@@ -1,0 +1,9 @@
+# The collector rewrites the JSON stores on every run and the CI job commits
+# them. Node writes LF, so without pinning this Windows would check them out as
+# CRLF and the next local run would rewrite every line — turning an appended day
+# into a whole-file diff. Keep the repo and both working copies on LF.
+* text=auto eol=lf
+
+# except the Windows launchers, which cmd.exe wants with CRLF
+*.bat text eol=crlf
+*.ps1 text eol=crlf

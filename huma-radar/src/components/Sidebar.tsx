@@ -1,0 +1,221 @@
+import { Activity, Clock3, Coins, Landmark, Layers } from 'lucide-react'
+import { CHAINS } from '../data/chains'
+import { STABLE_TOTAL } from '../data/stablecoins'
+import { STABLE_PROTOCOLS } from '../data/stableprotocols'
+import { formatUsd } from '../lib/format'
+import type { ChainId, MarketRow, ViewId } from '../types'
+import { ChainDot, Logo } from './Primitives'
+
+interface Props {
+  selected: ViewId
+  onSelect: (v: ViewId) => void
+  allRows: MarketRow[]
+  lastSync: string
+}
+
+/**
+ * Huma Related is an overlay, not a network — a vault it lists may also appear
+ * under its own chain. Global totals therefore count each venue once, keyed by
+ * the protocol and address it actually lives at.
+ */
+function dedupe(rows: MarketRow[]): MarketRow[] {
+  const seen = new Set<string>()
+  return rows.filter((r) => {
+    // venueAddress alone is not an identity: every Aave reserve in a market
+    // shares the pool address, so the asset has to be part of the key
+    const key = `${r.protocol}-${r.chainId}-${r.venueAddress.toLowerCase()}-${r.assetAddress.toLowerCase()}`
+    if (seen.has(key)) return false
+    seen.add(key)
+    return true
+  })
+}
+
+export function Sidebar({ selected, onSelect, allRows, lastSync }: Props) {
+  const statsFor = (id: ChainId) => {
+    const rows = allRows.filter((r) => r.chain === id)
+    return { count: rows.length, tvl: rows.reduce((a, r) => a + (r.tvl ?? 0), 0) }
+  }
+
+  const unique = dedupe(allRows)
+  const protocolTvl = STABLE_PROTOCOLS.reduce((a, r) => a + (r.tvl ?? 0), 0)
+
+  return (
+    <aside className="flex h-full w-[264px] shrink-0 flex-col border-r border-hairline/60 bg-abyss/80 backdrop-blur-xl">
+      <div className="flex items-center gap-3 px-5 py-5">
+        <Logo />
+        <div className="leading-tight">
+          <div className="text-[15px] font-extrabold tracking-tight text-white">
+            Huma <span className="text-plum-400">Radar</span>
+          </div>
+          <div className="text-[10px] font-medium uppercase tracking-[0.16em] text-dim">
+            Yield &amp; TVL Intelligence
+          </div>
+        </div>
+      </div>
+
+      <div className="mx-5 h-px bg-gradient-to-r from-transparent via-hairline to-transparent" />
+
+      <div className="flex items-center justify-between px-5 pb-2 pt-5">
+        <span className="text-[10px] font-bold uppercase tracking-[0.16em] text-dim">Overview</span>
+      </div>
+
+      <div className="space-y-0.5 px-3">
+        <OverviewTab
+          icon={<Coins size={11} />}
+          label="Stablecoin Supply"
+          detail={STABLE_TOTAL?.total ? `${formatUsd(STABLE_TOTAL.total)} all chains` : 'not collected yet'}
+          selected={selected === 'stables'}
+          onSelect={() => onSelect('stables')}
+        />
+        <OverviewTab
+          icon={<Landmark size={11} />}
+          label="Stablecoin Protocols"
+          detail={
+            STABLE_PROTOCOLS.length
+              ? `${STABLE_PROTOCOLS.length} products · ${formatUsd(protocolTvl)}`
+              : 'not collected yet'
+          }
+          selected={selected === 'protocols'}
+          onSelect={() => onSelect('protocols')}
+        />
+      </div>
+
+      <div className="flex items-center justify-between px-5 pb-2 pt-5">
+        <span className="text-[10px] font-bold uppercase tracking-[0.16em] text-dim">Networks</span>
+        <span className="text-[10px] text-dim/70">{CHAINS.filter((c) => c.live).length} live</span>
+      </div>
+
+      <nav className="flex-1 space-y-0.5 overflow-y-auto px-3 pb-4">
+        {CHAINS.map((c) => {
+          const active = c.id === selected
+          const { count, tvl } = statsFor(c.id)
+          return (
+            <button
+              key={c.id}
+              onClick={() => onSelect(c.id)}
+              aria-current={active ? 'page' : undefined}
+              className={
+                'group relative flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-left transition-all duration-150 ' +
+                (active
+                  ? 'bg-gradient-to-r from-plum-600/22 to-transparent shadow-[inset_0_0_0_1px_rgba(145,70,232,0.28)]'
+                  : 'hover:bg-raised/60')
+              }
+            >
+              {active && (
+                <span className="absolute left-0 top-1/2 h-6 w-[2px] -translate-y-1/2 rounded-r-full bg-plum-400 shadow-[0_0_10px_#A974F1]" />
+              )}
+              <ChainDot chain={c.id} size={9} />
+              <span className="min-w-0 flex-1">
+                <span
+                  className={
+                    'block truncate text-[13px] font-semibold ' +
+                    (active ? 'text-white' : 'text-plum-200/80 group-hover:text-plum-100')
+                  }
+                >
+                  {c.name}
+                </span>
+                <span className="num block text-[10.5px] text-dim">
+                  {count ? `${count} markets · ${formatUsd(tvl)}` : 'not tracked yet'}
+                </span>
+              </span>
+              {!count && (
+                <span className="rounded border border-hairline px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wide text-dim">
+                  Soon
+                </span>
+              )}
+            </button>
+          )
+        })}
+      </nav>
+
+      <div className="space-y-2 border-t border-hairline/60 px-5 py-4">
+        <Row
+          icon={<Layers size={13} />}
+          label="Markets tracked"
+          value={String(unique.length)}
+          title={
+            unique.length === allRows.length
+              ? undefined
+              : `${allRows.length} listings, ${allRows.length - unique.length} of them cross-listed on Huma Related`
+          }
+        />
+        <Row
+          icon={<Activity size={13} />}
+          label="Aggregate TVL"
+          value={formatUsd(unique.reduce((a, r) => a + (r.tvl ?? 0), 0))}
+          title="Each venue counted once, even when it appears on more than one tab"
+        />
+        <Row icon={<Clock3 size={13} />} label="Last collected" value={lastSync} />
+        <div className="flex items-center gap-2 pt-1">
+          <span className="h-1.5 w-1.5 animate-pulseDot rounded-full bg-gain shadow-[0_0_8px_#34D8A0]" />
+          <span className="text-[10.5px] text-dim">Aave · Morpho · Fluid · Jupiter · daily</span>
+        </div>
+      </div>
+    </aside>
+  )
+}
+
+/**
+ * The two overview tabs sit above the networks because they look wider than any
+ * one of them: what stablecoin supply exists at all, and what the issuers
+ * themselves pay on it, before either reaches a lending market.
+ */
+function OverviewTab({
+  icon, label, detail, selected, onSelect,
+}: {
+  icon: React.ReactNode
+  label: string
+  detail: string
+  selected: boolean
+  onSelect: () => void
+}) {
+  return (
+    <button
+      onClick={onSelect}
+      aria-current={selected ? 'page' : undefined}
+      className={
+        'group relative flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-left transition-all duration-150 ' +
+        (selected
+          ? 'bg-gradient-to-r from-plum-600/22 to-transparent shadow-[inset_0_0_0_1px_rgba(145,70,232,0.28)]'
+          : 'hover:bg-raised/60')
+      }
+    >
+      {selected && (
+        <span className="absolute left-0 top-1/2 h-6 w-[2px] -translate-y-1/2 rounded-r-full bg-plum-400 shadow-[0_0_10px_#A974F1]" />
+      )}
+      <span
+        className={
+          'grid h-[18px] w-[18px] shrink-0 place-items-center rounded-md border ' +
+          (selected ? 'border-plum-400/50 text-plum-300' : 'border-hairline text-plum-500/80')
+        }
+      >
+        {icon}
+      </span>
+      <span className="min-w-0 flex-1">
+        <span
+          className={
+            'block truncate text-[13px] font-semibold ' +
+            (selected ? 'text-white' : 'text-plum-200/80 group-hover:text-plum-100')
+          }
+        >
+          {label}
+        </span>
+        <span className="num block text-[10.5px] text-dim">{detail}</span>
+      </span>
+    </button>
+  )
+}
+
+function Row({
+  icon, label, value, title,
+}: { icon: React.ReactNode; label: string; value: string; title?: string }) {
+  return (
+    <div className="flex items-center justify-between gap-2" title={title}>
+      <span className="flex items-center gap-2 text-[11px] text-dim">
+        <span className="text-plum-500/70">{icon}</span>
+        {label}
+      </span>
+      <span className="num text-[11.5px] font-semibold text-plum-200">{value}</span>
+    </div>
+  )
+}

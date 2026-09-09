@@ -1,0 +1,84 @@
+name: Daily collect
+
+# Cron is UTC only and does not observe DST. 12:00 UTC is 15:00 in UTC+3, and
+# Turkey has been permanently UTC+3 since 2016, so this stays 15:00 all year.
+# A scheduled run is queued rather than guaranteed on time — expect it a few
+# minutes late, more if GitHub is busy.
+on:
+  schedule:
+    - cron: '0 12 * * *'
+  workflow_dispatch:
+
+# the collector accumulates into files it then commits, so two runs must never
+# overlap; a slow one finishes before the next begins
+concurrency:
+  group: collect
+  cancel-in-progress: false
+
+# needed to push the day's data back to the repo
+permissions:
+  contents: write
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: huma-radar/package-lock.json
+
+      - name: Install
+        working-directory: huma-radar
+        run: npm ci
+
+      # pipefail so a hard crash fails the step; tee so the log can be checked
+      # for the partial failures the collector deliberately survives
+      - name: Collect
+        working-directory: huma-radar
+        run: |
+          set -o pipefail
+          npm run collect 2>&1 | tee "$RUNNER_TEMP/collect.log"
+
+      # Always commit, even after a failed step. The collector is built to keep
+      # yesterday's value for a source that failed rather than blank the row, so
+      # a partial day is worth saving — and for Aave TVL, Fluid, Jupiter, Kamino
+      # and Orca these files are the only record that history ever existed.
+      - name: Commit today's data
+        if: always()
+        run: |
+          git config user.name 'huma-radar-bot'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add huma-radar/src/data/*.json
+          if git diff --cached --quiet; then
+            echo 'no data change'
+          else
+            git commit -m "data: snapshot $(date -u +%F)"
+            git push
+          fi
+
+      # catches a data shape the app cannot render, before the host tries
+      - name: Build
+        if: always()
+        working-directory: huma-radar
+        run: npm run build
+
+      # The collector exits 0 when a single source gives up, so that one bad
+      # API cannot lose the whole day. Surface it anyway: the data is already
+      # committed above, and a red run is how you find out.
+      - name: Report failed sources
+        if: always()
+        run: |
+          if [ ! -f "$RUNNER_TEMP/collect.log" ]; then
+            echo 'no collect log — the run failed before collecting'
+            exit 0
+          fi
+          if grep -q '!!' "$RUNNER_TEMP/collect.log"; then
+            echo '::error::one or more sources failed this run'
+            grep '!!' "$RUNNER_TEMP/collect.log"
+            exit 1
+          fi
+          echo 'every source reported'
