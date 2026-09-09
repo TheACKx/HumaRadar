@@ -27,7 +27,9 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          # one source of truth, shared with Cloudflare's build runner, which
+          # needs 22+ for Wrangler
+          node-version-file: .node-version
           cache: npm
           cache-dependency-path: huma-radar/package-lock.json
 

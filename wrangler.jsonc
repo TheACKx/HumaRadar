@@ -1,0 +1,17 @@
+{
+  // Cloudflare deploys this as a Worker that serves static files and nothing
+  // else — there is no `main`, so no server code runs. It is the current
+  // equivalent of a Pages project, and keeping the config here rather than in
+  // dashboard fields means the deploy is reproducible and reviewable.
+  "name": "humaradar",
+  "compatibility_date": "2026-09-09",
+
+  "assets": {
+    // the Vite app lives in a subfolder, so its build output does too
+    "directory": "./huma-radar/dist",
+
+    // the dashboard is one page that keeps its state in React rather than in
+    // the URL, so any unknown path should still serve the app
+    "not_found_handling": "single-page-application"
+  }
+}

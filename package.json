@@ -1,0 +1,8 @@
+{
+  "name": "humaradar",
+  "private": true,
+  "description": "Repo-root entry point so Cloudflare's build runner can find and build the app in huma-radar/",
+  "scripts": {
+    "build": "cd huma-radar && npm ci && npm run build"
+  }
+}
