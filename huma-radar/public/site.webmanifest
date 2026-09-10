@@ -1,0 +1,22 @@
+{
+  "name": "Huma Radar",
+  "short_name": "Huma Radar",
+  "description": "DeFi yield & TVL analytics across chains.",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#06040B",
+  "background_color": "#06040B",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
