@@ -1,9 +1,10 @@
-import { Activity, Clock3, Coins, Landmark, Layers } from 'lucide-react'
-import { CHAINS } from '../data/chains'
+import { useState } from 'react'
+import { Activity, ChevronRight, Clock3, Coins, Landmark, Layers } from 'lucide-react'
+import { CHAIN_MAP, NETWORKS, PROJECTS } from '../data/chains'
 import { STABLE_TOTAL } from '../data/stablecoins'
 import { STABLE_PROTOCOLS } from '../data/stableprotocols'
 import { formatUsd } from '../lib/format'
-import type { ChainId, MarketRow, ViewId } from '../types'
+import type { Chain, ChainId, MarketRow, ViewId } from '../types'
 import { ChainDot, Logo } from './Primitives'
 
 interface Props {
@@ -31,11 +32,6 @@ function dedupe(rows: MarketRow[]): MarketRow[] {
 }
 
 export function Sidebar({ selected, onSelect, allRows, lastSync }: Props) {
-  const statsFor = (id: ChainId) => {
-    const rows = allRows.filter((r) => r.chain === id)
-    return { count: rows.length, tvl: rows.reduce((a, r) => a + (r.tvl ?? 0), 0) }
-  }
-
   const unique = dedupe(allRows)
   const protocolTvl = STABLE_PROTOCOLS.reduce((a, r) => a + (r.tvl ?? 0), 0)
 
@@ -55,77 +51,52 @@ export function Sidebar({ selected, onSelect, allRows, lastSync }: Props) {
 
       <div className="mx-5 h-px bg-gradient-to-r from-transparent via-hairline to-transparent" />
 
-      <div className="flex items-center justify-between px-5 pb-2 pt-5">
-        <span className="text-[10px] font-bold uppercase tracking-[0.16em] text-dim">Overview</span>
-      </div>
+      <nav className="flex-1 overflow-y-auto pb-4">
+        <div className="px-5 pb-2 pt-5">
+          <span className="text-[10px] font-bold uppercase tracking-[0.16em] text-dim">Overview</span>
+        </div>
 
-      <div className="space-y-0.5 px-3">
-        <OverviewTab
-          icon={<Coins size={11} />}
-          label="Stablecoin Supply"
-          detail={STABLE_TOTAL?.total ? `${formatUsd(STABLE_TOTAL.total)} all chains` : 'not collected yet'}
-          selected={selected === 'stables'}
-          onSelect={() => onSelect('stables')}
+        <div className="space-y-0.5 px-3">
+          <OverviewTab
+            icon={<Coins size={11} />}
+            label="Stablecoin Supply"
+            detail={STABLE_TOTAL?.total ? `${formatUsd(STABLE_TOTAL.total)} all chains` : 'not collected yet'}
+            selected={selected === 'stables'}
+            onSelect={() => onSelect('stables')}
+          />
+          <OverviewTab
+            icon={<Landmark size={11} />}
+            label="Stablecoin Protocols"
+            detail={
+              STABLE_PROTOCOLS.length
+                ? `${STABLE_PROTOCOLS.length} products · ${formatUsd(protocolTvl)}`
+                : 'not collected yet'
+            }
+            selected={selected === 'protocols'}
+            onSelect={() => onSelect('protocols')}
+          />
+          <ChainTab
+            chain={CHAIN_MAP.huma}
+            rows={allRows}
+            selected={selected === 'huma'}
+            onSelect={() => onSelect('huma')}
+          />
+        </div>
+
+        <ChainGroup
+          title="Networks"
+          chains={NETWORKS}
+          selected={selected}
+          onSelect={onSelect}
+          allRows={allRows}
         />
-        <OverviewTab
-          icon={<Landmark size={11} />}
-          label="Stablecoin Protocols"
-          detail={
-            STABLE_PROTOCOLS.length
-              ? `${STABLE_PROTOCOLS.length} products · ${formatUsd(protocolTvl)}`
-              : 'not collected yet'
-          }
-          selected={selected === 'protocols'}
-          onSelect={() => onSelect('protocols')}
+        <ChainGroup
+          title="Projects"
+          chains={PROJECTS}
+          selected={selected}
+          onSelect={onSelect}
+          allRows={allRows}
         />
-      </div>
-
-      <div className="flex items-center justify-between px-5 pb-2 pt-5">
-        <span className="text-[10px] font-bold uppercase tracking-[0.16em] text-dim">Networks</span>
-        <span className="text-[10px] text-dim/70">{CHAINS.filter((c) => c.live).length} live</span>
-      </div>
-
-      <nav className="flex-1 space-y-0.5 overflow-y-auto px-3 pb-4">
-        {CHAINS.map((c) => {
-          const active = c.id === selected
-          const { count, tvl } = statsFor(c.id)
-          return (
-            <button
-              key={c.id}
-              onClick={() => onSelect(c.id)}
-              aria-current={active ? 'page' : undefined}
-              className={
-                'group relative flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-left transition-all duration-150 ' +
-                (active
-                  ? 'bg-gradient-to-r from-plum-600/22 to-transparent shadow-[inset_0_0_0_1px_rgba(145,70,232,0.28)]'
-                  : 'hover:bg-raised/60')
-              }
-            >
-              {active && (
-                <span className="absolute left-0 top-1/2 h-6 w-[2px] -translate-y-1/2 rounded-r-full bg-plum-400 shadow-[0_0_10px_#A974F1]" />
-              )}
-              <ChainDot chain={c.id} size={9} />
-              <span className="min-w-0 flex-1">
-                <span
-                  className={
-                    'block truncate text-[13px] font-semibold ' +
-                    (active ? 'text-white' : 'text-plum-200/80 group-hover:text-plum-100')
-                  }
-                >
-                  {c.name}
-                </span>
-                <span className="num block text-[10.5px] text-dim">
-                  {count ? `${count} markets · ${formatUsd(tvl)}` : 'not tracked yet'}
-                </span>
-              </span>
-              {!count && (
-                <span className="rounded border border-hairline px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wide text-dim">
-                  Soon
-                </span>
-              )}
-            </button>
-          )
-        })}
       </nav>
 
       <div className="space-y-2 border-t border-hairline/60 px-5 py-4">
@@ -156,9 +127,116 @@ export function Sidebar({ selected, onSelect, allRows, lastSync }: Props) {
 }
 
 /**
- * The two overview tabs sit above the networks because they look wider than any
- * one of them: what stablecoin supply exists at all, and what the issuers
- * themselves pay on it, before either reaches a lending market.
+ * A collapsible run of chain tabs. Networks and Projects answer different
+ * questions — what is deployed where, versus where one asset family is
+ * accepted — so either can be folded away while working in the other.
+ *
+ * Collapsing never hides where you are: a folded section holding the current
+ * tab names it in the header instead of counting its rows.
+ */
+function ChainGroup({
+  title, chains, selected, onSelect, allRows,
+}: {
+  title: string
+  chains: Chain[]
+  selected: ViewId
+  onSelect: (v: ViewId) => void
+  allRows: MarketRow[]
+}) {
+  const [open, setOpen] = useState(true)
+  const holdsSelection = chains.some((c) => c.id === selected)
+
+  return (
+    <>
+      <button
+        onClick={() => setOpen((o) => !o)}
+        aria-expanded={open}
+        className="group flex w-full items-center gap-1.5 px-5 pb-2 pt-5 text-left"
+      >
+        <ChevronRight
+          size={11}
+          className={
+            'shrink-0 text-dim transition-transform duration-150 group-hover:text-plum-300 ' +
+            (open ? 'rotate-90' : '')
+          }
+        />
+        <span className="text-[10px] font-bold uppercase tracking-[0.16em] text-dim group-hover:text-plum-200">
+          {title}
+        </span>
+        <span className="ml-auto truncate pl-2 text-[10px] text-dim/70">
+          {open || !holdsSelection ? chains.length : CHAIN_MAP[selected as ChainId].name}
+        </span>
+      </button>
+
+      {open && (
+        <div className="space-y-0.5 px-3">
+          {chains.map((c) => (
+            <ChainTab
+              key={c.id}
+              chain={c}
+              rows={allRows}
+              selected={c.id === selected}
+              onSelect={() => onSelect(c.id)}
+            />
+          ))}
+        </div>
+      )}
+    </>
+  )
+}
+
+/** One chain or overlay tab, wherever in the sidebar it happens to be listed. */
+function ChainTab({
+  chain, rows, selected, onSelect,
+}: {
+  chain: Chain
+  rows: MarketRow[]
+  selected: boolean
+  onSelect: () => void
+}) {
+  const mine = rows.filter((r) => r.chain === chain.id)
+  const tvl = mine.reduce((a, r) => a + (r.tvl ?? 0), 0)
+
+  return (
+    <button
+      onClick={onSelect}
+      aria-current={selected ? 'page' : undefined}
+      className={
+        'group relative flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-left transition-all duration-150 ' +
+        (selected
+          ? 'bg-gradient-to-r from-plum-600/22 to-transparent shadow-[inset_0_0_0_1px_rgba(145,70,232,0.28)]'
+          : 'hover:bg-raised/60')
+      }
+    >
+      {selected && (
+        <span className="absolute left-0 top-1/2 h-6 w-[2px] -translate-y-1/2 rounded-r-full bg-plum-400 shadow-[0_0_10px_#A974F1]" />
+      )}
+      <ChainDot chain={chain.id} size={9} />
+      <span className="min-w-0 flex-1">
+        <span
+          className={
+            'block truncate text-[13px] font-semibold ' +
+            (selected ? 'text-white' : 'text-plum-200/80 group-hover:text-plum-100')
+          }
+        >
+          {chain.name}
+        </span>
+        <span className="num block text-[10.5px] text-dim">
+          {mine.length ? `${mine.length} markets · ${formatUsd(tvl)}` : 'not tracked yet'}
+        </span>
+      </span>
+      {!mine.length && (
+        <span className="rounded border border-hairline px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wide text-dim">
+          Soon
+        </span>
+      )}
+    </button>
+  )
+}
+
+/**
+ * The overview tabs look wider than any one network: what stablecoin supply
+ * exists at all, what the issuers pay on it, and Huma itself.
  */
 function OverviewTab({
   icon, label, detail, selected, onSelect,

@@ -10,6 +10,17 @@ export type ChainId =
   | 'arbitrum' | 'mantle' | 'robinhood' | 'tempo'
   | 'huma' | 'maple' | 'ethena' | 're' | 'usdai'
 
+/**
+ * Where a tab sits in the sidebar.
+ *
+ * `overview` — read before any single venue: what supply exists, what the
+ *   issuers pay on it, and Huma itself, which is what this dashboard is for.
+ * `network`  — a real chain, listing every venue deployed on it.
+ * `project`  — an asset-family overlay, gathering one issuer's venues from
+ *   several protocols across several networks.
+ */
+export type ChainGroup = 'overview' | 'network' | 'project'
+
 export interface Chain {
   id: ChainId
   name: string
@@ -18,6 +29,7 @@ export interface Chain {
   color: string
   /** false = no collector wired up yet */
   live: boolean
+  group: ChainGroup
 }
 
 /**

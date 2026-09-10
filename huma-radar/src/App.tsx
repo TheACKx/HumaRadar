@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react'
 import { Coins, Landmark, Radar } from 'lucide-react'
-import { CHAINS, CHAIN_MAP } from './data/chains'
+import { CHAIN_MAP, NETWORKS, PROJECTS } from './data/chains'
 import { GENERATED_AT, LATEST_DATE, MARKETS, PROTOCOL_ORDER } from './data/markets'
 import { STABLE_CHAINS, STABLE_GENERATED_AT, STABLE_LATEST_DATE } from './data/stablecoins'
 import {
@@ -9,7 +9,7 @@ import {
 import { aggregate, excludedFromTotals, withDeltas } from './lib/derive'
 import { formatDateLong, relativeTime } from './lib/format'
 import type {
-  ChainId, DeltaMode, MarketRow, Protocol, ProtocolFilter, SortKey, StableProtocolRow,
+  Chain, ChainId, DeltaMode, MarketRow, Protocol, ProtocolFilter, SortKey, StableProtocolRow,
   StableRow, ViewId,
 } from './types'
 import { Sidebar } from './components/Sidebar'
@@ -38,6 +38,11 @@ const CHAIN_BLURB: Record<ChainId, string> = {
   ethena: 'Where USDe and staked sUSDe are supplied, across Aave, Morpho, Kamino and Jupiter Lend.',
   re: 'Where Re Protocol reUSD is supplied, across Morpho, Fluid, Kamino and Jupiter Lend.',
   usdai: 'Where staked sUSDai is supplied, across Fluid and Morpho on Arbitrum.',
+}
+
+/** Separates the mobile rail groups, standing in for a section label. */
+function Rule() {
+  return <span className="mx-0.5 h-5 w-px shrink-0 self-center bg-hairline" />
 }
 
 export default function App() {
@@ -135,6 +140,21 @@ export default function App() {
   const onProtocols = view === 'protocols'
   const onOverview = onStables || onProtocols
 
+  // the mobile rail mirrors the sidebar order: overview, then networks, then
+  // projects, separated by rules since a scrolling row has no room for labels
+  const chainChip = (c: Chain) => (
+    <button
+      key={c.id}
+      onClick={() => selectView(c.id)}
+      className={`chip shrink-0 !px-3 !py-1.5 ${
+        !onOverview && c.id === chain ? '!border-plum-500/50 !bg-plum-600/20 !text-plum-100' : ''
+      }`}
+    >
+      <ChainDot chain={c.id} size={6} />
+      {c.name}
+    </button>
+  )
+
   return (
     <div className="flex h-full">
       <div className="hidden lg:block">
@@ -175,18 +195,11 @@ export default function App() {
                 <Landmark size={11} />
                 Protocols
               </button>
-              {CHAINS.map((c) => (
-                <button
-                  key={c.id}
-                  onClick={() => selectView(c.id)}
-                  className={`chip shrink-0 !px-3 !py-1.5 ${
-                    !onOverview && c.id === chain ? '!border-plum-500/50 !bg-plum-600/20 !text-plum-100' : ''
-                  }`}
-                >
-                  <ChainDot chain={c.id} size={6} />
-                  {c.name}
-                </button>
-              ))}
+              {chainChip(CHAIN_MAP.huma)}
+              <Rule />
+              {NETWORKS.map(chainChip)}
+              <Rule />
+              {PROJECTS.map(chainChip)}
             </div>
           </div>
 
