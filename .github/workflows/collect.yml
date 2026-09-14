@@ -1,12 +1,24 @@
 name: Daily collect
 
-# Cron is UTC only and does not observe DST. 12:00 UTC is 15:00 in UTC+3, and
-# Turkey has been permanently UTC+3 since 2016, so this stays 15:00 all year.
-# A scheduled run is queued rather than guaranteed on time — expect it a few
-# minutes late, more if GitHub is busy.
+# Cron is UTC only and does not observe DST. Turkey has been permanently UTC+3
+# since 2016, so a UTC time maps to one local time all year: 09:13 UTC is 12:13
+# local.
+#
+# That is nominally three hours earlier than the 15:00 local this job is meant
+# to land at, and deliberately so. A scheduled run on free runners is queued
+# behind paid jobs, not guaranteed — GitHub delays it under load and may drop
+# it entirely. The first five runs of this job, all asking for 12:00 UTC, fired
+# 150 to 206 minutes late, never once near the requested time, and the sixth
+# day did not fire at all.
+#
+# So: ask early enough that the usual slip still lands in the afternoon, and
+# ask on an odd minute, since the top of the hour is the most contended slot on
+# the platform. Neither is a guarantee — a missed day is still possible, and
+# costs that day's row rather than the history. Run the workflow by hand from
+# the Actions tab to fill one in.
 on:
   schedule:
-    - cron: '0 12 * * *'
+    - cron: '13 9 * * *'
   workflow_dispatch:
 
 # the collector accumulates into files it then commits, so two runs must never
