@@ -1,24 +1,28 @@
 name: Daily collect
 
-# Cron is UTC only and does not observe DST. Turkey has been permanently UTC+3
-# since 2016, so a UTC time maps to one local time all year: 09:13 UTC is 12:13
-# local.
+# The clock for this job lives in Cloudflare, not here.
 #
-# That is nominally three hours earlier than the 15:00 local this job is meant
-# to land at, and deliberately so. A scheduled run on free runners is queued
-# behind paid jobs, not guaranteed — GitHub delays it under load and may drop
-# it entirely. The first five runs of this job, all asking for 12:00 UTC, fired
-# 150 to 206 minutes late, never once near the requested time, and the sixth
-# day did not fire at all.
+# GitHub's own schedule: is best-effort on free runners — it queues behind paid
+# work, and may be dropped. Measured on this repo: five runs that asked for
+# 12:00 UTC fired 150 to 206 minutes late, never once near the requested time,
+# and then two consecutive days produced no run at all while Actions reported
+# operational. Moving the cron earlier and off the hour did not help.
 #
-# So: ask early enough that the usual slip still lands in the afternoon, and
-# ask on an odd minute, since the top of the hour is the most contended slot on
-# the platform. Neither is a guarantee — a missed day is still possible, and
-# costs that day's row rather than the history. Run the workflow by hand from
-# the Actions tab to fill one in.
+# So a Cloudflare Cron Trigger, which fires on UTC time and is not best-effort,
+# POSTs a repository dispatch at 12:00 UTC — 15:00 in UTC+3, the intended time,
+# with nothing budgeted for slip. See worker/index.js.
 on:
+  # the trigger that is meant to fire; only works from the default branch
+  repository_dispatch:
+    types: [daily-collect]
+
+  # Kept as a backstop, not the plan. If both fire on the same day the
+  # concurrency group below serialises them and the second run rewrites the
+  # same UTC date, which costs an extra commit and no data.
   schedule:
     - cron: '13 9 * * *'
+
+  # Actions tab -> Daily collect -> Run workflow, to fill in a missed day
   workflow_dispatch:
 
 # the collector accumulates into files it then commits, so two runs must never

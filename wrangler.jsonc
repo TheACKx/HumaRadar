@@ -1,10 +1,12 @@
 {
-  // Cloudflare deploys this as a Worker that serves static files and nothing
-  // else — there is no `main`, so no server code runs. It is the current
-  // equivalent of a Pages project, and keeping the config here rather than in
-  // dashboard fields means the deploy is reproducible and reviewable.
+  // Cloudflare deploys this as a Worker serving the built site, plus a cron
+  // that pokes GitHub once a day to collect. Keeping the config here rather
+  // than in dashboard fields means the deploy is reproducible and reviewable.
   "name": "humaradar",
   "compatibility_date": "2026-09-09",
+
+  // Only the cron needs this; assets are matched before it ever runs.
+  "main": "./worker/index.js",
 
   "assets": {
     // the Vite app lives in a subfolder, so its build output does too
@@ -12,6 +14,26 @@
 
     // the dashboard is one page that keeps its state in React rather than in
     // the URL, so any unknown path should still serve the app
-    "not_found_handling": "single-page-application"
+    "not_found_handling": "single-page-application",
+
+    // lets the Worker hand unmatched paths straight back to the asset store,
+    // fallback behaviour included, so adding the script changed no routing
+    "binding": "ASSETS"
+  },
+
+  // Cron Triggers run on UTC and are not best-effort, so this is the plain
+  // conversion of the intended 15:00 in UTC+3 with nothing budgeted for slip.
+  // Turkey has been permanently UTC+3 since 2016, so it holds all year.
+  "triggers": {
+    "crons": ["0 12 * * *"]
+  },
+
+  "vars": {
+    "GITHUB_REPO": "TheACKx/HumaRadar"
+  },
+
+  // so a failed dispatch is visible in the dashboard instead of silent
+  "observability": {
+    "enabled": true
   }
 }
