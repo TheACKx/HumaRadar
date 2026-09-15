@@ -23,8 +23,11 @@ export default {
     return env.ASSETS.fetch(request)
   },
 
-  async scheduled(controller, env, ctx) {
-    ctx.waitUntil(dispatch(env, controller))
+  async scheduled(controller, env) {
+    // awaited rather than handed to ctx.waitUntil: the runtime then treats the
+    // POST as the handler's own work, and anything thrown inside it lands in
+    // the logs instead of disappearing into a floating promise
+    await dispatch(env, controller)
   },
 }
 
@@ -42,27 +45,36 @@ async function dispatch(env, controller) {
   }
 
   const url = `https://api.github.com/repos/${env.GITHUB_REPO}/dispatches`
-  const res = await fetch(url, {
-    method: 'POST',
-    headers: {
-      accept: 'application/vnd.github+json',
-      authorization: `Bearer ${env.GITHUB_TOKEN}`,
-      'content-type': 'application/json',
-      // GitHub rejects API requests that do not identify themselves
-      'user-agent': 'humaradar-cron',
-      // deliberately no X-GitHub-Api-Version: pinning a version means this
-      // breaks the day that version retires, and the contract being relied on
-      // here is a two-field body and a 204 — nothing a version could change
-    },
-    body: JSON.stringify({
-      event_type: DISPATCH_EVENT,
-      client_payload: {
-        source: 'cloudflare-cron',
-        cron: controller.cron,
-        scheduledTime: new Date(controller.scheduledTime).toISOString(),
+  console.log(`dispatching ${DISPATCH_EVENT} to ${url}`)
+
+  let res
+  try {
+    res = await fetch(url, {
+      method: 'POST',
+      headers: {
+        accept: 'application/vnd.github+json',
+        authorization: `Bearer ${env.GITHUB_TOKEN}`,
+        'content-type': 'application/json',
+        // GitHub rejects API requests that do not identify themselves
+        'user-agent': 'humaradar-cron',
+        // deliberately no X-GitHub-Api-Version: pinning a version means this
+        // breaks the day that version retires, and the contract relied on here
+        // is a two-field body and a 204 — nothing a version could change
       },
-    }),
-  })
+      body: JSON.stringify({
+        event_type: DISPATCH_EVENT,
+        client_payload: {
+          source: 'cloudflare-cron',
+          cron: controller.cron,
+          scheduledTime: new Date(controller.scheduledTime).toISOString(),
+        },
+      }),
+    })
+  } catch (err) {
+    // DNS, TLS, a thrown binding — without this the request simply vanishes
+    console.error(`dispatch threw before any response: ${err}`)
+    return
+  }
 
   // 204 No Content is the documented success. Anything else is worth the log
   // line, since a silent failure here looks identical to a stale site.
