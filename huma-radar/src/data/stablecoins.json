@@ -1,4 +1,4 @@
-{"source":"defillama-stablecoins","generatedAt":"2026-09-15T14:06:29.192Z","chains":{"all":{"id":"all","name":"All Chains","slug":"all","url":"https://defillama.com/stablecoins","history":[
+{"source":"defillama-stablecoins","generatedAt":"2026-09-15T14:18:57.843Z","chains":{"all":{"id":"all","name":"All Chains","slug":"all","url":"https://defillama.com/stablecoins","history":[
 {"date":"2025-08-12","total":270104133617},
 {"date":"2025-08-13","total":270973742383},
 {"date":"2025-08-14","total":272603015115},
@@ -398,7 +398,7 @@
 {"date":"2026-09-12","total":311835952966},
 {"date":"2026-09-13","total":311819653599},
 {"date":"2026-09-14","total":311687167633},
-{"date":"2026-09-15","total":311931457765}]},"ethereum":{"id":"ethereum","name":"Ethereum","slug":"Ethereum","url":"https://defillama.com/stablecoins/ethereum","history":[
+{"date":"2026-09-15","total":311923540963}]},"ethereum":{"id":"ethereum","name":"Ethereum","slug":"Ethereum","url":"https://defillama.com/stablecoins/ethereum","history":[
 {"date":"2025-08-12","total":138055818687},
 {"date":"2025-08-13","total":138778500515},
 {"date":"2025-08-14","total":139066174100},
@@ -1198,7 +1198,7 @@
 {"date":"2026-09-12","total":16555016192},
 {"date":"2026-09-13","total":16525219991},
 {"date":"2026-09-14","total":16354077829},
-{"date":"2026-09-15","total":16389151723}]},"base":{"id":"base","name":"Base","slug":"Base","url":"https://defillama.com/stablecoins/base","history":[
+{"date":"2026-09-15","total":16388623785}]},"base":{"id":"base","name":"Base","slug":"Base","url":"https://defillama.com/stablecoins/base","history":[
 {"date":"2025-08-12","total":4293546709},
 {"date":"2025-08-13","total":4291560054},
 {"date":"2025-08-14","total":4316579796},
@@ -2426,7 +2426,7 @@
 {"date":"2026-09-12","total":1066668674},
 {"date":"2026-09-13","total":1073168630},
 {"date":"2026-09-14","total":1073731441},
-{"date":"2026-09-15","total":1087800383}]},"monad":{"id":"monad","name":"Monad","slug":"Monad","url":"https://defillama.com/stablecoins/monad","history":[
+{"date":"2026-09-15","total":1087885645}]},"monad":{"id":"monad","name":"Monad","slug":"Monad","url":"https://defillama.com/stablecoins/monad","history":[
 {"date":"2025-11-22","total":2933434},
 {"date":"2025-11-23","total":12924955},
 {"date":"2025-11-24","total":16122319},
