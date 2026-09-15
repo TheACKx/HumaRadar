@@ -28,7 +28,7 @@
     "crons": [
       "0 12 * * *",
       // TEMPORARY: one-off to prove the chain end to end. Remove after.
-      "46 14 * * *"
+      "25 15 * * *"
     ]
   },
 
