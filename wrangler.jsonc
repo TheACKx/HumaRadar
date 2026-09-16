@@ -25,11 +25,7 @@
   // conversion of the intended 15:00 in UTC+3 with nothing budgeted for slip.
   // Turkey has been permanently UTC+3 since 2016, so it holds all year.
   "triggers": {
-    "crons": [
-      "0 12 * * *",
-      // TEMPORARY: one-off to prove the chain end to end. Remove after.
-      "14 10 * * *"
-    ]
+    "crons": ["0 12 * * *"]
   },
 
   "vars": {
