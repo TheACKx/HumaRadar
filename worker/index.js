@@ -20,6 +20,21 @@ export default {
    * single-page-application fallback — the Worker adds a cron, not a behaviour.
    */
   async fetch(request, env) {
+    // A Worker with assets behaves identically whether or not a script is
+    // deployed, which makes "is the script actually live?" unanswerable from
+    // outside — and that was the question that cost a day of debugging. This
+    // path answers it. It reports whether the secret is bound, never its value,
+    // and deliberately cannot trigger a dispatch: an unauthenticated URL that
+    // starts a workflow is an open door.
+    if (new URL(request.url).pathname === '/__health') {
+      return Response.json({
+        worker: 'alive',
+        hasToken: Boolean(env.GITHUB_TOKEN),
+        repo: env.GITHUB_REPO ?? null,
+        now: new Date().toISOString(),
+      })
+    }
+
     return env.ASSETS.fetch(request)
   },
 
