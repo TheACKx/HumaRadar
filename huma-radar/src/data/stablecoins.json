@@ -1,4 +1,4 @@
-{"source":"defillama-stablecoins","generatedAt":"2026-09-17T11:11:36.368Z","chains":{"all":{"id":"all","name":"All Chains","slug":"all","url":"https://defillama.com/stablecoins","history":[
+{"source":"defillama-stablecoins","generatedAt":"2026-09-17T12:01:56.740Z","chains":{"all":{"id":"all","name":"All Chains","slug":"all","url":"https://defillama.com/stablecoins","history":[
 {"date":"2025-08-14","total":272603015115},
 {"date":"2025-08-15","total":274209898842},
 {"date":"2025-08-16","total":275700646632},
@@ -398,7 +398,7 @@
 {"date":"2026-09-14","total":311687124320},
 {"date":"2026-09-15","total":311868984279},
 {"date":"2026-09-16","total":311079726592},
-{"date":"2026-09-17","total":311057964538}]},"ethereum":{"id":"ethereum","name":"Ethereum","slug":"Ethereum","url":"https://defillama.com/stablecoins/ethereum","history":[
+{"date":"2026-09-17","total":311061975779}]},"ethereum":{"id":"ethereum","name":"Ethereum","slug":"Ethereum","url":"https://defillama.com/stablecoins/ethereum","history":[
 {"date":"2025-08-14","total":139066174100},
 {"date":"2025-08-15","total":141078821239},
 {"date":"2025-08-16","total":142936006582},
@@ -798,7 +798,7 @@
 {"date":"2026-09-14","total":148842664750},
 {"date":"2026-09-15","total":149113983658},
 {"date":"2026-09-16","total":148732505388},
-{"date":"2026-09-17","total":148460113135}]},"solana":{"id":"solana","name":"Solana","slug":"Solana","url":"https://defillama.com/stablecoins/solana","history":[
+{"date":"2026-09-17","total":148462193619}]},"solana":{"id":"solana","name":"Solana","slug":"Solana","url":"https://defillama.com/stablecoins/solana","history":[
 {"date":"2025-08-14","total":11977039376},
 {"date":"2025-08-15","total":11961507729},
 {"date":"2025-08-16","total":11578679414},
@@ -1198,7 +1198,7 @@
 {"date":"2026-09-14","total":16354077829},
 {"date":"2026-09-15","total":16387277524},
 {"date":"2026-09-16","total":15964894729},
-{"date":"2026-09-17","total":15772866527}]},"base":{"id":"base","name":"Base","slug":"Base","url":"https://defillama.com/stablecoins/base","history":[
+{"date":"2026-09-17","total":15773000222}]},"base":{"id":"base","name":"Base","slug":"Base","url":"https://defillama.com/stablecoins/base","history":[
 {"date":"2025-08-14","total":4316579796},
 {"date":"2025-08-15","total":4261022998},
 {"date":"2025-08-16","total":4246920949},
