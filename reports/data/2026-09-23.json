@@ -1,0 +1,4536 @@
+{
+ "end": "2026-09-23",
+ "week": "2026-09-16",
+ "month": "2026-08-24",
+ "generatedAt": "2026-09-23T23:51:34.897Z",
+ "thresholds": {
+  "wowPct": 5,
+  "wowUsd": 25000000,
+  "minTvlForPct": 10000000,
+  "minUsdForPct": 5000000,
+  "contributorsPerGroup": 3,
+  "trendWeeks": 3,
+  "dominantShare": 0.5,
+  "crossCheckTolerance": 0.015
+ },
+ "products": [
+  {
+   "id": "maple",
+   "label": "Maple syrupUSDC",
+   "source": "pool",
+   "metric": "tvl",
+   "liveSupplied": null,
+   "liveBorrowed": null,
+   "asOf": "2026-09-23",
+   "now": 2941625412,
+   "wk": 2598274223,
+   "mo": 2864978474,
+   "wow": {
+    "usd": 343351189,
+    "pct": 13.214586280410481,
+    "from": 2598274223,
+    "to": 2941625412
+   },
+   "m30": {
+    "usd": 76646938,
+    "pct": 2.6753058948114106,
+    "from": 2864978474,
+    "to": 2941625412
+   },
+   "apy": 5.1594,
+   "apyWowPp": 0.18400000000000016,
+   "apyRange": {
+    "from": 4.9754,
+    "to": 5.1594
+   },
+   "bigDay": {
+    "date": "2026-09-19",
+    "usd": 167717147
+   },
+   "significant": true,
+   "trend": "mixed",
+   "chains": [
+    {
+     "chain": "Ethereum",
+     "whole": true
+    }
+   ]
+  },
+  {
+   "id": "ethena",
+   "label": "Ethena USDe",
+   "source": "protocol",
+   "metric": "tvl",
+   "liveSupplied": null,
+   "liveBorrowed": null,
+   "asOf": "2026-09-23",
+   "now": 4896104144,
+   "wk": 4698716415,
+   "mo": 4076721995,
+   "wow": {
+    "usd": 197387729,
+    "pct": 4.2008861903192765,
+    "from": 4698716415,
+    "to": 4896104144
+   },
+   "m30": {
+    "usd": 819382149,
+    "pct": 20.09904403599147,
+    "from": 4076721995,
+    "to": 4896104144
+   },
+   "apy": 4.6523,
+   "apyWowPp": -0.33840000000000003,
+   "apyRange": {
+    "from": 4.9907,
+    "to": 4.6523
+   },
+   "bigDay": {
+    "date": "2026-09-19",
+    "usd": 69836260
+   },
+   "significant": true,
+   "trend": "up 3 wks",
+   "chains": [
+    {
+     "chain": "Ethereum",
+     "now": 4889410750,
+     "wk": 4698716415,
+     "change": {
+      "usd": 190694335,
+      "pct": 4.058434648050578,
+      "from": 4698716415,
+      "to": 4889410750
+     }
+    }
+   ]
+  },
+  {
+   "id": "huma",
+   "label": "Huma PST",
+   "source": "protocol",
+   "metric": "tvl",
+   "liveSupplied": null,
+   "liveBorrowed": null,
+   "asOf": "2026-09-23",
+   "now": 378236014,
+   "wk": 315866733,
+   "mo": 221371124,
+   "wow": {
+    "usd": 62369281,
+    "pct": 19.74544150554785,
+    "from": 315866733,
+    "to": 378236014
+   },
+   "m30": {
+    "usd": 156864890,
+    "pct": 70.86059245920438,
+    "from": 221371124,
+    "to": 378236014
+   },
+   "apy": null,
+   "apyWowPp": null,
+   "apyRange": null,
+   "bigDay": {
+    "date": "2026-09-23",
+    "usd": 19801741
+   },
+   "significant": true,
+   "trend": "up 3 wks",
+   "chains": [
+    {
+     "chain": "Solana",
+     "now": 197052074,
+     "wk": 193114398,
+     "change": {
+      "usd": 3937676,
+      "pct": 2.0390380213908235,
+      "from": 193114398,
+      "to": 197052074
+     }
+    },
+    {
+     "chain": "Ethereum",
+     "now": 178128198,
+     "wk": 120025804,
+     "change": {
+      "usd": 58102394,
+      "pct": 48.40825227881831,
+      "from": 120025804,
+      "to": 178128198
+     }
+    },
+    {
+     "chain": "Stellar",
+     "now": 2727051,
+     "wk": 2726530,
+     "change": {
+      "usd": 521,
+      "pct": 0.019108537224970936,
+      "from": 2726530,
+      "to": 2727051
+     }
+    },
+    {
+     "chain": "Monad",
+     "now": 2088361,
+     "wk": null,
+     "change": null
+    }
+   ]
+  },
+  {
+   "id": "aave",
+   "label": "Aave USDC",
+   "source": "pool",
+   "metric": "liquidity",
+   "liveSupplied": 2385329253,
+   "liveBorrowed": 2218232685,
+   "asOf": "2026-09-23",
+   "now": 143260752,
+   "wk": 181097153,
+   "mo": 159870387,
+   "wow": {
+    "usd": -37836401,
+    "pct": -20.892874555570735,
+    "from": 181097153,
+    "to": 143260752
+   },
+   "m30": {
+    "usd": -16609635,
+    "pct": -10.389438164054734,
+    "from": 159870387,
+    "to": 143260752
+   },
+   "apy": 3.7205,
+   "apyWowPp": 0.12480000000000002,
+   "apyRange": {
+    "from": 3.5957,
+    "to": 3.7205
+   },
+   "bigDay": {
+    "date": "2026-09-21",
+    "usd": -38069881
+   },
+   "significant": true,
+   "trend": "mixed",
+   "chains": [
+    {
+     "chain": "Ethereum",
+     "whole": true
+    }
+   ]
+  },
+  {
+   "id": "fluid",
+   "label": "Fluid USDC",
+   "source": "pool",
+   "metric": "tvl",
+   "liveSupplied": null,
+   "liveBorrowed": null,
+   "asOf": "2026-09-23",
+   "now": 136696135,
+   "wk": 160878490,
+   "mo": 146508753,
+   "wow": {
+    "usd": -24182355,
+    "pct": -15.031440809768915,
+    "from": 160878490,
+    "to": 136696135
+   },
+   "m30": {
+    "usd": -9812618,
+    "pct": -6.697632598101494,
+    "from": 146508753,
+    "to": 136696135
+   },
+   "apy": 4.18,
+   "apyWowPp": -0.5300000000000002,
+   "apyRange": {
+    "from": 4.71,
+    "to": 4.18
+   },
+   "bigDay": {
+    "date": "2026-09-22",
+    "usd": -10591867
+   },
+   "significant": true,
+   "trend": "mixed",
+   "chains": [
+    {
+     "chain": "Ethereum",
+     "whole": true
+    }
+   ]
+  },
+  {
+   "id": "sky",
+   "label": "Sky sUSDS",
+   "source": "pool",
+   "metric": "tvl",
+   "liveSupplied": null,
+   "liveBorrowed": null,
+   "asOf": "2026-09-23",
+   "now": 4367220577,
+   "wk": 4390332881,
+   "mo": 4665688197,
+   "wow": {
+    "usd": -23112304,
+    "pct": -0.5264362549824613,
+    "from": 4390332881,
+    "to": 4367220577
+   },
+   "m30": {
+    "usd": -298467620,
+    "pct": -6.397076002462236,
+    "from": 4665688197,
+    "to": 4367220577
+   },
+   "apy": 3.6,
+   "apyWowPp": 0,
+   "apyRange": {
+    "from": 3.6,
+    "to": 3.6
+   },
+   "bigDay": {
+    "date": "2026-09-21",
+    "usd": -37185291
+   },
+   "significant": false,
+   "trend": "down 3 wks",
+   "chains": [
+    {
+     "chain": "Ethereum",
+     "whole": true
+    }
+   ]
+  },
+  {
+   "id": "cap",
+   "label": "Cap stcUSD",
+   "source": "protocol",
+   "metric": "tvl",
+   "liveSupplied": null,
+   "liveBorrowed": null,
+   "asOf": "2026-09-23",
+   "now": 344094373,
+   "wk": 325694618,
+   "mo": 326572738,
+   "wow": {
+    "usd": 18399755,
+    "pct": 5.649388716641305,
+    "from": 325694618,
+    "to": 344094373
+   },
+   "m30": {
+    "usd": 17521635,
+    "pct": 5.365308539624639,
+    "from": 326572738,
+    "to": 344094373
+   },
+   "apy": 5.6645,
+   "apyWowPp": -0.47249999999999925,
+   "apyRange": {
+    "from": 6.137,
+    "to": 5.6645
+   },
+   "bigDay": {
+    "date": "2026-09-19",
+    "usd": 25843681
+   },
+   "significant": true,
+   "trend": "mixed",
+   "chains": [
+    {
+     "chain": "Ethereum",
+     "now": 339238252,
+     "wk": 325694618,
+     "change": {
+      "usd": 13543634,
+      "pct": 4.15838434272193,
+      "from": 325694618,
+      "to": 339238252
+     }
+    }
+   ]
+  },
+  {
+   "id": "spark",
+   "label": "Spark spUSDS",
+   "source": "pool",
+   "metric": "liquidity",
+   "liveSupplied": 1297162412,
+   "liveBorrowed": 894564026,
+   "asOf": "2026-09-23",
+   "now": 422030928,
+   "wk": 435353758,
+   "mo": 330424128,
+   "wow": {
+    "usd": -13322830,
+    "pct": -3.060230847944122,
+    "from": 435353758,
+    "to": 422030928
+   },
+   "m30": {
+    "usd": 91606800,
+    "pct": 27.72400446495239,
+    "from": 330424128,
+    "to": 422030928
+   },
+   "apy": 2.5604,
+   "apyWowPp": 0.242,
+   "apyRange": {
+    "from": 2.3184,
+    "to": 2.5604
+   },
+   "bigDay": {
+    "date": "2026-09-21",
+    "usd": -31573160
+   },
+   "significant": false,
+   "trend": "mixed",
+   "chains": [
+    {
+     "chain": "Ethereum",
+     "whole": true
+    }
+   ]
+  },
+  {
+   "id": "reusd",
+   "label": "Re reUSD",
+   "source": "pool",
+   "metric": "tvl",
+   "liveSupplied": null,
+   "liveBorrowed": null,
+   "asOf": "2026-09-23",
+   "now": 269195258,
+   "wk": 258842815,
+   "mo": 208395371,
+   "wow": {
+    "usd": 10352443,
+    "pct": 3.999509509274963,
+    "from": 258842815,
+    "to": 269195258
+   },
+   "m30": {
+    "usd": 60799887,
+    "pct": 29.175257928353886,
+    "from": 208395371,
+    "to": 269195258
+   },
+   "apy": 6.8286,
+   "apyWowPp": 0.15309999999999935,
+   "apyRange": {
+    "from": 6.6755,
+    "to": 6.8286
+   },
+   "bigDay": {
+    "date": "2026-09-19",
+    "usd": 4072204
+   },
+   "significant": false,
+   "trend": "up 3 wks",
+   "chains": [
+    {
+     "chain": "Ethereum",
+     "whole": true
+    }
+   ]
+  },
+  {
+   "id": "yuzu",
+   "label": "Yuzu syzUSD",
+   "source": "protocol",
+   "metric": "tvl",
+   "liveSupplied": null,
+   "liveBorrowed": null,
+   "asOf": "2026-09-23",
+   "now": 80925499,
+   "wk": 74363542,
+   "mo": 83060883,
+   "wow": {
+    "usd": 6561957,
+    "pct": 8.824158752416608,
+    "from": 74363542,
+    "to": 80925499
+   },
+   "m30": {
+    "usd": -2135384,
+    "pct": -2.570865999582499,
+    "from": 83060883,
+    "to": 80925499
+   },
+   "apy": 7.2967,
+   "apyWowPp": -0.1595999999999993,
+   "apyRange": {
+    "from": 7.4563,
+    "to": 7.2967
+   },
+   "bigDay": {
+    "date": "2026-09-22",
+    "usd": 4614948
+   },
+   "significant": true,
+   "trend": "mixed",
+   "chains": [
+    {
+     "chain": "Plasma",
+     "now": 66729315,
+     "wk": 60196163,
+     "change": {
+      "usd": 6533152,
+      "pct": 10.853103710281335,
+      "from": 60196163,
+      "to": 66729315
+     }
+    },
+    {
+     "chain": "Monad",
+     "now": 7584213,
+     "wk": 7572107,
+     "change": {
+      "usd": 12106,
+      "pct": 0.1598762405232784,
+      "from": 7572107,
+      "to": 7584213
+     }
+    },
+    {
+     "chain": "Ethereum",
+     "now": 6638664,
+     "wk": 6595270,
+     "change": {
+      "usd": 43394,
+      "pct": 0.6579563838933054,
+      "from": 6595270,
+      "to": 6638664
+     }
+    }
+   ]
+  },
+  {
+   "id": "usdai",
+   "label": "UsdAI sUSDai",
+   "source": "pool",
+   "metric": "tvl",
+   "liveSupplied": null,
+   "liveBorrowed": null,
+   "asOf": "2026-09-23",
+   "now": 497972636,
+   "wk": 493073463,
+   "mo": 356551562,
+   "wow": {
+    "usd": 4899173,
+    "pct": 0.9935990004799752,
+    "from": 493073463,
+    "to": 497972636
+   },
+   "m30": {
+    "usd": 141421074,
+    "pct": 39.663568771576436,
+    "from": 356551562,
+    "to": 497972636
+   },
+   "apy": 7.05,
+   "apyWowPp": 0.08000000000000007,
+   "apyRange": {
+    "from": 6.97,
+    "to": 7.05
+   },
+   "bigDay": {
+    "date": "2026-09-21",
+    "usd": 3974172
+   },
+   "significant": false,
+   "trend": "up 3 wks",
+   "chains": [
+    {
+     "chain": "Arbitrum",
+     "whole": true
+    }
+   ]
+  },
+  {
+   "id": "avant",
+   "label": "Avant savUSD",
+   "source": "protocol",
+   "metric": "tvl",
+   "liveSupplied": null,
+   "liveBorrowed": null,
+   "asOf": "2026-09-23",
+   "now": 124749324,
+   "wk": 128147392,
+   "mo": 131943443,
+   "wow": {
+    "usd": -3398068,
+    "pct": -2.6516872071809314,
+    "from": 128147392,
+    "to": 124749324
+   },
+   "m30": {
+    "usd": -7194119,
+    "pct": -5.4524263096575405,
+    "from": 131943443,
+    "to": 124749324
+   },
+   "apy": 7.8115,
+   "apyWowPp": 0.23849999999999927,
+   "apyRange": {
+    "from": 7.573,
+    "to": 7.8115
+   },
+   "bigDay": {
+    "date": "2026-09-20",
+    "usd": -2243222
+   },
+   "significant": false,
+   "trend": "mixed",
+   "chains": [
+    {
+     "chain": "Avalanche",
+     "now": 124734563,
+     "wk": 128147392,
+     "change": {
+      "usd": -3412829,
+      "pct": -2.6632059745702823,
+      "from": 128147392,
+      "to": 124734563
+     }
+    }
+   ]
+  },
+  {
+   "id": "tori",
+   "label": "Tori strUSD",
+   "source": "protocol",
+   "metric": "tvl",
+   "liveSupplied": null,
+   "liveBorrowed": null,
+   "asOf": "2026-09-23",
+   "now": 70129154,
+   "wk": 67817936,
+   "mo": 65503063,
+   "wow": {
+    "usd": 2311218,
+    "pct": 3.4079745511570865,
+    "from": 67817936,
+    "to": 70129154
+   },
+   "m30": {
+    "usd": 4626091,
+    "pct": 7.062404089408765,
+    "from": 65503063,
+    "to": 70129154
+   },
+   "apy": 10.1564,
+   "apyWowPp": -0.07559999999999967,
+   "apyRange": {
+    "from": 10.232,
+    "to": 10.1564
+   },
+   "bigDay": {
+    "date": "2026-09-23",
+    "usd": 2214733
+   },
+   "significant": false,
+   "trend": "up 3 wks",
+   "chains": [
+    {
+     "chain": "Ethereum",
+     "now": 71929770,
+     "wk": 67817936,
+     "change": {
+      "usd": 4111834,
+      "pct": 6.063047981879012,
+      "from": 67817936,
+      "to": 71929770
+     }
+    }
+   ]
+  },
+  {
+   "id": "onre",
+   "label": "OnRe ONYC",
+   "source": "pool",
+   "metric": "tvl",
+   "liveSupplied": null,
+   "liveBorrowed": null,
+   "asOf": "2026-09-23",
+   "now": 301380709,
+   "wk": 300276872,
+   "mo": 270142153,
+   "wow": {
+    "usd": 1103837,
+    "pct": 0.367606400269149,
+    "from": 300276872,
+    "to": 301380709
+   },
+   "m30": {
+    "usd": 31238556,
+    "pct": 11.563747328244622,
+    "from": 270142153,
+    "to": 301380709
+   },
+   "apy": 11.02,
+   "apyWowPp": -0.5211000000000006,
+   "apyRange": {
+    "from": 11.5411,
+    "to": 11.02
+   },
+   "bigDay": {
+    "date": "2026-09-21",
+    "usd": 2142529
+   },
+   "significant": false,
+   "trend": "up 3 wks",
+   "chains": [
+    {
+     "chain": "Solana",
+     "whole": true
+    }
+   ]
+  },
+  {
+   "id": "reusde",
+   "label": "Re reUSDe",
+   "source": "pool",
+   "metric": "tvl",
+   "liveSupplied": null,
+   "liveBorrowed": null,
+   "asOf": "2026-09-23",
+   "now": 20390258,
+   "wk": 20261573,
+   "mo": 19739580,
+   "wow": {
+    "usd": 128685,
+    "pct": 0.6351185073340555,
+    "from": 20261573,
+    "to": 20390258
+   },
+   "m30": {
+    "usd": 650678,
+    "pct": 3.2963112690340926,
+    "from": 19739580,
+    "to": 20390258
+   },
+   "apy": 12.3035,
+   "apyWowPp": 0.029899999999999594,
+   "apyRange": {
+    "from": 12.2736,
+    "to": 12.3035
+   },
+   "bigDay": {
+    "date": "2026-09-22",
+    "usd": 45970
+   },
+   "significant": false,
+   "trend": "up 3 wks",
+   "chains": [
+    {
+     "chain": "Ethereum",
+     "whole": true
+    }
+   ]
+  },
+  {
+   "id": "susd3",
+   "label": "3Jane sUSD3",
+   "source": "pool",
+   "metric": "tvl",
+   "liveSupplied": null,
+   "liveBorrowed": null,
+   "asOf": "2026-09-23",
+   "now": 7693299,
+   "wk": 7669557,
+   "mo": 7556935,
+   "wow": {
+    "usd": 23742,
+    "pct": 0.3095615561628918,
+    "from": 7669557,
+    "to": 7693299
+   },
+   "m30": {
+    "usd": 136364,
+    "pct": 1.8044881952802294,
+    "from": 7556935,
+    "to": 7693299
+   },
+   "apy": 12.8357,
+   "apyWowPp": -0.08730000000000082,
+   "apyRange": {
+    "from": 12.923,
+    "to": 12.8357
+   },
+   "bigDay": {
+    "date": "2026-09-22",
+    "usd": 32297
+   },
+   "significant": false,
+   "trend": "up 3 wks",
+   "chains": [
+    {
+     "chain": "Ethereum",
+     "whole": true
+    }
+   ]
+  },
+  {
+   "id": "ember",
+   "label": "Ember PPplus",
+   "source": "pool",
+   "metric": "tvl",
+   "liveSupplied": null,
+   "liveBorrowed": null,
+   "asOf": "2026-09-23",
+   "now": 10309933,
+   "wk": 10290185,
+   "mo": 8969046,
+   "wow": {
+    "usd": 19748,
+    "pct": 0.19191102978226338,
+    "from": 10290185,
+    "to": 10309933
+   },
+   "m30": {
+    "usd": 1340887,
+    "pct": 14.9501630385216,
+    "from": 8969046,
+    "to": 10309933
+   },
+   "apy": 10.8186,
+   "apyWowPp": 1.2850000000000001,
+   "apyRange": {
+    "from": 9.5336,
+    "to": 10.8186
+   },
+   "bigDay": {
+    "date": "2026-09-18",
+    "usd": 6146
+   },
+   "significant": false,
+   "trend": "up 3 wks",
+   "chains": [
+    {
+     "chain": "Ethereum",
+     "whole": true
+    }
+   ]
+  },
+  {
+   "id": "valos",
+   "label": "Valos vUSD",
+   "source": "pool",
+   "metric": "tvl",
+   "liveSupplied": null,
+   "liveBorrowed": null,
+   "asOf": "2026-09-23",
+   "now": 100625793,
+   "wk": 100607664,
+   "mo": 102689295,
+   "wow": {
+    "usd": 18129,
+    "pct": 0.01801950197352758,
+    "from": 100607664,
+    "to": 100625793
+   },
+   "m30": {
+    "usd": -2063502,
+    "pct": -2.009461648363639,
+    "from": 102689295,
+    "to": 100625793
+   },
+   "apy": 6.6975,
+   "apyWowPp": -0.07580000000000009,
+   "apyRange": {
+    "from": 6.7733,
+    "to": 6.6975
+   },
+   "bigDay": {
+    "date": "2026-09-18",
+    "usd": 35520
+   },
+   "significant": false,
+   "trend": "mixed",
+   "chains": [
+    {
+     "chain": "Monad",
+     "whole": true
+    }
+   ]
+  },
+  {
+   "id": "usd3",
+   "label": "3Jane USD3",
+   "source": "pool",
+   "metric": "tvl",
+   "liveSupplied": null,
+   "liveBorrowed": null,
+   "asOf": "2026-09-23",
+   "now": 72362164,
+   "wk": 72357236,
+   "mo": 67435474,
+   "wow": {
+    "usd": 4928,
+    "pct": 0.006810652634658405,
+    "from": 72357236,
+    "to": 72362164
+   },
+   "m30": {
+    "usd": 4926690,
+    "pct": 7.305783896469683,
+    "from": 67435474,
+    "to": 72362164
+   },
+   "apy": 6.7606,
+   "apyWowPp": -0.03669999999999973,
+   "apyRange": {
+    "from": 6.7973,
+    "to": 6.7606
+   },
+   "bigDay": {
+    "date": "2026-09-21",
+    "usd": 69026
+   },
+   "significant": false,
+   "trend": "mixed",
+   "chains": [
+    {
+     "chain": "Ethereum",
+     "whole": true
+    }
+   ]
+  },
+  {
+   "id": "ondo",
+   "label": "Ondo USDY",
+   "source": "protocol",
+   "metric": "tvl",
+   "liveSupplied": null,
+   "liveBorrowed": null,
+   "asOf": null,
+   "now": null,
+   "wk": null,
+   "mo": null,
+   "wow": null,
+   "m30": null,
+   "apy": 3.59,
+   "apyWowPp": 0.009999999999999787,
+   "apyRange": {
+    "from": 3.58,
+    "to": 3.59
+   },
+   "bigDay": null,
+   "significant": false,
+   "trend": "insufficient history",
+   "chains": []
+  },
+  {
+   "id": "hastra",
+   "label": "Hastra PRIME",
+   "source": "protocol",
+   "metric": "tvl",
+   "liveSupplied": null,
+   "liveBorrowed": null,
+   "asOf": null,
+   "now": null,
+   "wk": null,
+   "mo": null,
+   "wow": null,
+   "m30": null,
+   "apy": 6.1785,
+   "apyWowPp": 0.2073999999999998,
+   "apyRange": {
+    "from": 5.9711,
+    "to": 6.1785
+   },
+   "bigDay": null,
+   "significant": false,
+   "trend": "insufficient history",
+   "chains": []
+  }
+ ],
+ "venues": {
+  "listings": 85,
+  "unique": 73,
+  "groups": [
+   {
+    "protocol": "Aave v3",
+    "network": "Ethereum",
+    "markets": 5,
+    "now": 6240390355,
+    "wow": {
+     "usd": -279856268,
+     "pct": -4.292111697321606,
+     "from": 6520246623,
+     "to": 6240390355
+    },
+    "wowCoverage": null,
+    "m30": null,
+    "m30Why": "no history",
+    "significant": true,
+    "trend": "mixed",
+    "contributors": [
+     {
+      "name": "USDT",
+      "venue": "AaveV3Ethereum",
+      "protocol": "Aave v3",
+      "network": "Ethereum",
+      "tabs": [
+       "ethereum"
+      ],
+      "kind": "reserve",
+      "now": 2931203135,
+      "wk": 3171668013,
+      "wow": {
+       "usd": -240464878,
+       "pct": -7.5816534711194565,
+       "from": 3171668013,
+       "to": 2931203135
+      },
+      "bigDay": {
+       "date": "2026-09-19",
+       "usd": -243703088
+      },
+      "borrowed": {
+       "from": 2717766969,
+       "to": 2726521214
+      },
+      "utilization": {
+       "from": 85.6889,
+       "to": 93.0171
+      },
+      "supplyApy": {
+       "from": 3.1416,
+       "to": 3.7734
+      },
+      "trend": "mixed",
+      "url": "https://app.aave.com/markets/",
+      "share": 0.8592442103172762
+     },
+     {
+      "name": "USDe",
+      "venue": "AaveV3Ethereum",
+      "protocol": "Aave v3",
+      "network": "Ethereum",
+      "tabs": [
+       "ethereum",
+       "ethena"
+      ],
+      "kind": "reserve",
+      "now": 612041556,
+      "wk": 637257532,
+      "wow": {
+       "usd": -25215976,
+       "pct": -3.956952210648802,
+       "from": 637257532,
+       "to": 612041556
+      },
+      "bigDay": {
+       "date": "2026-09-17",
+       "usd": -67344831
+      },
+      "borrowed": {
+       "from": 90452790,
+       "to": 75457399
+      },
+      "utilization": {
+       "from": 14.1941,
+       "to": 12.3288
+      },
+      "supplyApy": {
+       "from": 0.6771,
+       "to": 0.5874
+      },
+      "trend": "mixed",
+      "url": "https://app.aave.com/markets/",
+      "share": 0.09010330974613011
+     },
+     {
+      "name": "sUSDe",
+      "venue": "AaveV3Ethereum",
+      "protocol": "Aave v3",
+      "network": "Ethereum",
+      "tabs": [
+       "ethereum",
+       "ethena"
+      ],
+      "kind": "reserve",
+      "now": 202686186,
+      "wk": 211043841,
+      "wow": {
+       "usd": -8357655,
+       "pct": -3.960151104338553,
+       "from": 211043841,
+       "to": 202686186
+      },
+      "bigDay": {
+       "date": "2026-09-23",
+       "usd": -8116230
+      },
+      "borrowed": null,
+      "utilization": null,
+      "supplyApy": {
+       "from": 0,
+       "to": 0
+      },
+      "trend": "down 3 wks",
+      "url": "https://app.aave.com/markets/",
+      "share": 0.0298640979518815
+     }
+    ]
+   },
+   {
+    "protocol": "Aave v3",
+    "network": "Plasma",
+    "markets": 5,
+    "now": 1573150928,
+    "wow": {
+     "usd": 72733945,
+     "pct": 4.847582093783859,
+     "from": 1500416983,
+     "to": 1573150928
+    },
+    "wowCoverage": null,
+    "m30": null,
+    "m30Why": "no history",
+    "significant": true,
+    "trend": "up 3 wks",
+    "contributors": [
+     {
+      "name": "USDe",
+      "venue": "AaveV3Plasma",
+      "protocol": "Aave v3",
+      "network": "Plasma",
+      "tabs": [
+       "plasma",
+       "ethena"
+      ],
+      "kind": "reserve",
+      "now": 550771879,
+      "wk": 483598538,
+      "wow": {
+       "usd": 67173341,
+       "pct": 13.890311016614366,
+       "from": 483598538,
+       "to": 550771879
+      },
+      "bigDay": {
+       "date": "2026-09-17",
+       "usd": 58196072
+      },
+      "borrowed": {
+       "from": 47772166,
+       "to": 44718560
+      },
+      "utilization": {
+       "from": 9.8785,
+       "to": 8.1193
+      },
+      "supplyApy": {
+       "from": 0.47,
+       "to": 0.3858
+      },
+      "trend": "up 3 wks",
+      "url": "https://app.aave.com/markets/",
+      "share": 0.9235487089281352
+     },
+     {
+      "name": "USDT0",
+      "venue": "AaveV3Plasma",
+      "protocol": "Aave v3",
+      "network": "Plasma",
+      "tabs": [
+       "plasma"
+      ],
+      "kind": "reserve",
+      "now": 753627230,
+      "wk": 725061105,
+      "wow": {
+       "usd": 28566125,
+       "pct": 3.9398231132533303,
+       "from": 725061105,
+       "to": 753627230
+      },
+      "bigDay": {
+       "date": "2026-09-17",
+       "usd": 49218020
+      },
+      "borrowed": {
+       "from": 677551583,
+       "to": 709091390
+      },
+      "utilization": {
+       "from": 93.4475,
+       "to": 94.0905
+      },
+      "supplyApy": {
+       "from": 3.9595,
+       "to": 4.1516
+      },
+      "trend": "up 3 wks",
+      "url": "https://app.aave.com/markets/",
+      "share": 0.3927481865585594
+     },
+     {
+      "name": "syrupUSDT",
+      "venue": "AaveV3Plasma",
+      "protocol": "Aave v3",
+      "network": "Plasma",
+      "tabs": [
+       "maple"
+      ],
+      "kind": "reserve",
+      "now": 41520383,
+      "wk": 65363644,
+      "wow": {
+       "usd": -23843261,
+       "pct": -36.47786374945681,
+       "from": 65363644,
+       "to": 41520383
+      },
+      "bigDay": {
+       "date": "2026-09-18",
+       "usd": -23634632
+      },
+      "borrowed": null,
+      "utilization": null,
+      "supplyApy": {
+       "from": 0,
+       "to": 0
+      },
+      "trend": "down 3 wks",
+      "url": "https://app.aave.com/markets/",
+      "share": -0.32781476379426416
+     }
+    ]
+   },
+   {
+    "protocol": "Morpho",
+    "network": "Robinhood",
+    "markets": 3,
+    "now": 949617107,
+    "wow": {
+     "usd": 52256776,
+     "pct": 5.823388241573607,
+     "from": 897360331,
+     "to": 949617107
+    },
+    "wowCoverage": null,
+    "m30": {
+     "usd": 189465276,
+     "pct": 24.92466218896735,
+     "from": 760151831,
+     "to": 949617107
+    },
+    "m30Why": null,
+    "significant": true,
+    "trend": "up 3 wks",
+    "contributors": [
+     {
+      "name": "Steakhouse USDG",
+      "venue": "Morpho V2",
+      "protocol": "Morpho",
+      "network": "Robinhood",
+      "tabs": [
+       "robinhood"
+      ],
+      "kind": "vault",
+      "now": 492970032,
+      "wk": 462725531,
+      "wow": {
+       "usd": 30244501,
+       "pct": 6.536164307735161,
+       "from": 462725531,
+       "to": 492970032
+      },
+      "bigDay": {
+       "date": "2026-09-19",
+       "usd": 9558212
+      },
+      "borrowed": null,
+      "utilization": null,
+      "supplyApy": {
+       "from": 4.0714,
+       "to": 3.9276
+      },
+      "trend": "up 3 wks",
+      "url": "https://app.morpho.org/robinhood-chain/vault/0xBeEff033F34C046626B8D0A041844C5d1A5409dd/steakhouse-usdg",
+      "share": 0.5787670674516928
+     },
+     {
+      "name": "USDe / USDG",
+      "venue": "Morpho Blue · Robinhood",
+      "protocol": "Morpho",
+      "network": "Robinhood",
+      "tabs": [
+       "ethena"
+      ],
+      "kind": "market",
+      "now": 337491149,
+      "wk": 322221380,
+      "wow": {
+       "usd": 15269769,
+       "pct": 4.738906214106587,
+       "from": 322221380,
+       "to": 337491149
+      },
+      "bigDay": {
+       "date": "2026-09-19",
+       "usd": 10761708
+      },
+      "borrowed": {
+       "from": 291253285,
+       "to": 304946483
+      },
+      "utilization": {
+       "from": 90.3892,
+       "to": 90.3569
+      },
+      "supplyApy": {
+       "from": 4.0066,
+       "to": 4.0508
+      },
+      "trend": "up 3 wks",
+      "url": "https://app.morpho.org/robinhood-chain/variable/0xc845da65a020ddca5f132efa8fea79676d8edfdea504226a4c01e7a9e34cddd6/usdg-usde",
+      "share": 0.29220648820738576
+     },
+     {
+      "name": "syrupUSDG / USDG",
+      "venue": "Morpho Blue · Robinhood",
+      "protocol": "Morpho",
+      "network": "Robinhood",
+      "tabs": [
+       "maple"
+      ],
+      "kind": "market",
+      "now": 119155926,
+      "wk": 112413420,
+      "wow": {
+       "usd": 6742506,
+       "pct": 5.997954692598091,
+       "from": 112413420,
+       "to": 119155926
+      },
+      "bigDay": {
+       "date": "2026-09-17",
+       "usd": 3434773
+      },
+      "borrowed": {
+       "from": 101549885,
+       "to": 105790554
+      },
+      "utilization": {
+       "from": 90.3361,
+       "to": 88.7833
+      },
+      "supplyApy": {
+       "from": 4.0005,
+       "to": 3.5788
+      },
+      "trend": "up 3 wks",
+      "url": "https://app.morpho.org/robinhood-chain/variable/0x919a9b6b94dae7c86620eaf7a08e597aae8a4c3a9e9c7671771fbaf62b6b61c7/usdg-syrupusdg",
+      "share": 0.12902644434092145
+     }
+    ]
+   },
+   {
+    "protocol": "Aave v3",
+    "network": "Monad",
+    "markets": 7,
+    "now": 432340543,
+    "wow": {
+     "usd": -30578951,
+     "pct": -6.605673642251066,
+     "from": 462919494,
+     "to": 432340543
+    },
+    "wowCoverage": null,
+    "m30": null,
+    "m30Why": "no history",
+    "significant": true,
+    "trend": "down 3 wks",
+    "contributors": [
+     {
+      "name": "USDC",
+      "venue": "AaveV3Monad",
+      "protocol": "Aave v3",
+      "network": "Monad",
+      "tabs": [
+       "monad"
+      ],
+      "kind": "reserve",
+      "now": 141911619,
+      "wk": 159902638,
+      "wow": {
+       "usd": -17991019,
+       "pct": -11.251233391158937,
+       "from": 159902638,
+       "to": 141911619
+      },
+      "bigDay": {
+       "date": "2026-09-18",
+       "usd": -7926771
+      },
+      "borrowed": {
+       "from": 147247240,
+       "to": 131319466
+      },
+      "utilization": {
+       "from": 92.0856,
+       "to": 92.5361
+      },
+      "supplyApy": {
+       "from": 4.4158,
+       "to": 5.4222
+      },
+      "trend": "mixed",
+      "url": "https://app.aave.com/markets/",
+      "share": 0.5883465067196059
+     },
+     {
+      "name": "USDT0",
+      "venue": "AaveV3Monad",
+      "protocol": "Aave v3",
+      "network": "Monad",
+      "tabs": [
+       "monad"
+      ],
+      "kind": "reserve",
+      "now": 62845660,
+      "wk": 74273661,
+      "wow": {
+       "usd": -11428001,
+       "pct": -15.386344023085115,
+       "from": 74273661,
+       "to": 62845660
+      },
+      "bigDay": {
+       "date": "2026-09-18",
+       "usd": 13246626
+      },
+      "borrowed": {
+       "from": 61576451,
+       "to": 57929023
+      },
+      "utilization": {
+       "from": 82.9048,
+       "to": 92.1766
+      },
+      "supplyApy": {
+       "from": 3.419,
+       "to": 4.6178
+      },
+      "trend": "mixed",
+      "url": "https://app.aave.com/markets/",
+      "share": 0.37372115871469885
+     },
+     {
+      "name": "USDe",
+      "venue": "AaveV3Monad",
+      "protocol": "Aave v3",
+      "network": "Monad",
+      "tabs": [
+       "monad",
+       "ethena"
+      ],
+      "kind": "reserve",
+      "now": 55275122,
+      "wk": 63407725,
+      "wow": {
+       "usd": -8132603,
+       "pct": -12.825886751180555,
+       "from": 63407725,
+       "to": 55275122
+      },
+      "bigDay": {
+       "date": "2026-09-21",
+       "usd": -10498750
+      },
+      "borrowed": {
+       "from": 4764836,
+       "to": 2668965
+      },
+      "utilization": {
+       "from": 7.5146,
+       "to": 4.8285
+      },
+      "supplyApy": {
+       "from": 0.3569,
+       "to": 0.2289
+      },
+      "trend": "down 3 wks",
+      "url": "https://app.aave.com/markets/",
+      "share": 0.2659542833892503
+     }
+    ]
+   },
+   {
+    "protocol": "Morpho",
+    "network": "Base",
+    "markets": 3,
+    "now": 802565385,
+    "wow": {
+     "usd": 28956523,
+     "pct": 3.743044375828259,
+     "from": 773608862,
+     "to": 802565385
+    },
+    "wowCoverage": null,
+    "m30": {
+     "usd": 131823208,
+     "pct": 19.653335144302396,
+     "from": 670742177,
+     "to": 802565385
+    },
+    "m30Why": null,
+    "significant": true,
+    "trend": "up 3 wks",
+    "contributors": [
+     {
+      "name": "Steakhouse High Yield USDC Edition",
+      "venue": "Morpho V2",
+      "protocol": "Morpho",
+      "network": "Base",
+      "tabs": [
+       "base"
+      ],
+      "kind": "vault",
+      "now": 431993641,
+      "wk": 402933572,
+      "wow": {
+       "usd": 29060069,
+       "pct": 7.21212403716015,
+       "from": 402933572,
+       "to": 431993641
+      },
+      "bigDay": {
+       "date": "2026-09-19",
+       "usd": 9345537
+      },
+      "borrowed": null,
+      "utilization": null,
+      "supplyApy": {
+       "from": 2.808,
+       "to": 3.0029
+      },
+      "trend": "up 3 wks",
+      "url": "https://app.morpho.org/base/vault/0xbeeff2490FEffa212faC2f6553682C219E6a8845/steakhouse-high-yield-usdc-edition",
+      "share": 1.003575912757205
+     },
+     {
+      "name": "Gauntlet USDC Frontier",
+      "venue": "Morpho V2",
+      "protocol": "Morpho",
+      "network": "Base",
+      "tabs": [
+       "base"
+      ],
+      "kind": "vault",
+      "now": 4725366,
+      "wk": 5228145,
+      "wow": {
+       "usd": -502779,
+       "pct": -9.616776122314894,
+       "from": 5228145,
+       "to": 4725366
+      },
+      "bigDay": {
+       "date": "2026-09-17",
+       "usd": -467340
+      },
+      "borrowed": null,
+      "utilization": null,
+      "supplyApy": {
+       "from": 5.2318,
+       "to": 6.3449
+      },
+      "trend": "mixed",
+      "url": "https://app.morpho.org/base/vault/0x1deEfABEe758AAbdC29a542B24ca3b75aFD56765/gauntlet-usdc-frontier",
+      "share": -0.01736323798268183
+     },
+     {
+      "name": "USDe / USDC",
+      "venue": "Morpho Blue · Base",
+      "protocol": "Morpho",
+      "network": "Base",
+      "tabs": [
+       "ethena"
+      ],
+      "kind": "market",
+      "now": 365846378,
+      "wk": 365447145,
+      "wow": {
+       "usd": 399233,
+       "pct": 0.10924507290924383,
+       "from": 365447145,
+       "to": 365846378
+      },
+      "bigDay": {
+       "date": "2026-09-19",
+       "usd": -11406652
+      },
+      "borrowed": {
+       "from": 328843575,
+       "to": 329860171
+      },
+      "utilization": {
+       "from": 89.9839,
+       "to": 90.1636
+      },
+      "supplyApy": {
+       "from": 3.6199,
+       "to": 3.8397
+      },
+      "trend": "mixed",
+      "url": "https://app.morpho.org/base/variable/0x54cf9be57fdfa6457a660991907434ff9d295c465a603a50126ff647d50b7354/usdc-usde",
+      "share": 0.01378732522547683
+     }
+    ]
+   },
+   {
+    "protocol": "JupLend",
+    "network": "Solana",
+    "markets": 8,
+    "now": 326316203,
+    "wow": {
+     "usd": -16893344,
+     "pct": -4.9221661074597085,
+     "from": 343209547,
+     "to": 326316203
+    },
+    "wowCoverage": null,
+    "m30": null,
+    "m30Why": "no history",
+    "significant": false,
+    "trend": "insufficient history",
+    "contributors": [
+     {
+      "name": "USDe",
+      "venue": "Jupiter Lend · ethena · liquidity layer",
+      "protocol": "JupLend",
+      "network": "Solana",
+      "tabs": [
+       "ethena"
+      ],
+      "kind": "total",
+      "now": 240462951,
+      "wk": 257272241,
+      "wow": {
+       "usd": -16809290,
+       "pct": -6.533658639060091,
+       "from": 257272241,
+       "to": 240462951
+      },
+      "bigDay": {
+       "date": "2026-09-22",
+       "usd": -6744875
+      },
+      "borrowed": {
+       "from": 132046,
+       "to": 14471
+      },
+      "utilization": {
+       "from": 0.05132533885916199,
+       "to": 0.006018104051746148
+      },
+      "supplyApy": {
+       "from": 0,
+       "to": 0
+      },
+      "trend": "mixed",
+      "url": "https://jup.ag/lend/ethena/statistics/liquidity/DEkqHyPN7GMRJ5cArtQFAWefqbZb33Hyf6s5iCwjEonT",
+      "share": 0.9950244309238006
+     },
+     {
+      "name": "PST / JupUSD-USDC",
+      "venue": "Jupiter Lend #91",
+      "protocol": "JupLend",
+      "network": "Solana",
+      "tabs": [
+       "huma"
+      ],
+      "kind": "market",
+      "now": 3746969,
+      "wk": 3361508,
+      "wow": {
+       "usd": 385461,
+       "pct": 11.466907114307032,
+       "from": 3361508,
+       "to": 3746969
+      },
+      "bigDay": {
+       "date": "2026-09-18",
+       "usd": 371798
+      },
+      "borrowed": {
+       "from": 2701454,
+       "to": 3022754
+      },
+      "utilization": {
+       "from": 80.36434825551201,
+       "to": 80.67197842669927
+      },
+      "supplyApy": {
+       "from": 8,
+       "to": 8
+      },
+      "trend": "insufficient history",
+      "url": "https://jup.ag/lend/borrow/smart/91/stats",
+      "share": -0.022817329712814704
+     },
+     {
+      "name": "reUSD",
+      "venue": "Jupiter Lend · liquidity layer",
+      "protocol": "JupLend",
+      "network": "Solana",
+      "tabs": [
+       "re"
+      ],
+      "kind": "total",
+      "now": 2588508,
+      "wk": 2959435,
+      "wow": {
+       "usd": -370927,
+       "pct": -12.533709981803959,
+       "from": 2959435,
+       "to": 2588508
+      },
+      "bigDay": {
+       "date": "2026-09-20",
+       "usd": 216837
+      },
+      "borrowed": null,
+      "utilization": null,
+      "supplyApy": {
+       "from": 0,
+       "to": 0
+      },
+      "trend": "mixed",
+      "url": "https://jup.ag/lend/statistics/liquidity/2uxaYT1fVrp6Fg2BrxQcyKSW91hefM6dG9krpbeDiirT",
+      "share": 0.021956990871671116
+     }
+    ]
+   },
+   {
+    "protocol": "Morpho",
+    "network": "Ethereum",
+    "markets": 19,
+    "now": 1412219323,
+    "wow": {
+     "usd": 15698806,
+     "pct": 1.1241371543702139,
+     "from": 1396520517,
+     "to": 1412219323
+    },
+    "wowCoverage": null,
+    "m30": {
+     "usd": 234046769,
+     "pct": 19.86523690484815,
+     "from": 1178172554,
+     "to": 1412219323
+    },
+    "m30Why": null,
+    "significant": false,
+    "trend": "up 3 wks",
+    "contributors": [
+     {
+      "name": "Paypal USD Main",
+      "venue": "Morpho V2",
+      "protocol": "Morpho",
+      "network": "Ethereum",
+      "tabs": [
+       "ethereum"
+      ],
+      "kind": "vault",
+      "now": 427897837,
+      "wk": 402042575,
+      "wow": {
+       "usd": 25855262,
+       "pct": 6.43097612236714,
+       "from": 402042575,
+       "to": 427897837
+      },
+      "bigDay": {
+       "date": "2026-09-17",
+       "usd": 21329442
+      },
+      "borrowed": null,
+      "utilization": null,
+      "supplyApy": {
+       "from": 6.2159,
+       "to": 5.598
+      },
+      "trend": "mixed",
+      "url": "https://app.morpho.org/ethereum/vault/0xb576765fB15505433aF24FEe2c0325895C559FB2/paypal-usd-main",
+      "share": 1.6469572271929471
+     },
+     {
+      "name": "Sentora RLUSD Main",
+      "venue": "Morpho V2",
+      "protocol": "Morpho",
+      "network": "Ethereum",
+      "tabs": [
+       "ethereum"
+      ],
+      "kind": "vault",
+      "now": 375441686,
+      "wk": 389726626,
+      "wow": {
+       "usd": -14284940,
+       "pct": -3.6653744052889015,
+       "from": 389726626,
+       "to": 375441686
+      },
+      "bigDay": {
+       "date": "2026-09-21",
+       "usd": 16880237
+      },
+      "borrowed": null,
+      "utilization": null,
+      "supplyApy": {
+       "from": 5.8192,
+       "to": 6.4056
+      },
+      "trend": "mixed",
+      "url": "https://app.morpho.org/ethereum/vault/0x6dC58a0FdfC8D694e571DC59B9A52EEEa780E6bf/sentora-rlusd-main",
+      "share": -0.9099379914625354
+     },
+     {
+      "name": "Sentora Prime Main",
+      "venue": "Morpho V2",
+      "protocol": "Morpho",
+      "network": "Ethereum",
+      "tabs": [
+       "ethereum"
+      ],
+      "kind": "vault",
+      "now": 184126739,
+      "wk": 197766194,
+      "wow": {
+       "usd": -13639455,
+       "pct": -6.8967575924528335,
+       "from": 197766194,
+       "to": 184126739
+      },
+      "bigDay": {
+       "date": "2026-09-17",
+       "usd": -8923642
+      },
+      "borrowed": null,
+      "utilization": null,
+      "supplyApy": {
+       "from": 5.7726,
+       "to": 6.1324
+      },
+      "trend": "down 3 wks",
+      "url": "https://app.morpho.org/ethereum/vault/0xC21b08C16458202593D4D9B26b9984Ee67b38BbD/sentora-prime-main",
+      "share": -0.8688211702214805
+     }
+    ]
+   },
+   {
+    "protocol": "Aave v3",
+    "network": "Arbitrum",
+    "markets": 2,
+    "now": 222716855,
+    "wow": {
+     "usd": -9143021,
+     "pct": -3.943339036375574,
+     "from": 231859876,
+     "to": 222716855
+    },
+    "wowCoverage": null,
+    "m30": null,
+    "m30Why": "no history",
+    "significant": false,
+    "trend": "mixed",
+    "contributors": [
+     {
+      "name": "USDT0",
+      "venue": "AaveV3Arbitrum",
+      "protocol": "Aave v3",
+      "network": "Arbitrum",
+      "tabs": [
+       "arbitrum"
+      ],
+      "kind": "reserve",
+      "now": 44735158,
+      "wk": 51664947,
+      "wow": {
+       "usd": -6929789,
+       "pct": -13.412941273316317,
+       "from": 51664947,
+       "to": 44735158
+      },
+      "bigDay": {
+       "date": "2026-09-17",
+       "usd": -5041890
+      },
+      "borrowed": {
+       "from": 39298689,
+       "to": 40553141
+      },
+      "utilization": {
+       "from": 76.1039,
+       "to": 90.7059
+      },
+      "supplyApy": {
+       "from": 2.5798,
+       "to": 4.2537
+      },
+      "trend": "down 3 wks",
+      "url": "https://app.aave.com/markets/",
+      "share": 0.7579320883108548
+     },
+     {
+      "name": "USDC",
+      "venue": "AaveV3Arbitrum",
+      "protocol": "Aave v3",
+      "network": "Arbitrum",
+      "tabs": [
+       "arbitrum"
+      ],
+      "kind": "reserve",
+      "now": 177981697,
+      "wk": 180194929,
+      "wow": {
+       "usd": -2213232,
+       "pct": -1.2282432209843153,
+       "from": 180194929,
+       "to": 177981697
+      },
+      "bigDay": {
+       "date": "2026-09-21",
+       "usd": 12310524
+      },
+      "borrowed": {
+       "from": 149904031,
+       "to": 155681705
+      },
+      "utilization": {
+       "from": 83.1901,
+       "to": 87.4709
+      },
+      "supplyApy": {
+       "from": 2.8069,
+       "to": 3.1078
+      },
+      "trend": "mixed",
+      "url": "https://app.aave.com/markets/",
+      "share": 0.2420679116891452
+     }
+    ]
+   },
+   {
+    "protocol": "Kamino",
+    "network": "Solana",
+    "markets": 5,
+    "now": 415443410,
+    "wow": {
+     "usd": -8553506,
+     "pct": -2.0173509941284573,
+     "from": 423996916,
+     "to": 415443410
+    },
+    "wowCoverage": null,
+    "m30": null,
+    "m30Why": "no history",
+    "significant": false,
+    "trend": "insufficient history",
+    "contributors": [
+     {
+      "name": "USDe",
+      "venue": "Kamino Lend",
+      "protocol": "Kamino",
+      "network": "Solana",
+      "tabs": [
+       "ethena"
+      ],
+      "kind": "reserve",
+      "now": 251678817,
+      "wk": 259595621,
+      "wow": {
+       "usd": -7916804,
+       "pct": -3.0496677754051946,
+       "from": 259595621,
+       "to": 251678817
+      },
+      "bigDay": {
+       "date": "2026-09-22",
+       "usd": 5867218
+      },
+      "borrowed": {
+       "from": 1026,
+       "to": 1027
+      },
+      "utilization": {
+       "from": 0.00039536188613144816,
+       "to": 0.00040803589302801076
+      },
+      "supplyApy": {
+       "from": 0,
+       "to": 0
+      },
+      "trend": "down 3 wks",
+      "url": "https://kamino.com/borrow/reserve/BJnbcRHqvppTyGesLzWASGKnmnF1wq9jZu6ExrjT7wvF/2erD9GTGcaQbLsVSQweg3HvMpfKxScmz95raWv8H4iPN",
+      "share": 0.9255624535716699
+     },
+     {
+      "name": "syrupUSDC",
+      "venue": "Kamino Lend",
+      "protocol": "Kamino",
+      "network": "Solana",
+      "tabs": [
+       "maple"
+      ],
+      "kind": "reserve",
+      "now": 72519926,
+      "wk": 74523182,
+      "wow": {
+       "usd": -2003256,
+       "pct": -2.6880977787556093,
+       "from": 74523182,
+       "to": 72519926
+      },
+      "bigDay": {
+       "date": "2026-09-21",
+       "usd": -2047808
+      },
+      "borrowed": null,
+      "utilization": null,
+      "supplyApy": {
+       "from": 0,
+       "to": 0
+      },
+      "trend": "mixed",
+      "url": "https://kamino.com/borrow/reserve/6WEGfej9B9wjxRs6t4BYpb9iCXd8CpTpJ8fVSNzHCC5y/AwCyCPZYJSZ93xcVKNK7jR8e1BHzJXq1D4bReNuh9woY",
+      "share": 0.234202910479048
+     },
+     {
+      "name": "PST",
+      "venue": "Kamino Lend",
+      "protocol": "Kamino",
+      "network": "Solana",
+      "tabs": [
+       "huma"
+      ],
+      "kind": "reserve",
+      "now": 45923462,
+      "wk": 44451420,
+      "wow": {
+       "usd": 1472042,
+       "pct": 3.3115747483432476,
+       "from": 44451420,
+       "to": 45923462
+      },
+      "bigDay": {
+       "date": "2026-09-17",
+       "usd": 784673
+      },
+      "borrowed": null,
+      "utilization": null,
+      "supplyApy": {
+       "from": 0,
+       "to": 0
+      },
+      "trend": "up 3 wks",
+      "url": "https://kamino.com/borrow/reserve/52FSGeeokLpgvgAMdqxyt5Hoc2TbUYj5b8yxrEdZ37Vf/DzgYbR8HFQKf8YLCJ6M3E6ricB1xWAiNGZ2TB7X2KDHz",
+      "share": -0.1720980846918211
+     }
+    ]
+   },
+   {
+    "protocol": "Aave v3",
+    "network": "Base",
+    "markets": 2,
+    "now": 177971044,
+    "wow": {
+     "usd": -6496972,
+     "pct": -3.5220045950946854,
+     "from": 184468016,
+     "to": 177971044
+    },
+    "wowCoverage": null,
+    "m30": null,
+    "m30Why": "no history",
+    "significant": false,
+    "trend": "down 3 wks",
+    "contributors": [
+     {
+      "name": "USDC",
+      "venue": "AaveV3Base",
+      "protocol": "Aave v3",
+      "network": "Base",
+      "tabs": [
+       "base"
+      ],
+      "kind": "reserve",
+      "now": 177836294,
+      "wk": 181728870,
+      "wow": {
+       "usd": -3892576,
+       "pct": -2.1419689672862656,
+       "from": 181728870,
+       "to": 177836294
+      },
+      "bigDay": {
+       "date": "2026-09-20",
+       "usd": 2649083
+      },
+      "borrowed": {
+       "from": 160041783,
+       "to": 160385722
+      },
+      "utilization": {
+       "from": 88.0663,
+       "to": 90.1873
+      },
+      "supplyApy": {
+       "from": 3.7124,
+       "to": 4.0467
+      },
+      "trend": "mixed",
+      "url": "https://app.aave.com/markets/",
+      "share": 0.5991369517984686
+     },
+     {
+      "name": "syrupUSDC",
+      "venue": "AaveV3Base",
+      "protocol": "Aave v3",
+      "network": "Base",
+      "tabs": [
+       "base",
+       "maple"
+      ],
+      "kind": "reserve",
+      "now": 134750,
+      "wk": 2739146,
+      "wow": {
+       "usd": -2604396,
+       "pct": -95.08058351033498,
+       "from": 2739146,
+       "to": 134750
+      },
+      "bigDay": {
+       "date": "2026-09-18",
+       "usd": -1313379
+      },
+      "borrowed": null,
+      "utilization": null,
+      "supplyApy": {
+       "from": 0,
+       "to": 0
+      },
+      "trend": "down 3 wks",
+      "url": "https://app.aave.com/markets/",
+      "share": 0.4008630482015314
+     }
+    ]
+   },
+   {
+    "protocol": "Fluid",
+    "network": "Ethereum",
+    "markets": 4,
+    "now": 81747196,
+    "wow": {
+     "usd": 3014246,
+     "pct": 3.828442856516871,
+     "from": 78732950,
+     "to": 81747196
+    },
+    "wowCoverage": null,
+    "m30": null,
+    "m30Why": "no history",
+    "significant": false,
+    "trend": "up 3 wks",
+    "contributors": [
+     {
+      "name": "reUSD",
+      "venue": "Fluid liquidity layer",
+      "protocol": "Fluid",
+      "network": "Ethereum",
+      "tabs": [
+       "re"
+      ],
+      "kind": "total",
+      "now": 39784829,
+      "wk": 36410610,
+      "wow": {
+       "usd": 3374219,
+       "pct": 9.267131201592063,
+       "from": 36410610,
+       "to": 39784829
+      },
+      "bigDay": {
+       "date": "2026-09-22",
+       "usd": 1518925
+      },
+      "borrowed": null,
+      "utilization": null,
+      "supplyApy": {
+       "from": 0,
+       "to": 0
+      },
+      "trend": "up 3 wks",
+      "url": "https://fluid.io/1/stats/liquidity?id=reUSD",
+      "share": 1.119423895727157
+     },
+     {
+      "name": "PST / USDT",
+      "venue": "Fluid #166",
+      "protocol": "Fluid",
+      "network": "Ethereum",
+      "tabs": [
+       "huma"
+      ],
+      "kind": "market",
+      "now": 18433839,
+      "wk": 18619890,
+      "wow": {
+       "usd": -186051,
+       "pct": -0.9992056881109395,
+       "from": 18619890,
+       "to": 18433839
+      },
+      "bigDay": {
+       "date": "2026-09-19",
+       "usd": -560662
+      },
+      "borrowed": {
+       "from": 15224761,
+       "to": 15242186
+      },
+      "utilization": {
+       "from": 81.76611910706173,
+       "to": 82.68590345115463
+      },
+      "supplyApy": {
+       "from": 8,
+       "to": 8
+      },
+      "trend": "mixed",
+      "url": "https://fluid.io/1/borrowing/vaults/166",
+      "share": -0.061723893802961005
+     },
+     {
+      "name": "PST / USDC",
+      "venue": "Fluid #165",
+      "protocol": "Fluid",
+      "network": "Ethereum",
+      "tabs": [
+       "huma"
+      ],
+      "kind": "market",
+      "now": 18434046,
+      "wk": 18615931,
+      "wow": {
+       "usd": -181885,
+       "pct": -0.9770395044975188,
+       "from": 18615931,
+       "to": 18434046
+      },
+      "bigDay": {
+       "date": "2026-09-21",
+       "usd": -137506
+      },
+      "borrowed": {
+       "from": 15235383,
+       "to": 15252721
+      },
+      "utilization": {
+       "from": 81.84056508679802,
+       "to": 82.74212283436209
+      },
+      "supplyApy": {
+       "from": 8,
+       "to": 8
+      },
+      "trend": "mixed",
+      "url": "https://fluid.io/1/borrowing/vaults/165",
+      "share": -0.060341790285199016
+     }
+    ]
+   },
+   {
+    "protocol": "Aave v3",
+    "network": "Mantle",
+    "markets": 4,
+    "now": 307606131,
+    "wow": {
+     "usd": -2367054,
+     "pct": -0.7636318606075555,
+     "from": 309973185,
+     "to": 307606131
+    },
+    "wowCoverage": null,
+    "m30": null,
+    "m30Why": "no history",
+    "significant": false,
+    "trend": "mixed",
+    "contributors": [
+     {
+      "name": "syrupUSDT",
+      "venue": "AaveV3Mantle",
+      "protocol": "Aave v3",
+      "network": "Mantle",
+      "tabs": [
+       "maple"
+      ],
+      "kind": "reserve",
+      "now": 25150243,
+      "wk": 50234069,
+      "wow": {
+       "usd": -25083826,
+       "pct": -49.933892474447966,
+       "from": 50234069,
+       "to": 25150243
+      },
+      "bigDay": {
+       "date": "2026-09-18",
+       "usd": -22235093
+      },
+      "borrowed": null,
+      "utilization": null,
+      "supplyApy": {
+       "from": 0,
+       "to": 0
+      },
+      "trend": "mixed",
+      "url": "https://app.aave.com/markets/",
+      "share": 10.59706538169387
+     },
+     {
+      "name": "sUSDe",
+      "venue": "AaveV3Mantle",
+      "protocol": "Aave v3",
+      "network": "Mantle",
+      "tabs": [
+       "ethena"
+      ],
+      "kind": "reserve",
+      "now": 100997576,
+      "wk": 89111174,
+      "wow": {
+       "usd": 11886402,
+       "pct": 13.338845698520368,
+       "from": 89111174,
+       "to": 100997576
+      },
+      "bigDay": {
+       "date": "2026-09-18",
+       "usd": 7469941
+      },
+      "borrowed": null,
+      "utilization": null,
+      "supplyApy": {
+       "from": 0,
+       "to": 0
+      },
+      "trend": "mixed",
+      "url": "https://app.aave.com/markets/",
+      "share": -5.021601535072711
+     },
+     {
+      "name": "USDe",
+      "venue": "AaveV3Mantle",
+      "protocol": "Aave v3",
+      "network": "Mantle",
+      "tabs": [
+       "ethena"
+      ],
+      "kind": "reserve",
+      "now": 25887204,
+      "wk": 14113830,
+      "wow": {
+       "usd": 11773374,
+       "pct": 83.4172864488236,
+       "from": 14113830,
+       "to": 25887204
+      },
+      "bigDay": {
+       "date": "2026-09-18",
+       "usd": 5869286
+      },
+      "borrowed": {
+       "from": 20222,
+       "to": 19860
+      },
+      "utilization": {
+       "from": 0.1433,
+       "to": 0.0767
+      },
+      "supplyApy": {
+       "from": 0.0068,
+       "to": 0.0036
+      },
+      "trend": "mixed",
+      "url": "https://app.aave.com/markets/",
+      "share": -4.97385104015371
+     }
+    ]
+   },
+   {
+    "protocol": "Orca",
+    "network": "Solana",
+    "markets": 1,
+    "now": 205939,
+    "wow": {
+     "usd": -1801741,
+     "pct": -89.74243903410903,
+     "from": 2007680,
+     "to": 205939
+    },
+    "wowCoverage": null,
+    "m30": null,
+    "m30Why": "no history",
+    "significant": false,
+    "trend": "insufficient history",
+    "contributors": [
+     {
+      "name": "PST / USDC",
+      "venue": "Orca Whirlpool · 0.01% fee",
+      "protocol": "Orca",
+      "network": "Solana",
+      "tabs": [
+       "huma"
+      ],
+      "kind": "pool",
+      "now": 205939,
+      "wk": 2007680,
+      "wow": {
+       "usd": -1801741,
+       "pct": -89.74243903410903,
+       "from": 2007680,
+       "to": 205939
+      },
+      "bigDay": {
+       "date": "2026-09-22",
+       "usd": -1800033
+      },
+      "borrowed": null,
+      "utilization": null,
+      "supplyApy": {
+       "from": 0.0515,
+       "to": 0.3064
+      },
+      "trend": "insufficient history",
+      "url": "https://www.orca.so/pools/FCdB84kbytrT8JHsWLrWxPoquetmtcF1NZw7LYcgrQJE",
+      "share": 1
+     }
+    ]
+   },
+   {
+    "protocol": "Morpho",
+    "network": "Monad",
+    "markets": 2,
+    "now": 51360207,
+    "wow": {
+     "usd": 1136469,
+     "pct": 2.262812457328445,
+     "from": 50223738,
+     "to": 51360207
+    },
+    "wowCoverage": null,
+    "m30": {
+     "usd": -16144908,
+     "pct": -23.916569877704823,
+     "from": 67505115,
+     "to": 51360207
+    },
+    "m30Why": null,
+    "significant": false,
+    "trend": "up 3 wks",
+    "contributors": [
+     {
+      "name": "August USDC V2",
+      "venue": "Morpho V2",
+      "protocol": "Morpho",
+      "network": "Monad",
+      "tabs": [
+       "monad"
+      ],
+      "kind": "vault",
+      "now": 11641393,
+      "wk": 10455042,
+      "wow": {
+       "usd": 1186351,
+       "pct": 11.347166276328684,
+       "from": 10455042,
+       "to": 11641393
+      },
+      "bigDay": {
+       "date": "2026-09-22",
+       "usd": -1158731
+      },
+      "borrowed": null,
+      "utilization": null,
+      "supplyApy": {
+       "from": 7.5463,
+       "to": 9.7407
+      },
+      "trend": "mixed",
+      "url": "https://app.morpho.org/monad/vault/0x80017bF0f793EBbE9679Cd61ff0e395B62CAbB59/august-usdc-v2",
+      "share": 1.043892090325385
+     },
+     {
+      "name": "Hyperithm USDC Apex",
+      "venue": "Morpho V2",
+      "protocol": "Morpho",
+      "network": "Monad",
+      "tabs": [
+       "monad"
+      ],
+      "kind": "vault",
+      "now": 39718814,
+      "wk": 39768696,
+      "wow": {
+       "usd": -49882,
+       "pct": -0.12543031332986126,
+       "from": 39768696,
+       "to": 39718814
+      },
+      "bigDay": {
+       "date": "2026-09-23",
+       "usd": 1293991
+      },
+      "borrowed": null,
+      "utilization": null,
+      "supplyApy": {
+       "from": 7.7974,
+       "to": 10.5095
+      },
+      "trend": "mixed",
+      "url": "https://app.morpho.org/monad/vault/0x78999cc96d2Ba0341588C60CcB0E91c6C33CF371/hyperithm-usdc-apex",
+      "share": -0.04389209032538503
+     }
+    ]
+   },
+   {
+    "protocol": "Morpho",
+    "network": "Tempo",
+    "markets": 1,
+    "now": 36553149,
+    "wow": {
+     "usd": 515834,
+     "pct": 1.4313885482311877,
+     "from": 36037315,
+     "to": 36553149
+    },
+    "wowCoverage": null,
+    "m30": {
+     "usd": 13217189,
+     "pct": 56.638719812683945,
+     "from": 23335960,
+     "to": 36553149
+    },
+    "m30Why": null,
+    "significant": false,
+    "trend": "up 3 wks",
+    "contributors": [
+     {
+      "name": "Sentora pathUSD",
+      "venue": "Morpho V2",
+      "protocol": "Morpho",
+      "network": "Tempo",
+      "tabs": [
+       "tempo"
+      ],
+      "kind": "vault",
+      "now": 36553149,
+      "wk": 36037315,
+      "wow": {
+       "usd": 515834,
+       "pct": 1.4313885482311877,
+       "from": 36037315,
+       "to": 36553149
+      },
+      "bigDay": {
+       "date": "2026-09-19",
+       "usd": 358328
+      },
+      "borrowed": null,
+      "utilization": null,
+      "supplyApy": {
+       "from": 3.1955,
+       "to": 3.4744
+      },
+      "trend": "up 3 wks",
+      "url": "https://app.morpho.org/tempo/vault/0x9a044AE05E5e6290DcF56afd69548565e957a626/sentora-pathusd",
+      "share": 1
+     }
+    ]
+   },
+   {
+    "protocol": "Fluid",
+    "network": "Arbitrum",
+    "markets": 1,
+    "now": 100800288,
+    "wow": {
+     "usd": -93625,
+     "pct": -0.09279548905988015,
+     "from": 100893913,
+     "to": 100800288
+    },
+    "wowCoverage": null,
+    "m30": null,
+    "m30Why": "no history",
+    "significant": false,
+    "trend": "mixed",
+    "contributors": [
+     {
+      "name": "sUSDai",
+      "venue": "Fluid liquidity layer",
+      "protocol": "Fluid",
+      "network": "Arbitrum",
+      "tabs": [
+       "usdai"
+      ],
+      "kind": "total",
+      "now": 100800288,
+      "wk": 100893913,
+      "wow": {
+       "usd": -93625,
+       "pct": -0.09279548905988015,
+       "from": 100893913,
+       "to": 100800288
+      },
+      "bigDay": {
+       "date": "2026-09-19",
+       "usd": -1148254
+      },
+      "borrowed": null,
+      "utilization": null,
+      "supplyApy": {
+       "from": 0,
+       "to": 0
+      },
+      "trend": "mixed",
+      "url": "https://fluid.io/42161/stats/liquidity?id=sUSDai",
+      "share": 1
+     }
+    ]
+   },
+   {
+    "protocol": "Morpho",
+    "network": "Arbitrum",
+    "markets": 1,
+    "now": 128818,
+    "wow": {
+     "usd": 9287,
+     "pct": 7.769532589872083,
+     "from": 119531,
+     "to": 128818
+    },
+    "wowCoverage": null,
+    "m30": {
+     "usd": -27707,
+     "pct": -17.70132566682639,
+     "from": 156525,
+     "to": 128818
+    },
+    "m30Why": null,
+    "significant": false,
+    "trend": "mixed",
+    "contributors": [
+     {
+      "name": "sUSDai / USDC",
+      "venue": "Morpho Blue · Arbitrum",
+      "protocol": "Morpho",
+      "network": "Arbitrum",
+      "tabs": [
+       "usdai"
+      ],
+      "kind": "market",
+      "now": 128818,
+      "wk": 119531,
+      "wow": {
+       "usd": 9287,
+       "pct": 7.769532589872083,
+       "from": 119531,
+       "to": 128818
+      },
+      "bigDay": {
+       "date": "2026-09-17",
+       "usd": 4299
+      },
+      "borrowed": {
+       "from": 107085,
+       "to": 113821
+      },
+      "utilization": {
+       "from": 89.5876,
+       "to": 88.3581
+      },
+      "supplyApy": {
+       "from": 4.6067,
+       "to": 4.439
+      },
+      "trend": "mixed",
+      "url": "https://app.morpho.org/arbitrum/variable/0x71c2954e00c8f72864600c9d1d1cd70fa15202c4294cd938d80add3be2eced26/usdc-susdai",
+      "share": 1
+     }
+    ]
+   }
+  ],
+  "movers": [
+   {
+    "name": "USDT",
+    "venue": "AaveV3Ethereum",
+    "protocol": "Aave v3",
+    "network": "Ethereum",
+    "tabs": [
+     "ethereum"
+    ],
+    "kind": "reserve",
+    "now": 2931203135,
+    "wk": 3171668013,
+    "wow": {
+     "usd": -240464878,
+     "pct": -7.5816534711194565,
+     "from": 3171668013,
+     "to": 2931203135
+    },
+    "bigDay": {
+     "date": "2026-09-19",
+     "usd": -243703088
+    },
+    "borrowed": {
+     "from": 2717766969,
+     "to": 2726521214
+    },
+    "utilization": {
+     "from": 85.6889,
+     "to": 93.0171
+    },
+    "supplyApy": {
+     "from": 3.1416,
+     "to": 3.7734
+    },
+    "trend": "mixed",
+    "url": "https://app.aave.com/markets/",
+    "inFlaggedGroup": true
+   },
+   {
+    "name": "USDe",
+    "venue": "AaveV3Plasma",
+    "protocol": "Aave v3",
+    "network": "Plasma",
+    "tabs": [
+     "plasma",
+     "ethena"
+    ],
+    "kind": "reserve",
+    "now": 550771879,
+    "wk": 483598538,
+    "wow": {
+     "usd": 67173341,
+     "pct": 13.890311016614366,
+     "from": 483598538,
+     "to": 550771879
+    },
+    "bigDay": {
+     "date": "2026-09-17",
+     "usd": 58196072
+    },
+    "borrowed": {
+     "from": 47772166,
+     "to": 44718560
+    },
+    "utilization": {
+     "from": 9.8785,
+     "to": 8.1193
+    },
+    "supplyApy": {
+     "from": 0.47,
+     "to": 0.3858
+    },
+    "trend": "up 3 wks",
+    "url": "https://app.aave.com/markets/",
+    "inFlaggedGroup": true
+   },
+   {
+    "name": "Steakhouse USDG",
+    "venue": "Morpho V2",
+    "protocol": "Morpho",
+    "network": "Robinhood",
+    "tabs": [
+     "robinhood"
+    ],
+    "kind": "vault",
+    "now": 492970032,
+    "wk": 462725531,
+    "wow": {
+     "usd": 30244501,
+     "pct": 6.536164307735161,
+     "from": 462725531,
+     "to": 492970032
+    },
+    "bigDay": {
+     "date": "2026-09-19",
+     "usd": 9558212
+    },
+    "borrowed": null,
+    "utilization": null,
+    "supplyApy": {
+     "from": 4.0714,
+     "to": 3.9276
+    },
+    "trend": "up 3 wks",
+    "url": "https://app.morpho.org/robinhood-chain/vault/0xBeEff033F34C046626B8D0A041844C5d1A5409dd/steakhouse-usdg",
+    "inFlaggedGroup": true
+   },
+   {
+    "name": "Steakhouse High Yield USDC Edition",
+    "venue": "Morpho V2",
+    "protocol": "Morpho",
+    "network": "Base",
+    "tabs": [
+     "base"
+    ],
+    "kind": "vault",
+    "now": 431993641,
+    "wk": 402933572,
+    "wow": {
+     "usd": 29060069,
+     "pct": 7.21212403716015,
+     "from": 402933572,
+     "to": 431993641
+    },
+    "bigDay": {
+     "date": "2026-09-19",
+     "usd": 9345537
+    },
+    "borrowed": null,
+    "utilization": null,
+    "supplyApy": {
+     "from": 2.808,
+     "to": 3.0029
+    },
+    "trend": "up 3 wks",
+    "url": "https://app.morpho.org/base/vault/0xbeeff2490FEffa212faC2f6553682C219E6a8845/steakhouse-high-yield-usdc-edition",
+    "inFlaggedGroup": true
+   },
+   {
+    "name": "USDT0",
+    "venue": "AaveV3Plasma",
+    "protocol": "Aave v3",
+    "network": "Plasma",
+    "tabs": [
+     "plasma"
+    ],
+    "kind": "reserve",
+    "now": 753627230,
+    "wk": 725061105,
+    "wow": {
+     "usd": 28566125,
+     "pct": 3.9398231132533303,
+     "from": 725061105,
+     "to": 753627230
+    },
+    "bigDay": {
+     "date": "2026-09-17",
+     "usd": 49218020
+    },
+    "borrowed": {
+     "from": 677551583,
+     "to": 709091390
+    },
+    "utilization": {
+     "from": 93.4475,
+     "to": 94.0905
+    },
+    "supplyApy": {
+     "from": 3.9595,
+     "to": 4.1516
+    },
+    "trend": "up 3 wks",
+    "url": "https://app.aave.com/markets/",
+    "inFlaggedGroup": true
+   },
+   {
+    "name": "Paypal USD Main",
+    "venue": "Morpho V2",
+    "protocol": "Morpho",
+    "network": "Ethereum",
+    "tabs": [
+     "ethereum"
+    ],
+    "kind": "vault",
+    "now": 427897837,
+    "wk": 402042575,
+    "wow": {
+     "usd": 25855262,
+     "pct": 6.43097612236714,
+     "from": 402042575,
+     "to": 427897837
+    },
+    "bigDay": {
+     "date": "2026-09-17",
+     "usd": 21329442
+    },
+    "borrowed": null,
+    "utilization": null,
+    "supplyApy": {
+     "from": 6.2159,
+     "to": 5.598
+    },
+    "trend": "mixed",
+    "url": "https://app.morpho.org/ethereum/vault/0xb576765fB15505433aF24FEe2c0325895C559FB2/paypal-usd-main",
+    "inFlaggedGroup": false
+   },
+   {
+    "name": "USDe",
+    "venue": "AaveV3Ethereum",
+    "protocol": "Aave v3",
+    "network": "Ethereum",
+    "tabs": [
+     "ethereum",
+     "ethena"
+    ],
+    "kind": "reserve",
+    "now": 612041556,
+    "wk": 637257532,
+    "wow": {
+     "usd": -25215976,
+     "pct": -3.956952210648802,
+     "from": 637257532,
+     "to": 612041556
+    },
+    "bigDay": {
+     "date": "2026-09-17",
+     "usd": -67344831
+    },
+    "borrowed": {
+     "from": 90452790,
+     "to": 75457399
+    },
+    "utilization": {
+     "from": 14.1941,
+     "to": 12.3288
+    },
+    "supplyApy": {
+     "from": 0.6771,
+     "to": 0.5874
+    },
+    "trend": "mixed",
+    "url": "https://app.aave.com/markets/",
+    "inFlaggedGroup": true
+   },
+   {
+    "name": "syrupUSDT",
+    "venue": "AaveV3Mantle",
+    "protocol": "Aave v3",
+    "network": "Mantle",
+    "tabs": [
+     "maple"
+    ],
+    "kind": "reserve",
+    "now": 25150243,
+    "wk": 50234069,
+    "wow": {
+     "usd": -25083826,
+     "pct": -49.933892474447966,
+     "from": 50234069,
+     "to": 25150243
+    },
+    "bigDay": {
+     "date": "2026-09-18",
+     "usd": -22235093
+    },
+    "borrowed": null,
+    "utilization": null,
+    "supplyApy": {
+     "from": 0,
+     "to": 0
+    },
+    "trend": "mixed",
+    "url": "https://app.aave.com/markets/",
+    "inFlaggedGroup": false
+   }
+  ]
+ },
+ "supply": {
+  "all": {
+   "id": "all",
+   "name": "All Chains",
+   "asOf": "2026-09-23",
+   "now": 313270124717,
+   "wk": 311091500473,
+   "mo": 309942726114,
+   "wow": {
+    "usd": 2178624244,
+    "pct": 0.700316222297139,
+    "from": 311091500473,
+    "to": 313270124717
+   },
+   "m30": {
+    "usd": 3327398603,
+    "pct": 1.0735527317315232,
+    "from": 309942726114,
+    "to": 313270124717
+   },
+   "top": null,
+   "driver": null,
+   "liveSum": null,
+   "dayMover": null
+  },
+  "chains": [
+   {
+    "id": "solana",
+    "name": "Solana",
+    "asOf": "2026-09-23",
+    "now": 16879246882,
+    "wk": 15965708939,
+    "mo": 16273640268,
+    "wow": {
+     "usd": 913537943,
+     "pct": 5.721875217006297,
+     "from": 15965708939,
+     "to": 16879246882
+    },
+    "m30": {
+     "usd": 605606614,
+     "pct": 3.7213960983938343,
+     "from": 16273640268,
+     "to": 16879246882
+    },
+    "top": [
+     {
+      "symbol": "USDC",
+      "now": 7387428458.475307,
+      "wk": 6769174589.109228,
+      "frozen": false,
+      "day": {
+       "usd": -899702571.4969587,
+       "pct": -10.856622976552233,
+       "from": 8287131029.972266,
+       "to": 7387428458.475307
+      },
+      "wow": {
+       "usd": 618253869.3660793,
+       "pct": 9.133371598374401,
+       "from": 6769174589.109228,
+       "to": 7387428458.475307
+      }
+     },
+     {
+      "symbol": "USDT",
+      "now": 2135597944.5825627,
+      "wk": 2485563176.5741134,
+      "frozen": false,
+      "day": {
+       "usd": 84.82882595062256,
+       "pct": 0.0000039721348082079675,
+       "from": 2135597859.7537367,
+       "to": 2135597944.5825627
+      },
+      "wow": {
+       "usd": -349965231.9915507,
+       "pct": -14.079916989835386,
+       "from": 2485563176.5741134,
+       "to": 2135597944.5825627
+      }
+     },
+     {
+      "symbol": "USDGO",
+      "now": 1417749252.819201,
+      "wk": 1376761457.2255838,
+      "frozen": false,
+      "day": {
+       "usd": 13995689.514664412,
+       "pct": 0.9970189839958485,
+       "from": 1403753563.3045366,
+       "to": 1417749252.819201
+      },
+      "wow": {
+       "usd": 40987795.5936172,
+       "pct": 2.9771167240703273,
+       "from": 1376761457.2255838,
+       "to": 1417749252.819201
+      }
+     }
+    ],
+    "driver": {
+     "symbol": "USDC",
+     "usd": 618253869.3660793,
+     "share": 0.513176428709079,
+     "dominant": true
+    },
+    "liveSum": 16346656789.35616,
+    "dayMover": {
+     "symbol": "USDC",
+     "usd": -899702571.4969587
+    }
+   },
+   {
+    "id": "plasma",
+    "name": "Plasma",
+    "asOf": "2026-09-23",
+    "now": 1433086599,
+    "wk": 1115211478,
+    "mo": 965422666,
+    "wow": {
+     "usd": 317875121,
+     "pct": 28.503573292670147,
+     "from": 1115211478,
+     "to": 1433086599
+    },
+    "m30": {
+     "usd": 467663933,
+     "pct": 48.44136661278678,
+     "from": 965422666,
+     "to": 1433086599
+    },
+    "top": [
+     {
+      "symbol": "USDT",
+      "now": 881140947.9470255,
+      "wk": 627089550.4325576,
+      "frozen": false,
+      "day": {
+       "usd": 80513035.60113573,
+       "pct": 10.056236406401009,
+       "from": 800627912.3458898,
+       "to": 881140947.9470255
+      },
+      "wow": {
+       "usd": 254051397.51446795,
+       "pct": 40.512778013798325,
+       "from": 627089550.4325576,
+       "to": 881140947.9470255
+      }
+     },
+     {
+      "symbol": "USDe",
+      "now": 504732000.77225,
+      "wk": 428897570.80464894,
+      "frozen": false,
+      "day": {
+       "usd": -989189.5745239258,
+       "pct": -0.1955997876706801,
+       "from": 505721190.3467739,
+       "to": 504732000.77225
+      },
+      "wow": {
+       "usd": 75834429.96760106,
+       "pct": 17.681244924127014,
+       "from": 428897570.80464894,
+       "to": 504732000.77225
+      }
+     },
+     {
+      "symbol": "YZUSD",
+      "now": 61289692.1528381,
+      "wk": 55418770.629818775,
+      "frozen": false,
+      "day": {
+       "usd": 584572.2718703151,
+       "pct": 0.9629702947898956,
+       "from": 60705119.88096779,
+       "to": 61289692.1528381
+      },
+      "wow": {
+       "usd": 5870921.523019329,
+       "pct": 10.593741897010622,
+       "from": 55418770.629818775,
+       "to": 61289692.1528381
+      }
+     }
+    ],
+    "driver": {
+     "symbol": "USDT",
+     "usd": 254051397.51446795,
+     "share": 0.7566474687402593,
+     "dominant": true
+    },
+    "liveSum": 1448181596.7314725,
+    "dayMover": {
+     "symbol": "USDT",
+     "usd": 80513035.60113573
+    }
+   },
+   {
+    "id": "tempo",
+    "name": "Tempo",
+    "asOf": "2026-09-23",
+    "now": 254072041,
+    "wk": 145873191,
+    "mo": 52666998,
+    "wow": {
+     "usd": 108198850,
+     "pct": 74.17322487995756,
+     "from": 145873191,
+     "to": 254072041
+    },
+    "m30": {
+     "usd": 201405043,
+     "pct": 382.4122327989911,
+     "from": 52666998,
+     "to": 254072041
+    },
+    "top": [
+     {
+      "symbol": "USDC",
+      "now": 90954375.4306984,
+      "wk": 61737613.53079994,
+      "frozen": false,
+      "day": {
+       "usd": 4978531.522997931,
+       "pct": 5.7906166391837255,
+       "from": 85975843.90770046,
+       "to": 90954375.4306984
+      },
+      "wow": {
+       "usd": 29216761.899898455,
+       "pct": 47.32408693660092,
+       "from": 61737613.53079994,
+       "to": 90954375.4306984
+      }
+     },
+     {
+      "symbol": "USDB",
+      "now": 86048019.53,
+      "wk": 31436421.76,
+      "frozen": false,
+      "day": {
+       "usd": 8199559.620000005,
+       "pct": 10.532719117988272,
+       "from": 77848459.91,
+       "to": 86048019.53
+      },
+      "wow": {
+       "usd": 54611597.769999996,
+       "pct": 173.7207821772143,
+       "from": 31436421.76,
+       "to": 86048019.53
+      }
+     },
+     {
+      "symbol": "pathUSD",
+      "now": 56088817.45047053,
+      "wk": 38373371.23190952,
+      "frozen": false,
+      "day": {
+       "usd": 850502.4951751605,
+       "pct": 1.5396966686320468,
+       "from": 55238314.95529537,
+       "to": 56088817.45047053
+      },
+      "wow": {
+       "usd": 17715446.21856101,
+       "pct": 46.16598867870557,
+       "from": 38373371.23190952,
+       "to": 56088817.45047053
+      }
+     }
+    ],
+    "driver": {
+     "symbol": "USDB",
+     "usd": 54611597.769999996,
+     "share": 0.5268760169741571,
+     "dominant": true
+    },
+    "liveSum": 249781898.9703616,
+    "dayMover": {
+     "symbol": "USDB",
+     "usd": 8199559.620000005
+    }
+   },
+   {
+    "id": "xrpl",
+    "name": "XRPL",
+    "asOf": "2026-09-23",
+    "now": 1162898564,
+    "wk": 1092879991,
+    "mo": 1091527947,
+    "wow": {
+     "usd": 70018573,
+     "pct": 6.406794302815633,
+     "from": 1092879991,
+     "to": 1162898564
+    },
+    "m30": {
+     "usd": 71370617,
+     "pct": 6.538597311791963,
+     "from": 1091527947,
+     "to": 1162898564
+    },
+    "top": [
+     {
+      "symbol": "RLUSD",
+      "now": 1059885337.7995507,
+      "wk": 999563339.2446419,
+      "frozen": false,
+      "day": {
+       "usd": -40823514.3401109,
+       "pct": -3.7088385598747853,
+       "from": 1100708852.1396616,
+       "to": 1059885337.7995507
+      },
+      "wow": {
+       "usd": 60321998.55490875,
+       "pct": 6.0348350311140235,
+       "from": 999563339.2446419,
+       "to": 1059885337.7995507
+      }
+     },
+     {
+      "symbol": "USDV",
+      "now": 72771000.00000015,
+      "wk": 72771000.00000013,
+      "frozen": false,
+      "day": {
+       "usd": 8.940696716308594e-8,
+       "pct": 1.2286070984744728e-13,
+       "from": 72771000.00000006,
+       "to": 72771000.00000015
+      },
+      "wow": {
+       "usd": 1.4901161193847656e-8,
+       "pct": 2.0476784974574527e-14,
+       "from": 72771000.00000013,
+       "to": 72771000.00000015
+      }
+     },
+     {
+      "symbol": "EURCV",
+      "now": 12958806.198315624,
+      "wk": 12958806.198315624,
+      "frozen": true,
+      "day": null,
+      "wow": null
+     }
+    ],
+    "driver": {
+     "symbol": "RLUSD",
+     "usd": 60321998.55490875,
+     "share": 0.9748147224335106,
+     "dominant": true
+    },
+    "liveSum": 1151874860.738775,
+    "dayMover": {
+     "symbol": "RLUSD",
+     "usd": -40823514.3401109
+    }
+   },
+   {
+    "id": "base",
+    "name": "Base",
+    "asOf": "2026-09-23",
+    "now": 5092351008,
+    "wk": 5042567881,
+    "mo": 5068495181,
+    "wow": {
+     "usd": 49783127,
+     "pct": 0.9872574484833196,
+     "from": 5042567881,
+     "to": 5092351008
+    },
+    "m30": {
+     "usd": 23855827,
+     "pct": 0.47066883065070436,
+     "from": 5068495181,
+     "to": 5092351008
+    },
+    "top": [
+     {
+      "symbol": "USDC",
+      "now": 4273496418.1628785,
+      "wk": 4259509740.383904,
+      "frozen": false,
+      "day": {
+       "usd": -43266439.069443226,
+       "pct": -1.0022889952584368,
+       "from": 4316762857.232322,
+       "to": 4273496418.1628785
+      },
+      "wow": {
+       "usd": 13986677.778974533,
+       "pct": 0.3283635589882213,
+       "from": 4259509740.383904,
+       "to": 4273496418.1628785
+      }
+     },
+     {
+      "symbol": "USDe",
+      "now": 369239269.14766,
+      "wk": 366764977.2884195,
+      "frozen": false,
+      "day": {
+       "usd": 1514519.4846647978,
+       "pct": 0.41186226547242016,
+       "from": 367724749.6629952,
+       "to": 369239269.14766
+      },
+      "wow": {
+       "usd": 2474291.859240532,
+       "pct": 0.6746259900641437,
+       "from": 366764977.2884195,
+       "to": 369239269.14766
+      }
+     },
+     {
+      "symbol": "rwaUSDi",
+      "now": 147729995.11699018,
+      "wk": 147729995.11699018,
+      "frozen": true,
+      "day": null,
+      "wow": null
+     }
+    ],
+    "driver": {
+     "symbol": "USDC",
+     "usd": 13986677.778974533,
+     "share": 0.5289412079434901,
+     "dominant": true
+    },
+    "liveSum": 5062648546.323181,
+    "dayMover": {
+     "symbol": "USDC",
+     "usd": -43266439.069443226
+    }
+   },
+   {
+    "id": "robinhood",
+    "name": "Robinhood Chain",
+    "asOf": "2026-09-23",
+    "now": 1095034556,
+    "wk": 1055745000,
+    "mo": 712557525,
+    "wow": {
+     "usd": 39289556,
+     "pct": 3.7215005517430817,
+     "from": 1055745000,
+     "to": 1095034556
+    },
+    "m30": {
+     "usd": 382477031,
+     "pct": 53.67665312354957,
+     "from": 712557525,
+     "to": 1095034556
+    },
+    "top": [
+     {
+      "symbol": "USDG",
+      "now": 702831804.8028715,
+      "wk": 693092459.9216439,
+      "frozen": false,
+      "day": {
+       "usd": -17067082.06728363,
+       "pct": -2.370761002490888,
+       "from": 719898886.8701551,
+       "to": 702831804.8028715
+      },
+      "wow": {
+       "usd": 9739344.881227612,
+       "pct": 1.4052013900611,
+       "from": 693092459.9216439,
+       "to": 702831804.8028715
+      }
+     },
+     {
+      "symbol": "USDe",
+      "now": 341200855.2030574,
+      "wk": 328891043.68609023,
+      "frozen": false,
+      "day": {
+       "usd": -11258510.146934927,
+       "pct": -3.1942718093914793,
+       "from": 352459365.34999233,
+       "to": 341200855.2030574
+      },
+      "wow": {
+       "usd": 12309811.516967177,
+       "pct": 3.7428235743373626,
+       "from": 328891043.68609023,
+       "to": 341200855.2030574
+      }
+     },
+     {
+      "symbol": "U",
+      "now": 29980847.9017189,
+      "wk": 29980847.9017189,
+      "frozen": true,
+      "day": null,
+      "wow": null
+     }
+    ],
+    "driver": {
+     "symbol": "USDe",
+     "usd": 12309811.516967177,
+     "share": 0.5582894553723156,
+     "dominant": true
+    },
+    "liveSum": 1077967379.7142267,
+    "dayMover": {
+     "symbol": "USDG",
+     "usd": -17067082.06728363
+    }
+   },
+   {
+    "id": "monad",
+    "name": "Monad",
+    "asOf": "2026-09-23",
+    "now": 704417861,
+    "wk": 724407782,
+    "mo": 731829222,
+    "wow": {
+     "usd": -19989921,
+     "pct": -2.759484574394039,
+     "from": 724407782,
+     "to": 704417861
+    },
+    "m30": {
+     "usd": -27411361,
+     "pct": -3.745595307753371,
+     "from": 731829222,
+     "to": 704417861
+    },
+    "top": [
+     {
+      "symbol": "USDC",
+      "now": 213589934.10385987,
+      "wk": 225992063.61016503,
+      "frozen": false,
+      "day": {
+       "usd": -2651985.156236708,
+       "pct": -1.2263973448399201,
+       "from": 216241919.26009658,
+       "to": 213589934.10385987
+      },
+      "wow": {
+       "usd": -12402129.506305158,
+       "pct": -5.487860639079237,
+       "from": 225992063.61016503,
+       "to": 213589934.10385987
+      }
+     },
+     {
+      "symbol": "AUSD",
+      "now": 153812051.1102126,
+      "wk": 166587151.98787856,
+      "frozen": false,
+      "day": {
+       "usd": -8399532.777153373,
+       "pct": -5.178133753373442,
+       "from": 162211583.88736597,
+       "to": 153812051.1102126
+      },
+      "wow": {
+       "usd": -12775100.877665967,
+       "pct": -7.668719181053967,
+       "from": 166587151.98787856,
+       "to": 153812051.1102126
+      }
+     },
+     {
+      "symbol": "rwaUSDi",
+      "now": 100691863.03093188,
+      "wk": 100691863.03093188,
+      "frozen": true,
+      "day": null,
+      "wow": null
+     }
+    ],
+    "driver": {
+     "symbol": "AUSD",
+     "usd": -12775100.877665967,
+     "share": 0.2718556015844089,
+     "dominant": false
+    },
+    "liveSum": 715353600.862101,
+    "dayMover": {
+     "symbol": "AUSD",
+     "usd": -8399532.777153373
+    }
+   },
+   {
+    "id": "stellar",
+    "name": "Stellar",
+    "asOf": "2026-09-23",
+    "now": 931131293,
+    "wk": 957789600,
+    "mo": 973169937,
+    "wow": {
+     "usd": -26658307,
+     "pct": -2.783315563251052,
+     "from": 957789600,
+     "to": 931131293
+    },
+    "m30": {
+     "usd": -42038644,
+     "pct": -4.319763938618256,
+     "from": 973169937,
+     "to": 931131293
+    },
+    "top": [
+     {
+      "symbol": "USDY",
+      "now": 536007941.9587985,
+      "wk": 536007941.9587985,
+      "frozen": true,
+      "day": null,
+      "wow": null
+     },
+     {
+      "symbol": "USDC",
+      "now": 352629348.1306613,
+      "wk": 371934739.37882125,
+      "frozen": false,
+      "day": {
+       "usd": 23469468.736232996,
+       "pct": 7.130112205476237,
+       "from": 329159879.3944283,
+       "to": 352629348.1306613
+      },
+      "wow": {
+       "usd": -19305391.248159945,
+       "pct": -5.190531887503282,
+       "from": 371934739.37882125,
+       "to": 352629348.1306613
+      }
+     },
+     {
+      "symbol": "YLDS",
+      "now": 25170613.707678966,
+      "wk": 25170613.707678966,
+      "frozen": true,
+      "day": null,
+      "wow": null
+     }
+    ],
+    "driver": {
+     "symbol": "USDC",
+     "usd": -19305391.248159945,
+     "share": 0.9647872726167688,
+     "dominant": true
+    },
+    "liveSum": 942578456.7077613,
+    "dayMover": {
+     "symbol": "USDC",
+     "usd": 23469468.736232996
+    }
+   },
+   {
+    "id": "bsc",
+    "name": "BSC",
+    "asOf": "2026-09-23",
+    "now": 16928241325,
+    "wk": 16991446031,
+    "mo": 17387049733,
+    "wow": {
+     "usd": -63204706,
+     "pct": -0.37197955891856604,
+     "from": 16991446031,
+     "to": 16928241325
+    },
+    "m30": {
+     "usd": -458808408,
+     "pct": -2.6387939014702306,
+     "from": 17387049733,
+     "to": 16928241325
+    },
+    "top": [
+     {
+      "symbol": "USDT",
+      "now": 9183526889.777643,
+      "wk": 9183099811.58765,
+      "frozen": false,
+      "day": {
+       "usd": 459467.32392311096,
+       "pct": 0.005003418822774374,
+       "from": 9183067422.45372,
+       "to": 9183526889.777643
+      },
+      "wow": {
+       "usd": 427078.18999290466,
+       "pct": 0.004650697463333657,
+       "from": 9183099811.58765,
+       "to": 9183526889.777643
+      }
+     },
+     {
+      "symbol": "USYC",
+      "now": 2388698813.7427225,
+      "wk": 2563958714.223957,
+      "frozen": false,
+      "day": {
+       "usd": -76249437.22235489,
+       "pct": -3.093348397577989,
+       "from": 2464948250.9650774,
+       "to": 2388698813.7427225
+      },
+      "wow": {
+       "usd": -175259900.48123455,
+       "pct": -6.835519601347446,
+       "from": 2563958714.223957,
+       "to": 2388698813.7427225
+      }
+     },
+     {
+      "symbol": "USDC",
+      "now": 1588922362.6783926,
+      "wk": 1581779286.878679,
+      "frozen": false,
+      "day": {
+       "usd": 7052505.911587715,
+       "pct": 0.44583351034973145,
+       "from": 1581869856.766805,
+       "to": 1588922362.6783926
+      },
+      "wow": {
+       "usd": 7143075.799713612,
+       "pct": 0.451584861362613,
+       "from": 1581779286.878679,
+       "to": 1588922362.6783926
+      }
+     }
+    ],
+    "driver": {
+     "symbol": "USYC",
+     "usd": -175259900.48123455,
+     "share": 0.7393631133063332,
+     "dominant": true
+    },
+    "liveSum": 16855714638.082344,
+    "dayMover": {
+     "symbol": "USYC",
+     "usd": -76249437.22235489
+    }
+   },
+   {
+    "id": "ethereum",
+    "name": "Ethereum",
+    "asOf": "2026-09-23",
+    "now": 148331105850,
+    "wk": 148734825889,
+    "mo": 147919102621,
+    "wow": {
+     "usd": -403720039,
+     "pct": -0.2714361190036919,
+     "from": 148734825889,
+     "to": 148331105850
+    },
+    "m30": {
+     "usd": 412003229,
+     "pct": 0.27853280725724744,
+     "from": 147919102621,
+     "to": 148331105850
+    },
+    "top": [
+     {
+      "symbol": "USDT",
+      "now": 73708380039.0174,
+      "wk": 73588189151.8906,
+      "frozen": false,
+      "day": {
+       "usd": -86399111.23326111,
+       "pct": -0.11708024907473097,
+       "from": 73794779150.25066,
+       "to": 73708380039.0174
+      },
+      "wow": {
+       "usd": 120190887.12680054,
+       "pct": 0.1633290457504248,
+       "from": 73588189151.8906,
+       "to": 73708380039.0174
+      }
+     },
+     {
+      "symbol": "USDC",
+      "now": 46513490176.01675,
+      "wk": 46821532101.33082,
+      "frozen": false,
+      "day": {
+       "usd": 448586218.3431549,
+       "pct": 0.9738134236757232,
+       "from": 46064903957.67359,
+       "to": 46513490176.01675
+      },
+      "wow": {
+       "usd": -308041925.31407166,
+       "pct": -0.6579065474564343,
+       "from": 46821532101.33082,
+       "to": 46513490176.01675
+      }
+     },
+     {
+      "symbol": "USDS",
+      "now": 6375281705.93743,
+      "wk": 6369040052.057538,
+      "frozen": false,
+      "day": {
+       "usd": 9874208.075856209,
+       "pct": 0.15512295291657915,
+       "from": 6365407497.861574,
+       "to": 6375281705.93743
+      },
+      "wow": {
+       "usd": 6241653.879892349,
+       "pct": 0.09799991566823267,
+       "from": 6369040052.057538,
+       "to": 6375281705.93743
+      }
+     }
+    ],
+    "driver": {
+     "symbol": "BUIDL",
+     "usd": -338553982.9427999,
+     "share": 0.2549309475087667,
+     "dominant": false
+    },
+    "liveSum": 148563835113.97507,
+    "dayMover": {
+     "symbol": "USDC",
+     "usd": 448586218.3431549
+    }
+   }
+  ]
+ },
+ "huma": {
+  "tabTotal": {
+   "now": 250489728,
+   "wow": {
+    "usd": 13958633,
+    "pct": 5.901394486843262,
+    "from": 236531095,
+    "to": 250489728
+   },
+   "m30": null,
+   "m30Why": "only 3 of 13 markets have history"
+  },
+  "product": {
+   "id": "huma",
+   "label": "Huma PST",
+   "source": "protocol",
+   "metric": "tvl",
+   "liveSupplied": null,
+   "liveBorrowed": null,
+   "asOf": "2026-09-23",
+   "now": 378236014,
+   "wk": 315866733,
+   "mo": 221371124,
+   "wow": {
+    "usd": 62369281,
+    "pct": 19.74544150554785,
+    "from": 315866733,
+    "to": 378236014
+   },
+   "m30": {
+    "usd": 156864890,
+    "pct": 70.86059245920438,
+    "from": 221371124,
+    "to": 378236014
+   },
+   "apy": null,
+   "apyWowPp": null,
+   "apyRange": null,
+   "bigDay": {
+    "date": "2026-09-23",
+    "usd": 19801741
+   },
+   "significant": true,
+   "trend": "up 3 wks",
+   "chains": [
+    {
+     "chain": "Solana",
+     "now": 197052074,
+     "wk": 193114398,
+     "change": {
+      "usd": 3937676,
+      "pct": 2.0390380213908235,
+      "from": 193114398,
+      "to": 197052074
+     }
+    },
+    {
+     "chain": "Ethereum",
+     "now": 178128198,
+     "wk": 120025804,
+     "change": {
+      "usd": 58102394,
+      "pct": 48.40825227881831,
+      "from": 120025804,
+      "to": 178128198
+     }
+    },
+    {
+     "chain": "Stellar",
+     "now": 2727051,
+     "wk": 2726530,
+     "change": {
+      "usd": 521,
+      "pct": 0.019108537224970936,
+      "from": 2726530,
+      "to": 2727051
+     }
+    },
+    {
+     "chain": "Monad",
+     "now": 2088361,
+     "wk": null,
+     "change": null
+    }
+   ]
+  },
+  "pstLiquidity": {
+   "name": "Total PST Liquidity",
+   "venue": "Fluid · Jupiter Lend · Orca",
+   "protocol": "Combined",
+   "network": "Ethereum",
+   "kind": "total",
+   "inTotal": false,
+   "now": 10316472,
+   "wk": 12104288,
+   "wow": {
+    "usd": -1787816,
+    "pct": -14.77010461086187,
+    "from": 12104288,
+    "to": 10316472
+   },
+   "borrowApy": null,
+   "borrowApyWowPp": null,
+   "utilization": null
+  },
+  "pstJupLend": {
+   "name": "PST",
+   "venue": "Jupiter Lend · liquidity layer",
+   "protocol": "JupLend",
+   "network": "Solana",
+   "kind": "total",
+   "inTotal": false,
+   "now": 75331462,
+   "wk": 75030735,
+   "wow": {
+    "usd": 300727,
+    "pct": 0.40080508341015186,
+    "from": 75030735,
+    "to": 75331462
+   },
+   "borrowApy": null,
+   "borrowApyWowPp": null,
+   "utilization": null
+  },
+  "pstMorpho": {
+   "name": "PST",
+   "venue": "Morpho Blue · 3 markets",
+   "protocol": "Morpho",
+   "network": "Ethereum",
+   "kind": "total",
+   "inTotal": false,
+   "now": 83424564,
+   "wk": 70004906,
+   "wow": {
+    "usd": 13419658,
+    "pct": 19.16959648513777,
+    "from": 70004906,
+    "to": 83424564
+   },
+   "borrowApy": null,
+   "borrowApyWowPp": null,
+   "utilization": null
+  },
+  "networks": [
+   {
+    "network": "Ethereum",
+    "now": 125386932,
+    "wow": {
+     "usd": 13980638,
+     "pct": 12.549235324172978,
+     "from": 111406294,
+     "to": 125386932
+    },
+    "coverage": null
+   },
+   {
+    "network": "Solana",
+    "now": 125102796,
+    "wow": {
+     "usd": -22005,
+     "pct": -0.017586441556058898,
+     "from": 125124801,
+     "to": 125102796
+    },
+    "coverage": null
+   }
+  ],
+  "vsMarket": [
+   {
+    "chain": "Solana",
+    "supplyWowPct": 5.721875217006297,
+    "pstWowPct": 2.0390380213908235,
+    "pstWowUsd": 3937676,
+    "pstNow": 197052074,
+    "tabWowUsd": -22005,
+    "tabWowPct": -0.017586441556058898
+   },
+   {
+    "chain": "Ethereum",
+    "supplyWowPct": -0.2714361190036919,
+    "pstWowPct": 48.40825227881831,
+    "pstWowUsd": 58102394,
+    "pstNow": 178128198,
+    "tabWowUsd": 13980638,
+    "tabWowPct": 12.549235324172978
+   }
+  ],
+  "rows": [
+   {
+    "name": "PST",
+    "venue": "Morpho Blue · 3 markets",
+    "protocol": "Morpho",
+    "network": "Ethereum",
+    "kind": "total",
+    "inTotal": false,
+    "now": 83424564,
+    "wk": 70004906,
+    "wow": {
+     "usd": 13419658,
+     "pct": 19.16959648513777,
+     "from": 70004906,
+     "to": 83424564
+    },
+    "borrowApy": null,
+    "borrowApyWowPp": null,
+    "utilization": null
+   },
+   {
+    "name": "PST",
+    "venue": "Jupiter Lend · liquidity layer",
+    "protocol": "JupLend",
+    "network": "Solana",
+    "kind": "total",
+    "inTotal": false,
+    "now": 75331462,
+    "wk": 75030735,
+    "wow": {
+     "usd": 300727,
+     "pct": 0.40080508341015186,
+     "from": 75030735,
+     "to": 75331462
+    },
+    "borrowApy": null,
+    "borrowApyWowPp": null,
+    "utilization": null
+   },
+   {
+    "name": "PST",
+    "venue": "Fluid liquidity layer",
+    "protocol": "Fluid",
+    "network": "Ethereum",
+    "kind": "total",
+    "inTotal": false,
+    "now": 47438038,
+    "wk": 46608673,
+    "wow": {
+     "usd": 829365,
+     "pct": 1.779422040185525,
+     "from": 46608673,
+     "to": 47438038
+    },
+    "borrowApy": null,
+    "borrowApyWowPp": null,
+    "utilization": null
+   },
+   {
+    "name": "PST",
+    "venue": "Kamino Lend",
+    "protocol": "Kamino",
+    "network": "Solana",
+    "kind": "reserve",
+    "inTotal": true,
+    "now": 45923462,
+    "wk": 44451420,
+    "wow": {
+     "usd": 1472042,
+     "pct": 3.3115747483432476,
+     "from": 44451420,
+     "to": 45923462
+    },
+    "borrowApy": null,
+    "borrowApyWowPp": null,
+    "utilization": null
+   },
+   {
+    "name": "Sentora Huma PST Main",
+    "venue": "Morpho V2",
+    "protocol": "Morpho",
+    "network": "Ethereum",
+    "kind": "vault",
+    "inTotal": false,
+    "now": 45645544,
+    "wk": 43138753,
+    "wow": {
+     "usd": 2506791,
+     "pct": 5.810995510231833,
+     "from": 43138753,
+     "to": 45645544
+    },
+    "borrowApy": null,
+    "borrowApyWowPp": null,
+    "utilization": null
+   },
+   {
+    "name": "PST / PYUSD",
+    "venue": "Morpho Blue",
+    "protocol": "Morpho",
+    "network": "Ethereum",
+    "kind": "market",
+    "inTotal": true,
+    "now": 45008176,
+    "wk": 43138751,
+    "wow": {
+     "usd": 1869425,
+     "pct": 4.3335167492447795,
+     "from": 43138751,
+     "to": 45008176
+    },
+    "borrowApy": 7.1566,
+    "borrowApyWowPp": 1.4613000000000005,
+    "utilization": 90.6567
+   },
+   {
+    "name": "PST / JupUSD",
+    "venue": "Jupiter Lend #61",
+    "protocol": "JupLend",
+    "network": "Solana",
+    "kind": "market",
+    "inTotal": true,
+    "now": 38441232,
+    "wk": 38376180,
+    "wow": {
+     "usd": 65052,
+     "pct": 0.16951140004033752,
+     "from": 38376180,
+     "to": 38441232
+    },
+    "borrowApy": 7.282998197628755,
+    "borrowApyWowPp": 1.4385881571161825,
+    "utilization": 83.30427022092798
+   },
+   {
+    "name": "USDC",
+    "venue": "Kamino Lend",
+    "protocol": "Kamino",
+    "network": "Solana",
+    "kind": "reserve",
+    "inTotal": false,
+    "now": 33097261,
+    "wk": 33276560,
+    "wow": {
+     "usd": -179299,
+     "pct": -0.5388147092127311,
+     "from": 33276560,
+     "to": 33097261
+    },
+    "borrowApy": 5.4957,
+    "borrowApyWowPp": 0,
+    "utilization": 89.83789034383149
+   },
+   {
+    "name": "PST / USDC",
+    "venue": "Morpho Blue",
+    "protocol": "Morpho",
+    "network": "Ethereum",
+    "kind": "market",
+    "inTotal": true,
+    "now": 30679110,
+    "wk": 17858758,
+    "wow": {
+     "usd": 12820352,
+     "pct": 71.78747816617482,
+     "from": 17858758,
+     "to": 30679110
+    },
+    "borrowApy": 10.7208,
+    "borrowApyWowPp": 0.398200000000001,
+    "utilization": 91.9162
+   },
+   {
+    "name": "PST / USDC",
+    "venue": "Jupiter Lend #45",
+    "protocol": "JupLend",
+    "network": "Solana",
+    "kind": "market",
+    "inTotal": true,
+    "now": 28061214,
+    "wk": 28190148,
+    "wow": {
+     "usd": -128934,
+     "pct": -0.4573725544115625,
+     "from": 28190148,
+     "to": 28061214
+    },
+    "borrowApy": 5.823243275251552,
+    "borrowApyWowPp": -0.06351299795914844,
+    "utilization": 81.29639487803524
+   },
+   {
+    "name": "PST / USDC",
+    "venue": "Fluid #165",
+    "protocol": "Fluid",
+    "network": "Ethereum",
+    "kind": "market",
+    "inTotal": true,
+    "now": 18434046,
+    "wk": 18615931,
+    "wow": {
+     "usd": -181885,
+     "pct": -0.9770395044975188,
+     "from": 18615931,
+     "to": 18434046
+    },
+    "borrowApy": 5.72,
+    "borrowApyWowPp": -1.0899999999999999,
+    "utilization": 82.74212283436209
+   },
+   {
+    "name": "PST / USDT",
+    "venue": "Fluid #166",
+    "protocol": "Fluid",
+    "network": "Ethereum",
+    "kind": "market",
+    "inTotal": true,
+    "now": 18433839,
+    "wk": 18619890,
+    "wow": {
+     "usd": -186051,
+     "pct": -0.9992056881109395,
+     "from": 18619890,
+     "to": 18433839
+    },
+    "borrowApy": 6.69,
+    "borrowApyWowPp": 1.08,
+    "utilization": 82.68590345115463
+   },
+   {
+    "name": "RockawayX USDC Yield",
+    "venue": "Morpho V2",
+    "protocol": "Morpho",
+    "network": "Ethereum",
+    "kind": "vault",
+    "inTotal": false,
+    "now": 14540675,
+    "wk": 14812623,
+    "wow": {
+     "usd": -271948,
+     "pct": -1.8359206198659075,
+     "from": 14812623,
+     "to": 14540675
+    },
+    "borrowApy": null,
+    "borrowApyWowPp": null,
+    "utilization": null
+   },
+   {
+    "name": "Huma USDC Main",
+    "venue": "Morpho V2",
+    "protocol": "Morpho",
+    "network": "Ethereum",
+    "kind": "vault",
+    "inTotal": false,
+    "now": 12427376,
+    "wk": 12353702,
+    "wow": {
+     "usd": 73674,
+     "pct": 0.5963718406029221,
+     "from": 12353702,
+     "to": 12427376
+    },
+    "borrowApy": null,
+    "borrowApyWowPp": null,
+    "utilization": null
+   },
+   {
+    "name": "Total PST Liquidity",
+    "venue": "Fluid · Jupiter Lend · Orca",
+    "protocol": "Combined",
+    "network": "Ethereum",
+    "kind": "total",
+    "inTotal": false,
+    "now": 10316472,
+    "wk": 12104288,
+    "wow": {
+     "usd": -1787816,
+     "pct": -14.77010461086187,
+     "from": 12104288,
+     "to": 10316472
+    },
+    "borrowApy": null,
+    "borrowApyWowPp": null,
+    "utilization": null
+   },
+   {
+    "name": "Galaxy USDC Enhanced",
+    "venue": "Morpho V2",
+    "protocol": "Morpho",
+    "network": "Ethereum",
+    "kind": "vault",
+    "inTotal": false,
+    "now": 8067508,
+    "wk": 8058669,
+    "wow": {
+     "usd": 8839,
+     "pct": 0.10968312509174903,
+     "from": 8058669,
+     "to": 8067508
+    },
+    "borrowApy": null,
+    "borrowApyWowPp": null,
+    "utilization": null
+   },
+   {
+    "name": "PST / AUSD",
+    "venue": "Morpho Blue",
+    "protocol": "Morpho",
+    "network": "Ethereum",
+    "kind": "market",
+    "inTotal": true,
+    "now": 7737279,
+    "wk": 8086445,
+    "wow": {
+     "usd": -349166,
+     "pct": -4.3179172058920825,
+     "from": 8086445,
+     "to": 7737279
+    },
+    "borrowApy": 6.3373,
+    "borrowApyWowPp": 1.6992000000000003,
+    "utilization": 91.1254
+   },
+   {
+    "name": "PST-USDC / USDC-USDT",
+    "venue": "Fluid #169",
+    "protocol": "Fluid",
+    "network": "Ethereum",
+    "kind": "market",
+    "inTotal": true,
+    "now": 5094482,
+    "wk": 5086519,
+    "wow": {
+     "usd": 7963,
+     "pct": 0.156551071567805,
+     "from": 5086519,
+     "to": 5094482
+    },
+    "borrowApy": 5.7225250109506165,
+    "borrowApyWowPp": -0.47941662320280987,
+    "utilization": 79.88761143524133
+   },
+   {
+    "name": "PST-USDC / JupUSD",
+    "venue": "Jupiter Lend #93",
+    "protocol": "JupLend",
+    "network": "Solana",
+    "kind": "market",
+    "inTotal": true,
+    "now": 5016051,
+    "wk": 5010089,
+    "wow": {
+     "usd": 5962,
+     "pct": 0.11899988203802367,
+     "from": 5010089,
+     "to": 5016051
+    },
+    "borrowApy": 6.641227446008941,
+    "borrowApyWowPp": 1.4299824710487297,
+    "utilization": 80.01090455885497
+   },
+   {
+    "name": "PST / JupUSD-USDC",
+    "venue": "Jupiter Lend #91",
+    "protocol": "JupLend",
+    "network": "Solana",
+    "kind": "market",
+    "inTotal": true,
+    "now": 3746969,
+    "wk": 3361508,
+    "wow": {
+     "usd": 385461,
+     "pct": 11.466907114307032,
+     "from": 3361508,
+     "to": 3746969
+    },
+    "borrowApy": 5.661196657565074,
+    "borrowApyWowPp": 0.5573547000198236,
+    "utilization": 80.67197842669927
+   },
+   {
+    "name": "PST / USDC-USDT",
+    "venue": "Jupiter Lend #96",
+    "protocol": "JupLend",
+    "network": "Solana",
+    "kind": "market",
+    "inTotal": true,
+    "now": 3707929,
+    "wk": 3727776,
+    "wow": {
+     "usd": -19847,
+     "pct": -0.5324085996583486,
+     "from": 3727776,
+     "to": 3707929
+    },
+    "borrowApy": 5.179772976218242,
+    "borrowApyWowPp": 0.18250861880111824,
+    "utilization": 81.87546105790477
+   },
+   {
+    "name": "PST / USDC",
+    "venue": "Orca Whirlpool · 0.01% fee",
+    "protocol": "Orca",
+    "network": "Solana",
+    "kind": "pool",
+    "inTotal": true,
+    "now": 205939,
+    "wk": 2007680,
+    "wow": {
+     "usd": -1801741,
+     "pct": -89.74243903410903,
+     "from": 2007680,
+     "to": 205939
+    },
+    "borrowApy": null,
+    "borrowApyWowPp": null,
+    "utilization": null
+   }
+  ],
+  "counted": 13,
+  "excluded": 9
+ },
+ "research": {
+  "targets": [
+   {
+    "id": "huma",
+    "name": "Huma",
+    "x": "https://x.com/humafinance",
+    "blog": "https://blog.huma.finance/",
+    "items": [
+     "Huma PST +$62.4M (+19.75%)"
+    ]
+   },
+   {
+    "id": "ethena",
+    "name": "Ethena",
+    "x": "https://x.com/ethena",
+    "blog": "https://ethena.fi/blog",
+    "items": [
+     "Ethena USDe +$197.4M (+4.20%)"
+    ]
+   },
+   {
+    "id": "maple",
+    "name": "Maple",
+    "x": "https://x.com/maplefinance",
+    "blog": "https://maple.finance/insights/category/news",
+    "items": [
+     "Maple syrupUSDC +$343.4M (+13.21%)"
+    ]
+   },
+   {
+    "id": "cap",
+    "name": "Cap",
+    "x": "https://x.com/CapApp",
+    "blog": "https://www.cap.app/blog",
+    "items": [
+     "Cap stcUSD +$18.4M (+5.65%)"
+    ]
+   },
+   {
+    "id": "aave",
+    "name": "Aave",
+    "x": "https://x.com/aave",
+    "blog": "https://aave.com/blog",
+    "items": [
+     "Aave USDC −$37.8M (−20.89%) [liquidity, not deposits — check the borrow side]",
+     "Aave v3 on Ethereum −$279.9M (−4.29%)",
+     "Aave v3 on Plasma +$72.7M (+4.85%)",
+     "Aave v3 on Monad −$30.6M (−6.61%)"
+    ]
+   },
+   {
+    "id": "fluid",
+    "name": "Fluid",
+    "x": "https://x.com/0xfluid",
+    "blog": "https://fluid.io/blog",
+    "items": [
+     "Fluid USDC −$24.2M (−15.03%)"
+    ]
+   },
+   {
+    "id": "morpho",
+    "name": "Morpho",
+    "x": "https://x.com/Morpho",
+    "blog": "https://morpho.org/blog/",
+    "items": [
+     "Morpho on Robinhood +$52.3M (+5.82%)",
+     "Morpho on Base +$29.0M (+3.74%)"
+    ]
+   },
+   {
+    "id": "yuzu",
+    "name": "Yuzu",
+    "x": null,
+    "blog": null,
+    "items": [
+     "Yuzu syzUSD +$6.6M (+8.82%)"
+    ]
+   }
+  ],
+  "unclaimed": []
+ },
+ "checks": [
+  {
+   "name": "every row carries the end-date snapshot",
+   "ok": true,
+   "detail": "all rows on 2026-09-23",
+   "level": "fail"
+  },
+  {
+   "name": "venue groups sum to the flat venue total",
+   "ok": true,
+   "detail": "groups $13.13B vs flat $13.13B",
+   "level": "fail"
+  },
+  {
+   "name": "like-for-like group changes are marked",
+   "ok": true,
+   "detail": "every group change covers all its markets",
+   "level": "warn"
+  },
+  {
+   "name": "Huma tab total equals the sum of its counted rows",
+   "ok": true,
+   "detail": "rows $250.5M vs total $250.5M",
+   "level": "fail"
+  },
+  {
+   "name": "Huma by-network split sums to the tab total",
+   "ok": true,
+   "detail": "networks $250.5M vs total $250.5M",
+   "level": "fail"
+  },
+  {
+   "name": "every WoW % matches its own two values",
+   "ok": true,
+   "detail": "74 rows",
+   "level": "fail"
+  },
+  {
+   "name": "chain totals agree with the live per-stablecoin sums (±1.5%)",
+   "ok": false,
+   "detail": "live figures are newer than the snapshot — Solana -3.16% (largest one-day mover USDC −$899.7M); Tempo -1.69% (largest one-day mover USDB +$8.2M); Robinhood Chain -1.56% (largest one-day mover USDG −$17.1M); Monad 1.55% (largest one-day mover AUSD −$8.4M)",
+   "level": "warn"
+  },
+  {
+   "name": "no roll-up double counts markets listed elsewhere",
+   "ok": true,
+   "detail": "5 roll-ups kept, none overlapping",
+   "level": "fail"
+  }
+ ],
+ "notes": [
+  "Ondo USDY: no TVL anywhere in the store — the source stopped returning it, so the row is yield-only this week",
+  "Hastra PRIME: no TVL anywhere in the store — the source stopped returning it, so the row is yield-only this week"
+ ]
+}

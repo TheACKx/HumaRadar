@@ -1,0 +1,35 @@
+{
+ "start": "2026-09-16",
+ "end": "2026-09-23",
+ "supply": {
+  "value": "$313.27B",
+  "usd": "+$2.18B",
+  "pct": "+0.70%",
+  "dir": 1
+ },
+ "venues": {
+  "value": "$13.13B",
+  "usd": "−$181.5M",
+  "pct": "−1.36%",
+  "dir": -1
+ },
+ "pst": {
+  "value": "$378.2M",
+  "usd": "+$62.4M",
+  "pct": "+19.75%",
+  "dir": 1
+ },
+ "flagged": {
+  "products": 7,
+  "groups": 5,
+  "passes": 8
+ },
+ "topUp": {
+  "label": "Maple syrupUSDC",
+  "usd": "+$343.4M"
+ },
+ "topDown": {
+  "label": "Aave v3 on Ethereum",
+  "usd": "−$279.9M"
+ }
+}

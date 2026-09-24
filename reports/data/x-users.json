@@ -1,0 +1,37 @@
+{
+ "humafinance": {
+  "id": "1504853869397905408",
+  "username": "humafinance",
+  "name": "Huma"
+ },
+ "ethena": {
+  "id": "1637885519374721035",
+  "username": "ethena",
+  "name": "Ethena"
+ },
+ "maplefinance": {
+  "id": "1164762427604389890",
+  "username": "maplefinance",
+  "name": "Maple"
+ },
+ "capapp": {
+  "id": "1828233244908630016",
+  "username": "CapApp",
+  "name": "cap"
+ },
+ "aave": {
+  "id": "867100084248469505",
+  "username": "aave",
+  "name": "Aave"
+ },
+ "0xfluid": {
+  "id": "1711105935610093568",
+  "username": "0xfluid",
+  "name": "Fluid 🌊"
+ },
+ "morpho": {
+  "id": "1420789685811650560",
+  "username": "Morpho",
+  "name": "Morpho 🦋"
+ }
+}

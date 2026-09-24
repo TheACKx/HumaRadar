@@ -1,0 +1,1348 @@
+{
+ "window": {
+  "start": "2026-09-09T00:00:00Z",
+  "end": "2026-09-24T00:00:00Z"
+ },
+ "fields": "post",
+ "fetchedAt": "2026-09-24T01:00:45.284Z",
+ "accounts": [
+  {
+   "handle": "humafinance",
+   "name": "Huma",
+   "why": "flagged",
+   "id": "1504853869397905408",
+   "username": "humafinance",
+   "truncated": false,
+   "posts": [
+    {
+     "id": "2102355285956534556",
+     "url": "https://x.com/humafinance/status/2102355285956534556",
+     "created_at": "2026-09-22T11:12:14.000Z",
+     "text": "Apple: https://t.co/v0yfrn7wV3\n\nSpotify: https://t.co/u3TE5NI6Ah",
+     "likes": 3,
+     "reposts": 0
+    },
+    {
+     "id": "2102355283490324855",
+     "url": "https://x.com/humafinance/status/2102355283490324855",
+     "created_at": "2026-09-22T11:12:14.000Z",
+     "text": "A new episode of Bits to Bricks with @0xErbil @amiravalliani just dropped.\n\nPayFi\nStablecoins\nReal world yield \nCross-border payments \nTrade Finance \nDoes Huma want to be a bank? \n\nFull episode below https://t.co/Eh5q1Ukyh4",
+     "likes": 40,
+     "reposts": 11
+    },
+    {
+     "id": "2102020521617453156",
+     "url": "https://x.com/humafinance/status/2102020521617453156",
+     "created_at": "2026-09-21T13:02:00.000Z",
+     "text": "Full Huma H1 report by @Blockworks ↓\n\nhttps://t.co/Erxg4aTngP",
+     "likes": 3,
+     "reposts": 0
+    },
+    {
+     "id": "2102020520761806953",
+     "url": "https://x.com/humafinance/status/2102020520761806953",
+     "created_at": "2026-09-21T13:02:00.000Z",
+     "text": "Huma's protocol capital turns over 4x per quarter, 16x annually. Traditional term credit does 1–2x per year. The same $100M generates roughly 8–16x more origination volume on Huma.\n\nShort-duration receivables. Uncorrelated to credit cycles.\n\nPayFi is velocity https://t.co/RY9YUsUkW0 https://t.co/LWrYV0Njfr",
+     "likes": 64,
+     "reposts": 6
+    },
+    {
+     "id": "2100254545238712805",
+     "url": "https://x.com/humafinance/status/2100254545238712805",
+     "created_at": "2026-09-16T16:04:39.000Z",
+     "text": "@SentoraHQ Read what makes PST a high quality and productive collateral.  \n\nFull @defillama_res article ↓\nhttps://t.co/ITVUd8Rslu",
+     "likes": 3,
+     "reposts": 0
+    },
+    {
+     "id": "2100253789429334328",
+     "url": "https://x.com/humafinance/status/2100253789429334328",
+     "created_at": "2026-09-16T16:01:38.000Z",
+     "text": ".@SentoraHQ's PST Vault by the numbers:\n\n• TVL grew 8x from $5.4M →$43M in just 3 weeks\n• Average APY held steadily at 8%\n• Transparent and verifiable onchain\n\nProof of real yield https://t.co/v35ozpWe8p",
+     "likes": 32,
+     "reposts": 5
+    },
+    {
+     "id": "2100224596113015243",
+     "url": "https://x.com/humafinance/status/2100224596113015243",
+     "created_at": "2026-09-16T14:05:38.000Z",
+     "text": "As a long-time partner of @Circle, Huma is proud to bring the real economy onchain to Arc.\n\nLearn more about Arc ↓\nhttps://t.co/8moz5KM4tl",
+     "likes": 7,
+     "reposts": 0
+    },
+    {
+     "id": "2100224584083747281",
+     "url": "https://x.com/humafinance/status/2100224584083747281",
+     "created_at": "2026-09-16T14:05:35.000Z",
+     "text": "PST is now live on @Arc.\n\nWhat PST brings to Arc:\n• Institutional RWA exposure, curated by @Bitwise.\n• Huma's @USDC-native yield deepening Arc's financial markets. https://t.co/mjv322PyL8",
+     "likes": 75,
+     "reposts": 12
+    },
+    {
+     "id": "2099845447166972007",
+     "url": "https://x.com/humafinance/status/2099845447166972007",
+     "created_at": "2026-09-15T12:59:02.000Z",
+     "text": "Huma 🤝 @Arc\n\nPST will be live on Arc from day one.\n\nHuma’s @USDC-native PayFi solution is accelerating cross-border payments, with $18B in transaction volume and zero defaults. https://t.co/gngtzolmzd",
+     "likes": 201,
+     "reposts": 22
+    },
+    {
+     "id": "2099498652800881070",
+     "url": "https://x.com/humafinance/status/2099498652800881070",
+     "created_at": "2026-09-14T14:01:00.000Z",
+     "text": "In just over one week, PST crossed $300M in market cap.\n\nNow at $322M, PST is the largest yield bearing asset on @Solana, and the fastest growing in all ecosystems according to https://t.co/X667r5A7Tz.\n\nAccelerate https://t.co/Yxpv6tSUlx https://t.co/7QZoVB8Rw1",
+     "likes": 98,
+     "reposts": 13
+    },
+    {
+     "id": "2099395576542744766",
+     "url": "https://x.com/humafinance/status/2099395576542744766",
+     "created_at": "2026-09-14T07:11:24.000Z",
+     "text": "Join Huma's official discord ↓\nhttps://t.co/V0ErIPyZCn",
+     "likes": 7,
+     "reposts": 0
+    },
+    {
+     "id": "2099395563741757915",
+     "url": "https://x.com/humafinance/status/2099395563741757915",
+     "created_at": "2026-09-14T07:11:21.000Z",
+     "text": "Phishing emails are actively circulating from fake domains such as (humaverse. info), asking recipients to connect wallets to a fake claim portal.\n\nThese emails are not from Huma. Stay vigilant.\n\nOfficial announcements are only made from https://t.co/kwP65jVC7u, @humafinance and Huma’s official discord.",
+     "likes": 46,
+     "reposts": 12
+    },
+    {
+     "id": "2098758778166423684",
+     "url": "https://x.com/humafinance/status/2098758778166423684",
+     "created_at": "2026-09-12T13:01:00.000Z",
+     "text": "An incredible week in Istanbul 🇹🇷 with @Arc and @jerallaire. \n\nExcited to support Arc's ecosystem and everything ahead! https://t.co/0QrGJjls9B",
+     "likes": 35,
+     "reposts": 6
+    },
+    {
+     "id": "2098566757841805805",
+     "url": "https://x.com/humafinance/status/2098566757841805805",
+     "created_at": "2026-09-12T00:17:59.000Z",
+     "text": "Deposit PYUSD or borrow against PST ↓\nhttps://t.co/pD2v7rNnze",
+     "likes": 3,
+     "reposts": 0
+    },
+    {
+     "id": "2098566744445219168",
+     "url": "https://x.com/humafinance/status/2098566744445219168",
+     "created_at": "2026-09-12T00:17:56.000Z",
+     "text": "The @SentoraHQ PST Main Vault just crossed $25M on @Morpho.\n\nCapacity has been raised from $25M → $45M.\n\nProof that real yield assets like PST are among the most effective collaterals in DeFi. https://t.co/U9WLrpewlj",
+     "likes": 40,
+     "reposts": 8
+    },
+    {
+     "id": "2098427979865235456",
+     "url": "https://x.com/humafinance/status/2098427979865235456",
+     "created_at": "2026-09-11T15:06:31.000Z",
+     "text": "$6.65M AUSD is currently borrowed against PST in Bitwise's PAPY vault.\n\nReal institutional demand for PST as productive collateral, enabling a 6.34% borrow rate.\n\nCongrats to @Bitwise and @withAUSD on the $15M milestone.\n\nSo much higher https://t.co/yjkzetCu2P https://t.co/8ObR1Vz8Fv",
+     "likes": 46,
+     "reposts": 11
+    },
+    {
+     "id": "2097904217143058727",
+     "url": "https://x.com/humafinance/status/2097904217143058727",
+     "created_at": "2026-09-10T04:25:17.000Z",
+     "text": "My kind of Solana duo \n\n@jup_mobile https://t.co/y2B6UkLfk1 https://t.co/TZ5uLAtdnS",
+     "likes": 48,
+     "reposts": 5
+    },
+    {
+     "id": "2097693284902867290",
+     "url": "https://x.com/humafinance/status/2097693284902867290",
+     "created_at": "2026-09-09T14:27:07.000Z",
+     "text": "Full report here ↓\nhttps://t.co/jmYCPOLVet",
+     "likes": 3,
+     "reposts": 0
+    },
+    {
+     "id": "2097693272504492248",
+     "url": "https://x.com/humafinance/status/2097693272504492248",
+     "created_at": "2026-09-09T14:27:04.000Z",
+     "text": ".@SolanaFndn and @AlliumLabs' Solana RWA Ecosystem Report maps 37 issuers across six asset classes.\n\nHuma pioneered PayFi on Solana and now stands in a category of its own, bringing ~$30T of annual payment financing onchain.\n\n$18B processed\n$300M TAL\nThis is PayFi on @Solana. https://t.co/f9EKp1YL31",
+     "likes": 40,
+     "reposts": 7
+    }
+   ]
+  },
+  {
+   "handle": "ethena",
+   "name": "Ethena",
+   "why": "flagged",
+   "id": "1637885519374721035",
+   "username": "ethena",
+   "truncated": false,
+   "posts": [
+    {
+     "id": "2102751965415616557",
+     "url": "https://x.com/ethena/status/2102751965415616557",
+     "created_at": "2026-09-23T13:28:30.000Z",
+     "text": "Earn up to 4.75% APR on USDe with @BinanceWallet's Hold to Earn.\n\nPromotional rewards distributed by Binance Wallet.\n\n🔶🔶🔶 https://t.co/0QwMVDw8JF",
+     "likes": 203,
+     "reposts": 16
+    },
+    {
+     "id": "2102724151920468164",
+     "url": "https://x.com/ethena/status/2102724151920468164",
+     "created_at": "2026-09-23T11:37:59.000Z",
+     "text": "Binance Wallet has enabled USDe rewards.\n\nUSDe has been selected as one of only three assets eligible for @BinanceWallet's new Hold to Earn - and offers the highest rate available.\n\nHold USDe and earn rewards automatically, paid by Binance. https://t.co/Dt50J7Yl0K https://t.co/GObJuIaQiq",
+     "likes": 364,
+     "reposts": 45
+    },
+    {
+     "id": "2102011157129343125",
+     "url": "https://x.com/ethena/status/2102011157129343125",
+     "created_at": "2026-09-21T12:24:47.000Z",
+     "text": "Two of the three largest markets across all of @Morpho are now backed by USDe collateral 🦋 https://t.co/pumTdmz81n",
+     "likes": 409,
+     "reposts": 25
+    },
+    {
+     "id": "2101957346004214136",
+     "url": "https://x.com/ethena/status/2101957346004214136",
+     "created_at": "2026-09-21T08:50:58.000Z",
+     "text": "Good morning, have a great weekend. https://t.co/VhSxQjiymy",
+     "likes": 415,
+     "reposts": 20
+    },
+    {
+     "id": "2099891771711078452",
+     "url": "https://x.com/ethena/status/2099891771711078452",
+     "created_at": "2026-09-15T16:03:07.000Z",
+     "text": "RSVP: https://t.co/i5wTRWIsbZ",
+     "likes": 29,
+     "reposts": 3
+    },
+    {
+     "id": "2099891759245578416",
+     "url": "https://x.com/ethena/status/2099891759245578416",
+     "created_at": "2026-09-15T16:03:04.000Z",
+     "text": "Join us for a day of padel tournaments and wellness ahead of @token2049, in collaboration with @moonpay and @JupiterExchange.\n\nTaking place October 6th, 2026. https://t.co/mU8yLWhG0C",
+     "likes": 411,
+     "reposts": 15
+    },
+    {
+     "id": "2099541743360450625",
+     "url": "https://x.com/ethena/status/2099541743360450625",
+     "created_at": "2026-09-14T16:52:13.000Z",
+     "text": "Proud to announce that Ethena has completed a SOC 2 Type II audit based on the Security Trust Services Criteria, receiving a clean opinion from an independent auditor with zero exceptions noted.\n\nSOC 2 is a widely recognized standard for enterprise-grade, operational security assurance: an independent audit of how Ethena actually run access control, change management, monitoring, and incident response.\n\nUnlike a Type I report, which checks that controls are designed correctly at a single point in time, a Type II examination tests that those controls actually operated effectively over time.\n\nThe audit covers infrastructure and processes supporting our products. It is distinct from, and complementary to, the smart contract audits and security reviews covering the Ethena protocol.\n\nWe believe rigorous operational security should be table stakes for any onchain infrastructure handling billions of dollars, and we intend to maintain continuous SOC 2 coverage into the future.\n\nEthena joins a very short list of onchain businesses that have completed SOC 2 Type II, including Circle, Chainlink and Aave.\n\nThe full report is available to partners on request under NDA.",
+     "likes": 465,
+     "reposts": 44
+    },
+    {
+     "id": "2098381606306361524",
+     "url": "https://x.com/ethena/status/2098381606306361524",
+     "created_at": "2026-09-11T12:02:15.000Z",
+     "text": "Users be able to bridge USDe and sUSDe to TRON later today via @StargateFinance.\n\nUSDe and sUSDe will be integrated across the TRON ecosystem in the coming weeks, including integrations into @DeFi_JUST, @OfficialSUNio, and other core DeFi products.\n\nExpect further announcements around those integrations.",
+     "likes": 41,
+     "reposts": 5
+    },
+    {
+     "id": "2098381594293846217",
+     "url": "https://x.com/ethena/status/2098381594293846217",
+     "created_at": "2026-09-11T12:02:12.000Z",
+     "text": "USDe is now live on TRON.\n\nTRON one of the largest chains by stablecoin supply with nearly $100 billion in assets, used by millions of people globally.\n\nWe're excited to be bringing Ethena's product lines to @trondao's thriving stablecoin ecosystem and userbase. https://t.co/H0zzcKdBRE",
+     "likes": 471,
+     "reposts": 67
+    },
+    {
+     "id": "2097956209936716249",
+     "url": "https://x.com/ethena/status/2097956209936716249",
+     "created_at": "2026-09-10T07:51:53.000Z",
+     "text": "https://t.co/9Z6fozovXW",
+     "likes": 24,
+     "reposts": 5
+    },
+    {
+     "id": "2097956197748162575",
+     "url": "https://x.com/ethena/status/2097956197748162575",
+     "created_at": "2026-09-10T07:51:50.000Z",
+     "text": "Users on the waitlist will now be added to Ethena Pay on a daily basis going forward, sign up for access now to secure your spot: https://t.co/feLyDYZJV3",
+     "likes": 211,
+     "reposts": 10
+    },
+    {
+     "id": "2097584936295547110",
+     "url": "https://x.com/ethena/status/2097584936295547110",
+     "created_at": "2026-09-09T07:16:34.000Z",
+     "text": "Following the growth of the Robinhood and Coinbase integrations, USDe is now the second largest collateral asset and the largest dollar collateral asset across all of Morpho. https://t.co/CXHKYtbL9m",
+     "likes": 321,
+     "reposts": 27
+    }
+   ]
+  },
+  {
+   "handle": "maplefinance",
+   "name": "Maple",
+   "why": "flagged",
+   "id": "1164762427604389890",
+   "username": "maplefinance",
+   "truncated": false,
+   "posts": [
+    {
+     "id": "2102759941912301928",
+     "url": "https://x.com/maplefinance/status/2102759941912301928",
+     "created_at": "2026-09-23T14:00:12.000Z",
+     "text": "https://t.co/zSGrFjQ6e8",
+     "likes": 4,
+     "reposts": 0
+    },
+    {
+     "id": "2102759927777460728",
+     "url": "https://x.com/maplefinance/status/2102759927777460728",
+     "created_at": "2026-09-23T14:00:08.000Z",
+     "text": "Q: Why doesn't a bank just report loans this way too?\n\nA: It could, but a standard loan covenant compliance certificate typically lands 45 to 60 days after the quarter it reports on. Maple's collateral and repayment data are visible onchain as they happen. That's the actual difference.\n\nHave a question for us to answer? ↓",
+     "likes": 75,
+     "reposts": 9
+    },
+    {
+     "id": "2102382465067458975",
+     "url": "https://x.com/maplefinance/status/2102382465067458975",
+     "created_at": "2026-09-22T13:00:14.000Z",
+     "text": "https://t.co/zSGrFjQ6e8",
+     "likes": 3,
+     "reposts": 0
+    },
+    {
+     "id": "2102382452610375747",
+     "url": "https://x.com/maplefinance/status/2102382452610375747",
+     "created_at": "2026-09-22T13:00:11.000Z",
+     "text": "Q: Why doesn't someone just copy Maple's yield spread?\n\nA: Because the underwriting behind it is hard to copy, and that's our moat. Credit officers, borrower relationships, legal structuring, and recourse if a borrower defaults all sit behind that number. Replicate the code and none of that comes with it.\n\nHave a question for us to answer? ↓",
+     "likes": 140,
+     "reposts": 4
+    },
+    {
+     "id": "2102050236290261101",
+     "url": "https://x.com/maplefinance/status/2102050236290261101",
+     "created_at": "2026-09-21T15:00:05.000Z",
+     "text": "Direct lending, securitization, and fintech-originated receivables are markets traditional finance has already built into the trillions.\n\nWhere Maple's new strategies fit into that opportunity ↓\nhttps://t.co/ecP6QONI24",
+     "likes": 181,
+     "reposts": 8
+    },
+    {
+     "id": "2101665208909570247",
+     "url": "https://x.com/maplefinance/status/2101665208909570247",
+     "created_at": "2026-09-20T13:30:07.000Z",
+     "text": "https://t.co/zSGrFjQ6e8",
+     "likes": 8,
+     "reposts": 0
+    },
+    {
+     "id": "2101665196716736948",
+     "url": "https://x.com/maplefinance/status/2101665196716736948",
+     "created_at": "2026-09-20T13:30:04.000Z",
+     "text": "Q: When will TradFi and DeFi actually converge?\n\nA: We don't think the line between TradFi and DeFi was ever really about technology. It was about who could access credit underwritten to institutional standards. Maple's loan book runs onchain and follows the same underwriting discipline as any traditional credit desk. That infrastructure already exists.\n\nHave a question for us to answer? ↓",
+     "likes": 180,
+     "reposts": 10
+    },
+    {
+     "id": "2101355766867481070",
+     "url": "https://x.com/maplefinance/status/2101355766867481070",
+     "created_at": "2026-09-19T17:00:30.000Z",
+     "text": "https://t.co/1olAPyKokN",
+     "likes": 2,
+     "reposts": 0
+    },
+    {
+     "id": "2101355754792087732",
+     "url": "https://x.com/maplefinance/status/2101355754792087732",
+     "created_at": "2026-09-19T17:00:27.000Z",
+     "text": "Sid joined the Station70 podcast for a conversation on risk in crypto, where it's actually coming from, and how that's shifted over time.\n\nFull episode ↓ https://t.co/pft4UgyZpF",
+     "likes": 123,
+     "reposts": 2
+    },
+    {
+     "id": "2101302821518033011",
+     "url": "https://x.com/maplefinance/status/2101302821518033011",
+     "created_at": "2026-09-19T13:30:07.000Z",
+     "text": "https://t.co/zSGrFjQ6e8",
+     "likes": 5,
+     "reposts": 0
+    },
+    {
+     "id": "2101302809681625203",
+     "url": "https://x.com/maplefinance/status/2101302809681625203",
+     "created_at": "2026-09-19T13:30:04.000Z",
+     "text": "Q: What's the difference between yield from token emissions and yield from real lending?\n\nA: Emissions yield disappears the moment the emissions stop. Yield from Maple comes from borrowers paying interest on overcollateralized loans that fund real economic activity. One of those is sustainable. The other was always temporary.\n\nHave a question for us to answer? ↓",
+     "likes": 82,
+     "reposts": 5
+    },
+    {
+     "id": "2100992036052844753",
+     "url": "https://x.com/maplefinance/status/2100992036052844753",
+     "created_at": "2026-09-18T16:55:10.000Z",
+     "text": "Next quarterly call is in October.\n\nRegister your interest: https://t.co/BGqFZaDC3Z",
+     "likes": 6,
+     "reposts": 0
+    },
+    {
+     "id": "2100992024103326150",
+     "url": "https://x.com/maplefinance/status/2100992024103326150",
+     "created_at": "2026-09-18T16:55:07.000Z",
+     "text": "August in numbers.\n\n- $4.8B AUM, +47% YoY\n- $7.4B originations YTD, +88% YoY\n- $13.7M revenue YTD, double last year\n- syrupUSD is outperforming peers by 130bps\n- 676k SYRUP in buybacks\n\nMissed our AMA call this week? Sid walked through last month's numbers. https://t.co/JLn6GQSjPI",
+     "likes": 126,
+     "reposts": 19
+    },
+    {
+     "id": "2100940439398522897",
+     "url": "https://x.com/maplefinance/status/2100940439398522897",
+     "created_at": "2026-09-18T13:30:08.000Z",
+     "text": "https://t.co/zSGrFjQ6e8",
+     "likes": 3,
+     "reposts": 0
+    },
+    {
+     "id": "2100940427352555780",
+     "url": "https://x.com/maplefinance/status/2100940427352555780",
+     "created_at": "2026-09-18T13:30:06.000Z",
+     "text": "Q: Does tokenizing an asset make it liquid?\n\nA: Not necessarily. Wrapping an illiquid asset in a token doesn't automatically make it liquid. An asset is illiquid because of demand, not because of where and how it's issued. What really matters is direct issuance onchain, where the loan itself is the smart contract, rather than a token pointing at a legal document sitting elsewhere.\n\nHave a question for us to answer? ↓",
+     "likes": 79,
+     "reposts": 7
+    },
+    {
+     "id": "2100585596184154271",
+     "url": "https://x.com/maplefinance/status/2100585596184154271",
+     "created_at": "2026-09-17T14:00:07.000Z",
+     "text": "Lenders and allocators already trust Maple with billions in institutional lending, and are asking for more range without giving up the standard.\n\nWhy Maple's widening the allocation engine rather than adding it elsewhere ↓\n\nhttps://t.co/ecP6QONI24",
+     "likes": 92,
+     "reposts": 13
+    },
+    {
+     "id": "2100499367438549107",
+     "url": "https://x.com/maplefinance/status/2100499367438549107",
+     "created_at": "2026-09-17T08:17:29.000Z",
+     "text": "The Maple Memo just dropped.\n\n@syrupsid's latest take on why we're adding new allocation strategies: Lenders and partners already trust Maple with billions in institutional lending, and meeting that demand means widening the allocation engine so capital can reach a wider range of strategies.\n\nFull Memo ↓ https://t.co/PXxXf984YX",
+     "likes": 96,
+     "reposts": 10
+    },
+    {
+     "id": "2100238640735789420",
+     "url": "https://x.com/maplefinance/status/2100238640735789420",
+     "created_at": "2026-09-16T15:01:27.000Z",
+     "text": "Maple Community AMA - August 2026 https://t.co/l4Npip3G82",
+     "likes": 84,
+     "reposts": 9
+    },
+    {
+     "id": "2100218444906156199",
+     "url": "https://x.com/maplefinance/status/2100218444906156199",
+     "created_at": "2026-09-16T13:41:12.000Z",
+     "text": "Discover more at https://t.co/ToroHdzTih",
+     "likes": 12,
+     "reposts": 1
+    },
+    {
+     "id": "2100218432524521817",
+     "url": "https://x.com/maplefinance/status/2100218432524521817",
+     "created_at": "2026-09-16T13:41:09.000Z",
+     "text": "Arc x Maple\nsyrupUSDC is live on @Arc from day one.\n\nWhat it unlocks:\n→ An institutional lending market on Arc at launch, backed by ~$1B deployed across institutional loans\n→ Fintechs building on Arc can ship an earn product as an integration rather than build the credit engine behind it\n→ A lending market alongside Arc's payments, FX, and tokenized assets from launch",
+     "likes": 191,
+     "reposts": 24
+    },
+    {
+     "id": "2100162799427268774",
+     "url": "https://x.com/maplefinance/status/2100162799427268774",
+     "created_at": "2026-09-16T10:00:05.000Z",
+     "text": "Have a question for Matt? https://t.co/zSGrFjQ6e8",
+     "likes": 5,
+     "reposts": 0
+    },
+    {
+     "id": "2100162787137945778",
+     "url": "https://x.com/maplefinance/status/2100162787137945778",
+     "created_at": "2026-09-16T10:00:02.000Z",
+     "text": "A reminder that we're live on X at 11AM EDT today. Head to our profile to join or get the link straight to your inbox by registering below.\n\nRegister: https://t.co/BGqFZaDC3Z",
+     "likes": 52,
+     "reposts": 2
+    },
+    {
+     "id": "2099906099860439511",
+     "url": "https://x.com/maplefinance/status/2099906099860439511",
+     "created_at": "2026-09-15T17:00:03.000Z",
+     "text": "ICYMI\n\nLending has never really changed. What changes is who enforces it. Village elders, then the state, then ratings agencies, and now code that enforces collateral and repayment terms without needing to trust any of them. The next chapter was always going to look like this.\n\nhttps://t.co/ySKQqTDTUS",
+     "likes": 78,
+     "reposts": 8
+    },
+    {
+     "id": "2099876020790940123",
+     "url": "https://x.com/maplefinance/status/2099876020790940123",
+     "created_at": "2026-09-15T15:00:31.000Z",
+     "text": "https://t.co/zSGrFjQ6e8",
+     "likes": 4,
+     "reposts": 0
+    },
+    {
+     "id": "2099876008107348031",
+     "url": "https://x.com/maplefinance/status/2099876008107348031",
+     "created_at": "2026-09-15T15:00:28.000Z",
+     "text": "Q: What does \"trustless\" actually mean?\n\nA: It doesn't mean you don't trust the counterparty, it means you don't have to. That's what makes it possible for agents to start interacting directly with each other on top of verified onchain data, without needing the intermediary layers traditional finance built just to manufacture that trust.\n\nHave a question for us to answer? ↓",
+     "likes": 71,
+     "reposts": 7
+    },
+    {
+     "id": "2099865832214155565",
+     "url": "https://x.com/maplefinance/status/2099865832214155565",
+     "created_at": "2026-09-15T14:20:02.000Z",
+     "text": "Maple's CEO @syrupsid is joining the @heybeluga livestream to discuss where DeFi is headed and how Maple is positioned for that.\n\nTune in today at 12PM ET. https://t.co/9VOcLqetic",
+     "likes": 62,
+     "reposts": 6
+    },
+    {
+     "id": "2099513566516912203",
+     "url": "https://x.com/maplefinance/status/2099513566516912203",
+     "created_at": "2026-09-14T15:00:15.000Z",
+     "text": "Full podcast here https://t.co/7g96aqq7aF",
+     "likes": 9,
+     "reposts": 1
+    },
+    {
+     "id": "2099513551933305305",
+     "url": "https://x.com/maplefinance/status/2099513551933305305",
+     "created_at": "2026-09-14T15:00:12.000Z",
+     "text": "“There are only three things that matter in any lending or credit transaction. The facility... the security... and then your ability to repay... That is ultimately what leads to the progress of society and innovation, when capital can flow to its most productive use case.”\n\n@joe_defi (Maple), on Stable Dash Live's The Incline.",
+     "likes": 94,
+     "reposts": 5
+    },
+    {
+     "id": "2099474670680449329",
+     "url": "https://x.com/maplefinance/status/2099474670680449329",
+     "created_at": "2026-09-14T12:25:42.000Z",
+     "text": "Maple has joined Interchange, Zodia Custody's institutional settlement network. Institutions can now access Maple's onchain financing from Maple while their collateral stays in their own segregated Zodia Custody wallet for the life of the loan.\n\nRead more ↓ https://t.co/Xia9Q84xri",
+     "likes": 104,
+     "reposts": 16
+    },
+    {
+     "id": "2098396248231575880",
+     "url": "https://x.com/maplefinance/status/2098396248231575880",
+     "created_at": "2026-09-11T13:00:26.000Z",
+     "text": "A single strategy only gives you one cycle's worth of yield.\n\nHere's how Maple will spread that across three ↓\n https://t.co/ecP6QONI24",
+     "likes": 126,
+     "reposts": 7
+    },
+    {
+     "id": "2098182375112884397",
+     "url": "https://x.com/maplefinance/status/2098182375112884397",
+     "created_at": "2026-09-10T22:50:35.000Z",
+     "text": "Wherever syrupUSDC deploys, the credit behind it doesn't change: Institutional loans, overcollateralized and onchain. \n\nIt carries ~$1B deployed across institutional loans, now live on @arc too. Yields are variable and not guaranteed. https://t.co/4GRcf0sI0F",
+     "likes": 187,
+     "reposts": 18
+    },
+    {
+     "id": "2098067490534465639",
+     "url": "https://x.com/maplefinance/status/2098067490534465639",
+     "created_at": "2026-09-10T15:14:04.000Z",
+     "text": "More details: Content &amp; Brand Associate (Content, Community, and Social) - Internship ↓https://t.co/czi0Djlzg1",
+     "likes": 18,
+     "reposts": 0
+    },
+    {
+     "id": "2098067478459097438",
+     "url": "https://x.com/maplefinance/status/2098067478459097438",
+     "created_at": "2026-09-10T15:14:01.000Z",
+     "text": "Maple is hiring a Content &amp; Brand Associate as we expand our Marketing and Community team.\n\nIf you're steeped in Maple, crypto Twitter, or onchain credit and want to help shape how we sound and show up, this one's worth a look. https://t.co/EWRdQ04yGF",
+     "likes": 110,
+     "reposts": 6
+    },
+    {
+     "id": "2098056595133399074",
+     "url": "https://x.com/maplefinance/status/2098056595133399074",
+     "created_at": "2026-09-10T14:30:46.000Z",
+     "text": "Founders don't usually lose the plot on credit risk. They lose it on the decisions they're too slow to make.\n\n@syrupsid joined the @station_70 podcast for a candid one on building crypto lending, and why operational risk, not credit risk, is where the money actually goes. https://t.co/UYMunvSbK5",
+     "likes": 74,
+     "reposts": 7
+    },
+    {
+     "id": "2097689270224130229",
+     "url": "https://x.com/maplefinance/status/2097689270224130229",
+     "created_at": "2026-09-09T14:11:09.000Z",
+     "text": "Register: https://t.co/BGqFZaDC3Z",
+     "likes": 4,
+     "reposts": 0
+    },
+    {
+     "id": "2097689258446430245",
+     "url": "https://x.com/maplefinance/status/2097689258446430245",
+     "created_at": "2026-09-09T14:11:07.000Z",
+     "text": "Have a specific question for Matt? Submit it here ↓ https://t.co/zSGrFjQ6e8",
+     "likes": 8,
+     "reposts": 0
+    },
+    {
+     "id": "2097689245423116728",
+     "url": "https://x.com/maplefinance/status/2097689245423116728",
+     "created_at": "2026-09-09T14:11:03.000Z",
+     "text": "We're gearing up to go for the September Maple Community AMA next Wednesday, September 16.\n\nFinancials will be covered as usual, this time we want your input on the technical side.\n\nWhere should Matt spend the most time?",
+     "likes": 71,
+     "reposts": 10
+    }
+   ]
+  },
+  {
+   "handle": "CapApp",
+   "name": "Cap",
+   "why": "flagged",
+   "id": "1828233244908630016",
+   "username": "CapApp",
+   "truncated": false,
+   "posts": [
+    {
+     "id": "2102425696463442291",
+     "url": "https://x.com/CapApp/status/2102425696463442291",
+     "created_at": "2026-09-22T15:52:01.000Z",
+     "text": "Cap has created a novel credit marketplace with a new participant, the funded underwriter.\n\nInstead of a central team allocating capital, an independent party posts collateral and is rewarded for their judgment.\n\nThis is how Cap enables onchain credit to scale across industries. https://t.co/WdaXDJqKYE",
+     "likes": 32,
+     "reposts": 4
+    },
+    {
+     "id": "2100682696393671048",
+     "url": "https://x.com/CapApp/status/2100682696393671048",
+     "created_at": "2026-09-17T20:25:58.000Z",
+     "text": "Lombard’s Bitcoin Onchain Credit Strategy is funded underwriting in practice.\n\nBy providing sound judgement, Lombard earns a premium.\n\nCredit is evolving and Cap is leading the way. https://t.co/51LnhILnNh",
+     "likes": 25,
+     "reposts": 7
+    },
+    {
+     "id": "2100276289701622132",
+     "url": "https://x.com/CapApp/status/2100276289701622132",
+     "created_at": "2026-09-16T17:31:03.000Z",
+     "text": "Credit: @ChangeNOW",
+     "likes": 11,
+     "reposts": 2
+    },
+    {
+     "id": "2100269571525705869",
+     "url": "https://x.com/CapApp/status/2100269571525705869",
+     "created_at": "2026-09-16T17:04:21.000Z",
+     "text": "Over the past year, institutions and brick &amp; mortar businesses alike have been coming onchain.\n\nWhen these companies collectively onboard billions of dollars, they demand a level of transparency and recourse few can provide.\n\nThrough funded underwriters, Cap is one of those few. https://t.co/MmYcofoxdI",
+     "likes": 35,
+     "reposts": 7
+    },
+    {
+     "id": "2099909802843640076",
+     "url": "https://x.com/CapApp/status/2099909802843640076",
+     "created_at": "2026-09-15T17:14:46.000Z",
+     "text": "Cap is a credit platform powered by funded underwriting and backed by Franklin Templeton.\n\nHolding stcUSD mean's you're holding Cap's yield-bearing asset. That yield comes from borrowers who each have an underwriter posting collateral on each borrower's behalf.\n\nMore details about Cap and this step-by-step guide can be found in our latest post: https://t.co/eMzl0WXSff",
+     "likes": 3,
+     "reposts": 1
+    },
+    {
+     "id": "2099909790650777658",
+     "url": "https://x.com/CapApp/status/2099909790650777658",
+     "created_at": "2026-09-15T17:14:43.000Z",
+     "text": "9/ You're all set. When the order completes, stcUSD arrives in the wallet you connected.\n\nTo confirm, connect that wallet at https://t.co/vJTeqv2VWW and your stcUSD balance and current yield show at the top.\n\nThat's it. You're earning. https://t.co/VqySJZknRp",
+     "likes": 3,
+     "reposts": 1
+    },
+    {
+     "id": "2099909775631032527",
+     "url": "https://x.com/CapApp/status/2099909775631032527",
+     "created_at": "2026-09-15T17:14:39.000Z",
+     "text": "8/ Switch back to the Cap page. Your order shows in progress: the USDC you sent on one side, the stcUSD you'll receive on the other.\n\nOnce your USDC lands, Halliday swaps it into cUSD and stakes into stcUSD in one flow. This usually takes a few minutes. https://t.co/mC1nyy95rw",
+     "likes": 3,
+     "reposts": 1
+    },
+    {
+     "id": "2099909761089368248",
+     "url": "https://x.com/CapApp/status/2099909761089368248",
+     "created_at": "2026-09-15T17:14:36.000Z",
+     "text": "7/ Slide the bar to confirm.\n\nFomo shows the withdrawal processing. Nothing more to do on this side. https://t.co/cUUN6PocIS",
+     "likes": 3,
+     "reposts": 1
+    },
+    {
+     "id": "2099909746174378456",
+     "url": "https://x.com/CapApp/status/2099909746174378456",
+     "created_at": "2026-09-15T17:14:32.000Z",
+     "text": "6/ Tap the network selector (it may default to Solana or another chain) and switch it to Ethereum. Paste the deposit address you copied from Cap, then tap Review.\n\nDouble-check the network says Ethereum. USDC sent on the wrong chain will not reach Cap. https://t.co/hWkX7MYoKR",
+     "likes": 4,
+     "reposts": 1
+    },
+    {
+     "id": "2099909731129368671",
+     "url": "https://x.com/CapApp/status/2099909731129368671",
+     "created_at": "2026-09-15T17:14:28.000Z",
+     "text": "5/ Enter the amount you want to withdraw and tap Continue.\n\nFor the cleanest match, use the same amount you entered on Cap. https://t.co/d8OQxs6ffp",
+     "likes": 4,
+     "reposts": 1
+    },
+    {
+     "id": "2099909716172562793",
+     "url": "https://x.com/CapApp/status/2099909716172562793",
+     "created_at": "2026-09-15T17:14:25.000Z",
+     "text": "4/ Switch over to the Fomo app.\n\nIn the bottom right, tap the three dots next to the + button, select Withdraw, then choose Crypto wallet. https://t.co/tamFpxouur",
+     "likes": 4,
+     "reposts": 1
+    },
+    {
+     "id": "2099909695687561497",
+     "url": "https://x.com/CapApp/status/2099909695687561497",
+     "created_at": "2026-09-15T17:14:20.000Z",
+     "text": "3/ Enter how much you want to move. Make sure the asset and network are set to USDC on Ethereum. Cap shows you an estimate of the stcUSD you'll receive.\n\nPress Continue, then copy the deposit address on the next page. This is the address Halliday watches for your USDC, so keep it handy.",
+     "likes": 4,
+     "reposts": 1
+    },
+    {
+     "id": "2099909677366784444",
+     "url": "https://x.com/CapApp/status/2099909677366784444",
+     "created_at": "2026-09-15T17:14:16.000Z",
+     "text": "2/ Choose your wallet and connect.\n\nThis is the wallet your stcUSD will land in, so make sure it's one you control. https://t.co/V6zuI8b5vD",
+     "likes": 5,
+     "reposts": 1
+    },
+    {
+     "id": "2099909662074363968",
+     "url": "https://x.com/CapApp/status/2099909662074363968",
+     "created_at": "2026-09-15T17:14:12.000Z",
+     "text": "1/ Go to https://t.co/YKmHWVXHCX and press Connect under the Use crypto tab.\n\nThis page is powered by @HallidayHQ, which handles all the routing behind the scenes. https://t.co/61pthKK9mx",
+     "likes": 8,
+     "reposts": 1
+    },
+    {
+     "id": "2099909646266048766",
+     "url": "https://x.com/CapApp/status/2099909646266048766",
+     "created_at": "2026-09-15T17:14:08.000Z",
+     "text": "Your PnL is up on @fomo. You're ready to withdraw some USD but you don't want them to sit idle.\n\nNow you can put them to work on Cap. Here's how to move into stcUSD and start earning yield.\n\nAll you need: funds in Fomo and a few minutes of your time.\n\nStep by step guide 👇 https://t.co/qFRZPxiqLr",
+     "likes": 38,
+     "reposts": 7
+    },
+    {
+     "id": "2098144501026197793",
+     "url": "https://x.com/CapApp/status/2098144501026197793",
+     "created_at": "2026-09-10T20:20:05.000Z",
+     "text": "Demand for underwriting loans at Cap has never been higher.\n\nAround 85% of $USDC deposits at Cap have been lent to institutional borrowers, generating a 30D average of 5.6% APR for USD depositors.\n\nEvery loan is backed by a funded underwriter who posts collateral and earns a premium for good judgement.",
+     "likes": 48,
+     "reposts": 10
+    },
+    {
+     "id": "2097697331739255236",
+     "url": "https://x.com/CapApp/status/2097697331739255236",
+     "created_at": "2026-09-09T14:43:11.000Z",
+     "text": "More on the platform: https://t.co/pkn3dZNrlS\n\nGet started with cUSD: https://t.co/vJTeqv2VWW",
+     "likes": 5,
+     "reposts": 1
+    },
+    {
+     "id": "2097697319957467359",
+     "url": "https://x.com/CapApp/status/2097697319957467359",
+     "created_at": "2026-09-09T14:43:09.000Z",
+     "text": "PYUSDx crossed $100M in processed volume on day one. Cap is live alongside @saturn_credit and @ConcreteXYZ, with @USDai_Official, @0xfairblock and others coming next.",
+     "likes": 6,
+     "reposts": 1
+    },
+    {
+     "id": "2097697308360233359",
+     "url": "https://x.com/CapApp/status/2097697308360233359",
+     "created_at": "2026-09-09T14:43:06.000Z",
+     "text": "PYUSDx is a meaning cUSD inherits PayPal's regulated infrastructure and liquidity all while Cap keeps contract-level control.",
+     "likes": 5,
+     "reposts": 1
+    },
+    {
+     "id": "2097697296431661475",
+     "url": "https://x.com/CapApp/status/2097697296431661475",
+     "created_at": "2026-09-09T14:43:03.000Z",
+     "text": "The biggest change is on the reserve side.\n\nUntil now, idle capital in the pool sat in DeFi liquidity that was unpredictable. With PYUSDx, those reserves are backed by PYUSD meaning a more stable platform for our depositors and borrowers to rely on.",
+     "likes": 7,
+     "reposts": 1
+    },
+    {
+     "id": "2097697284645703687",
+     "url": "https://x.com/CapApp/status/2097697284645703687",
+     "created_at": "2026-09-09T14:43:00.000Z",
+     "text": "Quick refresher: Cap is a credit platform powered by financial guarantees.\n\nDepositors supply USD stablecoins. Institutional borrowers deploy them. Funded underwriters post their own collateral to cover each loan and earn a premium from the spread. If a loan goes bad, the underwriter covers, not the depositor.",
+     "likes": 11,
+     "reposts": 4
+    },
+    {
+     "id": "2097697272343789880",
+     "url": "https://x.com/CapApp/status/2097697272343789880",
+     "created_at": "2026-09-09T14:42:57.000Z",
+     "text": "cUSD now runs on PYUSDx.\n\nCap's native stablecoin has migrated to PYUSDx, the new developer platform from @PayPal, @M0, and @moonpay. The backing of cUSD is now PYUSD reserves.\n\nHere's how it works 🧵 https://t.co/jq87BGivAD https://t.co/B7jO2TDRlC",
+     "likes": 70,
+     "reposts": 12
+    }
+   ]
+  },
+  {
+   "handle": "aave",
+   "name": "Aave",
+   "why": "flagged",
+   "id": "867100084248469505",
+   "username": "aave",
+   "truncated": false,
+   "posts": [
+    {
+     "id": "2102821734357352890",
+     "url": "https://x.com/aave/status/2102821734357352890",
+     "created_at": "2026-09-23T18:05:44.000Z",
+     "text": "Learn more here: https://t.co/HchJgJQU6l",
+     "likes": 8,
+     "reposts": 1
+    },
+    {
+     "id": "2102821732344099148",
+     "url": "https://x.com/aave/status/2102821732344099148",
+     "created_at": "2026-09-23T18:05:44.000Z",
+     "text": "Securities finance handles tens of trillions of dollars a year, and that value is now moving onchain.\n\nWe published a blog post that details how Aave V4 is positioned to be the credit layer.\n\nRead it below ↓ https://t.co/loYPGIeOEg",
+     "likes": 147,
+     "reposts": 20
+    },
+    {
+     "id": "2102771327488667903",
+     "url": "https://x.com/aave/status/2102771327488667903",
+     "created_at": "2026-09-23T14:45:26.000Z",
+     "text": "Aave V4 on @avax crossed $30 million deposits. https://t.co/Fekuhh15Er",
+     "likes": 261,
+     "reposts": 40
+    },
+    {
+     "id": "2102761898207039777",
+     "url": "https://x.com/aave/status/2102761898207039777",
+     "created_at": "2026-09-23T14:07:58.000Z",
+     "text": "Base community showed up and all Ghost Passes have been claimed 👻",
+     "likes": 7,
+     "reposts": 0
+    },
+    {
+     "id": "2102420653840154797",
+     "url": "https://x.com/aave/status/2102420653840154797",
+     "created_at": "2026-09-22T15:31:59.000Z",
+     "text": "Learn more about Aave App here: https://t.co/KXuU32zA69",
+     "likes": 16,
+     "reposts": 1
+    },
+    {
+     "id": "2102420651462078556",
+     "url": "https://x.com/aave/status/2102420651462078556",
+     "created_at": "2026-09-22T15:31:59.000Z",
+     "text": "USDC deposits from @base are now live in the Aave mobile app.\n\nIf you're on the waitlist, use Ghost Pass code 'AAVEONBASE' for instant access. https://t.co/AOamBjKx6O",
+     "likes": 314,
+     "reposts": 47
+    },
+    {
+     "id": "2102120441540157812",
+     "url": "https://x.com/aave/status/2102120441540157812",
+     "created_at": "2026-09-21T19:39:03.000Z",
+     "text": "weETH by @ether_fi crossed $4 billion deposits on Aave V3. https://t.co/Z1y1TjeRkJ",
+     "likes": 249,
+     "reposts": 30
+    },
+    {
+     "id": "2102078710144786574",
+     "url": "https://x.com/aave/status/2102078710144786574",
+     "created_at": "2026-09-21T16:53:13.000Z",
+     "text": "If you’ve been waiting to use Aave App, now’s your chance.\n\nUse Ghost Pass code “TAKEONE” for instant access, while supplies last. https://t.co/xjPJ9ruwm5",
+     "likes": 374,
+     "reposts": 40
+    },
+    {
+     "id": "2102052037823214029",
+     "url": "https://x.com/aave/status/2102052037823214029",
+     "created_at": "2026-09-21T15:07:14.000Z",
+     "text": "Find the Plasma market here: https://t.co/9n4ZXJSrWj",
+     "likes": 19,
+     "reposts": 0
+    },
+    {
+     "id": "2102052034471965054",
+     "url": "https://x.com/aave/status/2102052034471965054",
+     "created_at": "2026-09-21T15:07:13.000Z",
+     "text": "Asset swaps and position swaps, powered by @CowSwap, are now live on @plasma.\n\nUsers can swap any asset, or swap collateral and debt through the best available liquidity with MEV protection. https://t.co/w6A7UfgNYK",
+     "likes": 242,
+     "reposts": 34
+    },
+    {
+     "id": "2100913493528527333",
+     "url": "https://x.com/aave/status/2100913493528527333",
+     "created_at": "2026-09-18T11:43:04.000Z",
+     "text": "https://t.co/KXuU32zA69",
+     "likes": 19,
+     "reposts": 1
+    },
+    {
+     "id": "2100913352339804625",
+     "url": "https://x.com/aave/status/2100913352339804625",
+     "created_at": "2026-09-18T11:42:30.000Z",
+     "text": "If you’re in the US 🇺🇸, you can use the Ghost Pass code EVERYSECOND to skip the waitlist while supplies last.",
+     "likes": 41,
+     "reposts": 2
+    },
+    {
+     "id": "2100913349747695722",
+     "url": "https://x.com/aave/status/2100913349747695722",
+     "created_at": "2026-09-18T11:42:30.000Z",
+     "text": "Grow your money every single second with the world’s savings app. Now in early access. https://t.co/5QiOoAIAKJ",
+     "likes": 709,
+     "reposts": 53
+    },
+    {
+     "id": "2100594161774649413",
+     "url": "https://x.com/aave/status/2100594161774649413",
+     "created_at": "2026-09-17T14:34:09.000Z",
+     "text": "And yes, it has dark mode.\n\nFind V3 here: https://t.co/xxV6oeds2K",
+     "likes": 27,
+     "reposts": 1
+    },
+    {
+     "id": "2100594160222765511",
+     "url": "https://x.com/aave/status/2100594160222765511",
+     "created_at": "2026-09-17T14:34:09.000Z",
+     "text": "Aave V3 got a brand new look. https://t.co/J6pW6QnV0Y",
+     "likes": 669,
+     "reposts": 42
+    },
+    {
+     "id": "2100283036281536660",
+     "url": "https://x.com/aave/status/2100283036281536660",
+     "created_at": "2026-09-16T17:57:51.000Z",
+     "text": "Aave V4 crossed $1 billion deposits, a new all-time high. https://t.co/jVYHA110WA",
+     "likes": 656,
+     "reposts": 60
+    },
+    {
+     "id": "2100214101590860118",
+     "url": "https://x.com/aave/status/2100214101590860118",
+     "created_at": "2026-09-16T13:23:56.000Z",
+     "text": "This expansion builds on years of success on Avalanche, where Aave has established one of its strongest markets with deep liquidity and an active user base.\n\nMore here: https://t.co/H5CJkB0FAQ",
+     "likes": 15,
+     "reposts": 0
+    },
+    {
+     "id": "2100214099388850392",
+     "url": "https://x.com/aave/status/2100214099388850392",
+     "created_at": "2026-09-16T13:23:56.000Z",
+     "text": "Aave V4 has been live on Avalanche for two months and has already crossed $20 million deposits.\n\nThe RWA Hub extends V4's infrastructure into tokenized financial assets, giving institutions moving onchain a market purpose-built for them.",
+     "likes": 36,
+     "reposts": 1
+    },
+    {
+     "id": "2100214096343793983",
+     "url": "https://x.com/aave/status/2100214096343793983",
+     "created_at": "2026-09-16T13:23:55.000Z",
+     "text": "Aave V4's first RWA Hub is coming to @avax, a dedicated credit market where institutions can borrow against RWAs.\n\nIt will launch with USA₮, Tether's federally regulated, dollar-backed stablecoin, as its primary source of dollar liquidity. https://t.co/lQ60n6bHpQ",
+     "likes": 507,
+     "reposts": 47
+    },
+    {
+     "id": "2100174779378479573",
+     "url": "https://x.com/aave/status/2100174779378479573",
+     "created_at": "2026-09-16T10:47:41.000Z",
+     "text": "Find Arc on V4 here: https://t.co/z1TuNDVtza",
+     "likes": 17,
+     "reposts": 0
+    },
+    {
+     "id": "2100174778212425800",
+     "url": "https://x.com/aave/status/2100174778212425800",
+     "created_at": "2026-09-16T10:47:41.000Z",
+     "text": "This V4 instance was deployed by Aave Labs on behalf of Aave DAO, with risk analysis completed by @LlamaRisk.\n\n@chainlink will provide secure and reliable price feeds.",
+     "likes": 23,
+     "reposts": 0
+    },
+    {
+     "id": "2100174776274768066",
+     "url": "https://x.com/aave/status/2100174776274768066",
+     "created_at": "2026-09-16T10:47:40.000Z",
+     "text": "Arc is purpose-built to support real-world financial flows at scale. The deployment launches with a Core Hub and two markets.\n\nThe main market supports @USDC, EURC, WETH, and cirBTC, while a the forex market pairs USDC and EURC for stablecoin borrowing.\n\nhttps://t.co/AKdNxQxuPO",
+     "likes": 34,
+     "reposts": 3
+    },
+    {
+     "id": "2100174774932496778",
+     "url": "https://x.com/aave/status/2100174774932496778",
+     "created_at": "2026-09-16T10:47:40.000Z",
+     "text": "Aave V4 is live on @arc, the layer-1 blockchain built by @circle. https://t.co/jUieekALlQ",
+     "likes": 601,
+     "reposts": 58
+    },
+    {
+     "id": "2099887420556579090",
+     "url": "https://x.com/aave/status/2099887420556579090",
+     "created_at": "2026-09-15T15:45:49.000Z",
+     "text": "Aave V4 powers this inside an isolated Liquidity Hub, opening onchain credit to regulated institutions that require a custodian.\n\nReview the proposal here: https://t.co/tbiXVIenK3",
+     "likes": 15,
+     "reposts": 1
+    },
+    {
+     "id": "2099887419277332633",
+     "url": "https://x.com/aave/status/2099887419277332633",
+     "created_at": "2026-09-15T15:45:49.000Z",
+     "text": "Chainlink CustodySync would mirror custodial balances onchain with a non-transferable receipt token, and Chainlink price feeds would give both Aave and the custodian the same data, keeping LTV in sync.\n\nBorrowed stablecoins would route to the borrower in a single transaction.",
+     "likes": 31,
+     "reposts": 1
+    },
+    {
+     "id": "2099887417956188165",
+     "url": "https://x.com/aave/status/2099887417956188165",
+     "created_at": "2026-09-15T15:45:49.000Z",
+     "text": "Anchorage would hold the underlying collateral for the duration of the loan, operate the collateral management system that serves as the source of truth for balances and lifecycle events, and execute liquidations as an OTC sale of the underlying asset.",
+     "likes": 34,
+     "reposts": 2
+    },
+    {
+     "id": "2099887415502540896",
+     "url": "https://x.com/aave/status/2099887415502540896",
+     "created_at": "2026-09-15T15:45:48.000Z",
+     "text": "A new governance proposal introduces Custodied Collateral Lending, powered by Aave V4.\n\nIt would allow institutions to borrow stablecoins on Aave against assets held in custody at @Anchorage, synchronized through @chainlink infrastructure. https://t.co/WyLeUDH5tN",
+     "likes": 537,
+     "reposts": 51
+    },
+    {
+     "id": "2099564471672852534",
+     "url": "https://x.com/aave/status/2099564471672852534",
+     "created_at": "2026-09-14T18:22:32.000Z",
+     "text": "Still need access to Aave App? \n\nIt's your lucky day.\n\nUse code GOLDENGHOST while supplies last. https://t.co/JNYFlD2rgR",
+     "likes": 366,
+     "reposts": 19
+    },
+    {
+     "id": "2099530862534459498",
+     "url": "https://x.com/aave/status/2099530862534459498",
+     "created_at": "2026-09-14T16:08:59.000Z",
+     "text": "Aave V3 is nearing $200 million deposits on @XLayerOfficial. https://t.co/q2JokAQR5j",
+     "likes": 284,
+     "reposts": 12
+    },
+    {
+     "id": "2098452101240094952",
+     "url": "https://x.com/aave/status/2098452101240094952",
+     "created_at": "2026-09-11T16:42:22.000Z",
+     "text": "USDG by @global_dollar nears $100 million deposits on Aave V4. https://t.co/T3bmrgldTp",
+     "likes": 358,
+     "reposts": 19
+    },
+    {
+     "id": "2098132829288665201",
+     "url": "https://x.com/aave/status/2098132829288665201",
+     "created_at": "2026-09-10T19:33:42.000Z",
+     "text": "Receive a Ghost Pass and get instant access to the Aave mobile app.\n\nOr use code AAVEWILLWIN while supplies last. https://t.co/df5tZ2Ipt7",
+     "likes": 388,
+     "reposts": 27
+    },
+    {
+     "id": "2098090959116415328",
+     "url": "https://x.com/aave/status/2098090959116415328",
+     "created_at": "2026-09-10T16:47:19.000Z",
+     "text": "Find the PAXG market here: https://t.co/d27THlzY2x",
+     "likes": 20,
+     "reposts": 6
+    },
+    {
+     "id": "2098090956192882717",
+     "url": "https://x.com/aave/status/2098090956192882717",
+     "created_at": "2026-09-10T16:47:19.000Z",
+     "text": "PAXG from @Paxos is now live on the Aave V4 Global Dollar Hub on @ethereum.\n\nUsers can borrow USDG against it. https://t.co/kxsS2rSv6i",
+     "likes": 323,
+     "reposts": 25
+    },
+    {
+     "id": "2098026144230437363",
+     "url": "https://x.com/aave/status/2098026144230437363",
+     "created_at": "2026-09-10T12:29:46.000Z",
+     "text": "Find the page here: https://t.co/peeoo4k5Yi",
+     "likes": 25,
+     "reposts": 5
+    },
+    {
+     "id": "2098026141416099962",
+     "url": "https://x.com/aave/status/2098026141416099962",
+     "created_at": "2026-09-10T12:29:46.000Z",
+     "text": "Aave Insights is live, a dedicated space for AAVE token info, protocol data, and important updates.\n\nIt’s built for token holders, analysts, and more. https://t.co/FntG6tnvlU",
+     "likes": 259,
+     "reposts": 33
+    },
+    {
+     "id": "2097687885579194757",
+     "url": "https://x.com/aave/status/2097687885579194757",
+     "created_at": "2026-09-09T14:05:39.000Z",
+     "text": "Aave V4 crossed $900 million deposits. https://t.co/IXsXJDVUTB",
+     "likes": 286,
+     "reposts": 30
+    }
+   ]
+  },
+  {
+   "handle": "0xfluid",
+   "name": "Fluid",
+   "why": "flagged",
+   "id": "1711105935610093568",
+   "username": "0xfluid",
+   "truncated": false,
+   "posts": [
+    {
+     "id": "2102477132270273021",
+     "url": "https://x.com/0xfluid/status/2102477132270273021",
+     "created_at": "2026-09-22T19:16:25.000Z",
+     "text": "62% of DeFi's USDai + sUSDai liquidity lives on Fluid.\n\nThe #1 venue for @USDai_Official.\n\nWhy: better capital efficiency, deeper liquidity and the ability for LPs to earn both trading fees and lending yield at the same time.\n\nCapital works harder on Fluid 🌊 https://t.co/WYk17ZXKKo",
+     "likes": 274,
+     "reposts": 4
+    },
+    {
+     "id": "2100828224594837663",
+     "url": "https://x.com/0xfluid/status/2100828224594837663",
+     "created_at": "2026-09-18T06:04:14.000Z",
+     "text": "Fluid is everywhere.\n\nThis week, Dubai. \n\nOur team is at the MENA Stablecoin Forum. https://t.co/pHcv3e6OVk https://t.co/lOHbKLk1uf",
+     "likes": 363,
+     "reposts": 7
+    },
+    {
+     "id": "2100273076055531749",
+     "url": "https://x.com/0xfluid/status/2100273076055531749",
+     "created_at": "2026-09-16T17:18:17.000Z",
+     "text": "Jupiter Lend, @jupiter_earn, has been one of the fastest-growing lending markets, reaching $1B in just 8 days.\n\nNow, with Jupiter Lend V2 live, the JupLend AMM has generated more USDC-USDT volume in the last 24 hours than all other Solana DEXs combined.\n\nBuilt together with @JupiterExchange. Still early. 🌊",
+     "likes": 256,
+     "reposts": 9
+    },
+    {
+     "id": "2099925591336079401",
+     "url": "https://x.com/0xfluid/status/2099925591336079401",
+     "created_at": "2026-09-15T18:17:30.000Z",
+     "text": "Proud to be supporting @EFDevcon 🌊\n\nFinance is moving onchain, and it’s moving to Ethereum.\n\nWe’re building the Liquidity Layer for it.\n\nExcited to connect with India’s community, one of the fastest-growing onchain ecosystems in the world and talk about where finance goes next. https://t.co/T6Zv3w7o3t",
+     "likes": 236,
+     "reposts": 7
+    },
+    {
+     "id": "2099850824109412753",
+     "url": "https://x.com/0xfluid/status/2099850824109412753",
+     "created_at": "2026-09-15T13:20:24.000Z",
+     "text": "Tokenized stocks are coming to Fluid.\n\n@RealityFi_xyz brings 1,700+ tokenized RWAs onchain, 1:1 backed by real shares, powered by @BitgetWallet\n\nSoon 🌊 https://t.co/0GuLKRx09Y",
+     "likes": 245,
+     "reposts": 13
+    }
+   ]
+  },
+  {
+   "handle": "Morpho",
+   "name": "Morpho",
+   "why": "flagged",
+   "id": "1420789685811650560",
+   "username": "Morpho",
+   "truncated": false,
+   "posts": [
+    {
+     "id": "2102747303828447661",
+     "url": "https://x.com/Morpho/status/2102747303828447661",
+     "created_at": "2026-09-23T13:09:59.000Z",
+     "text": "Check out the USDC markets available on Morpho Midnight\n\nhttps://t.co/0FPQ9EWUDB",
+     "likes": 18,
+     "reposts": 3
+    },
+    {
+     "id": "2102747291832742153",
+     "url": "https://x.com/Morpho/status/2102747291832742153",
+     "created_at": "2026-09-23T13:09:56.000Z",
+     "text": "All USDC markets listed on Morpho Blue are live on Morpho Midnight\n\nUsers can make individual orders, or use multi-market limit orders on multiple markets at the same time. https://t.co/BApg0f9HsE",
+     "likes": 111,
+     "reposts": 10
+    },
+    {
+     "id": "2102409563526090937",
+     "url": "https://x.com/Morpho/status/2102409563526090937",
+     "created_at": "2026-09-22T14:47:55.000Z",
+     "text": "@coinbase Learn more about why Coinbase chooses to build on Morpho Midnight. \n\nhttps://t.co/pJApyTK3oz",
+     "likes": 12,
+     "reposts": 0
+    },
+    {
+     "id": "2102402377508897268",
+     "url": "https://x.com/Morpho/status/2102402377508897268",
+     "created_at": "2026-09-22T14:19:22.000Z",
+     "text": "Learn more about @Coinbase Fixed Rate Crypto-backed Loans.\n\nAvailable in the US, excluding NY. https://t.co/I8dAgym0nq",
+     "likes": 42,
+     "reposts": 3
+    },
+    {
+     "id": "2102402365374804260",
+     "url": "https://x.com/Morpho/status/2102402365374804260",
+     "created_at": "2026-09-22T14:19:19.000Z",
+     "text": "Fixed rate loans on @coinbase powered by Morpho.\n\nMillions of Coinbase users can now borrow against their BTC at a fixed rate, giving them predictable borrowing costs for the duration of their loans.\n\nBuilt on Morpho Midnight on @Base. https://t.co/xLRYtwsOI4",
+     "likes": 267,
+     "reposts": 28
+    },
+    {
+     "id": "2102340697290633666",
+     "url": "https://x.com/Morpho/status/2102340697290633666",
+     "created_at": "2026-09-22T10:14:16.000Z",
+     "text": "Available in variable &amp; fixed rate apps\n\nhttps://t.co/PfodtOYWPU",
+     "likes": 18,
+     "reposts": 3
+    },
+    {
+     "id": "2102340685341020189",
+     "url": "https://x.com/Morpho/status/2102340685341020189",
+     "created_at": "2026-09-22T10:14:13.000Z",
+     "text": "Looking for tokenized-stocks backed loans?\n\nFilter via the Collateral tab. https://t.co/m4cYKDl4I7 https://t.co/mnPVo2PfdY",
+     "likes": 114,
+     "reposts": 10
+    },
+    {
+     "id": "2102111747180253323",
+     "url": "https://x.com/Morpho/status/2102111747180253323",
+     "created_at": "2026-09-21T19:04:30.000Z",
+     "text": "Learn more about Circle Mint Digital Asset-Backed Borrowing https://t.co/RDhbIIY4T5",
+     "likes": 32,
+     "reposts": 4
+    },
+    {
+     "id": "2102111735079682125",
+     "url": "https://x.com/Morpho/status/2102111735079682125",
+     "created_at": "2026-09-21T19:04:27.000Z",
+     "text": "Digital Asset-Backed Borrow in @circle Mint, powered by Morpho\n\nCircle Mint customers can now deposit BTC &amp; mint cirBTC, collateralize cirBTC, and borrow USDC on @arc or @ethereum, all in an integrated flow on the same platform they already use and trust. https://t.co/nQgciaFHkp",
+     "likes": 275,
+     "reposts": 19
+    },
+    {
+     "id": "2101227422729240607",
+     "url": "https://x.com/Morpho/status/2101227422729240607",
+     "created_at": "2026-09-19T08:30:31.000Z",
+     "text": "Morpho is where cirBTC is being put to work on @arc https://t.co/qlpvrYTYYO",
+     "likes": 398,
+     "reposts": 33
+    },
+    {
+     "id": "2100887073331056787",
+     "url": "https://x.com/Morpho/status/2100887073331056787",
+     "created_at": "2026-09-18T09:58:05.000Z",
+     "text": "Stock-backed markets, their parameters and any compliance controls are deployed &amp; set by curators.\n\nMorpho is the credit infrastructure underneath.\n\nNot available to US persons or persons in other restricted jurisdictions.",
+     "likes": 73,
+     "reposts": 5
+    },
+    {
+     "id": "2100887060068671988",
+     "url": "https://x.com/Morpho/status/2100887060068671988",
+     "created_at": "2026-09-18T09:58:02.000Z",
+     "text": "Stock-backed loans are live on Morpho.\n\nUsers can lend and borrow against @coinbase tokenized stocks at variable &amp; fixed rates on @base. https://t.co/3IfejB0Okp",
+     "likes": 563,
+     "reposts": 69
+    },
+    {
+     "id": "2100596832661536840",
+     "url": "https://x.com/Morpho/status/2100596832661536840",
+     "created_at": "2026-09-17T14:44:46.000Z",
+     "text": "New all-time high.\n\nOnchain credit is just getting started. https://t.co/ZUChR9sPJB",
+     "likes": 241,
+     "reposts": 23
+    },
+    {
+     "id": "2100253973743837325",
+     "url": "https://x.com/Morpho/status/2100253973743837325",
+     "created_at": "2026-09-16T16:02:22.000Z",
+     "text": "Access Morpho Vaults on Arc\n\nhttps://t.co/0mWm88G8Ym",
+     "likes": 63,
+     "reposts": 5
+    },
+    {
+     "id": "2100253961806811348",
+     "url": "https://x.com/Morpho/status/2100253961806811348",
+     "created_at": "2026-09-16T16:02:19.000Z",
+     "text": "Onchain yield on @arc, powered by Morpho\n\n$220M+ is already put to work via Morpho Vaults curated by @SteakhouseFi @Bitwise @gauntlet_xyz @galaxyhq @Dialectic_Group @keyrock @kpk_io @AssetoFinance. https://t.co/Sa7uUSIvxd",
+     "likes": 265,
+     "reposts": 28
+    },
+    {
+     "id": "2100175969663545460",
+     "url": "https://x.com/Morpho/status/2100175969663545460",
+     "created_at": "2026-09-16T10:52:25.000Z",
+     "text": "Learn more about Arc's Economic OS for the internet https://t.co/uBv5yV1J1m",
+     "likes": 9,
+     "reposts": 0
+    },
+    {
+     "id": "2100175957793657251",
+     "url": "https://x.com/Morpho/status/2100175957793657251",
+     "created_at": "2026-09-16T10:52:22.000Z",
+     "text": "Learn more about how Morpho is powering onchain credit on Arc\n\nhttps://t.co/XiDBWka6TR",
+     "likes": 49,
+     "reposts": 1
+    },
+    {
+     "id": "2100175945894338838",
+     "url": "https://x.com/Morpho/status/2100175945894338838",
+     "created_at": "2026-09-16T10:52:19.000Z",
+     "text": "Morpho is live on @arc\n\nMorpho powers earn &amp; borrow use cases built on Arc as its credit infrastructure. https://t.co/MqfCTkuuiL",
+     "likes": 295,
+     "reposts": 31
+    },
+    {
+     "id": "2099832238196297869",
+     "url": "https://x.com/Morpho/status/2099832238196297869",
+     "created_at": "2026-09-15T12:06:33.000Z",
+     "text": "Learn more about how Zama is scaling confidential DeFi https://t.co/ph1H5Pt3tW",
+     "likes": 56,
+     "reposts": 2
+    },
+    {
+     "id": "2099832226200621437",
+     "url": "https://x.com/Morpho/status/2099832226200621437",
+     "created_at": "2026-09-15T12:06:30.000Z",
+     "text": "More choices for confidential yield via @zama\n\nCapital allocators can confidentially deposit into Morpho Vaults curated by @SteakhouseFi @Bitwise @RockawayX @flowdesk_co and Armitage by @wintermute_t, without having to disclose their strategies &amp; balances. https://t.co/13NL8w7Ex3",
+     "likes": 254,
+     "reposts": 27
+    },
+    {
+     "id": "2098396017876189603",
+     "url": "https://x.com/Morpho/status/2098396017876189603",
+     "created_at": "2026-09-11T12:59:31.000Z",
+     "text": "Learn more about the transition:\n\nhttps://t.co/iR7DiLe5pL",
+     "likes": 101,
+     "reposts": 12
+    },
+    {
+     "id": "2098396005641367702",
+     "url": "https://x.com/Morpho/status/2098396005641367702",
+     "created_at": "2026-09-11T12:59:28.000Z",
+     "text": "Morpho Mini App on @worldnetwork App is now operated by @Featherlend\n\nUnchanged: the mini app experience, underlying Morpho smart contracts & user positions.\n\nFeather is an experienced interface operator and curator within the Morpho ecosystem, providing access to Morpho on @SeiNetwork @Celo @KaiaChain @hemi_xyz @soneium & @megaeth.",
+     "likes": 217,
+     "reposts": 25
+    },
+    {
+     "id": "2098064553112449497",
+     "url": "https://x.com/Morpho/status/2098064553112449497",
+     "created_at": "2026-09-10T15:02:24.000Z",
+     "text": "Morpho Midnight audit reports are now available in the Github repo\n\nThanks to @spearbit @cantinasecurity @blackthornxyz @TrustSecAudits @StErMi\n\nSee the reports via the link below\nhttps://t.co/Tzu8MgjI9O https://t.co/FPx0bBerTx",
+     "likes": 162,
+     "reposts": 13
+    },
+    {
+     "id": "2098034200964440097",
+     "url": "https://x.com/Morpho/status/2098034200964440097",
+     "created_at": "2026-09-10T13:01:47.000Z",
+     "text": "Access Direct Lend in the Morpho App\n\nhttps://t.co/NIfBJh8QEY",
+     "likes": 50,
+     "reposts": 4
+    },
+    {
+     "id": "2098034189165797544",
+     "url": "https://x.com/Morpho/status/2098034189165797544",
+     "created_at": "2026-09-10T13:01:44.000Z",
+     "text": "Direct Lend into variable rate markets\n\nBuilt for users applying their own risk expertise. https://t.co/Ei4lcl7j9q",
+     "likes": 323,
+     "reposts": 25
+    },
+    {
+     "id": "2097717604618219676",
+     "url": "https://x.com/Morpho/status/2097717604618219676",
+     "created_at": "2026-09-09T16:03:45.000Z",
+     "text": "Learn more about the embedded earn product launched by Turnkey, available on @ethereum @base @arbitrum @0xPolygon @monad https://t.co/HMqW0OSsRw",
+     "likes": 56,
+     "reposts": 5
+    },
+    {
+     "id": "2097717592261890210",
+     "url": "https://x.com/Morpho/status/2097717592261890210",
+     "created_at": "2026-09-09T16:03:42.000Z",
+     "text": ".@turnkeyhq is evolving with Morpho\n\nTurnkey customers can now embed Morpho Vaults to provide yield within their products, via the wallet infrastructure they already use and trust. https://t.co/PgDH5jx71h",
+     "likes": 140,
+     "reposts": 9
+    }
+   ]
+  }
+ ],
+ "postsRead": 158,
+ "usersRead": 7,
+ "estCostUsd": 0.79,
+ "notes": []
+}
