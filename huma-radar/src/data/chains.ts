@@ -16,6 +16,7 @@ export const CHAINS: Chain[] = [
   { id: 'monad',    name: 'Monad',         short: 'MON',  color: '#A974F1', live: true, group: 'network'  },
   { id: 'tempo',    name: 'Tempo',         short: 'TEMPO',color: '#F2C14E', live: true, group: 'network'  },
   { id: 'robinhood',name: 'Robinhood',     short: 'RHC',  color: '#8FE04A', live: true, group: 'network'  },
+  { id: 'arc',      name: 'Arc',           short: 'ARC',  color: '#FDBA74', live: true, group: 'network'  },
 
   { id: 'maple',    name: 'Maple Related', short: 'MPL',  color: '#FF7A45', live: true, group: 'project'  },
   { id: 'ethena',   name: 'Ethena Related',short: 'ENA',  color: '#E879F9', live: true, group: 'project'  },

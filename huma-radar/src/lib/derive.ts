@@ -187,20 +187,31 @@ export interface AggChange {
   coveredTvl: number
 }
 
+/**
+ * A change measured on a sliver of the selection is not the selection's change.
+ * Arc's first day read "+2228%" on $143M of TVL, because the only market with a
+ * week of history was a $0.5M vault. Below this share of the selection's
+ * current value, the headline change is withheld rather than shown.
+ */
+const MIN_COVERED_SHARE = 0.5
+
 function aggregateChange(rows: MarketRow[], metric: Metric, daysAgo: number): AggChange {
   let now = 0
   let then = 0
   let covered = 0
+  let whole = 0
   for (const r of rows) {
     const a = latest(r.history, metric)
+    if (a !== null) whole += a
     const b = valueBack(r.history, metric, daysAgo)
     if (a === null || b === null) continue
     now += a
     then += b
     covered++
   }
+  const enough = whole > 0 && now / whole >= MIN_COVERED_SHARE
   return {
-    pct: !covered || then < BASELINE_FLOOR_USD ? null : ((now - then) / then) * 100,
+    pct: !covered || !enough || then < BASELINE_FLOOR_USD ? null : ((now - then) / then) * 100,
     covered,
     total: rows.length,
     coveredTvl: now,

@@ -1,6 +1,7 @@
 import { useState } from 'react'
-import { Activity, ChevronRight, Clock3, Coins, Landmark, Layers } from 'lucide-react'
+import { Activity, ChevronRight, Clock3, Coins, FileText, Landmark, Layers } from 'lucide-react'
 import { CHAIN_MAP, NETWORKS, PROJECTS } from '../data/chains'
+import { LATEST_REPORT, weekLabel } from '../data/reports'
 import { STABLE_TOTAL } from '../data/stablecoins'
 import { STABLE_PROTOCOLS } from '../data/stableprotocols'
 import { formatUsd } from '../lib/format'
@@ -57,6 +58,17 @@ export function Sidebar({ selected, onSelect, allRows, lastSync }: Props) {
         </div>
 
         <div className="space-y-0.5 px-3">
+          <OverviewTab
+            icon={<FileText size={11} />}
+            label="Weekly Report"
+            detail={
+              LATEST_REPORT
+                ? `${weekLabel(LATEST_REPORT.start, LATEST_REPORT.end, { short: true, withYear: false })} · latest`
+                : 'first report on Friday'
+            }
+            selected={selected === 'reports'}
+            onSelect={() => onSelect('reports')}
+          />
           <OverviewTab
             icon={<Coins size={11} />}
             label="Stablecoin Supply"
@@ -235,8 +247,8 @@ function ChainTab({
 }
 
 /**
- * The overview tabs look wider than any one network: what stablecoin supply
- * exists at all, what the issuers pay on it, and Huma itself.
+ * The overview tabs look wider than any one network: the week's report, what
+ * stablecoin supply exists at all, what the issuers pay on it, and Huma itself.
  */
 function OverviewTab({
   icon, label, detail, selected, onSelect,

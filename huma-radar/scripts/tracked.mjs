@@ -23,6 +23,7 @@ export const CHAINS = [
   { id: 'mantle',    chainId: 5000,  name: 'Mantle'    },
   { id: 'robinhood', chainId: 4663,  name: 'Robinhood' },
   { id: 'tempo',     chainId: 4217,  name: 'Tempo'     },
+  { id: 'arc',       chainId: 5042,  name: 'Arc'       },
 ]
 
 export const AAVE = {
@@ -69,6 +70,24 @@ export const AAVE = {
   },
 }
 
+/**
+ * Aave v4 reserves. v4 is a different protocol shape from v3 — liquidity sits
+ * in hubs, and each market ("spoke") borrows from one — and it is served by a
+ * different API (api.aave.com, not api.v3.aave.com), so it has its own source.
+ *
+ * `reserveId` is the id Aave Pro puts in its reserve URLs: base64 of
+ * "<chainId>::<spoke address>::<reserve index>". It is also what the API takes.
+ */
+export const AAVE_V4 = {
+  arc: [
+    {
+      // 5042::0xB843bdC3a87A05E77E07Df9FE48928b3A34b134d::0 — USDC, Main spoke on the Core hub
+      reserveId: 'NTA0Mjo6MHhCODQzYmRDM2E4N0EwNUU3N0UwN0RmOUZFNDg5MjhiM0EzNGIxMzRkOjow',
+      name: 'USDC',
+    },
+  ],
+}
+
 const morphoUrl = (slug, address, path) =>
   `https://app.morpho.org/${slug}/vault/${address}/${path}`
 
@@ -96,6 +115,9 @@ export const MORPHO = {
   ],
   tempo: [
     { name: 'Sentora pathUSD', address: '0x9a044AE05E5e6290DcF56afd69548565e957a626', url: morphoUrl('tempo', '0x9a044AE05E5e6290DcF56afd69548565e957a626', 'sentora-pathusd') },
+  ],
+  arc: [
+    { name: 'Bitwise Premium RWA USDC', address: '0x7610094B846657dCF166D59e42973db52c7015F9', url: morphoUrl('arc', '0x7610094B846657dCF166D59e42973db52c7015F9', 'bitwise-premium-rwa-usdc') },
   ],
 }
 
@@ -519,6 +541,7 @@ export const STABLECOINS = [
   { id: 'bsc',       name: 'BSC',             slug: 'BSC',             url: 'https://defillama.com/stablecoins/bsc' },
   { id: 'tempo',     name: 'Tempo',           slug: 'Tempo',           url: 'https://defillama.com/stablecoins/tempo' },
   { id: 'stellar',   name: 'Stellar',         slug: 'Stellar',         url: 'https://defillama.com/stablecoins/stellar' },
+  { id: 'arc',       name: 'Arc',             slug: 'Arc',             url: 'https://defillama.com/stablecoins/arc' },
 ]
 
 /**

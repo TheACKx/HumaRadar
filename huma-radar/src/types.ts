@@ -7,7 +7,7 @@
  */
 export type ChainId =
   | 'ethereum' | 'plasma' | 'monad' | 'base'
-  | 'arbitrum' | 'mantle' | 'robinhood' | 'tempo'
+  | 'arbitrum' | 'mantle' | 'robinhood' | 'tempo' | 'arc'
   | 'huma' | 'maple' | 'ethena' | 're' | 'usdai'
 
 /**
@@ -37,7 +37,7 @@ export interface Chain {
  * strip can separate those from the venues they add up.
  */
 export type Protocol =
-  | 'Aave v3' | 'Morpho' | 'Fluid' | 'JupLend' | 'Kamino' | 'Orca' | 'Combined'
+  | 'Aave v3' | 'Aave v4' | 'Morpho' | 'Fluid' | 'JupLend' | 'Kamino' | 'Orca' | 'Combined'
 
 /**
  * `reserve` — an Aave pool reserve, one asset supplied and borrowed.
@@ -258,8 +258,43 @@ export type StableProtocolSortKey =
   | 'name' | 'ticker' | 'apy' | 'apy7d' | 'apy30d' | 'tvl' | 'tvl7d' | 'tvl30d'
 
 /**
- * What the sidebar selects. The two stablecoin tabs are not networks — each
- * reads its own store and measures something the chain tabs do not — so they
- * sit beside the chain ids rather than among them.
+ * What the sidebar selects. The stablecoin tabs and the weekly report are not
+ * networks — each reads its own data and measures something the chain tabs do
+ * not — so they sit beside the chain ids rather than among them.
  */
-export type ViewId = 'stables' | 'protocols' | ChainId
+export type ViewId = 'stables' | 'protocols' | 'reports' | ChainId
+
+/** A headline figure exactly as the report script formatted it. */
+export interface ReportKpi {
+  value: string
+  usd: string
+  pct: string
+  /** sign of the change: 1, -1 or 0 */
+  dir: number
+}
+
+/**
+ * reports/data/<date>.headline.json — the few figures shown above a report and
+ * in the week list, written by scripts/report.mjs so the page never computes
+ * or reformats a number the report itself states.
+ */
+export interface ReportHeadline {
+  start: string
+  end: string
+  supply: ReportKpi
+  venues: ReportKpi
+  pst: ReportKpi
+  flagged: { products: number; groups: number; passes: number }
+  topUp: { label: string; usd: string } | null
+  topDown: { label: string; usd: string } | null
+}
+
+export interface ReportMeta {
+  /** snapshot date the report ends on, YYYY-MM-DD */
+  end: string
+  /** snapshot it is compared against, seven days earlier */
+  start: string
+  /** the markdown, fetched only when the week is opened */
+  load: () => Promise<string>
+  headline: ReportHeadline | null
+}

@@ -1,0 +1,61 @@
+{
+  "schedule": {
+    "day": "Friday",
+    "runAfterUtc": "12:30",
+    "why": "Huma Radar snapshots at 12:00 UTC. Running at 12:30 reads that day's snapshot instead of racing it."
+  },
+
+  "thresholds": {
+    "wowPct": 5,
+    "wowUsd": 25000000,
+    "minTvlForPct": 10000000,
+    "minUsdForPct": 5000000,
+    "contributorsPerGroup": 3,
+    "trendWeeks": 3,
+    "dominantShare": 0.5,
+    "crossCheckTolerance": 0.015
+  },
+
+  "x": {
+    "always": ["huma"],
+    "lookbackDaysBeforeWindow": 7,
+    "maxPostsPerAccount": 60,
+    "maxPostsPerRun": 400,
+    "costPerPostUsd": 0.005
+  },
+
+  "huma": {
+    "tab": "huma",
+    "product": "huma",
+    "compareChains": ["solana", "ethereum"]
+  },
+
+  "sources": [
+    { "id": "huma",   "name": "Huma",    "x": "humafinance",    "blog": "https://blog.huma.finance/",                      "radar": { "products": ["huma"],           "tabs": ["huma"] } },
+    { "id": "ethena", "name": "Ethena",  "x": "ethena",         "blog": "https://ethena.fi/blog",                          "radar": { "products": ["ethena"],         "tabs": ["ethena"] } },
+    { "id": "maple",  "name": "Maple",   "x": "maplefinance",   "blog": "https://maple.finance/insights/category/news",    "radar": { "products": ["maple"],          "tabs": ["maple"] } },
+    { "id": "usdai",  "name": "USDai",   "x": "USDai_Official", "blog": "https://usd.ai/insights",                         "radar": { "products": ["usdai"],          "tabs": ["usdai"] } },
+    { "id": "re",     "name": "Re",      "x": "re",             "blog": "https://re.xyz/insights",                         "radar": { "products": ["reusd", "reusde"], "tabs": ["re"] } },
+    { "id": "sky",    "name": "Sky",     "x": "SkyEcosystem",   "blog": "https://insights.skyeco.com/",                    "radar": { "products": ["sky"] } },
+    { "id": "cap",    "name": "Cap",     "x": "CapApp",         "blog": "https://www.cap.app/blog",                        "radar": { "products": ["cap"] } },
+    { "id": "onre",   "name": "OnRe",    "x": "onrefinance",    "blog": "https://www.onre.finance/blog",                   "radar": { "products": ["onre"] } },
+    { "id": "aave",   "name": "Aave",    "x": "aave",           "blog": "https://aave.com/blog",                           "radar": { "products": ["aave"],           "venues": ["Aave v3", "Aave v4"] } },
+    { "id": "fluid",  "name": "Fluid",   "x": "0xfluid",        "blog": "https://fluid.io/blog",                           "radar": { "products": ["fluid"],          "venues": ["Fluid"] } },
+    { "id": "morpho", "name": "Morpho",  "x": "Morpho",         "blog": "https://morpho.org/blog/",                        "radar": { "venues": ["Morpho"] } },
+    { "id": "3jane",  "name": "3Jane",   "x": "3janexyz",       "blog": "https://www.3jane.xyz/reports",                   "radar": { "products": ["usd3", "susd3"] } },
+    { "id": "ondo",   "name": "Ondo",    "x": "Ondo",           "blog": "https://ondo.finance/blog",                       "radar": { "products": ["ondo"] } },
+    { "id": "hastra", "name": "Hastra",  "x": "HastraFi",       "blog": null,                                              "radar": { "products": ["hastra"] } },
+
+    { "id": "dawn",   "name": "Dawn",    "x": "dawninternet",   "blog": "https://infrastructure.finance/research",         "radar": null, "status": "awaiting DefiLlama listing — add to Huma Radar once it has one" },
+
+    { "id": "spark",   "name": "Spark",   "x": null, "blog": null, "radar": { "products": ["spark"] } },
+    { "id": "avant",   "name": "Avant",   "x": null, "blog": null, "radar": { "products": ["avant"] } },
+    { "id": "valos",   "name": "Valos",   "x": null, "blog": null, "radar": { "products": ["valos"] } },
+    { "id": "tori",    "name": "Tori",    "x": null, "blog": null, "radar": { "products": ["tori"] } },
+    { "id": "yuzu",    "name": "Yuzu",    "x": null, "blog": null, "radar": { "products": ["yuzu"] } },
+    { "id": "ember",   "name": "Ember",   "x": null, "blog": null, "radar": { "products": ["ember"] } },
+    { "id": "jupiter", "name": "Jupiter Lend", "x": "jupiter_earn", "blog": "https://jup.ag/updates",  "radar": { "venues": ["JupLend"] } },
+    { "id": "kamino",  "name": "Kamino",  "x": "kamino",       "blog": "https://kamino.com/blog/",  "radar": { "venues": ["Kamino"] } },
+    { "id": "orca",    "name": "Orca",    "x": null, "blog": null, "radar": { "venues": ["Orca"] } }
+  ]
+}

@@ -1,5 +1,5 @@
-import { useMemo, useState } from 'react'
-import { Coins, Landmark, Radar } from 'lucide-react'
+import { Suspense, lazy, useMemo, useState } from 'react'
+import { Coins, FileText, Landmark, Radar } from 'lucide-react'
 import { CHAIN_MAP, NETWORKS, PROJECTS } from './data/chains'
 import { GENERATED_AT, LATEST_DATE, MARKETS, PROTOCOL_ORDER } from './data/markets'
 import { STABLE_CHAINS, STABLE_GENERATED_AT, STABLE_LATEST_DATE } from './data/stablecoins'
@@ -24,6 +24,12 @@ import { ChainDot, Logo } from './components/Primitives'
 
 const ALL_ROWS: MarketRow[] = MARKETS.map(withDeltas)
 
+// The report tab brings a markdown renderer the rest of the dashboard never
+// uses, so it loads on first visit to the tab rather than with every page.
+const WeeklyReportPanel = lazy(() =>
+  import('./components/WeeklyReportPanel').then((m) => ({ default: m.WeeklyReportPanel })),
+)
+
 const CHAIN_BLURB: Record<ChainId, string> = {
   ethereum: 'Aave v3 Core reserves and curated Morpho vaults.',
   base: 'Aave v3 USDC lending plus Morpho USDC vaults.',
@@ -33,6 +39,7 @@ const CHAIN_BLURB: Record<ChainId, string> = {
   monad: 'Aave v3 reserves and Morpho vaults on a young deployment.',
   tempo: 'Morpho vaults on Tempo.',
   robinhood: 'Morpho vaults on Robinhood Chain.',
+  arc: "Circle's L1, live since 16 Sep 2026 — Aave v4 and Morpho from day one.",
   huma: 'PST borrow venues and Huma-curated vaults, across Morpho, Fluid and Jupiter Lend.',
   maple: 'Where Maple syrup tokens are supplied, across Aave, Morpho, Kamino and Jupiter Lend.',
   ethena: 'Where USDe and staked sUSDe are supplied, across Aave, Morpho, Kamino and Jupiter Lend.',
@@ -129,7 +136,7 @@ export default function App() {
 
   const selectView = (v: ViewId) => {
     setView(v)
-    if (v !== 'stables' && v !== 'protocols') {
+    if (v !== 'stables' && v !== 'protocols' && v !== 'reports') {
       setChain(v)
       setProtocolFilter('all')
     }
@@ -138,7 +145,8 @@ export default function App() {
   const meta = CHAIN_MAP[chain]
   const onStables = view === 'stables'
   const onProtocols = view === 'protocols'
-  const onOverview = onStables || onProtocols
+  const onReports = view === 'reports'
+  const onOverview = onStables || onProtocols || onReports
 
   // the mobile rail mirrors the sidebar order: overview, then networks, then
   // projects, separated by rules since a scrolling row has no room for labels
@@ -178,6 +186,15 @@ export default function App() {
             </div>
             <div className="mt-3 flex gap-2 overflow-x-auto pb-1">
               <button
+                onClick={() => selectView('reports')}
+                className={`chip shrink-0 !px-3 !py-1.5 ${
+                  onReports ? '!border-plum-500/50 !bg-plum-600/20 !text-plum-100' : ''
+                }`}
+              >
+                <FileText size={11} />
+                Weekly Report
+              </button>
+              <button
                 onClick={() => selectView('stables')}
                 className={`chip shrink-0 !px-3 !py-1.5 ${
                   onStables ? '!border-plum-500/50 !bg-plum-600/20 !text-plum-100' : ''
@@ -203,7 +220,11 @@ export default function App() {
             </div>
           </div>
 
-          {onStables ? (
+          {onReports ? (
+            <Suspense fallback={<div className="card h-[420px] animate-pulse" />}>
+              <WeeklyReportPanel />
+            </Suspense>
+          ) : onStables ? (
             <>
               <header className="mb-6 flex flex-wrap items-end justify-between gap-4">
                 <div className="flex items-center gap-2.5">

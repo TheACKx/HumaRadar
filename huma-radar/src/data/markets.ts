@@ -7,7 +7,7 @@ import type { Market, Protocol, SnapshotStore } from '../types'
  * selection is simply left out.
  */
 export const PROTOCOL_ORDER: Protocol[] = [
-  'Aave v3', 'Morpho', 'Fluid', 'JupLend', 'Kamino', 'Orca', 'Combined',
+  'Aave v3', 'Aave v4', 'Morpho', 'Fluid', 'JupLend', 'Kamino', 'Orca', 'Combined',
 ]
 
 /**

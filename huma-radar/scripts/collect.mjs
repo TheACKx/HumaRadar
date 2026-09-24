@@ -26,6 +26,7 @@ import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { stringifyStore } from './lib/gql.mjs'
 import { collectAave } from './sources/aave.mjs'
+import { collectAaveV4 } from './sources/aavev4.mjs'
 import { collectMorpho } from './sources/morpho.mjs'
 import { collectFluid } from './sources/fluid.mjs'
 import { collectJupLend } from './sources/juplend.mjs'
@@ -54,6 +55,7 @@ const log = (msg) => console.log(msg)
 
 const SOURCES = [
   { id: 'aave', run: collectAave },
+  { id: 'aavev4', run: collectAaveV4 },
   { id: 'morpho', run: collectMorpho },
   { id: 'fluid', run: collectFluid },
   { id: 'juplend', run: collectJupLend },
@@ -102,7 +104,7 @@ async function main() {
 
   store.generatedAt = new Date().toISOString()
   store.sources = [
-    'aave-v3-api', 'morpho-api', 'fluid-api', 'jupiter-lend-api', 'kamino-api', 'orca-api',
+    'aave-v3-api', 'aave-v4-api', 'morpho-api', 'fluid-api', 'jupiter-lend-api', 'kamino-api', 'orca-api',
   ]
 
   // keep the store from growing without bound

@@ -26,9 +26,13 @@ const COLORS: Record<string, string> = {
   bsc: '#F0B90B',
   tempo: '#F2C14E',
   stellar: '#9BA9C7',
+  arc: '#FDBA74',
 }
 
 const FALLBACK_COLOR = '#8A7FA8'
+
+/** Shared with the weekly report, which names chains the network tabs do not list. */
+export { COLORS as STABLE_CHAIN_COLORS, FALLBACK_COLOR as CHAIN_FALLBACK_COLOR }
 
 /** The network-wide total is the headline, not a row beside the chains. */
 export const ALL_CHAINS_ID = 'all'
