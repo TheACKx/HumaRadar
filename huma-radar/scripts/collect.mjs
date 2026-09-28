@@ -19,6 +19,7 @@
  *   npm run collect -- --only=morpho
  *   npm run collect -- --only=stablecoins
  *   npm run collect -- --only=stableprotocols
+ *   npm run collect -- --only=curators
  */
 
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs'
@@ -35,6 +36,7 @@ import { collectOrca } from './sources/orca.mjs'
 import { collectComposites } from './sources/composites.mjs'
 import { collectStablecoins } from './sources/stablecoins.mjs'
 import { collectStableProtocols } from './sources/stableprotocols.mjs'
+import { collectCurators } from './sources/curators.mjs'
 
 const HERE = dirname(fileURLToPath(import.meta.url))
 const STORE = resolve(HERE, '../src/data/snapshots.json')
@@ -102,6 +104,11 @@ async function main() {
     stableProtocols = await collectStableProtocols({ log })
   }
 
+  let curators = { curators: 0, days: 0 }
+  if (!only || only === 'curators') {
+    curators = await collectCurators({ log })
+  }
+
   store.generatedAt = new Date().toISOString()
   store.sources = [
     'aave-v3-api', 'aave-v4-api', 'morpho-api', 'fluid-api', 'jupiter-lend-api', 'kamino-api', 'orca-api',
@@ -134,6 +141,11 @@ async function main() {
       `Wrote ${stableProtocols.protocols} stablecoin protocols · ${stableProtocols.days} daily rows`,
     )
     console.log(`-> ${resolve(HERE, '../src/data/stableprotocols.json')}`)
+  }
+
+  if (curators.curators) {
+    console.log(`Wrote ${curators.curators} curators · ${curators.days} daily rows`)
+    console.log(`-> ${resolve(HERE, '../src/data/curators.json')}`)
   }
 }
 

@@ -612,3 +612,21 @@ export const STABLECOIN_PROTOCOLS = [
   { id: 'yuzu',     name: 'Yuzu',      ticker: 'syzUSD',    protocol: 'yuzu-money',        yieldsProject: 'yuzu-money',        yieldsSymbol: 'SYZUSD', url: 'https://defillama.com/protocol/yuzu-money?fees=false&events=false&medianApy=true' },
   { id: 'ember',    name: 'Ember',     ticker: 'PPplus',    pool: '99989c4e-cf3b-5936-89fa-769f7e56cd34' },
 ]
+
+/**
+ * Risk curators — the teams that run lending vaults (Morpho, Euler, Kamino and
+ * others) — as DefiLlama counts them: `slug` is the protocol page, whose TVL is
+ * the assets in every vault the curator manages, across chains. The Curators
+ * tab follows each one's TVL; the collector is scripts/sources/curators.mjs.
+ */
+export const CURATORS = [
+  { id: 'sentora',    name: 'Sentora',                slug: 'sentora-curator' },
+  { id: 'gauntlet',   name: 'Gauntlet',               slug: 'gauntlet' },
+  { id: 'k3',         name: 'K3 Capital',             slug: 'k3-capital' },
+  { id: 'rockawayx',  name: 'RockawayX',              slug: 'rockawayx' },
+  { id: 'clearstar',  name: 'Clearstar',              slug: 'clearstar' },
+  { id: 'armitage',   name: 'Armitage by Wintermute', slug: 'armitage-by-wintermute' },
+  { id: 'galaxy',     name: 'Galaxy Curation',        slug: 'galaxy-curation' },
+  { id: 'bitwise',    name: 'Bitwise',                slug: 'bitwise' },
+  { id: 'steakhouse', name: 'Steakhouse',             slug: 'steakhouse-financial' },
+]

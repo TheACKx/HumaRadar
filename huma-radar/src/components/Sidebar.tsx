@@ -1,6 +1,7 @@
 import { useState } from 'react'
-import { Activity, ChevronRight, Clock3, Coins, FileText, Landmark, Layers } from 'lucide-react'
+import { Activity, ChevronRight, Clock3, Coins, FileText, Landmark, Layers, ShieldCheck } from 'lucide-react'
 import { CHAIN_MAP, NETWORKS, PROJECTS } from '../data/chains'
+import { CURATORS } from '../data/curators'
 import { LATEST_REPORT, weekLabel } from '../data/reports'
 import { STABLE_TOTAL } from '../data/stablecoins'
 import { STABLE_PROTOCOLS } from '../data/stableprotocols'
@@ -35,6 +36,7 @@ function dedupe(rows: MarketRow[]): MarketRow[] {
 export function Sidebar({ selected, onSelect, allRows, lastSync }: Props) {
   const unique = dedupe(allRows)
   const protocolTvl = STABLE_PROTOCOLS.reduce((a, r) => a + (r.tvl ?? 0), 0)
+  const curatorTvl = CURATORS.reduce((a, r) => a + (r.total ?? 0), 0)
 
   return (
     <aside className="flex h-full w-[264px] shrink-0 flex-col border-r border-hairline/60 bg-abyss/80 backdrop-blur-xl">
@@ -92,6 +94,13 @@ export function Sidebar({ selected, onSelect, allRows, lastSync }: Props) {
             rows={allRows}
             selected={selected === 'huma'}
             onSelect={() => onSelect('huma')}
+          />
+          <OverviewTab
+            icon={<ShieldCheck size={11} />}
+            label="Curators"
+            detail={CURATORS.length ? `${CURATORS.length} curators · ${formatUsd(curatorTvl)}` : 'not collected yet'}
+            selected={selected === 'curators'}
+            onSelect={() => onSelect('curators')}
           />
         </div>
 

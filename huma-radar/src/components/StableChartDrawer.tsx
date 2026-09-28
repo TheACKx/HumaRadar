@@ -15,8 +15,28 @@ const RANGES: { id: Range; label: string }[] = [
   { id: 365, label: '1Y' },
 ]
 
-/** Supply history for one chain, or for the network as a whole. */
-export function StableChartDrawer({ row, onClose }: { row: StableRow | null; onClose: () => void }) {
+/** What the drawer is charting — stablecoin supply by default, or a curator's TVL. */
+export interface DrawerMeasure {
+  /** "Stablecoin market cap" */
+  title: string
+  /** "Market Cap" */
+  short: string
+  /** CSV column and file prefix */
+  csvColumn: string
+  csvPrefix: string
+}
+
+const SUPPLY: DrawerMeasure = {
+  title: 'Stablecoin market cap',
+  short: 'Market Cap',
+  csvColumn: 'stablecoin_market_cap_usd',
+  csvPrefix: 'stablecoins',
+}
+
+/** Supply history for one chain or the network as a whole — or any other one-number daily series. */
+export function StableChartDrawer({
+  row, onClose, measure = SUPPLY,
+}: { row: StableRow | null; onClose: () => void; measure?: DrawerMeasure }) {
   const [range, setRange] = useState<Range>(30)
 
   useEffect(() => {
@@ -49,12 +69,12 @@ export function StableChartDrawer({ row, onClose }: { row: StableRow | null; onC
   const d30 = seriesChange(row.history, 30)
 
   const exportCsv = () => {
-    const header = 'date,stablecoin_market_cap_usd\n'
+    const header = `date,${measure.csvColumn}\n`
     const body = row.history.map((h) => `${h.date},${h.total}`).join('\n')
     const url = URL.createObjectURL(new Blob([header + body], { type: 'text/csv' }))
     const a = document.createElement('a')
     a.href = url
-    a.download = `stablecoins-${row.id}-history.csv`
+    a.download = `${measure.csvPrefix}-${row.id}-history.csv`
     a.click()
     URL.revokeObjectURL(url)
   }
@@ -64,7 +84,7 @@ export function StableChartDrawer({ row, onClose }: { row: StableRow | null; onC
       <div onClick={onClose} className="fixed inset-0 z-40 animate-rise bg-void/75 backdrop-blur-sm" aria-hidden />
       <aside
         role="dialog"
-        aria-label={`${row.name} stablecoin supply history`}
+        aria-label={`${row.name} ${measure.title.toLowerCase()} history`}
         className="fixed right-0 top-0 z-50 flex h-full w-full max-w-[820px] animate-slidein flex-col
                    border-l border-hairline bg-abyss/95 shadow-[-32px_0_80px_-24px_rgba(0,0,0,.9)] backdrop-blur-2xl"
       >
@@ -87,7 +107,7 @@ export function StableChartDrawer({ row, onClose }: { row: StableRow | null; onC
             <div className="min-w-0 flex-1">
               <h2 className="truncate text-[17px] font-bold tracking-tight text-white">{row.name}</h2>
               <div className="mt-1.5 flex flex-wrap items-center gap-2">
-                <span className="text-[12px] text-muted">Stablecoin market cap</span>
+                <span className="text-[12px] text-muted">{measure.title}</span>
                 <span className="text-dim">·</span>
                 <span className="chip !text-[10.5px]">DefiLlama · {row.history.length} days stored</span>
               </div>
@@ -107,7 +127,7 @@ export function StableChartDrawer({ row, onClose }: { row: StableRow | null; onC
           </div>
 
           <div className="relative mt-5 grid grid-cols-2 gap-x-4 gap-y-4 sm:grid-cols-4">
-            <Stat label="Market Cap" value={formatUsd(row.total)} accent={accent} />
+            <Stat label={measure.short} value={formatUsd(row.total)} accent={accent} />
             <Stat
               label="Weekly Change"
               value={formatUsdSigned(d7.abs)}
@@ -155,7 +175,7 @@ export function StableChartDrawer({ row, onClose }: { row: StableRow | null; onC
             <div className="mb-3 flex items-center justify-between gap-3">
               <h3 className="flex items-center gap-2 text-[12.5px] font-semibold text-plum-100">
                 <span className="h-2 w-2 rounded-full" style={{ background: accent, boxShadow: `0 0 8px ${accent}` }} />
-                Stablecoin market cap over time
+                {measure.title} over time
               </h3>
               <span className="chip num !text-[10px]">{series.length} days</span>
             </div>
@@ -174,7 +194,7 @@ export function StableChartDrawer({ row, onClose }: { row: StableRow | null; onC
                   <YAxis tickFormatter={(v) => formatUsd(v)} width={64} domain={['auto', 'auto']}
                     tick={{ fill: '#5D5478', fontSize: 10 }} axisLine={false} tickLine={false} />
                   <Tooltip content={<SupplyTip accent={accent} />} cursor={{ stroke: accent, strokeOpacity: 0.35 }} />
-                  <Area type="monotone" dataKey="total" name="Market cap" stroke={accent} strokeWidth={2}
+                  <Area type="monotone" dataKey="total" name={measure.short} stroke={accent} strokeWidth={2}
                     fill="url(#fillStable)" dot={false} animationDuration={650}
                     activeDot={{ r: 4, fill: accent, stroke: '#0A0713', strokeWidth: 2 }} />
                 </AreaChart>
@@ -187,7 +207,7 @@ export function StableChartDrawer({ row, onClose }: { row: StableRow | null; onC
             )}
           </section>
 
-          <HistoryTable rows={[...series].reverse()} />
+          <HistoryTable rows={[...series].reverse()} valueLabel={measure.short} />
         </div>
       </aside>
     </>
@@ -224,7 +244,7 @@ function SupplyTip({ active, payload, label, accent }: {
   )
 }
 
-function HistoryTable({ rows }: { rows: StablePoint[] }) {
+function HistoryTable({ rows, valueLabel }: { rows: StablePoint[]; valueLabel: string }) {
   return (
     <section className="card overflow-hidden">
       <div className="flex items-center justify-between border-b border-hairline/70 px-4 py-3">
@@ -235,7 +255,7 @@ function HistoryTable({ rows }: { rows: StablePoint[] }) {
         <table className="w-full border-collapse text-left">
           <thead className="sticky top-0 z-10 bg-panel/95 backdrop-blur">
             <tr className="border-b border-hairline/60">
-              {['Date', 'Market Cap', 'Day over day'].map((h, i) => (
+              {['Date', valueLabel, 'Day over day'].map((h, i) => (
                 <th
                   key={h}
                   className={`whitespace-nowrap px-4 py-2 text-[10px] font-bold uppercase tracking-[0.1em] text-dim ${

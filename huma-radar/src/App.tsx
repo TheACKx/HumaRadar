@@ -1,6 +1,7 @@
 import { Suspense, lazy, useMemo, useState } from 'react'
-import { Coins, FileText, Landmark, Radar } from 'lucide-react'
+import { Coins, FileText, Landmark, Radar, ShieldCheck } from 'lucide-react'
 import { CHAIN_MAP, NETWORKS, PROJECTS } from './data/chains'
+import { CURATORS, CURATORS_GENERATED_AT, CURATORS_LATEST_DATE } from './data/curators'
 import { GENERATED_AT, LATEST_DATE, MARKETS, PROTOCOL_ORDER } from './data/markets'
 import { STABLE_CHAINS, STABLE_GENERATED_AT, STABLE_LATEST_DATE } from './data/stablecoins'
 import {
@@ -9,7 +10,7 @@ import {
 import { aggregate, excludedFromTotals, withDeltas } from './lib/derive'
 import { formatDateLong, relativeTime } from './lib/format'
 import type {
-  Chain, ChainId, DeltaMode, MarketRow, Protocol, ProtocolFilter, SortKey, StableProtocolRow,
+  Chain, ChainId, CuratorRow, DeltaMode, MarketRow, Protocol, ProtocolFilter, SortKey, StableProtocolRow,
   StableRow, ViewId,
 } from './types'
 import { Sidebar } from './components/Sidebar'
@@ -20,6 +21,7 @@ import { StablecoinPanel } from './components/StablecoinPanel'
 import { StableChartDrawer } from './components/StableChartDrawer'
 import { StableProtocolPanel } from './components/StableProtocolPanel'
 import { StableProtocolDrawer } from './components/StableProtocolDrawer'
+import { CuratorPanel } from './components/CuratorPanel'
 import { ChainDot, Logo } from './components/Primitives'
 
 const ALL_ROWS: MarketRow[] = MARKETS.map(withDeltas)
@@ -65,6 +67,7 @@ export default function App() {
   const [active, setActive] = useState<MarketRow | null>(null)
   const [activeStable, setActiveStable] = useState<StableRow | null>(null)
   const [activeProtocol, setActiveProtocol] = useState<StableProtocolRow | null>(null)
+  const [activeCurator, setActiveCurator] = useState<CuratorRow | null>(null)
 
   const chainRows = useMemo(() => ALL_ROWS.filter((r) => r.chain === chain), [chain])
 
@@ -136,7 +139,7 @@ export default function App() {
 
   const selectView = (v: ViewId) => {
     setView(v)
-    if (v !== 'stables' && v !== 'protocols' && v !== 'reports') {
+    if (v !== 'stables' && v !== 'protocols' && v !== 'reports' && v !== 'curators') {
       setChain(v)
       setProtocolFilter('all')
     }
@@ -146,7 +149,8 @@ export default function App() {
   const onStables = view === 'stables'
   const onProtocols = view === 'protocols'
   const onReports = view === 'reports'
-  const onOverview = onStables || onProtocols || onReports
+  const onCurators = view === 'curators'
+  const onOverview = onStables || onProtocols || onReports || onCurators
 
   // the mobile rail mirrors the sidebar order: overview, then networks, then
   // projects, separated by rules since a scrolling row has no room for labels
@@ -213,6 +217,15 @@ export default function App() {
                 Protocols
               </button>
               {chainChip(CHAIN_MAP.huma)}
+              <button
+                onClick={() => selectView('curators')}
+                className={`chip shrink-0 !px-3 !py-1.5 ${
+                  onCurators ? '!border-plum-500/50 !bg-plum-600/20 !text-plum-100' : ''
+                }`}
+              >
+                <ShieldCheck size={11} />
+                Curators
+              </button>
               <Rule />
               {NETWORKS.map(chainChip)}
               <Rule />
@@ -261,6 +274,46 @@ export default function App() {
                 </span>
                 <span className="num">
                   {STABLE_CHAINS.length} chains · collected {relativeTime(STABLE_GENERATED_AT)}
+                </span>
+              </footer>
+            </>
+          ) : onCurators ? (
+            <>
+              <header className="mb-6 flex flex-wrap items-end justify-between gap-4">
+                <div className="flex items-center gap-2.5">
+                  <span className="grid h-9 w-9 place-items-center rounded-xl border border-plum-500/20 bg-plum-500/10 text-plum-300">
+                    <ShieldCheck size={17} />
+                  </span>
+                  <div>
+                    <h1 className="text-[22px] font-extrabold leading-none tracking-tight text-white">
+                      Curators: TVL
+                    </h1>
+                    <p className="mt-1.5 text-[12.5px] text-muted">
+                      The risk curators behind lending vaults, and how much sits in the vaults each one
+                      manages — week, month and year.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-2">
+                  <span className="chip" title={CURATORS_GENERATED_AT ?? undefined}>
+                    <span className="h-1.5 w-1.5 animate-pulseDot rounded-full bg-gain" />
+                    Snapshot {CURATORS_LATEST_DATE ? formatDateLong(CURATORS_LATEST_DATE) : '—'}
+                  </span>
+                  <span className="chip">DefiLlama</span>
+                </div>
+              </header>
+
+              <CuratorPanel onOpenChart={setActiveCurator} activeId={activeCurator?.id} />
+
+              <footer className="mt-6 flex flex-wrap items-center justify-between gap-3 pb-4 text-[11px] text-dim">
+                <span>
+                  A curator's TVL is DefiLlama's count of the assets in every vault it manages, on
+                  every chain — not only the markets Huma Radar tracks. A change reads “—” when
+                  DefiLlama's history for that curator is shorter than the window.
+                </span>
+                <span className="num">
+                  {CURATORS.length} curators · collected {relativeTime(CURATORS_GENERATED_AT)}
                 </span>
               </footer>
             </>
@@ -379,6 +432,11 @@ export default function App() {
       <ChartDrawer row={active} onClose={() => setActive(null)} />
       <StableChartDrawer row={activeStable} onClose={() => setActiveStable(null)} />
       <StableProtocolDrawer row={activeProtocol} onClose={() => setActiveProtocol(null)} />
+      <StableChartDrawer
+        row={activeCurator}
+        onClose={() => setActiveCurator(null)}
+        measure={{ title: 'Curated TVL', short: 'TVL', csvColumn: 'curated_tvl_usd', csvPrefix: 'curator' }}
+      />
     </div>
   )
 }

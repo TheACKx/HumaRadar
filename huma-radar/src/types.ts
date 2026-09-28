@@ -204,6 +204,38 @@ export interface StableRow extends StableChain {
 export type StableSortKey = 'name' | 'total' | 'change7d' | 'change30d'
 
 /**
+ * A risk curator's TVL — the assets in the vaults it manages, across chains —
+ * as scripts/sources/curators.mjs writes it from DefiLlama. Same daily shape as
+ * a chain's stablecoin supply, so the supply chart drawer draws it too.
+ */
+export interface Curator {
+  id: string
+  name: string
+  /** DefiLlama protocol slug */
+  slug: string
+  url: string
+  /** oldest-to-newest */
+  history: StablePoint[]
+}
+
+export interface CuratorStore {
+  source: string
+  generatedAt: string | null
+  curators: Record<string, Curator>
+}
+
+/** A curator's latest TVL and its change over 7 days, 30 days and a year. */
+export interface CuratorRow extends Curator {
+  color: string
+  total: number | null
+  change7d: Change
+  change30d: Change
+  change365d: Change
+}
+
+export type CuratorSortKey = 'name' | 'total' | 'change7d' | 'change30d' | 'change365d'
+
+/**
  * One day of a stablecoin product's TVL and yield, as
  * scripts/sources/stableprotocols.mjs writes it. The two fields are filled
  * independently: a protocol-sourced row has TVL from its first day but no yield
@@ -266,7 +298,7 @@ export type StableProtocolSortKey =
  * networks — each reads its own data and measures something the chain tabs do
  * not — so they sit beside the chain ids rather than among them.
  */
-export type ViewId = 'stables' | 'protocols' | 'reports' | ChainId
+export type ViewId = 'stables' | 'protocols' | 'reports' | 'curators' | ChainId
 
 /** A headline figure exactly as the report script formatted it. */
 export interface ReportKpi {

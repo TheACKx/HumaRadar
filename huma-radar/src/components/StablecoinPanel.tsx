@@ -273,7 +273,7 @@ function ChangeCard({
 }
 
 /** Dollar move on top, percent underneath — the size of a move matters as much as its rate. */
-function ChangeCell({ change }: { change: { pct: number | null; abs: number | null } }) {
+export function ChangeCell({ change }: { change: { pct: number | null; abs: number | null } }) {
   if (change.abs === null) {
     return (
       <span className="num text-[13px] text-dim" title="Younger than this window">
@@ -289,9 +289,9 @@ function ChangeCell({ change }: { change: { pct: number | null; abs: number | nu
   )
 }
 
-function ShareBar({ pct, color }: { pct: number; color: string }) {
+export function ShareBar({ pct, color, title }: { pct: number; color: string; title?: string }) {
   return (
-    <div className="flex flex-col items-end gap-1" title={`${pct.toFixed(2)}% of the tracked chains' supply`}>
+    <div className="flex flex-col items-end gap-1" title={title ?? `${pct.toFixed(2)}% of the tracked chains' supply`}>
       <span className="num text-[11.5px] font-semibold text-plum-200">{pct.toFixed(1)}%</span>
       <span className="h-1 w-16 overflow-hidden rounded-full bg-raised">
         <span
@@ -303,16 +303,17 @@ function ShareBar({ pct, color }: { pct: number; color: string }) {
   )
 }
 
-function Th({
+/** A sortable header cell; shared with the Curators tab, whose table has the same shape. */
+export function Th<K extends string = StableSortKey>({
   children, align = 'left', className = '', sortKey, active, dir, onSort, divider, title,
 }: {
   children?: React.ReactNode
   align?: 'left' | 'right' | 'center'
   className?: string
-  sortKey?: StableSortKey
-  active?: StableSortKey
+  sortKey?: K
+  active?: K
   dir?: 'asc' | 'desc'
-  onSort?: (k: StableSortKey) => void
+  onSort?: (k: K) => void
   divider?: boolean
   title?: string
 }) {
