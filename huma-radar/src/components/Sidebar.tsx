@@ -64,7 +64,7 @@ export function Sidebar({ selected, onSelect, allRows, lastSync }: Props) {
             detail={
               LATEST_REPORT
                 ? `${weekLabel(LATEST_REPORT.start, LATEST_REPORT.end, { short: true, withYear: false })} · latest`
-                : 'first report on Friday'
+                : 'first report on Monday'
             }
             selected={selected === 'reports'}
             onSelect={() => onSelect('reports')}

@@ -1,8 +1,9 @@
 {
   "schedule": {
-    "day": "Friday",
-    "runAfterUtc": "12:30",
-    "why": "Huma Radar snapshots at 12:00 UTC. Running at 12:30 reads that day's snapshot instead of racing it."
+    "day": "Monday",
+    "runAtUtc": "08:00",
+    "window": "Monday to Monday",
+    "why": "The user's cadence. A Monday 07:30 UTC Cloudflare cron collects a snapshot first, since the daily one is at 12:00 UTC."
   },
 
   "thresholds": {
@@ -18,10 +19,21 @@
 
   "x": {
     "always": ["huma"],
+    "watch": [
+      { "handle": "TheDeFinvestor", "name": "The DeFi Investor", "about": "weekly watchlists and the latest developments in DeFi", "maxPosts": 100 },
+      { "handle": "Securitize", "name": "Securitize", "about": "Onchain Assets Weekly (X Articles) and tokenization news, often as threads", "threads": true, "maxPosts": 100 }
+    ],
+    "watchWhy": "Read every week for the DeFi & RWA watch section, from the window's start only: they are market commentary, not a protocol whose announcements lead its own flows.",
     "lookbackDaysBeforeWindow": 7,
     "maxPostsPerAccount": 60,
-    "maxPostsPerRun": 400,
+    "maxPostsPerRun": 500,
     "costPerPostUsd": 0.005
+  },
+
+  "exclude": {
+    "products": ["ondo", "hastra"],
+    "venueProtocols": ["Orca"],
+    "why": "Left out of the report's tables, still on the site. Ondo USDY and Hastra PRIME have had no TVL from DefiLlama since 2026-09-16; Orca is an AMM pool, not a lending venue (it stays in the Huma section's PST liquidity)."
   },
 
   "huma": {

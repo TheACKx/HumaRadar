@@ -7,6 +7,10 @@
  *
  *   npm run report                        latest snapshot vs 7 and 30 days back
  *   npm run report -- --date=2026-09-25   a specific snapshot date
+ *   npm run report -- --start=2026-09-18 --date=2026-09-28
+ *                                         a window other than seven days; its
+ *                                         change columns are then labelled by
+ *                                         length ("10D") instead of "WoW"
  *   npm run report -- --offline           skip the live DefiLlama calls
  *
  * Reads the Huma Radar stores in src/data and reports/config.json, and makes a
@@ -15,8 +19,10 @@
  *
  * Writes reports/data/<date>.json (every number, for audit and for next week),
  * reports/data/<date>.tables.md (the tables, ready to paste, and the
- * self-checks the prose has to respect), and reports/data/<date>.headline.json
- * (the handful of figures the site shows above a report and in its week list).
+ * self-checks the prose has to respect), reports/data/<date>.headline.json
+ * (the handful of figures the site shows above a report and in its week list),
+ * and reports/data/<date>.series.json (each product's daily TVL, frozen with
+ * the report, behind the trend graphs in its products table).
  *
  *   npm run report -- --date=2026-09-23 --headline-only
  *   npm run report -- --date=2026-09-23 --x-only
@@ -57,9 +63,15 @@ const snapStore = load('snapshots')
 const stableStore = load('stablecoins')
 const protoStore = load('stableprotocols')
 
+// rows the report leaves out, with the reason in the config; the site keeps them
+const EXCLUDE = {
+  products: new Set(CONFIG.exclude?.products ?? []),
+  venueProtocols: new Set(CONFIG.exclude?.venueProtocols ?? []),
+}
+
 const MARKETS = listOf(snapStore.markets)
 const CHAIN_TOTALS = listOf(stableStore.chains)
-const PRODUCTS = listOf(protoStore.protocols)
+const PRODUCTS = listOf(protoStore.protocols).filter((p) => !EXCLUDE.products.has(p.id))
 
 // ---------------------------------------------------------------- dates
 
@@ -75,8 +87,20 @@ const latest = MARKETS.reduce((a, r) => {
 }, '')
 
 const END = args.date ?? latest
-const WEEK = addDays(END, -7)
+// --x-only and --headline-only rebuild from a saved run, and keep its window
+const SAVED = args['x-only'] || args['headline-only']
+  ? JSON.parse(readFileSync(resolve(REPORTS, `data/${END}.json`), 'utf8'))
+  : null
+// the window's first snapshot — a week back unless --start says otherwise, as
+// when a report picks up after a gap
+const WEEK = args.start ?? SAVED?.week ?? addDays(END, -7)
 const MONTH = addDays(END, -30)
+const SPAN = Math.round((Date.parse(`${END}T00:00:00Z`) - Date.parse(`${WEEK}T00:00:00Z`)) / 86_400_000)
+if (!(SPAN > 0)) throw new Error(`--start=${WEEK} must be before the report date ${END}`)
+/** the window's change, as its column headers name it */
+const P = SPAN === 7 ? 'WoW' : `${SPAN}D`
+/** and as prose names it */
+const PERIOD = SPAN === 7 ? 'week' : 'period'
 
 /**
  * The value on `date`, or on the nearest earlier day within `slack` days. A
@@ -151,6 +175,35 @@ const endpoints = (history, field) => {
   return from == null && to == null ? null : { from, to }
 }
 
+/**
+ * Daily values from `days` before the report date up to it, for the trend
+ * graphs. Exact days only: a day the collector missed stays a gap in the line
+ * rather than borrowing its neighbour's value.
+ */
+function dailySeries(history, field, days) {
+  const by = new Map(history.map((h) => [h.date, h[field]]))
+  const out = []
+  for (let d = addDays(END, -days); d <= END; d = addDays(d, 1)) out.push([d, by.get(d) ?? null])
+  return out
+}
+
+const BLOCKS = '▁▂▃▄▅▆▇█'
+
+/**
+ * The trend graph as text, for anyone reading the markdown outside the site
+ * (GitHub, an editor). The site draws the real graph from the series file.
+ */
+function sparkText(points) {
+  const vals = points.map(([, v]) => v).filter((v) => v != null)
+  if (vals.length < 2) return '—'
+  // about one mark every three days of the month keeps the cell narrow
+  const step = Math.max(1, Math.ceil(vals.length / 10))
+  const picked = vals.filter((_, i) => i % step === 0 || i === vals.length - 1)
+  const lo = Math.min(...picked)
+  const hi = Math.max(...picked)
+  return picked.map((v) => BLOCKS[hi === lo ? 3 : Math.round(((v - lo) / (hi - lo)) * 7)]).join('')
+}
+
 const NETWORK = Object.fromEntries(CHAINS.map((c) => [c.chainId, c.name]))
 NETWORK[SOLANA_CHAIN_ID] = 'Solana'
 
@@ -206,7 +259,10 @@ async function productChains(meta) {
       const hist = v.tvl.map((p) => ({ date: dayOf(p.date), tvl: p.totalLiquidityUSD }))
       const now = valueAt(hist, 'tvl', END)?.v ?? null
       const wk = valueAt(hist, 'tvl', WEEK)?.v ?? null
-      out.push({ chain, now, wk, change: change(now, wk) })
+      // each day of the window, so a move between chains can be told from new supply
+      const days = []
+      for (let day = WEEK; day <= END; day = addDays(day, 1)) days.push([day, valueAt(hist, 'tvl', day, 0)?.v ?? null])
+      out.push({ chain, now, wk, change: change(now, wk), days })
     }
     return out.sort((a, b) => (b.now ?? 0) - (a.now ?? 0))
   } catch (err) {
@@ -276,9 +332,11 @@ async function products() {
     const apy = valueAt(r.history, 'apy', END)?.v ?? null
     const apyWk = valueAt(r.history, 'apy', WEEK)?.v ?? null
     if (now == null && !r.history.some((h) => h.tvl != null)) {
-      notes.push(`${r.name} ${r.ticker}: no TVL anywhere in the store — the source stopped returning it, so the row is yield-only this week`)
+      notes.push(`${r.name} ${r.ticker}: no TVL anywhere in the store — the source stopped returning it, so the row is yield-only this ${PERIOD}`)
     }
     const lb = meta.pool ? lending.get(meta.pool) : null
+    // 90 days for the site's larger chart; the table's graph shows the month
+    const points = dailySeries(r.history, 'tvl', 90)
     out.push({
       id: r.id,
       label: `${r.name} ${r.ticker}`,
@@ -297,10 +355,38 @@ async function products() {
       bigDay: biggestDay(r.history, 'tvl'),
       significant: significant(now, wk, c),
       trend: trendOf((d) => valueAt(r.history, 'tvl', d)?.v ?? null),
+      spark: sparkText(points.filter(([d]) => d >= MONTH)),
+      points,
       chains: await productChains({ ...meta, name: r.name, ticker: r.ticker }),
     })
   }
   return out.sort((a, b) => Math.abs(b.wow?.usd ?? 0) - Math.abs(a.wow?.usd ?? 0))
+}
+
+/**
+ * reports/data/<date>.series.json — what the site's trend graphs draw. Frozen
+ * with the report rather than read from the live store, so a report opened in
+ * a year still shows the line its numbers came from; the figures beside the
+ * chart are formatted here, so the page prints exactly what the table says.
+ */
+function seriesFile(productRows) {
+  const kpi = (c) => ({ usd: fmt.signed(c?.usd), pct: fmt.pct(c?.pct), dir: Math.sign(c?.usd ?? 0) })
+  return {
+    start: WEEK,
+    end: END,
+    month: MONTH,
+    span: P,
+    products: Object.fromEntries(productRows.map((p) => [p.id, {
+      label: p.label,
+      metric: p.metric,
+      source: p.source,
+      now: fmt.money(p.now),
+      period: kpi(p.wow),
+      mom: kpi(p.m30),
+      apy: fmt.apy(p.apy),
+      points: p.points.map(([d, v]) => [d, v == null ? null : Math.round(v)]),
+    }])),
+  }
 }
 
 // ---------------------------------------------------------------- 2. venues
@@ -321,11 +407,103 @@ function countedIn(rows) {
 const venueKey = (r) =>
   `${r.protocol}|${r.chainId}|${r.venueAddress.toLowerCase()}|${r.assetAddress.toLowerCase()}`
 
-function uniqueVenues() {
+// ---------------------------------------------------------------- 2a. vault-funded markets
+
+// past this share of its supply, a market's money is its funding vault's
+const FUNDED_MIN_SHARE = 0.9
+
+const MORPHO_API = 'https://api.morpho.org/graphql'
+async function morphoQuery(query, variables) {
+  const res = await fetch(MORPHO_API, {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify({ query, variables }),
+  })
+  const body = await res.json()
+  if (body.errors?.length) throw new Error(body.errors[0].message)
+  return body.data
+}
+
+/**
+ * Morpho markets whose supply comes from a vault Huma Radar also tracks. A
+ * curated vault lends its deposits into Blue markets, so a tab listing the
+ * vault and another listing the market show the same dollars twice; across
+ * tabs, the report's venue groups added both. First measured on 2026-09-28:
+ * $1.09B of tracked market supply was tracked vaults' money, among it all but
+ * $0.1M of the $387.6M USDe / USDC market on Base, supplied by Steakhouse High
+ * Yield USDC. A market funded at least 90% by tracked vaults is left out of the
+ * venue totals and listed on its own; one below that stays in, its overlap noted.
+ *
+ * The split is today's, from the markets' current suppliers: Morpho publishes
+ * no allocation history in a form this can read, so it is applied to both ends
+ * of the window alike — the row is either counted or not.
+ */
+async function vaultFunding() {
+  const out = { funded: new Map(), partial: [], error: null, checked: 0 }
+  if (!live) {
+    out.error = 'offline run'
+    return out
+  }
+  const vaults = MARKETS.filter((r) => r.protocol === 'Morpho' && r.kind === 'vault')
+  const markets = [...new Map(MARKETS
+    .filter((r) => r.protocol === 'Morpho' && r.kind === 'market')
+    .map((r) => [`${r.chainId}|${r.venueAddress.toLowerCase()}`, r])).values()]
+  try {
+    // a V2 vault supplies through its adapters, a V1 vault as itself
+    const owner = new Map()
+    for (const v of vaults) {
+      owner.set(v.venueAddress.toLowerCase(), v.name)
+      const d = await morphoQuery(
+        'query($a: String!, $c: Int!) { vaultV2ByAddress(address: $a, chainId: $c) { adapters { items { address } } } }',
+        { a: v.venueAddress, c: v.chainId },
+      ).catch(() => null)
+      for (const a of d?.vaultV2ByAddress?.adapters?.items ?? []) owner.set(a.address.toLowerCase(), v.name)
+    }
+    for (const m of markets) {
+      const d = await morphoQuery(`query($k: String!, $c: Int!) {
+        marketById(marketId: $k, chainId: $c) { state { supplyAssetsUsd } }
+        marketPositions(first: 20, orderBy: SupplyShares, orderDirection: Desc,
+          where: { marketUniqueKey_in: [$k], chainId_in: [$c] }) {
+          items { user { address } state { supplyAssetsUsd } }
+        }
+      }`, { k: m.venueAddress, c: m.chainId })
+      out.checked++
+      const total = d.marketById?.state?.supplyAssetsUsd ?? 0
+      const by = new Map()
+      for (const p of d.marketPositions?.items ?? []) {
+        const name = owner.get(p.user.address.toLowerCase())
+        if (name) by.set(name, (by.get(name) ?? 0) + (p.state.supplyAssetsUsd ?? 0))
+      }
+      const fromVaults = [...by.values()].reduce((a, v) => a + v, 0)
+      if (!total || !fromVaults) continue
+      const entry = {
+        name: m.name,
+        chainId: m.chainId,
+        network: NETWORK[m.chainId] ?? String(m.chainId),
+        supply: total,
+        fromVaults,
+        share: fromVaults / total,
+        vaults: [...by.keys()],
+        key: `${m.chainId}|${m.venueAddress.toLowerCase()}`,
+      }
+      if (entry.share >= FUNDED_MIN_SHARE) out.funded.set(entry.key, entry)
+      else out.partial.push(entry)
+    }
+  } catch (err) {
+    out.error = err.message
+    notes.push(`Morpho vault funding unavailable, so vault-funded markets stay in the venue totals: ${err.message}`)
+  }
+  return out
+}
+
+function uniqueVenues(funding) {
   const tabs = [...new Set(MARKETS.map((r) => r.chain))]
   const seen = new Map()
+  const fundedKey = (r) => `${r.chainId}|${r.venueAddress.toLowerCase()}`
   for (const tab of tabs) {
-    for (const r of countedIn(MARKETS.filter((m) => m.chain === tab))) {
+    const rows = MARKETS.filter((m) => m.chain === tab && !EXCLUDE.venueProtocols.has(m.protocol) &&
+      !(m.protocol === 'Morpho' && m.kind === 'market' && funding?.funded.has(fundedKey(m))))
+    for (const r of countedIn(rows)) {
       const k = venueKey(r)
       if (seen.has(k)) seen.get(k).tabs.push(tab)
       else seen.set(k, { row: r, tabs: [tab] })
@@ -398,8 +576,8 @@ function groupChange(members, a, b) {
   return { now: full, change: change(nowLike, thenLike), coverage, reason: null }
 }
 
-function venues() {
-  const unique = uniqueVenues()
+function venues(funding) {
+  const unique = uniqueVenues(funding)
   const groups = new Map()
   for (const u of unique) {
     const net = NETWORK[u.row.chainId] ?? String(u.row.chainId)
@@ -467,11 +645,29 @@ function venues() {
     .map((m) => ({ ...m, inFlaggedGroup: flaggedGroups.has(`${m.protocol}|${m.network}`) }))
     .sort((a, b) => Math.abs(b.wow.usd) - Math.abs(a.wow.usd))
 
+  // the vault-funded markets left out above, with their own moves: a market's
+  // change is its funding vault reallocating, so it explains, it does not add
+  const fundedRows = [...(funding?.funded.values() ?? [])].map((f) => {
+    const row = MARKETS.find((r) => r.protocol === 'Morpho' && r.kind === 'market' &&
+      `${r.chainId}|${r.venueAddress.toLowerCase()}` === f.key)
+    const now = row ? rowValue(row, END) : null
+    const wk = row ? rowValue(row, WEEK) : null
+    return {
+      ...f,
+      now, wk,
+      wow: change(now, wk),
+      borrowed: row ? endpoints(row.history, 'borrowed') : null,
+    }
+  }).sort((a, b) => (b.now ?? 0) - (a.now ?? 0))
+
   return {
     listings: MARKETS.length,
     unique: unique.length,
     groups: rows.sort((a, b) => Math.abs(b.wow?.usd ?? 0) - Math.abs(a.wow?.usd ?? 0)),
     movers,
+    funded: fundedRows,
+    fundedPartial: funding?.partial ?? [],
+    fundingError: funding?.error ?? null,
     unique_: unique,
   }
 }
@@ -689,7 +885,9 @@ function research(productRows, venueData) {
 /**
  * Every research pass whose source has an X handle, plus the sources read
  * every week regardless (Huma), so an X-only announcement from them is never
- * missed just because their numbers were quiet.
+ * missed just because their numbers were quiet — and the watch accounts, which
+ * are market commentary rather than a tracked protocol, so they are read from
+ * the window's start, not a week before it.
  */
 function xAccounts(targets) {
   const want = new Map()
@@ -699,6 +897,18 @@ function xAccounts(targets) {
   }
   for (const t of targets) add(t.id, 'flagged')
   for (const id of CONFIG.x.always) add(id, 'always read')
+  for (const w of CONFIG.x.watch ?? []) {
+    if (want.has(w.handle.toLowerCase())) continue
+    want.set(w.handle.toLowerCase(), {
+      handle: w.handle,
+      name: w.name,
+      why: 'watch',
+      about: w.about,
+      start: `${WEEK}T00:00:00Z`,
+      maxPosts: w.maxPosts,
+      threads: Boolean(w.threads),
+    })
+  }
   return [...want.values()]
 }
 
@@ -770,17 +980,18 @@ function checks({ productRows, venueData, supplyRows, humaData, xData }) {
     Math.abs(netSum - (humaData.tabTotal.now ?? 0)) < 1,
     `networks ${fmt.money(netSum)} vs total ${fmt.money(humaData.tabTotal.now)}`)
 
-  // every percentage agrees with the two values it came from, and in sign
+  // every percentage agrees with the two values it came from, and in sign —
+  // the window's change and the month's alike
   const all = [...productRows, ...venueData.groups, ...supplyRows.chains, supplyRows.all,
     humaData.tabTotal, ...humaData.networks, ...humaData.rows]
-  const bad = all.filter((r) => {
-    const c = r.wow
+  const wrong = (c) => {
     if (!c || c.pct == null) return false
     const expect = ((c.to - c.from) / c.from) * 100
     return Math.abs(expect - c.pct) > 1e-9 || Math.abs(c.to - c.from - c.usd) > 1e-6 ||
       Math.sign(c.usd) !== Math.sign(c.pct)
-  })
-  push('every WoW % matches its own two values', bad.length === 0,
+  }
+  const bad = all.filter((r) => wrong(r.wow) || wrong(r.m30))
+  push(`every ${P} and MoM % matches its own two values`, bad.length === 0,
     bad.length ? bad.map((r) => r.label ?? r.name ?? r.protocol).join(', ') : `${all.length} rows`)
 
   // two independent sources for the same chain totals should roughly agree
@@ -818,6 +1029,13 @@ function checks({ productRows, venueData, supplyRows, humaData, xData }) {
   push('no roll-up double counts markets listed elsewhere', overlap.length === 0,
     overlap.length ? overlap.map((k) => `${k.row.protocol} ${k.row.name}`).join(', ')
       : `${kept.length} roll-ups kept, none overlapping`)
+
+  push('no Morpho market counted alongside the tracked vault that funds it', !venueData.fundingError,
+    venueData.fundingError
+      ? `vault funding not checked (${venueData.fundingError}) — vault-funded markets stay in the totals, counted twice`
+      : `${venueData.funded.length} vault-funded markets left out (${fmt.money(venueData.funded.reduce((a, f) => a + (f.now ?? 0), 0))})` +
+        (venueData.fundedPartial.length ? `; ${venueData.fundedPartial.length} partly funded, still counted` : ''),
+    'warn')
 
   if (xData) {
     const failed = xData.accounts.filter((a) => a.error)
@@ -863,10 +1081,10 @@ function dayPhrase(day, weekUsd) {
   if (!weekUsd) return base
   // a share only means something when the day and the week point the same way
   // and the day did not overshoot; otherwise say what happened instead
-  if (Math.sign(day.usd) !== Math.sign(weekUsd)) return `${base} (against the week's direction)`
+  if (Math.sign(day.usd) !== Math.sign(weekUsd)) return `${base} (against the ${PERIOD}'s direction)`
   const share = day.usd / weekUsd
-  if (share > 1.1) return `${base} (bigger than the week's net — partly reversed)`
-  return `${base} (${Math.round(share * 100)}% of the week)`
+  if (share > 1.1) return `${base} (bigger than the ${PERIOD}'s net — partly reversed)`
+  return `${base} (${Math.round(share * 100)}% of the ${PERIOD})`
 }
 
 function contributorLine(m) {
@@ -902,14 +1120,23 @@ function chainLabel(p) {
     .join(', ')
 }
 
-/** The venue total and its change, as the sum of each group's own change. */
+/**
+ * The venue total and its change, as the sum of each group's own change. A
+ * group with no change of its own — every market in it newer than the window,
+ * as Aave v4 on Arc was in its first week — is left out of both sides and the
+ * total is marked like for like, the rule groupChange applies inside a group;
+ * past a tenth of the total the change is withheld, as it would describe a
+ * different set of markets.
+ */
 function venueTotal(groups) {
   const now = groups.reduce((a, g) => a + (g.now ?? 0), 0)
   const withWow = groups.filter((g) => g.wow)
-  const c = withWow.length === groups.length
+  const leftOut = groups.filter((g) => !g.wow).reduce((a, g) => a + (g.now ?? 0), 0)
+  const c = withWow.length && leftOut <= now * LIKE_FOR_LIKE_MAX
     ? change(withWow.reduce((a, g) => a + g.wow.to, 0), withWow.reduce((a, g) => a + g.wow.from, 0))
     : null
-  return { now, change: c }
+  const partial = withWow.length < groups.length || groups.some((g) => g.wowCoverage)
+  return { now, change: c, partial }
 }
 
 /**
@@ -932,8 +1159,11 @@ function headline({ products, venues, supply, huma, research }) {
   ].sort((a, b) => b.usd - a.usd)
   const top = (m) => (m ? { label: m.label, usd: fmt.signed(m.usd) } : null)
   return {
-    start: addDays(END, -7),
+    start: WEEK,
     end: END,
+    // how the page labels the change: "WoW", or the window's length
+    span: P,
+    month: MONTH,
     supply: kpi(supply.all?.now, supply.all?.wow),
     venues: kpi(vt.now, vt.change),
     pst: kpi(huma.product?.now, huma.product?.wow),
@@ -949,35 +1179,44 @@ function headline({ products, venues, supply, huma, research }) {
 
 function render({ productRows, venueData, supplyRows, humaData, checkRows, researchPlan, xData }) {
   const out = []
-  out.push(`# Weekly report numbers — ${END}`)
+  out.push(`# Report numbers — ${WEEK} → ${END}`)
   out.push('')
-  out.push(`Window: **${WEEK} → ${END}** (WoW) · 30d from ${MONTH} · ⚑ = significant: ` +
-    `|WoW| ≥ ${fmt.money(T.wowUsd)}, or |WoW %| ≥ ${T.wowPct}% on ≥ ${fmt.money(T.minTvlForPct)}`)
+  out.push(`Window: **${WEEK} → ${END}** (${P}${SPAN === 7 ? '' : `: ${SPAN} days`}) · MoM and 30d from ${MONTH} (30 days) · ⚑ = significant: ` +
+    `|${P}| ≥ ${fmt.money(T.wowUsd)}, or |${P} %| ≥ ${T.wowPct}% on ≥ ${fmt.money(T.minTvlForPct)}`)
+  if (EXCLUDE.products.size || EXCLUDE.venueProtocols.size) {
+    out.push('')
+    out.push(`Left out of these tables (config \`exclude\`): ${[...EXCLUDE.products, ...EXCLUDE.venueProtocols].join(', ')} — ${CONFIG.exclude.why}`)
+  }
   out.push('')
 
   out.push('## Stablecoin products')
   out.push('')
+  // the trend cell is a link the site draws as a graph: its text is the same
+  // line in block characters, for anyone reading the file itself
   out.push(table(
-    ['', 'Product', 'Chain', 'TVL', 'WoW $', 'WoW %', '30d %', 'APY', 'APY WoW', 'Trend'],
-    productRows.map((p) => [fmt.flag(p.significant), p.metric === 'liquidity' ? `${p.label} ◇` : p.label, chainLabel(p), fmt.money(p.now),
-      fmt.signed(p.wow?.usd), fmt.pct(p.wow?.pct), fmt.pct(p.m30?.pct), fmt.apy(p.apy),
-      fmt.pp(p.apyWowPp), p.trend]),
+    ['', 'Product', 'TVL', `${P} $`, `${P} %`, 'MoM $', 'MoM %', 'APY', `APY ${P}`, 'Trend'],
+    productRows.map((p) => [fmt.flag(p.significant), p.metric === 'liquidity' ? `${p.label} ◇` : p.label, fmt.money(p.now),
+      fmt.signed(p.wow?.usd), fmt.pct(p.wow?.pct), fmt.signed(p.m30?.usd), fmt.pct(p.m30?.pct), fmt.apy(p.apy),
+      fmt.pp(p.apyWowPp), `[${p.spark}](#tvl-${p.id})`]),
   ))
   out.push('')
   const protocolRows = productRows.filter((p) => p.source === 'protocol').map((p) => p.label.split(' ')[0])
   const supplyRows_ = productRows.filter((p) => p.source === 'mcaps')
   out.push(
-    `*Protocol-sourced rows (${protocolRows.join(', ')}) are protocol-wide TVL, not the ticker alone. ` +
+    `*Trend = daily TVL over the last 30 days; on the site, click it for the larger chart. ` +
+      `Protocol-sourced rows (${protocolRows.join(', ')}) are protocol-wide TVL, not the ticker alone. ` +
       supplyRows_.map((p) => `${p.label} is token supply: the market caps of ${p.tokens?.map((t) => t.ticker).join(', ') ?? 'its tokens'} summed, each counted once, with APY weighted by cap. `).join('') +
       '◇ = lending pool: the figure is available liquidity (supplied − borrowed), not deposits, so a fall can mean more borrowing rather than withdrawals.*',
   )
   for (const p of supplyRows_.filter((x) => x.tokens?.length)) {
     out.push('')
-    out.push(`*${p.label} by token:* ` + p.tokens.map((t) =>
-      `${t.ticker} ${fmt.money(t.now)} (${t.wow ? `${fmt.signed(t.wow.usd)}, ${fmt.pct(t.wow.pct)}` : 'no week-ago figure'})`).join(' · '))
+    out.push(`*${p.label} by token (${P}):* ` + p.tokens.map((t) =>
+      `${t.ticker} ${fmt.money(t.now)} (${t.wow ? `${fmt.signed(t.wow.usd)}, ${fmt.pct(t.wow.pct)}` : `no ${WEEK} figure`})`).join(' · '))
   }
   out.push('')
-  out.push('### Flagged products — shape of the week')
+  out.push(`### Flagged products — shape of the ${PERIOD}`)
+  out.push('')
+  out.push('_For the prose, not for pasting: the chain split left the table but still explains where a move happened._')
   out.push('')
   for (const p of productRows.filter((x) => x.significant)) {
     const liq = p.metric === 'liquidity'
@@ -986,27 +1225,61 @@ function render({ productRows, venueData, supplyRows, humaData, checkRows, resea
     out.push(`- **${p.label}** ${fmt.signed(p.wow.usd)}${liq} — ${dayPhrase(p.bigDay, p.wow.usd)}` +
       (p.apyRange?.from != null && p.apyRange?.to != null
         ? `; APY ${fmt.apy(p.apyRange.from)} → ${fmt.apy(p.apyRange.to)}` : '') +
-      `; trend: ${p.trend}`)
+      `; trend: ${p.trend}; chain: ${chainLabel(p)}`)
   }
   out.push('')
 
   out.push('## Tracked lending venues, by protocol and chain')
   out.push('')
   // the total's change is the sum of the groups' own like-for-like changes
-  const { now: gTotal, change: gc } = venueTotal(venueData.groups)
+  const { now: gTotal, change: gc, partial: gPartial } = venueTotal(venueData.groups)
   out.push(table(
-    ['', 'Protocol', 'Chain', 'Markets', 'TVL', 'WoW $', 'WoW %', '30d %', 'Trend'],
+    ['', 'Protocol', 'Chain', 'Markets', 'TVL', `${P} $`, `${P} %`, '30d %', 'Trend'],
     [
       ...venueData.groups.map((g) => [fmt.flag(g.significant), g.protocol, g.network, g.markets,
         fmt.money(g.now), fmt.signed(g.wow?.usd) + (g.wowCoverage ? '‡' : ''), fmt.pct(g.wow?.pct),
         g.m30 ? fmt.pct(g.m30.pct) : 'n/a', g.trend]),
-      ['', '**Total**', '', venueData.unique, `**${fmt.money(gTotal)}**`, fmt.signed(gc?.usd),
+      ['', '**Total**', '', venueData.unique, `**${fmt.money(gTotal)}**`, fmt.signed(gc?.usd) + (gc && gPartial ? '‡' : ''),
         fmt.pct(gc?.pct), '', ''],
     ],
   ))
   out.push('')
-  out.push(`*Only the ${venueData.unique} markets Huma Radar tracks (${venueData.listings} listings, cross-listed ones counted once) — not protocol-wide TVL. "n/a" 30d: that venue's TVL history starts after ${MONTH} (Aave, Fluid, Jupiter Lend, Kamino and Orca publish no history; the collector began recording them on 2026-08-30). ‡ = like for like, leaving out markets with no value a week ago.*`)
+  // which venues have no month of history yet, and since when they have any —
+  // from the data, so the note stops naming a venue once it has 30 days
+  const firstDay = (protocol) => venueData.unique_
+    .filter((u) => u.row.protocol === protocol)
+    .map((u) => u.row.history.find((h) => h.tvl != null)?.date)
+    .filter(Boolean)
+    .sort()[0] ?? '?'
+  const noMonth = [...new Set(venueData.groups.filter((g) => !g.m30).map((g) => g.protocol))]
+  const excludedVenues = [...EXCLUDE.venueProtocols]
+  out.push(`*Only the ${venueData.unique} markets Huma Radar tracks (${venueData.listings} listings, cross-listed ones counted once` +
+    (excludedVenues.length ? `, ${excludedVenues.join(', ')} left out` : '') + ') — not protocol-wide TVL. ' +
+    (noMonth.length
+      ? `"n/a" 30d: less than 30 days of TVL history — ${noMonth.map((p) => `${p} since ${firstDay(p)}`).join(', ')}; these venues publish no history, so it starts when the collector began recording them. `
+      : '') +
+    `‡ = like for like, leaving out markets with no value on ${WEEK}.*`)
   out.push('')
+  if (venueData.funded.length) {
+    const left = venueData.funded.reduce((a, f) => a + (f.now ?? 0), 0)
+    out.push(`### Morpho markets funded by tracked vaults — not counted`)
+    out.push('')
+    out.push(table(
+      ['Market', 'Chain', 'Supply', `${P} $`, 'Funded by', 'Share', 'Borrowed'],
+      [
+        ...venueData.funded.map((f) => [f.name, f.network, fmt.money(f.now), fmt.signed(f.wow?.usd),
+          f.vaults.join(', '), `${Math.round(f.share * 100)}%`,
+          f.borrowed?.from != null && f.borrowed?.to != null ? `${fmt.money(f.borrowed.from)} → ${fmt.money(f.borrowed.to)}` : '—']),
+        ['**Total**', '', `**${fmt.money(left)}**`, '', '', '', ''],
+      ],
+    ))
+    out.push('')
+    out.push(`*A curated vault lends its deposits into Morpho markets, so a market supplied by a vault Huma Radar already tracks holds the same dollars as the vault. At least ${Math.round(FUNDED_MIN_SHARE * 100)}% vault-funded, it is left out of the totals above — its move is the vault reallocating, not new money. Shares are from the markets' current suppliers (Morpho API).*` +
+      (venueData.fundedPartial.length
+        ? ` *Still counted, partly vault-funded: ${venueData.fundedPartial.map((f) => `${f.name} on ${f.network} (${Math.round(f.share * 100)}% from ${f.vaults.join(', ')})`).join('; ')}.*`
+        : ''))
+    out.push('')
+  }
 
   out.push('### Where the flagged groups moved')
   out.push('')
@@ -1022,7 +1295,7 @@ function render({ productRows, venueData, supplyRows, humaData, checkRows, resea
   out.push(`### Individual markets moving at least ${fmt.money(T.wowUsd)}`)
   out.push('')
   out.push(venueData.movers.length ? table(
-    ['Market', 'Venue', 'Chain', 'TVL', 'WoW $', 'WoW %', 'Biggest day', 'Trend', 'Group flagged?'],
+    ['Market', 'Venue', 'Chain', 'TVL', `${P} $`, `${P} %`, 'Biggest day', 'Trend', 'Group flagged?'],
     venueData.movers.map((m) => [`${m.name}${m.kind === 'total' ? ' (total)' : ''}`, m.venue, m.network,
       fmt.money(m.now), fmt.signed(m.wow.usd), fmt.pct(m.wow.pct),
       m.bigDay ? `${fmt.signed(m.bigDay.usd)} on ${m.bigDay.date}` : '—', m.trend,
@@ -1034,7 +1307,7 @@ function render({ productRows, venueData, supplyRows, humaData, checkRows, resea
   out.push('')
   const a = supplyRows.all
   out.push(table(
-    ['#', 'Chain', 'Supply', 'WoW $', 'WoW %', '30d %', 'Top 3 by supply (WoW %)', 'Biggest mover'],
+    ['#', 'Chain', 'Supply', `${P} $`, `${P} %`, '30d %', 'Top 3 by supply (WoW %)', 'Biggest mover'],
     [
       ['', '**All chains**', `**${fmt.money(a.now)}**`, fmt.signed(a.wow?.usd), fmt.pct(a.wow?.pct), fmt.pct(a.m30?.pct), '', ''],
       ...supplyRows.chains.map((c, i) => [i + 1, c.name, fmt.money(c.now), fmt.signed(c.wow?.usd),
@@ -1044,14 +1317,16 @@ function render({ productRows, venueData, supplyRows, humaData, checkRows, resea
     ],
   ))
   out.push('')
-  out.push('*Ranked by WoW $. Chain totals are Huma Radar snapshots; the top-3 and biggest-mover columns are live DefiLlama per-stablecoin figures against its rolling week-ago value. ◆ = one stablecoin made up at least half the gross movement. † = the same balance to the dollar a week apart: either a static supply or not re-read by DefiLlama, so no change is claimed.*')
+  out.push(`*Ranked by ${P} $. Chain totals are Huma Radar snapshots; the top-3 and biggest-mover columns are live DefiLlama per-stablecoin figures against its rolling week-ago value` +
+    (SPAN === 7 ? '' : ` — seven days, not the ${SPAN}-day window`) +
+    '. ◆ = one stablecoin made up at least half the gross movement. † = the same balance to the dollar a week apart: either a static supply or not re-read by DefiLlama, so no change is claimed.*')
   out.push('')
 
   out.push('## Huma')
   out.push('')
   const h = humaData
   const hl = (label, now, c, m30) => [label, fmt.money(now), fmt.signed(c?.usd), fmt.pct(c?.pct), m30 ? fmt.pct(m30.pct) : 'n/a']
-  out.push(table(['Metric', 'Value', 'WoW $', 'WoW %', '30d %'], [
+  out.push(table(['Metric', 'Value', `${P} $`, `${P} %`, '30d %'], [
     hl('PST TVL (DefiLlama, protocol-wide)', h.product?.now, h.product?.wow, h.product?.m30),
     hl('Huma Related tab TVL (site total)', h.tabTotal.now, h.tabTotal.wow, h.tabTotal.m30),
     ...(h.pstLiquidity ? [hl('Total PST Liquidity (Fluid + JupLend + Orca)', h.pstLiquidity.now, h.pstLiquidity.wow)] : []),
@@ -1061,12 +1336,12 @@ function render({ productRows, venueData, supplyRows, humaData, checkRows, resea
   out.push('')
   out.push('### Where it moved')
   out.push('')
-  out.push(table(['Network', 'Huma tab TVL', 'WoW $', 'WoW %'],
+  out.push(table(['Network', 'Huma tab TVL', `${P} $`, `${P} %`],
     h.networks.map((n) => [n.network, fmt.money(n.now), fmt.signed(n.wow?.usd), fmt.pct(n.wow?.pct)])))
   out.push('')
   out.push('### Against its market')
   out.push('')
-  out.push(table(['Chain', 'Stablecoin supply WoW %', 'PST on chain', 'PST WoW $', 'PST WoW %', 'Huma tab WoW $', 'PST growth outside tracked venues', 'Faster than market?'],
+  out.push(table(['Chain', `Stablecoin supply ${P} %`, 'PST on chain', `PST ${P} $`, `PST ${P} %`, `Huma tab ${P} $`, 'PST growth outside tracked venues', 'Faster than market?'],
     h.vsMarket.map((v) => [v.chain, fmt.pct(v.supplyWowPct), fmt.money(v.pstNow), fmt.signed(v.pstWowUsd),
       fmt.pct(v.pstWowPct), fmt.signed(v.tabWowUsd),
       v.pstWowUsd != null && v.tabWowUsd != null ? fmt.signed(v.pstWowUsd - v.tabWowUsd) : '—',
@@ -1074,9 +1349,44 @@ function render({ productRows, venueData, supplyRows, humaData, checkRows, resea
   out.push('')
   out.push('*PST on chain is DefiLlama supply; Huma tab is the venues Huma Radar tracks on that chain. Their difference is PST growth held somewhere the tab does not list — wallets, or venues not yet tracked. The two measure different things (PST supplied vs. dollars lent against it), so treat the difference as indicative.*')
   out.push('')
+  // A chain's growth can be PST arriving from another chain rather than new
+  // supply: first seen on 2026-09-22, when Ethereum gained what Solana lost.
+  const pstChains = (h.product?.chains ?? []).filter((c) => c.days && Math.max(c.now ?? 0, c.wk ?? 0) >= 1e6)
+  if (pstChains.length > 1) {
+    const MOVE = 1e6
+    const rows = []
+    for (let i = 1; i < pstChains[0].days.length; i++) {
+      const day = pstChains[0].days[i][0]
+      const deltas = pstChains.map((c) => {
+        const a = c.days[i - 1]?.[1]
+        const b = c.days[i]?.[1]
+        // no value on either day: PST was not on that chain yet, which moves nothing;
+        // a first value is PST arriving there, counted from nothing as DefiLlama counts it
+        if (a == null && b == null) return 0
+        if (a == null) return b
+        return b == null ? null : b - a
+      })
+      if (!deltas.some((x) => x != null && Math.abs(x) >= MOVE)) continue
+      const net = deltas.every((x) => x != null) ? deltas.reduce((s, x) => s + x, 0) : null
+      // opposite moves of similar size on one day read as a transfer between chains
+      const up = Math.max(...deltas.map((x) => x ?? 0))
+      const down = Math.min(...deltas.map((x) => x ?? 0))
+      const between = up >= MOVE && -down >= MOVE ? Math.min(up, -down) : 0
+      rows.push([day, ...deltas.map((x, k) => (x == null || (x === 0 && pstChains[k].days[i]?.[1] == null) ? '—' : fmt.signed(x))), fmt.signed(net),
+        between ? `≈ ${fmt.money(between)} moved between chains` : ''])
+    }
+    out.push(`### PST by chain, day by day`)
+    out.push('')
+    out.push(rows.length
+      ? table(['Day', ...pstChains.map((c) => c.chain), 'Net', 'Reading'], rows)
+      : `_No chain moved ${fmt.money(MOVE)} in a day._`)
+    out.push('')
+    out.push(`*Day-over-day change in DefiLlama's PST supply per chain, on days when some chain moved at least ${fmt.money(MOVE)}. Points are 00:00 UTC except the report day's, which is intraday. Equal and opposite moves on one day are PST changing chains, not new supply; "Net" is what was actually added.*`)
+    out.push('')
+  }
   out.push('### Markets')
   out.push('')
-  out.push(table(['Market', 'Venue', 'Chain', 'TVL', 'WoW $', 'WoW %', 'Borrow APY', 'Borrow WoW', 'Util.', 'In total'],
+  out.push(table(['Market', 'Venue', 'Chain', 'TVL', `${P} $`, `${P} %`, 'Borrow APY', `Borrow ${P}`, 'Util.', 'In total'],
     h.rows.map((r) => [`${r.name}${r.kind === 'total' ? ' (total)' : ''}`, r.venue, r.network, fmt.money(r.now),
       fmt.signed(r.wow?.usd), fmt.pct(r.wow?.pct), fmt.apy(r.borrowApy), fmt.pp(r.borrowApyWowPp),
       r.utilization == null ? '—' : `${r.utilization.toFixed(1)}%`, r.inTotal ? '✓' : '—'])))
@@ -1088,7 +1398,7 @@ function render({ productRows, venueData, supplyRows, humaData, checkRows, resea
   const xLine = (a) => !a ? '_none configured_' : a.error ? `@${a.handle} — not read (${a.error}), use web search`
     : `@${a.username ?? a.handle} — ${a.posts.length} posts in \`${END}.x.md\``
   out.push(xData
-    ? `One pass per source. X posts for the week are in \`reports/data/${END}.x.md\` — read them before searching.`
+    ? `One pass per source. X posts for the ${PERIOD} are in \`reports/data/${END}.x.md\` — read them before searching.`
     : 'One pass per source. X was not read this run — use web search for X-only news.')
   out.push('')
   for (const t of researchPlan.targets) {
@@ -1097,6 +1407,12 @@ function render({ productRows, venueData, supplyRows, humaData, checkRows, resea
   }
   for (const a of xData?.accounts.filter((a) => a.why === 'always read') ?? []) {
     out.push(`- **${a.name}** — read every week · X: ${xLine(a)}`)
+  }
+  // market commentary: the DeFi & RWA watch section, and leads for the moves above
+  for (const w of CONFIG.x.watch ?? []) {
+    const a = xData?.accounts.find((x) => x.why === 'watch' && x.handle.toLowerCase() === w.handle.toLowerCase())
+    out.push(`- **${w.name}** — watch account, ${w.about} · for the DeFi & RWA watch section · X: ` +
+      (xData ? xLine(a) : `@${w.handle} — X not read this run`))
   }
   if (researchPlan.unclaimed.length) {
     out.push(`- **No source configured:** ${researchPlan.unclaimed.join(', ')} — web search only`)
@@ -1124,9 +1440,8 @@ function render({ productRows, venueData, supplyRows, humaData, checkRows, resea
 const headlinePath = resolve(REPORTS, `data/${END}.headline.json`)
 
 if (args['x-only']) {
-  const saved = JSON.parse(readFileSync(resolve(REPORTS, `data/${END}.json`), 'utf8'))
   const x = await fetchXPosts({
-    accounts: xAccounts(saved.research.targets),
+    accounts: xAccounts(SAVED.research.targets),
     window: xWindow(),
     token: readXToken(resolve(REPORTS, 'x-token.local')),
     limits: CONFIG.x,
@@ -1144,14 +1459,13 @@ if (args['x-only']) {
 }
 
 if (args['headline-only']) {
-  const saved = JSON.parse(readFileSync(resolve(REPORTS, `data/${END}.json`), 'utf8'))
-  writeFileSync(headlinePath, JSON.stringify(headline(saved), null, 1) + '\n')
+  writeFileSync(headlinePath, JSON.stringify(headline(SAVED), null, 1) + '\n')
   console.log(`-> reports/data/${END}.headline.json (from the saved ${END}.json)`)
   process.exit(0)
 }
 
 const productRows = await products()
-const venueData = venues()
+const venueData = venues(await vaultFunding())
 const supplyRows = await supply()
 const humaData = huma(productRows, supplyRows, venueData)
 const researchPlan = research(productRows, venueData)
@@ -1162,10 +1476,12 @@ const checkRows = checks({ productRows, venueData, supplyRows, humaData, xData }
 mkdirSync(resolve(REPORTS, 'data'), { recursive: true })
 const { unique_, ...venueOut } = venueData
 writeFileSync(resolve(REPORTS, `data/${END}.json`), JSON.stringify({
-  end: END, week: WEEK, month: MONTH,
+  end: END, week: WEEK, month: MONTH, span: P,
   generatedAt: new Date().toISOString(),
   thresholds: T,
-  products: productRows,
+  exclude: CONFIG.exclude ?? null,
+  // the daily points live in the series file; here they would only repeat it
+  products: productRows.map(({ points, ...p }) => p),
   venues: venueOut,
   supply: supplyRows,
   huma: humaData,
@@ -1178,13 +1494,14 @@ writeFileSync(resolve(REPORTS, `data/${END}.tables.md`),
 writeFileSync(headlinePath, JSON.stringify(headline({
   products: productRows, venues: venueOut, supply: supplyRows, huma: humaData, research: researchPlan,
 }), null, 1) + '\n')
+writeFileSync(resolve(REPORTS, `data/${END}.series.json`), JSON.stringify(seriesFile(productRows)) + '\n')
 
 const failed = checkRows.filter((c) => !c.ok && c.level === 'fail')
-console.log(`Window ${WEEK} -> ${END} (30d from ${MONTH})`)
+console.log(`Window ${WEEK} -> ${END} (${P}, ${SPAN} days; MoM from ${MONTH})`)
 console.log(`Significant: ${productRows.filter((p) => p.significant).length} products, ` +
   `${venueData.groups.filter((g) => g.significant).length} venue groups · ` +
   `${venueData.movers.length} markets at least ${fmt.money(T.wowUsd)} · ${researchPlan.targets.length} research passes`)
 for (const c of checkRows) console.log(`  ${c.ok ? 'PASS' : c.level === 'warn' ? 'WARN' : 'FAIL'}  ${c.name} — ${c.detail}`)
 for (const n of [...notes, ...(xData?.notes ?? [])]) console.log(`  note: ${n}`)
-console.log(`-> reports/data/${END}.json, .tables.md, .headline.json`)
+console.log(`-> reports/data/${END}.json, .tables.md, .headline.json, .series.json`)
 if (failed.length) process.exitCode = 1

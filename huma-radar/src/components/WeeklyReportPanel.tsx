@@ -1,10 +1,12 @@
-import { useEffect, useMemo, useState, type ReactNode } from 'react'
+import { useCallback, useEffect, useMemo, useState, type ReactNode } from 'react'
 import {
-  ArrowDownRight, ArrowUpRight, CalendarClock, Coins, FileText, Flag, Info, Landmark, Layers,
+  ArrowDownRight, ArrowUpRight, CalendarClock, Coins, Eye, FileText, Flag, Info, Landmark, Layers,
   Minus, Newspaper, Radar, Rocket, Search, Sparkles, TrendingDown, TrendingUp, type LucideIcon,
 } from 'lucide-react'
-import { LATEST_REPORT, REPORTS, addDays, dayLabel, longDate, nextReportDate, weekLabel } from '../data/reports'
-import type { ReportHeadline, ReportKpi, ReportMeta } from '../types'
+import { LATEST_REPORT, REPORTS, addDays, dayLabel, longDate, nextReportDate, spanDays, weekLabel } from '../data/reports'
+import type { ReportHeadline, ReportKpi, ReportMeta, ReportSeries } from '../types'
+import { ReportChartsContext } from '../lib/reportCharts'
+import { ReportTvlDrawer } from './ReportCharts'
 import { InlineMarkdown, ReportMarkdown } from './ReportMarkdown'
 
 /**
@@ -34,7 +36,7 @@ export function WeeklyReportPanel() {
         <div className="flex items-center gap-2">
           <span className="chip">
             <CalendarClock size={11} />
-            Fridays · after the 12:00 UTC snapshot
+            Mondays · 08:00 UTC
           </span>
           <span className="chip">
             {REPORTS.length} report{REPORTS.length === 1 ? '' : 's'}
@@ -50,7 +52,7 @@ export function WeeklyReportPanel() {
         <div className="card grid place-items-center px-6 py-20 text-center">
           <FileText size={22} className="text-plum-400" />
           <p className="mt-3 text-sm font-semibold text-white">No reports yet</p>
-          <p className="mt-1 text-[12.5px] text-muted">The first one appears here after a Friday run.</p>
+          <p className="mt-1 text-[12.5px] text-muted">The first one appears here after a Monday run.</p>
         </div>
       )}
     </>
@@ -62,6 +64,9 @@ export function WeeklyReportPanel() {
 function WeekStrip({ selected, onSelect }: { selected: string | null; onSelect: (end: string) => void }) {
   const next = nextReportDate()
   const nextIsNew = !REPORTS.some((r) => r.end >= next)
+  // the next report picks up where the last one ended, if that is under a week ago
+  const weekBack = addDays(next, -7)
+  const nextStart = LATEST_REPORT && LATEST_REPORT.end > weekBack ? LATEST_REPORT.end : weekBack
 
   return (
     <div className="mb-6 flex gap-3 overflow-x-auto pb-1">
@@ -109,7 +114,7 @@ function WeekStrip({ selected, onSelect }: { selected: string | null; onSelect: 
         <div className="w-[208px] shrink-0 rounded-2xl border border-dashed border-hairline p-4">
           <div className="text-[10px] font-bold uppercase tracking-[0.16em] text-dim">Next report</div>
           <div className="mt-1.5 text-[19px] font-extrabold tracking-tight text-plum-200/60">
-            {weekLabel(addDays(next, -7), next, { short: true, withYear: false })}
+            {weekLabel(nextStart, next, { short: true, withYear: false })}
           </div>
           <div className="text-[11px] text-dim">{dayLabel(next)}</div>
           <div className="mt-3 flex items-center gap-1.5 border-t border-hairline/60 pt-2.5 text-[11px] text-dim">
@@ -158,7 +163,9 @@ function splitSections(md: string): { preamble: string; sections: Section[] } {
 
 function ReportView({ report, latest }: { report: ReportMeta; latest: boolean }) {
   const [text, setText] = useState<string | null>(null)
+  const [series, setSeries] = useState<ReportSeries | null>(null)
   const [failed, setFailed] = useState(false)
+  const [chart, setChart] = useState<string | null>(null)
 
   useEffect(() => {
     let live = true
@@ -166,24 +173,34 @@ function ReportView({ report, latest }: { report: ReportMeta; latest: boolean })
       (t) => live && setText(t),
       () => live && setFailed(true),
     )
+    // the trend graphs are extra: without their data the cells fall back to text
+    report.series?.().then(
+      (s) => live && setSeries(s),
+      () => {},
+    )
     return () => {
       live = false
     }
   }, [report])
 
   const parsed = useMemo(() => (text ? splitSections(text) : null), [text])
+  const charts = useMemo(() => (series ? { series, open: setChart } : null), [series])
+  const close = useCallback(() => setChart(null), [])
 
   return (
-    <div className="space-y-6">
-      <Hero report={report} latest={latest} preamble={parsed?.preamble ?? null} />
-      {parsed ? (
-        <Body sections={parsed.sections} />
-      ) : failed ? (
-        <div className="card px-6 py-10 text-center text-[13px] text-loss">This report could not be loaded.</div>
-      ) : (
-        <Skeleton />
-      )}
-    </div>
+    <ReportChartsContext.Provider value={charts}>
+      <div className="space-y-6">
+        <Hero report={report} latest={latest} preamble={parsed?.preamble ?? null} />
+        {parsed ? (
+          <Body sections={parsed.sections} />
+        ) : failed ? (
+          <div className="card px-6 py-10 text-center text-[13px] text-loss">This report could not be loaded.</div>
+        ) : (
+          <Skeleton />
+        )}
+      </div>
+      <ReportTvlDrawer id={chart} series={series} onClose={close} />
+    </ReportChartsContext.Provider>
   )
 }
 
@@ -210,8 +227,8 @@ function Hero({ report, latest, preamble }: { report: ReportMeta; latest: boolea
             {weekLabel(report.start, report.end)}
           </h2>
           <p className="mt-1 text-[12.5px] text-muted">
-            Week ending {longDate(report.end)} · snapshots <span className="num">{report.start}</span> →{' '}
-            <span className="num">{report.end}</span>
+            {spanDays(report) === 7 ? 'Week' : `${spanDays(report)} days`} ending {longDate(report.end)} · snapshots{' '}
+            <span className="num">{report.start}</span> → <span className="num">{report.end}</span>
           </p>
         </div>
         {h && (
@@ -240,11 +257,12 @@ function Hero({ report, latest, preamble }: { report: ReportMeta; latest: boolea
 }
 
 function KpiGrid({ h }: { h: ReportHeadline }) {
+  const span = h.span ?? 'WoW'
   return (
     <div className="relative mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-4">
-      <Kpi icon={Coins} label="Stablecoin supply" sub="All chains" k={h.supply} />
-      <Kpi icon={Layers} label="Tracked lending TVL" sub="Markets Huma Radar follows" k={h.venues} />
-      <Kpi icon={Radar} label="Huma PST" sub="Supply across chains" k={h.pst} glow />
+      <Kpi icon={Coins} label="Stablecoin supply" sub="All chains" k={h.supply} span={span} />
+      <Kpi icon={Layers} label="Tracked lending TVL" sub="Markets Huma Radar follows" k={h.venues} span={span} />
+      <Kpi icon={Radar} label="Huma PST" sub="Supply across chains" k={h.pst} span={span} glow />
       <div className="rounded-xl border border-hairline/70 bg-abyss/50 p-4">
         <div className="text-[10px] font-bold uppercase tracking-[0.14em] text-dim">Biggest movers</div>
         <div className="mt-3 space-y-2.5">
@@ -256,7 +274,9 @@ function KpiGrid({ h }: { h: ReportHeadline }) {
   )
 }
 
-function Kpi({ icon: Icon, label, sub, k, glow }: { icon: LucideIcon; label: string; sub: string; k: ReportKpi; glow?: boolean }) {
+function Kpi({ icon: Icon, label, sub, k, span, glow }: {
+  icon: LucideIcon; label: string; sub: string; k: ReportKpi; span: string; glow?: boolean
+}) {
   const Arrow = k.dir > 0 ? ArrowUpRight : k.dir < 0 ? ArrowDownRight : Minus
   return (
     <div
@@ -278,7 +298,7 @@ function Kpi({ icon: Icon, label, sub, k, glow }: { icon: LucideIcon; label: str
         <Signed dir={k.dir} dim>
           {k.pct}
         </Signed>
-        <span className="text-[11px] text-dim">WoW</span>
+        <span className="text-[11px] text-dim">{span}</span>
       </div>
       <div className="mt-1 text-[11px] text-dim">{sub}</div>
     </div>
@@ -312,6 +332,7 @@ function Signed({ dir, dim, children }: { dir: number; dim?: boolean; children: 
 
 const SECTION_ICONS: [RegExp, LucideIcon][] = [
   [/TL;DR/i, Sparkles],
+  [/watch/i, Eye],
   [/supply/i, Coins],
   [/product/i, Landmark],
   [/venue|lending/i, Layers],

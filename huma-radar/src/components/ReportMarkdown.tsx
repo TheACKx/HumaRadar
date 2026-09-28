@@ -6,6 +6,7 @@ import ReactMarkdown, { type Components } from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import { ArrowUpRight, Flag } from 'lucide-react'
 import { chainColor } from '../data/reports'
+import { TrendGraph } from './ReportCharts'
 
 /**
  * Renders a weekly report's markdown in the dashboard's own visual language.
@@ -18,10 +19,15 @@ import { chainColor } from '../data/reports'
  */
 
 // the minimum of a hast node this file reads
-type HNode = { type: string; tagName?: string; value?: string; children?: HNode[] }
+type HNode = { type: string; tagName?: string; value?: string; properties?: { href?: unknown }; children?: HNode[] }
 
 const textOf = (n?: HNode): string =>
   !n ? '' : n.type === 'text' ? (n.value ?? '') : (n.children ?? []).map(textOf).join('')
+
+// a products-table trend cell links to "#tvl-<product id>"; the site draws it as a graph
+const GRAPH_LINK = '#tvl-'
+const holdsGraph = (n?: HNode): boolean =>
+  !!n && ((n.tagName === 'a' && String(n.properties?.href ?? '').startsWith(GRAPH_LINK)) || (n.children ?? []).some(holdsGraph))
 
 const meaningful = (n: HNode) => !(n.type === 'text' && !n.value?.trim())
 
@@ -91,7 +97,8 @@ function Pill({ tone, children }: { tone: 'gain' | 'loss' | 'plum' | 'dim'; chil
 /** Column headers of the table being rendered, so a cell knows what it holds. */
 const Columns = createContext<string[]>([])
 
-const NUMERIC = /TVL|WoW|30d|APY|Supply|Value|Markets|Borrow|Util|PST on chain|Huma tab|Biggest day|outside tracked|^#$/i
+// "10D $" and the like: a report's own change when its window is not a week
+const NUMERIC = /TVL|WoW|MoM|30d|\b\d+D\b|APY|Supply|Value|Markets|Borrow|Util|PST on chain|Huma tab|Biggest day|outside tracked|^#$/i
 const CHAIN = /^(Chain|Network)$/
 // Long free-text cells wrap instead of stretching the table off the page. Checked
 // before NUMERIC: "Top 3 by supply (WoW %)" names a figure but holds a sentence.
@@ -108,6 +115,7 @@ function Cell({ node, children, col = -1 }: CellProps) {
   if (header === '' && text === '⚑') return <td className={`${base} w-9 pr-0`}><FlagMark /></td>
   if (header === '' && !text) return <td className={`${base} w-9 pr-0`} />
 
+  if (holdsGraph(node as HNode)) return <td className={`${base} whitespace-nowrap`}>{children}</td>
   if (header === 'Trend') {
     const tone = /^up/.test(text) ? 'gain' : /^down/.test(text) ? 'loss' : text === 'mixed' ? 'plum' : 'dim'
     return <td className={`${base} whitespace-nowrap`}><Pill tone={tone}>{text}</Pill></td>
@@ -159,17 +167,20 @@ const components = {
     <strong className="font-semibold text-white">{decorate(children)}</strong>
   ),
   em: ({ children }: { children?: ReactNode }) => <em className="italic text-plum-200">{children}</em>,
-  a: ({ href, children }: { href?: string; children?: ReactNode }) => (
-    <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group/link inline-flex items-baseline gap-0.5 text-plum-300 underline decoration-plum-500/40 decoration-1 underline-offset-[3px] transition-colors hover:text-plum-100 hover:decoration-plum-300"
-    >
-      {children}
-      <ArrowUpRight size={11} className="shrink-0 self-center opacity-60 transition-opacity group-hover/link:opacity-100" />
-    </a>
-  ),
+  a: ({ href, children }: { href?: string; children?: ReactNode }) =>
+    href?.startsWith(GRAPH_LINK) ? (
+      <TrendGraph id={href.slice(GRAPH_LINK.length)} fallback={children} />
+    ) : (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group/link inline-flex items-baseline gap-0.5 text-plum-300 underline decoration-plum-500/40 decoration-1 underline-offset-[3px] transition-colors hover:text-plum-100 hover:decoration-plum-300"
+      >
+        {children}
+        <ArrowUpRight size={11} className="shrink-0 self-center opacity-60 transition-opacity group-hover/link:opacity-100" />
+      </a>
+    ),
   ul: ({ children }: { children?: ReactNode }) => <ul className="space-y-2.5">{children}</ul>,
   ol: ({ children }: { children?: ReactNode }) => <ol className="list-decimal space-y-2.5 pl-5">{children}</ol>,
   li: ({ children }: { children?: ReactNode }) => (

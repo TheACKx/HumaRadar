@@ -285,6 +285,10 @@ export interface ReportKpi {
 export interface ReportHeadline {
   start: string
   end: string
+  /** how the report labels its own change: "WoW" for seven days, else its length ("10D") */
+  span?: string
+  /** the month-ago snapshot the MoM figures compare against */
+  month?: string
   supply: ReportKpi
   venues: ReportKpi
   pst: ReportKpi
@@ -293,12 +297,44 @@ export interface ReportHeadline {
   topDown: { label: string; usd: string } | null
 }
 
+/** A change as the report prints it, with its sign for colouring. */
+export interface ReportChange {
+  usd: string
+  pct: string
+  dir: number
+}
+
+/** One product's daily TVL, frozen with the report, and the figures its table row states. */
+export interface ReportSeriesProduct {
+  label: string
+  /** "liquidity" for a lending pool, whose figure is supplied minus borrowed */
+  metric: 'tvl' | 'liquidity'
+  source: 'pool' | 'protocol' | 'mcaps'
+  now: string
+  period: ReportChange
+  mom: ReportChange
+  apy: string
+  /** [date, value] per day for the 90 days to the report date; null where the collector missed a day */
+  points: [string, number | null][]
+}
+
+/** reports/data/<date>.series.json — behind the trend graphs in a report's products table. */
+export interface ReportSeries {
+  start: string
+  end: string
+  month: string
+  span: string
+  products: Record<string, ReportSeriesProduct>
+}
+
 export interface ReportMeta {
   /** snapshot date the report ends on, YYYY-MM-DD */
   end: string
-  /** snapshot it is compared against, seven days earlier */
+  /** snapshot it is compared against — seven days earlier unless the report says otherwise */
   start: string
   /** the markdown, fetched only when the week is opened */
   load: () => Promise<string>
+  /** the products' TVL series, for reports written since the trend graphs arrived */
+  series: (() => Promise<ReportSeries>) | null
   headline: ReportHeadline | null
 }

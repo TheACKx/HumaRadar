@@ -40,10 +40,13 @@ const COLORS: Record<string, string> = {
 
 const FALLBACK_COLOR = '#8A7FA8'
 
+/** A product's brand colour, by id — also used by the weekly report's trend charts. */
+export const productColor = (id: string) => COLORS[id] ?? FALLBACK_COLOR
+
 function toRow(p: StableProtocol): StableProtocolRow {
   return {
     ...p,
-    color: COLORS[p.id] ?? FALLBACK_COLOR,
+    color: productColor(p.id),
     tvl: latestOf(p.history, (h) => h.tvl),
     apy: latestOf(p.history, (h) => h.apy),
     // yield moves are read in percentage points as well as relative percent,

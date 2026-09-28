@@ -64,10 +64,15 @@ async function get(path, params, token, attempt = 1) {
  * post field `note_post`; the long-standing v2 names are `tweet.fields` and
  * `note_tweet`. Try the current names, fall back once on a 400, and remember
  * which worked. A rejected request returns no posts, so it costs nothing.
+ *
+ * `article` carries an X Article's title and full plain text — Securitize
+ * publishes Onchain Assets Weekly that way, and the post itself is only a
+ * t.co link. The conversation fields let a thread be put back together.
  */
+const COMMON = 'created_at,public_metrics,article,conversation_id,in_reply_to_user_id'
 const FIELDS = {
-  post: { 'post.fields': 'created_at,public_metrics,note_post' },
-  tweet: { 'tweet.fields': 'created_at,public_metrics,note_tweet' },
+  post: { 'post.fields': `${COMMON},note_post` },
+  tweet: { 'tweet.fields': `${COMMON},note_tweet` },
 }
 
 function readJson(path, fallback) {
@@ -79,7 +84,11 @@ function readJson(path, fallback) {
 }
 
 /**
- * @param accounts  [{ handle, name, why }] — the accounts to read
+ * @param accounts  [{ handle, name, why, start?, maxPosts?, threads? }] — the
+ *                  accounts to read. `start` narrows the window for that account,
+ *                  `maxPosts` replaces the per-account cap, and `threads` reads
+ *                  the account's replies too, keeping only those to itself: an
+ *                  account that posts its news as a thread says it in the replies.
  * @param window    { start, end } ISO timestamps
  * @param limits    { maxPostsPerAccount, maxPostsPerRun, costPerPostUsd }
  * @param cachePath this week's saved posts, reused unless `refresh`
@@ -135,21 +144,24 @@ export async function fetchXPosts({ accounts, window, token, limits, cachePath, 
       continue
     }
     const posts = []
+    const cap = a.maxPosts ?? limits.maxPostsPerAccount
     let next = null
     let truncated = false
     try {
       while (true) {
-        const room = Math.min(limits.maxPostsPerAccount - posts.length, limits.maxPostsPerRun - postsRead)
+        const room = Math.min(cap - posts.length, limits.maxPostsPerRun - postsRead)
         if (room <= 0) {
           truncated = true
           break
         }
         const params = {
-          start_time: window.start,
+          start_time: a.start ?? window.start,
           end_time: window.end,
           // X will not return fewer than 5 per page, so a cap can overshoot by up to 4
           max_results: String(Math.max(5, Math.min(100, room))),
-          exclude: 'replies,retweets',
+          // replies to other people are billed and then dropped below, so only
+          // an account that threads its news pays for them
+          exclude: a.threads ? 'retweets' : 'replies,retweets',
           ...(next ? { pagination_token: next } : {}),
         }
         let body
@@ -169,16 +181,29 @@ export async function fetchXPosts({ accounts, window, token, limits, cachePath, 
         next = body.meta?.next_token ?? null
         if (!next) break
       }
+      // with replies read, keep the account's own thread and drop its replies to others
+      const own = posts.filter((p) => !p.in_reply_to_user_id || p.in_reply_to_user_id === user.id)
       out.push({
         ...a,
         id: user.id,
         username: user.username,
         truncated,
-        posts: posts.map((p) => ({
+        repliesDropped: posts.length - own.length,
+        posts: own.map((p) => ({
           id: p.id,
           url: `https://x.com/${user.username}/status/${p.id}`,
           created_at: p.created_at,
           text: p.note_post?.text ?? p.note_tweet?.text ?? p.text,
+          // a later post of the account's own thread points at the thread's first post
+          thread: p.conversation_id && p.conversation_id !== p.id ? p.conversation_id : null,
+          article: p.article
+            ? {
+                title: p.article.title?.trim() || null,
+                preview: p.article.preview_text ?? null,
+                text: p.article.plain_text ?? null,
+                links: (p.article.entities?.urls ?? []).map((u) => u.text).filter(Boolean),
+              }
+            : null,
           likes: p.public_metrics?.like_count ?? null,
           reposts: p.public_metrics?.retweet_count ?? p.public_metrics?.repost_count ?? null,
         })),
@@ -214,9 +239,38 @@ export async function fetchXPosts({ accounts, window, token, limits, cachePath, 
   return result
 }
 
-/** The research digest: every post, newest first, with its link. */
+const oneLine = (s, max) => {
+  const t = (s ?? '').replace(/\s+/g, ' ').trim()
+  return t.length > max ? `${t.slice(0, max)}…` : t
+}
+
+function postLine(p, indent = '') {
+  const meta = `**${p.created_at.slice(0, 10)}** · ♥ ${p.likes ?? '—'} · ↻ ${p.reposts ?? '—'}`
+  if (!p.article) return [`${indent}- ${meta} — ${oneLine(p.text, 1500)} [post](${p.url})`]
+  // an Article's post text is only a t.co link; its substance is the article
+  const out = [`${indent}- ${meta} — **Article: ${p.article.title ?? 'untitled'}** [post](${p.url})`]
+  if (p.article.text) {
+    // one paragraph per line, so a section heading or list item stays readable
+    const paras = p.article.text.split(/\n+/).map((l) => l.trim()).filter(Boolean)
+    let used = 0
+    for (const para of paras) {
+      if (used > 8000) {
+        out.push(`${indent}  > …`)
+        break
+      }
+      out.push(`${indent}  > ${para}`)
+      used += para.length
+    }
+  } else if (p.article.preview) {
+    out.push(`${indent}  > ${oneLine(p.article.preview, 600)}`)
+  }
+  if (p.article.links.length) out.push(`${indent}  - links: ${p.article.links.join(' · ')}`)
+  return out
+}
+
+/** The research digest: every post, newest first, with its link; threads kept together. */
 export function renderXDigest(x, end) {
-  const lines = [`# X posts — week to ${end}`, '']
+  const lines = [`# X posts — report to ${end}`, '']
   const fetched = x.accounts.filter((a) => !a.error)
   const total = fetched.reduce((n, a) => n + a.posts.length, 0)
   lines.push(
@@ -224,11 +278,11 @@ export function renderXDigest(x, end) {
       ` · read this run: ${x.postsRead} (est. $${x.estCostUsd.toFixed(2)})`,
   )
   lines.push('')
-  lines.push('Accounts read because a move was flagged, plus the always-read ones. Replies and reposts excluded.')
+  lines.push('Accounts read because a move was flagged, the always-read ones, and the watch accounts (from the window\'s start). Replies to others and reposts excluded.')
   lines.push("Figures in posts are the account's own claims: cite the post link on the same line when using one.")
   lines.push('')
   for (const a of x.accounts) {
-    lines.push(`## ${a.name} (@${a.username ?? a.handle}) — ${a.why}${a.cached ? ' · cached' : ''}`)
+    lines.push(`## ${a.name} (@${a.username ?? a.handle}) — ${a.why}${a.about ? ` · ${a.about}` : ''}${a.cached ? ' · cached' : ''}`)
     lines.push('')
     if (a.error) {
       lines.push(`_Not read: ${a.error}._`, '')
@@ -238,10 +292,17 @@ export function renderXDigest(x, end) {
       lines.push('_No posts in the window._', '')
       continue
     }
-    for (const p of [...a.posts].sort((m, n) => n.created_at.localeCompare(m.created_at))) {
-      const text = p.text.replace(/\s+/g, ' ').trim()
-      const clipped = text.length > 500 ? `${text.slice(0, 500)}…` : text
-      lines.push(`- **${p.created_at.slice(0, 10)}** · ♥ ${p.likes ?? '—'} · ↻ ${p.reposts ?? '—'} — ${clipped} [post](${p.url})`)
+    const byId = new Map(a.posts.map((p) => [p.id, p]))
+    const children = new Map()
+    for (const p of a.posts) {
+      if (p.thread && byId.has(p.thread)) (children.get(p.thread) ?? children.set(p.thread, []).get(p.thread)).push(p)
+    }
+    const tops = a.posts.filter((p) => !p.thread || !byId.has(p.thread))
+    for (const p of tops.sort((m, n) => n.created_at.localeCompare(m.created_at))) {
+      lines.push(...postLine(p))
+      if (p.thread) lines.push('  - _continues a thread that started before the window_')
+      const kids = (children.get(p.id) ?? []).sort((m, n) => m.created_at.localeCompare(n.created_at) || m.id.localeCompare(n.id))
+      for (const k of kids) lines.push(...postLine(k, '  '))
     }
     if (a.truncated) lines.push(`- _…capped; older posts in the window were not read._`)
     lines.push('')

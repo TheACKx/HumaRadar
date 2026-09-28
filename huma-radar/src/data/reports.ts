@@ -1,6 +1,6 @@
 import { CHAINS } from './chains'
 import { CHAIN_FALLBACK_COLOR, STABLE_CHAIN_COLORS } from './stablecoins'
-import type { ReportHeadline, ReportMeta } from '../types'
+import type { ReportHeadline, ReportMeta, ReportSeries } from '../types'
 
 /**
  * Weekly reports, read from ../reports at the repo root — the report workflow
@@ -23,6 +23,11 @@ const HEADLINES = import.meta.glob('../../../reports/data/*.headline.json', {
   import: 'default',
 }) as Record<string, ReportHeadline>
 
+// the daily TVL behind a report's trend graphs — ~50 KB a week, so lazy like the text
+const SERIES = import.meta.glob('../../../reports/data/*.series.json', {
+  import: 'default',
+}) as Record<string, () => Promise<ReportSeries>>
+
 const DATE = /(\d{4}-\d{2}-\d{2})/
 const dateOf = (path: string) => path.match(DATE)?.[1] ?? null
 
@@ -35,15 +40,23 @@ export const addDays = (iso: string, n: number) => {
 const headlineFor = new Map(
   Object.entries(HEADLINES).map(([path, h]) => [dateOf(path), h]),
 )
+const seriesFor = new Map(Object.entries(SERIES).map(([path, load]) => [dateOf(path), load]))
 
 /** Newest first. */
 export const REPORTS: ReportMeta[] = Object.entries(TEXTS)
   .map(([path, load]) => {
     const end = dateOf(path)
-    return end ? { end, start: addDays(end, -7), load, headline: headlineFor.get(end) ?? null } : null
+    if (!end) return null
+    const headline = headlineFor.get(end) ?? null
+    // a report may cover more or less than a week; its headline says so
+    return { end, start: headline?.start ?? addDays(end, -7), load, series: seriesFor.get(end) ?? null, headline }
   })
   .filter((r): r is ReportMeta => r !== null)
   .sort((a, b) => b.end.localeCompare(a.end))
+
+/** Days between a report's two snapshots. */
+export const spanDays = (r: { start: string; end: string }) =>
+  Math.round((Date.parse(`${r.end}T00:00:00Z`) - Date.parse(`${r.start}T00:00:00Z`)) / 86_400_000)
 
 export const LATEST_REPORT = REPORTS[0] ?? null
 
@@ -68,7 +81,7 @@ export function weekLabel(start: string, end: string, opts: { short?: boolean; w
   return `${day(start)} ${month(start, 'short')} – ${day(end)} ${month(end, 'short')}${y}`
 }
 
-/** "Friday 25 Sep" — assembled by hand so no locale turns it into "Sept". */
+/** "Monday 5 Oct" — assembled by hand so no locale turns it into "Sept". */
 export function dayLabel(iso: string) {
   const weekday = utc(iso).toLocaleDateString('en-US', { weekday: 'long', timeZone: 'UTC' })
   return `${weekday} ${day(iso)} ${month(iso, 'short')}`
@@ -81,14 +94,14 @@ export function longDate(iso: string) {
 }
 
 /**
- * The Friday the next report is due, from today: reports run on Fridays after
- * the 12:00 UTC snapshot, so a Friday that has not reached 12:30 UTC counts.
+ * The Monday the next report is due, from today: reports run Monday to Monday
+ * at 08:00 UTC, so a Monday that has not reached 08:00 UTC counts.
  */
 export function nextReportDate(now = new Date()) {
   const d = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()))
   const minutes = now.getUTCHours() * 60 + now.getUTCMinutes()
-  let ahead = (5 - d.getUTCDay() + 7) % 7
-  if (ahead === 0 && minutes >= 12 * 60 + 30) ahead = 7
+  let ahead = (1 - d.getUTCDay() + 7) % 7
+  if (ahead === 0 && minutes >= 8 * 60) ahead = 7
   d.setUTCDate(d.getUTCDate() + ahead)
   return d.toISOString().slice(0, 10)
 }

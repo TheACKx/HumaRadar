@@ -24,8 +24,10 @@
   // Cron Triggers run on UTC and are not best-effort, so this is the plain
   // conversion of the intended 15:00 in UTC+3 with nothing budgeted for slip.
   // Turkey has been permanently UTC+3 since 2016, so it holds all year.
+  // The Monday 07:30 run exists for the weekly report, which runs Monday to
+  // Monday at 08:00 UTC — before the daily run — and needs Monday's snapshot.
   "triggers": {
-    "crons": ["0 12 * * *"]
+    "crons": ["0 12 * * *", "30 7 * * 1"]
   },
 
   "vars": {
