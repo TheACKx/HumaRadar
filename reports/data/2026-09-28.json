@@ -3,7 +3,7 @@
  "week": "2026-09-18",
  "month": "2026-08-29",
  "span": "10D",
- "generatedAt": "2026-09-28T14:33:40.303Z",
+ "generatedAt": "2026-09-28T15:20:08.930Z",
  "thresholds": {
   "wowPct": 5,
   "wowUsd": 25000000,
@@ -3376,9 +3376,9 @@
     "name": "USDe / USDC",
     "chainId": 8453,
     "network": "Base",
-    "supply": 387562896.05138516,
-    "fromVaults": 387523840.6457384,
-    "share": 0.9998992282129052,
+    "supply": 387152034.7902176,
+    "fromVaults": 386391833.5695528,
+    "share": 0.9980364271594834,
     "vaults": [
      "Steakhouse High Yield USDC Edition"
     ],
@@ -3400,9 +3400,9 @@
     "name": "USDe / USDG",
     "chainId": 4663,
     "network": "Robinhood",
-    "supply": 336779832.8186577,
-    "fromVaults": 336115064.4553305,
-    "share": 0.9980261040046149,
+    "supply": 337163478.1762839,
+    "fromVaults": 333123705.81576496,
+    "share": 0.9880183572005781,
     "vaults": [
      "Steakhouse USDG"
     ],
@@ -3424,9 +3424,9 @@
     "name": "syrupUSDG / USDG",
     "chainId": 4663,
     "network": "Robinhood",
-    "supply": 127337124.43209411,
-    "fromVaults": 127315350.92171489,
-    "share": 0.9998290089361109,
+    "supply": 126203620.22070526,
+    "fromVaults": 126181847.91456503,
+    "share": 0.9998274827132363,
     "vaults": [
      "Steakhouse USDG"
     ],
@@ -3448,9 +3448,9 @@
     "name": "sUSDe / PYUSD",
     "chainId": 1,
     "network": "Ethereum",
-    "supply": 103166767.06082153,
-    "fromVaults": 103166764.81754266,
-    "share": 0.9999999782557994,
+    "supply": 103159259.223353,
+    "fromVaults": 103159256.98023748,
+    "share": 0.9999999782558004,
     "vaults": [
      "Paypal USD Main"
     ],
@@ -3472,9 +3472,9 @@
     "name": "syrupUSDC / PYUSD",
     "chainId": 1,
     "network": "Ethereum",
-    "supply": 56883557.52869238,
-    "fromVaults": 56883556.29287833,
-    "share": 0.9999999782746701,
+    "supply": 56879458.17379527,
+    "fromVaults": 56879456.93807016,
+    "share": 0.9999999782746681,
     "vaults": [
      "Paypal USD Main"
     ],
@@ -3496,9 +3496,9 @@
     "name": "PST / PYUSD",
     "chainId": 1,
     "network": "Ethereum",
-    "supply": 44991467.07789516,
-    "fromVaults": 44991466.070423335,
-    "share": 0.9999999776074912,
+    "supply": 44988357.59954846,
+    "fromVaults": 44988356.59214605,
+    "share": 0.9999999776074864,
     "vaults": [
      "Sentora Huma PST Main"
     ],
@@ -3520,9 +3520,9 @@
     "name": "PST / AUSD",
     "chainId": 1,
     "network": "Ethereum",
-    "supply": 6775125.870145011,
-    "fromVaults": 6775124.856394302,
-    "share": 0.9999998503716789,
+    "supply": 6683654.77044124,
+    "fromVaults": 6683653.756698918,
+    "share": 0.9999998483251519,
     "vaults": [
      "Bitwise Premium RWA AUSD"
     ],
@@ -3544,8 +3544,8 @@
     "name": "syrupUSDC / RLUSD",
     "chainId": 1,
     "network": "Ethereum",
-    "supply": 6426944.188042265,
-    "fromVaults": 6426943.167094985,
+    "supply": 6426279.247057355,
+    "fromVaults": 6426278.226215703,
     "share": 0.9999998411457685,
     "vaults": [
      "Sentora RLUSD Main"
@@ -3570,9 +3570,9 @@
     "name": "PST / USDC",
     "chainId": 1,
     "network": "Ethereum",
-    "supply": 31136944.9732556,
-    "fromVaults": 14893503.585884692,
-    "share": 0.4783225714236622,
+    "supply": 31989425.58566026,
+    "fromVaults": 14832100.598793332,
+    "share": 0.4636563591639496,
     "vaults": [
      "Huma USDC Main",
      "Galaxy USDC Enhanced",
@@ -3584,9 +3584,9 @@
     "name": "reUSD / USDC",
     "chainId": 1,
     "network": "Ethereum",
-    "supply": 8530932.317139989,
-    "fromVaults": 2101880.661108466,
-    "share": 0.24638346466369873,
+    "supply": 8530922.73492027,
+    "fromVaults": 2101878.3002077052,
+    "share": 0.2463834646636674,
     "vaults": [
      "Galaxy USDC Enhanced"
     ],

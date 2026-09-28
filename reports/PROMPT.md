@@ -29,7 +29,7 @@ definition. Edit that file, not this prompt, to change what is tracked or flagge
   start where it ended: `--start=<previous report's date>`. A window other than 7 days labels
   its change columns by length (`10D $`, `10D %`) instead of WoW — use that label in prose too.
 - A report dated today uses today's intraday snapshot: DefiLlama keeps revising the current
-  day until midnight UTC. Say so in Data notes.
+  day until midnight UTC. Say so in the note under the report title.
 
 ## Step 1 — Numbers
 
@@ -38,7 +38,8 @@ definition. Edit that file, not this prompt, to change what is tracked or flagge
    `--start=YYYY-MM-DD` for a window other than 7 days).
 3. Read the self-checks at the end of `reports/data/<date>.tables.md`:
    - **FAIL** → stop. The numbers are wrong or incomplete; fix the cause before writing.
-   - **WARN** → publishable, but explain it in the Data notes section.
+   - **WARN** → publishable, but explain it in one sentence where the affected figure
+     appears (the report has no Data notes section).
 4. Every row must carry the report date. If the snapshot is missing, say so at the top
    rather than silently reporting an older week.
 
@@ -92,7 +93,7 @@ report in this format spent heavily on exactly that; don't repeat it.)
    figure: quote it only with that link on the same line. (The API is pay-per-post; the
    run is capped by `x.maxPostsPerRun` in the config, and a rerun of the same week reads
    from cache for free.) If the X self-check WARNs — no token, no credits, an account
-   failed — say so in Data notes and rely on that source's blog.
+   failed — say so in that source's paragraph and rely on its blog.
 3. **Blog** from the config: posts published within the window or up to 7 days before. A
    blog that doesn't render for automated reading is skipped, not searched around. x.com
    pages themselves can't be opened (HTTP 402); the API above is the way in.
@@ -131,7 +132,10 @@ snapshot — if the drift WARN fired, say which coin moved after the snapshot.
 ## Step 6 — Huma
 
 "Huma-related" means:
-- **PST supply** — DefiLlama's Huma protocol TVL, split by chain.
+- **PST reserves** — DefiLlama's Huma TVL: the reserves backing PST and mPST, split by
+  the chain they sit on — not where PST is held. A same-day move out of one chain and into
+  another is Huma moving reserves, not new money; the "PST reserves by chain" table shows
+  Solana and Ethereum only (smaller chains still count in its Net).
 - **The Huma Related tab** — PST borrow markets and liquidity on Morpho, Fluid, Jupiter Lend,
   Kamino and Orca, plus Huma-curated vaults. Its total follows the site's own rules, so it
   matches what people see.
@@ -139,8 +143,8 @@ snapshot — if the drift WARN fired, say which coin moved after the snapshot.
   and Morpho, and borrow APY and utilisation on the PST markets. A borrow-rate jump matters
   to anyone looping PST.
 
-Explain where growth came from — chain, venue, market — and compare it with stablecoin
-supply growth on the same chains: is Huma growing faster or slower than its market?
+Explain where growth came from — chain, venue, market — and compare PST's growth with
+stablecoin supply's: is Huma growing faster or slower than its market?
 
 ## Output — `reports/YYYY-MM-DD.md`
 
@@ -153,12 +157,14 @@ supply growth on the same chains: is Huma growing faster or slower than its mark
 3. **What drove the big moves?** — one short paragraph per research pass, products and
    venues alike, with links. It comes before the venue table, so name each venue with its
    chain ("Aave v3 on Ethereum") and give its figure, rather than pointing at a table below.
-4. **Lending venues** — protocol × chain table, and where the flagged groups moved. Orca is
+4. **Huma** — metrics table, where it moved, vs. its market, and notable market changes.
+5. **DeFi & RWA watch** — 3–6 items from the watch accounts (Step 4).
+6. **Lending venues** — protocol × chain table, and where the flagged groups moved. Orca is
    left out: an AMM pool, not a lending venue (it stays in Huma's PST liquidity).
-5. **Stablecoin supply by chain** — table plus 2–3 sentences of takeaways.
-6. **Huma** — metrics table, where it moved, vs. its market, and notable market changes.
-7. **DeFi & RWA watch** — 3–6 items from the watch accounts (Step 4).
-8. **Data notes** — coverage limits, WARNs, sources that failed, anything withheld.
+7. **Stablecoin supply by chain** — table plus 2–3 sentences of takeaways.
+
+No Data notes section — the user's instruction. A caveat a reader needs goes in one
+sentence beside the figure it qualifies; the tables' own footnotes cover the rest.
 
 ## On the site
 

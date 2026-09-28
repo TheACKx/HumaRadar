@@ -1341,18 +1341,26 @@ function render({ productRows, venueData, supplyRows, humaData, checkRows, resea
   out.push('')
   out.push('### Against its market')
   out.push('')
-  out.push(table(['Chain', `Stablecoin supply ${P} %`, 'PST on chain', `PST ${P} $`, `PST ${P} %`, `Huma tab ${P} $`, 'PST growth outside tracked venues', 'Faster than market?'],
+  out.push(table(['Chain', `Stablecoin supply ${P} %`, 'PST reserves on chain', `Reserves ${P} $`, `Reserves ${P} %`, `Huma tab ${P} $`, 'Reserves growth outside tracked venues', 'Faster than market?'],
     h.vsMarket.map((v) => [v.chain, fmt.pct(v.supplyWowPct), fmt.money(v.pstNow), fmt.signed(v.pstWowUsd),
       fmt.pct(v.pstWowPct), fmt.signed(v.tabWowUsd),
       v.pstWowUsd != null && v.tabWowUsd != null ? fmt.signed(v.pstWowUsd - v.tabWowUsd) : '—',
       v.pstWowPct == null || v.supplyWowPct == null ? '—' : v.pstWowPct > v.supplyWowPct ? 'yes' : 'no'])))
   out.push('')
-  out.push('*PST on chain is DefiLlama supply; Huma tab is the venues Huma Radar tracks on that chain. Their difference is PST growth held somewhere the tab does not list — wallets, or venues not yet tracked. The two measure different things (PST supplied vs. dollars lent against it), so treat the difference as indicative.*')
+  // DefiLlama's Huma adapter (projects/huma-v2) sums the reserves backing PST and
+  // mPST where they sit — receivables, notes, a liquid sleeve in Jupiter Lend,
+  // Kamino, Orca and Pendle — so its chain split is not where PST is held
+  out.push('*PST reserves on chain are what DefiLlama counts for Huma on that chain: the reserves backing PST and mPST, by where they sit, not where PST is held. Huma tab is the venues Huma Radar tracks on that chain. The two measure different things, so treat their difference as indicative.*')
   out.push('')
-  // A chain's growth can be PST arriving from another chain rather than new
-  // supply: first seen on 2026-09-22, when Ethereum gained what Solana lost.
+  // A chain's growth can be reserves arriving from another chain rather than new
+  // money: first seen on 2026-09-22, when Ethereum gained what Solana lost.
+  // Every chain counts towards the net, but only the ones holding a real share
+  // get a column: Stellar and Monad sat near 1% between them and only added noise.
   const pstChains = (h.product?.chains ?? []).filter((c) => c.days && Math.max(c.now ?? 0, c.wk ?? 0) >= 1e6)
-  if (pstChains.length > 1) {
+  const pstTotal = pstChains.reduce((a, c) => a + (c.now ?? 0), 0)
+  const shown = pstChains.filter((c) => pstTotal && (c.now ?? 0) / pstTotal >= 0.05)
+  const hidden = pstChains.filter((c) => !shown.includes(c))
+  if (shown.length > 1) {
     const MOVE = 1e6
     const rows = []
     for (let i = 1; i < pstChains[0].days.length; i++) {
@@ -1372,16 +1380,18 @@ function render({ productRows, venueData, supplyRows, humaData, checkRows, resea
       const up = Math.max(...deltas.map((x) => x ?? 0))
       const down = Math.min(...deltas.map((x) => x ?? 0))
       const between = up >= MOVE && -down >= MOVE ? Math.min(up, -down) : 0
-      rows.push([day, ...deltas.map((x, k) => (x == null || (x === 0 && pstChains[k].days[i]?.[1] == null) ? '—' : fmt.signed(x))), fmt.signed(net),
+      const cells = pstChains.map((c, k) => (deltas[k] == null || (deltas[k] === 0 && c.days[i]?.[1] == null) ? '—' : fmt.signed(deltas[k])))
+      rows.push([day, ...shown.map((c) => cells[pstChains.indexOf(c)]), fmt.signed(net),
         between ? `≈ ${fmt.money(between)} moved between chains` : ''])
     }
-    out.push(`### PST by chain, day by day`)
+    out.push(`### PST reserves by chain, day by day`)
     out.push('')
     out.push(rows.length
-      ? table(['Day', ...pstChains.map((c) => c.chain), 'Net', 'Reading'], rows)
+      ? table(['Day', ...shown.map((c) => c.chain), 'Net', 'Reading'], rows)
       : `_No chain moved ${fmt.money(MOVE)} in a day._`)
     out.push('')
-    out.push(`*Day-over-day change in DefiLlama's PST supply per chain, on days when some chain moved at least ${fmt.money(MOVE)}. Points are 00:00 UTC except the report day's, which is intraday. Equal and opposite moves on one day are PST changing chains, not new supply; "Net" is what was actually added.*`)
+    out.push(`*Day-over-day change in the reserves DefiLlama counts for PST, by the chain they sit on, on days when some chain moved at least ${fmt.money(MOVE)}. Points are 00:00 UTC except the report day's, which is intraday. Equal and opposite moves on one day are reserves moving between chains, not new money; "Net" is what was actually added` +
+      (hidden.length ? `, including ${hidden.map((c) => c.chain).join(' and ')}, too small for a column.*` : '.*'))
     out.push('')
   }
   out.push('### Markets')
