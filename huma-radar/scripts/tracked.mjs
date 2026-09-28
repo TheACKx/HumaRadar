@@ -564,13 +564,34 @@ export const STABLECOINS = [
  * `yieldsProject` and `yieldsSymbol` are resolved against yields.llama.fi/pools
  * at collect time rather than pinned to pool ids, so a project adding a chain
  * is picked up without an edit here.
+ *
+ * A third shape for an issuer whose supply spans several tokens:
+ *
+ *   mcaps    — the summed market caps of `mcaps[].coin` from DefiLlama's coins
+ *              API, with APY weighted by each token's cap across its `pool`.
+ *              The coins API has no history, so the series is backfilled once
+ *              from CoinGecko — the ids it is keyed by, and the same figures —
+ *              and grows by one day per run after that.
  */
 export const STABLECOIN_PROTOCOLS = [
   // Huma publishes no yields pool on DefiLlama, so this row carries TVL only
   { id: 'huma',     name: 'Huma',      ticker: 'PST',       protocol: 'huma-finance-v2',   url: 'https://defillama.com/protocol/huma-finance-v2?events=false&fees=false' },
   { id: 'sky',      name: 'Sky',       ticker: 'sUSDS',     pool: 'd8c4eff5-c8a9-46fc-a888-057c4c668e72' },
   { id: 'aave',     name: 'Aave',      ticker: 'USDC',      pool: 'aa70268e-4b52-42bf-a116-608b370f9501' },
-  { id: 'maple',    name: 'Maple',     ticker: 'syrupUSDC', pool: '43641cf5-a92e-416b-bce9-27113d3c0db6' },
+  // Maple's token supply rather than its yields pool, whose TVL counts loan
+  // collateral too: $2.90B against $1.44B of syrup tokens on 2026-09-28. Each
+  // token counts once. Copies bridged to other chains are backed by shares
+  // locked on Ethereum, so adding them — as DefiLlama's RWA pages do for
+  // syrupUSDC and syrupUSDT — would count the same deposits twice.
+  {
+    id: 'maple', name: 'Maple', ticker: 'syrupUSD',
+    mcaps: [
+      { coin: 'coingecko:syrupusdc',  ticker: 'syrupUSDC', pool: '43641cf5-a92e-416b-bce9-27113d3c0db6' },
+      { coin: 'coingecko:syrupusdt',  ticker: 'syrupUSDT', pool: '8edfdf02-cdbb-43f7-bca6-954e5fe56813' },
+      { coin: 'coingecko:syrup-usdg', ticker: 'syrupUSDG', pool: '4c004503-9587-46f2-a362-d23a80f4b691' },
+    ],
+    url: 'https://defillama.com/rwa/platform/maple',
+  },
   { id: 'ondo',     name: 'Ondo',      ticker: 'USDY',      protocol: 'ondo-yield-assets', yieldsProject: 'ondo-yield-assets', yieldsSymbol: 'USDY',   url: 'https://defillama.com/protocol/ondo-yield-assets?fees=false&medianApy=true' },
   // USDe itself pays nothing; its yield is the staked sUSDe rate, which is what
   // the protocol page's median APY reports

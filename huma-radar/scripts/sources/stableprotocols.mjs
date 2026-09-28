@@ -49,25 +49,25 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms))
 const GAP_MS = 400
 let lastCall = 0
 
-async function fetchJson(url, attempt = 1) {
+async function fetchJson(url, attempt = 1, init = {}) {
   const since = Date.now() - lastCall
   if (since < GAP_MS) await sleep(GAP_MS - since)
   lastCall = Date.now()
 
   let limited = false
   try {
-    const res = await fetch(url, { headers: { accept: 'application/json' } })
+    const res = await fetch(url, { ...init, headers: { accept: 'application/json', ...init.headers } })
     if (!res.ok) {
       limited = res.status === 429
       throw new Error(`HTTP ${res.status}`)
     }
     return await res.json()
   } catch (err) {
-    if (attempt >= 5) throw new Error(`DefiLlama: ${err.message}`)
+    if (attempt >= 5) throw new Error(`${new URL(url).hostname}: ${err.message}`)
     const wait = limited ? 3000 * attempt : 500 * 2 ** attempt
     console.warn(`    retry ${attempt} in ${wait}ms (${err.message})`)
     await sleep(wait)
-    return fetchJson(url, attempt + 1)
+    return fetchJson(url, attempt + 1, init)
   }
 }
 
@@ -139,6 +139,105 @@ async function medianApyByDate(pools, log, label) {
   return new Map([...perDate].map(([date, vals]) => [date, rate(median(vals))]))
 }
 
+const COINS = 'https://coins.llama.fi'
+const COINGECKO = 'https://api.coingecko.com/api/v3'
+
+/**
+ * One year of daily market caps per token, from CoinGecko, for a row that has
+ * none yet. The coins API only knows today, and CoinGecko is what it is keyed
+ * by: on 2026-09-28 the two agreed on all three syrup tokens.
+ *
+ * A token contributes 0 before its first day, since it did not exist; a day it
+ * did exist for but has no figure is dropped rather than summed short, which
+ * would read as an outflow.
+ */
+async function backfillMcaps(want, today) {
+  const perDay = new Map()
+  const first = {}
+  for (const t of want.mcaps) {
+    const id = t.coin.replace(/^coingecko:/, '')
+    const json = await fetchJson(`${COINGECKO}/coins/${id}/market_chart?vs_currency=usd&days=365&interval=daily`)
+    for (const [ms, v] of json?.market_caps ?? []) {
+      const date = new Date(ms).toISOString().slice(0, 10)
+      if (date >= today || !v) continue // today comes from the coins API
+      if (!perDay.has(date)) perDay.set(date, {})
+      perDay.get(date)[t.ticker] = round(v)
+      if (!first[t.ticker] || date < first[t.ticker]) first[t.ticker] = date
+    }
+  }
+
+  const rows = []
+  for (const date of [...perDay.keys()].sort()) {
+    const parts = {}
+    let complete = true
+    for (const t of want.mcaps) {
+      const v = perDay.get(date)[t.ticker]
+      if (v != null) parts[t.ticker] = v
+      else if (!first[t.ticker] || date < first[t.ticker]) parts[t.ticker] = 0
+      else {
+        complete = false
+        break
+      }
+    }
+    if (complete) rows.push({ date, parts })
+  }
+  return rows
+}
+
+/**
+ * Summed market caps, with APY weighted by each token's share of them. The
+ * history accumulates — a day at a time from the coins API — instead of being
+ * refetched, so what came before survives a bad day; each run recomputes the
+ * APY for every stored day from the pools' own rate history.
+ */
+async function mcapsSeries(want, stored) {
+  const today = new Date().toISOString().slice(0, 10)
+
+  const caps = await fetchJson(`${COINS}/mcaps`, 1, {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify({ coins: want.mcaps.map((t) => t.coin) }),
+  })
+  const now = {}
+  for (const t of want.mcaps) {
+    const v = caps?.[t.coin]?.mcap
+    if (v == null) throw new Error(`coins API returned no market cap for ${t.coin}`)
+    now[t.ticker] = round(v)
+  }
+
+  // only rows already on this basis carry forward; anything else was a
+  // different measure, and continuing it would draw a false step
+  let rows = stored?.kind === 'mcaps' ? stored.history.filter((h) => h.parts) : []
+  let backfilled = 0
+  if (!rows.length) {
+    rows = await backfillMcaps(want, today)
+    backfilled = rows.length
+  }
+  rows = rows.filter((h) => h.date !== today).concat({ date: today, parts: now })
+
+  const apyOf = {}
+  for (const t of want.mcaps) {
+    const series = await poolSeries(t.pool)
+    apyOf[t.ticker] = new Map(series.map((p) => [p.date, p.apy]))
+  }
+
+  const history = rows.map(({ date, parts }) => {
+    let tvl = 0
+    let weight = 0
+    let weighted = 0
+    for (const [ticker, cap] of Object.entries(parts)) {
+      tvl += cap
+      const apy = apyOf[ticker]?.get(date)
+      if (apy != null && cap > 0) {
+        weight += cap
+        weighted += cap * apy
+      }
+    }
+    return { date, tvl, apy: weight ? rate(weighted / weight) : null, parts }
+  })
+  return { history, backfilled }
+}
+
 /** Merge a TVL series with a separately sourced APY series, on date. */
 function join(tvlSeries, apyByDate) {
   const dates = new Set([...tvlSeries.map((p) => p.date), ...apyByDate.keys()])
@@ -184,7 +283,12 @@ export async function collectStableProtocols({ log }) {
     let venue = null
 
     try {
-      if (want.pool) {
+      if (want.mcaps) {
+        const res = await mcapsSeries(want, store.protocols[want.id])
+        history = res.history
+        venue = `${want.mcaps.map((t) => t.ticker).join(' + ')} · market cap`
+        if (res.backfilled) log(`  Yields  ${label.padEnd(18)} backfilled ${res.backfilled} days of market cap from CoinGecko`)
+      } else if (want.pool) {
         history = await poolSeries(want.pool)
         const hit = (await pools(log)).find((p) => p.pool === want.pool)
         venue = hit ? `${hit.project} · ${hit.chain}` : 'DefiLlama pool'
@@ -218,8 +322,8 @@ export async function collectStableProtocols({ log }) {
       id: want.id,
       name: want.name,
       ticker: want.ticker,
-      /** which of DefiLlama's two shapes this row is quoting */
-      kind: want.pool ? 'pool' : 'protocol',
+      /** which source shape this row is quoting — see STABLECOIN_PROTOCOLS */
+      kind: want.mcaps ? 'mcaps' : want.pool ? 'pool' : 'protocol',
       venue,
       url: want.url ?? `https://defillama.com/yields/pool/${want.pool}`,
       history,

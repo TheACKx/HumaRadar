@@ -131,7 +131,7 @@ export function StableProtocolDrawer({
               }
             />
             <Stat
-              label={row.kind === 'protocol' ? 'TVL (protocol-wide)' : 'TVL'}
+              label={row.kind === 'protocol' ? 'TVL (protocol-wide)' : row.kind === 'mcaps' ? 'TVL (token supply)' : 'TVL'}
               value={formatUsd(row.tvl)}
               sub={
                 <span className="flex items-center gap-2">

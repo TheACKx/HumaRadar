@@ -200,6 +200,14 @@ export function StableProtocolPanel({
                         protocol-wide
                       </span>
                     )}
+                    {r.kind === 'mcaps' && (
+                      <span
+                        className="block whitespace-nowrap text-[9px] font-bold uppercase tracking-wide text-dim"
+                        title={`Token supply: the market caps of ${r.venue?.split(' · ')[0] ?? 'its tokens'}, each counted once (DefiLlama coins API). Not a lending book, so no collateral is included.`}
+                      >
+                        token supply
+                      </span>
+                    )}
                   </td>
                   <td className="py-3 pr-4 text-right"><Delta value={r.tvl7d.pct} /></td>
                   <td className="py-3 pr-4 text-right"><Delta value={r.tvl30d.pct} /></td>
@@ -247,7 +255,7 @@ function ApyDelta({ change, mode }: { change: Change; mode: DeltaMode }) {
  * DefiLlama indexes some protocols' TVL without listing a yield pool for them,
  * so the rate is genuinely absent rather than zero.
  */
-function NoYield({ kind, name }: { kind: 'pool' | 'protocol'; name: string }) {
+function NoYield({ kind, name }: { kind: 'pool' | 'protocol' | 'mcaps'; name: string }) {
   return (
     <span
       className="text-dim"

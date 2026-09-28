@@ -189,6 +189,9 @@ const NOT_A_CHAIN = /-|^(staking|pool2|borrowed|vesting|offers|treasury)$/i
 const dayOf = (s) => new Date(s * 1000).toISOString().slice(0, 10)
 
 async function productChains(meta) {
+  // a sum of token market caps counts each token once, wherever it is bridged,
+  // so there is no per-chain figure to fetch
+  if (meta.mcaps) return [{ chain: 'multi-chain', whole: true }]
   if (!live) return null
   try {
     if (meta.pool) {
@@ -213,6 +216,33 @@ async function productChains(meta) {
 }
 
 // ---------------------------------------------------------------- 1. products
+
+/**
+ * For a row summed from several tokens: each token's own week, so the report
+ * can say which one moved. Maple's first week on this basis was flat overall
+ * while syrupUSDC gained $53M and syrupUSDT lost $82M — a rotation the sum hides.
+ */
+function tokenChanges(history) {
+  const at = (date) => {
+    const floor = addDays(date, -2)
+    for (let i = history.length - 1; i >= 0; i--) {
+      const h = history[i]
+      if (h.date > date) continue
+      if (h.date < floor) break
+      if (h.parts) return h.parts
+    }
+    return null
+  }
+  const now = at(END)
+  const wk = at(WEEK)
+  if (!now) return null
+  return Object.keys(now).map((ticker) => ({
+    ticker,
+    now: now[ticker],
+    wk: wk?.[ticker] ?? null,
+    wow: change(now[ticker], wk?.[ticker] ?? null),
+  }))
+}
 
 /**
  * For a lending pool, DefiLlama's yields "TVL" is available liquidity —
@@ -252,7 +282,8 @@ async function products() {
     out.push({
       id: r.id,
       label: `${r.name} ${r.ticker}`,
-      source: meta.pool ? 'pool' : 'protocol',
+      source: meta.mcaps ? 'mcaps' : meta.pool ? 'pool' : 'protocol',
+      tokens: meta.mcaps ? tokenChanges(r.history) : null,
       metric: lb ? 'liquidity' : 'tvl',
       liveSupplied: lb?.totalSupplyUsd ?? null,
       liveBorrowed: lb?.totalBorrowUsd ?? null,
@@ -933,7 +964,18 @@ function render({ productRows, venueData, supplyRows, humaData, checkRows, resea
       fmt.pp(p.apyWowPp), p.trend]),
   ))
   out.push('')
-  out.push('*Protocol-sourced rows (Huma, Ondo, Ethena, Hastra, Cap, Avant, Tori, Yuzu) are protocol-wide TVL, not the ticker alone. ◇ = lending pool: the figure is available liquidity (supplied − borrowed), not deposits, so a fall can mean more borrowing rather than withdrawals.*')
+  const protocolRows = productRows.filter((p) => p.source === 'protocol').map((p) => p.label.split(' ')[0])
+  const supplyRows_ = productRows.filter((p) => p.source === 'mcaps')
+  out.push(
+    `*Protocol-sourced rows (${protocolRows.join(', ')}) are protocol-wide TVL, not the ticker alone. ` +
+      supplyRows_.map((p) => `${p.label} is token supply: the market caps of ${p.tokens?.map((t) => t.ticker).join(', ') ?? 'its tokens'} summed, each counted once, with APY weighted by cap. `).join('') +
+      '◇ = lending pool: the figure is available liquidity (supplied − borrowed), not deposits, so a fall can mean more borrowing rather than withdrawals.*',
+  )
+  for (const p of supplyRows_.filter((x) => x.tokens?.length)) {
+    out.push('')
+    out.push(`*${p.label} by token:* ` + p.tokens.map((t) =>
+      `${t.ticker} ${fmt.money(t.now)} (${t.wow ? `${fmt.signed(t.wow.usd)}, ${fmt.pct(t.wow.pct)}` : 'no week-ago figure'})`).join(' · '))
+  }
   out.push('')
   out.push('### Flagged products — shape of the week')
   out.push('')

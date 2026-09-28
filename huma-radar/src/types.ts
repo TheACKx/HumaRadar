@@ -215,6 +215,8 @@ export interface StableProtocolPoint {
   tvl: number | null
   /** APY, percent */
   apy: number | null
+  /** an `mcaps` row's per-token market caps, which `tvl` sums */
+  parts?: Record<string, number>
 }
 
 export interface StableProtocol {
@@ -227,8 +229,10 @@ export interface StableProtocol {
    * `pool`     — a DefiLlama yields pool: TVL and APY for this one product.
    * `protocol` — a DefiLlama protocol: TVL is protocol-wide and the yield is
    *              the median across that project's pools for this ticker.
+   * `mcaps`    — several tokens' market caps summed, each counted once, with
+   *              APY weighted by cap. Supply, not a lending book.
    */
-  kind: 'pool' | 'protocol'
+  kind: 'pool' | 'protocol' | 'mcaps'
   /** where the figures come from, spelled out for the row's subline */
   venue: string | null
   url: string
