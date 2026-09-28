@@ -1,4 +1,4 @@
-{"sources":["aave-v3-api","aave-v4-api","morpho-api","fluid-api","jupiter-lend-api","kamino-api","orca-api"],"generatedAt":"2026-09-28T12:02:03.067Z","markets":{"aave-1-usdt":{"id":"aave-1-usdt","history":[
+{"sources":["aave-v3-api","aave-v4-api","morpho-api","fluid-api","jupiter-lend-api","kamino-api","orca-api"],"generatedAt":"2026-09-28T13:26:18.430Z","markets":{"aave-1-usdt":{"id":"aave-1-usdt","history":[
 {"date":"2025-08-31","tvl":null,"borrowed":null,"available":null,"apy":2.0055,"borrowApy":2.8774,"utilization":null},
 {"date":"2025-09-01","tvl":null,"borrowed":null,"available":null,"apy":4.2524,"borrowApy":6.0013,"utilization":null},
 {"date":"2025-09-02","tvl":null,"borrowed":null,"available":null,"apy":4.288,"borrowApy":5.8818,"utilization":null},
