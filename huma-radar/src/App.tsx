@@ -1,13 +1,14 @@
 import { Suspense, lazy, useMemo, useState } from 'react'
-import { Coins, FileText, Landmark, Radar, ShieldCheck } from 'lucide-react'
+import { Coins, FileText, Landmark, Microscope, Radar, ShieldCheck } from 'lucide-react'
 import { CHAIN_MAP, NETWORKS, PROJECTS } from './data/chains'
 import { CURATORS, CURATORS_GENERATED_AT, CURATORS_LATEST_DATE } from './data/curators'
+import { PRIME_GENERATED_AT, PRIME_WALLETS } from './data/prime'
 import { GENERATED_AT, LATEST_DATE, MARKETS, PROTOCOL_ORDER } from './data/markets'
 import { STABLE_CHAINS, STABLE_GENERATED_AT, STABLE_LATEST_DATE } from './data/stablecoins'
 import {
   STABLE_PROTOCOLS, STABLE_PROTOCOLS_GENERATED_AT, STABLE_PROTOCOLS_LATEST_DATE,
 } from './data/stableprotocols'
-import { aggregate, excludedFromTotals, withDeltas } from './lib/derive'
+import { aggregate, countedTvlSeries, excludedFromTotals, withDeltas } from './lib/derive'
 import { formatDateLong, relativeTime } from './lib/format'
 import type {
   Chain, ChainId, CuratorRow, DeltaMode, MarketRow, Protocol, ProtocolFilter, SortKey, StableProtocolRow,
@@ -22,9 +23,16 @@ import { StableChartDrawer } from './components/StableChartDrawer'
 import { StableProtocolPanel } from './components/StableProtocolPanel'
 import { StableProtocolDrawer } from './components/StableProtocolDrawer'
 import { CuratorPanel } from './components/CuratorPanel'
+import { PstDeepDivePanel } from './components/PstDeepDivePanel'
 import { ChainDot, Logo } from './components/Primitives'
 
 const ALL_ROWS: MarketRow[] = MARKETS.map(withDeltas)
+
+// the PST Deep Dive tab reads the Huma Related tab's header figure as its Lending Markets
+const HUMA_ROWS = ALL_ROWS.filter((r) => r.chain === 'huma')
+const HUMA_AGG = aggregate(HUMA_ROWS)
+const HUMA_LENDING_SERIES = countedTvlSeries(HUMA_ROWS)
+const HUMA_PST = STABLE_PROTOCOLS.find((p) => p.id === 'huma')
 
 // The report tab brings a markdown renderer the rest of the dashboard never
 // uses, so it loads on first visit to the tab rather than with every page.
@@ -140,7 +148,7 @@ export default function App() {
 
   const selectView = (v: ViewId) => {
     setView(v)
-    if (v !== 'stables' && v !== 'protocols' && v !== 'reports' && v !== 'curators') {
+    if (v !== 'stables' && v !== 'protocols' && v !== 'reports' && v !== 'curators' && v !== 'pst') {
       setChain(v)
       setProtocolFilter('all')
     }
@@ -151,7 +159,8 @@ export default function App() {
   const onProtocols = view === 'protocols'
   const onReports = view === 'reports'
   const onCurators = view === 'curators'
-  const onOverview = onStables || onProtocols || onReports || onCurators
+  const onPst = view === 'pst'
+  const onOverview = onStables || onProtocols || onReports || onCurators || onPst
 
   // the mobile rail mirrors the sidebar order: overview, then networks, then
   // projects, separated by rules since a scrolling row has no room for labels
@@ -191,6 +200,15 @@ export default function App() {
             </div>
             <div className="mt-3 flex gap-2 overflow-x-auto pb-1">
               {chainChip(CHAIN_MAP.huma)}
+              <button
+                onClick={() => selectView('pst')}
+                className={`chip shrink-0 !px-3 !py-1.5 ${
+                  onPst ? '!border-plum-500/50 !bg-plum-600/20 !text-plum-100' : ''
+                }`}
+              >
+                <Microscope size={11} />
+                PST Deep Dive
+              </button>
               <button
                 onClick={() => selectView('reports')}
                 className={`chip shrink-0 !px-3 !py-1.5 ${
@@ -275,6 +293,44 @@ export default function App() {
                 </span>
                 <span className="num">
                   {STABLE_CHAINS.length} chains · collected {relativeTime(STABLE_GENERATED_AT)}
+                </span>
+              </footer>
+            </>
+          ) : onPst ? (
+            <>
+              <header className="mb-6 flex flex-wrap items-end justify-between gap-4">
+                <div className="flex items-center gap-2.5">
+                  <span className="grid h-9 w-9 place-items-center rounded-xl border border-plum-500/20 bg-plum-500/10 text-plum-300">
+                    <Microscope size={17} />
+                  </span>
+                  <div>
+                    <h1 className="text-[22px] font-extrabold leading-none tracking-tight text-white">
+                      PST Deep Dive
+                    </h1>
+                    <p className="mt-1.5 text-[12.5px] text-muted">
+                      Where PST's funding comes from — Huma Prime, lending markets and plain dApp deposits.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-2">
+                  <span className="chip" title={GENERATED_AT ?? undefined}>
+                    <span className="h-1.5 w-1.5 animate-pulseDot rounded-full bg-gain" />
+                    Snapshot {LATEST_DATE ? formatDateLong(LATEST_DATE) : '—'}
+                  </span>
+                  <span className="chip">Prime wallets · DefiLlama</span>
+                </div>
+              </header>
+
+              <PstDeepDivePanel
+                pst={HUMA_PST}
+                lending={{ tvl: HUMA_AGG.tvl, tvl7d: HUMA_AGG.tvl7d, series: HUMA_LENDING_SERIES }}
+              />
+
+              <footer className="mt-6 flex flex-wrap items-center justify-between gap-3 pb-4 text-[11px] text-dim">
+                <span>Tenure analysis and top wallets are coming to this tab next.</span>
+                <span className="num">
+                  {PRIME_WALLETS.length} Prime wallets · collected {relativeTime(PRIME_GENERATED_AT)}
                 </span>
               </footer>
             </>

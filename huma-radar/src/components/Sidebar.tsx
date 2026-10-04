@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Activity, ChevronRight, Clock3, Coins, FileText, Landmark, Layers, ShieldCheck } from 'lucide-react'
+import { Activity, ChevronRight, Clock3, Coins, FileText, Landmark, Layers, Microscope, ShieldCheck } from 'lucide-react'
 import { CHAIN_MAP, NETWORKS, PROJECTS } from '../data/chains'
 import { CURATORS } from '../data/curators'
 import { LATEST_REPORT, weekLabel } from '../data/reports'
@@ -65,6 +65,13 @@ export function Sidebar({ selected, onSelect, allRows, lastSync }: Props) {
             rows={allRows}
             selected={selected === 'huma'}
             onSelect={() => onSelect('huma')}
+          />
+          <OverviewTab
+            icon={<Microscope size={11} />}
+            label="PST Deep Dive"
+            detail="Funding sources · Prime"
+            selected={selected === 'pst'}
+            onSelect={() => onSelect('pst')}
           />
           <OverviewTab
             icon={<FileText size={11} />}

@@ -219,6 +219,15 @@ function aggregateChange(rows: MarketRow[], metric: Metric, daysAgo: number): Ag
 }
 
 /** Days where every contributing market has a value — avoids phantom dips. */
+/**
+ * The header's Total Tracked TVL, day by day: the same counted rows aggregate()
+ * sums, on every date all of them carry a TVL.
+ */
+export function countedTvlSeries(all: MarketRow[], days = 400) {
+  const superseded = excludedFromTotals(all)
+  return totalSeries(all.filter((r) => !superseded.has(r.id)), days)
+}
+
 function totalSeries(rows: MarketRow[], days: number) {
   const withData = rows.filter((r) => r.history.some((h) => h.tvl !== null))
   if (!withData.length) return []

@@ -634,3 +634,41 @@ export const CURATORS = [
   { id: 'bitwise',    name: 'Bitwise',                slug: 'bitwise' },
   { id: 'steakhouse', name: 'Steakhouse',             slug: 'steakhouse-financial' },
 ]
+
+/**
+ * Huma Prime — the wallets that run Huma's leveraged PST strategy. Each posts
+ * PST as collateral in the Huma Related venues and borrows stablecoins against
+ * it, so it is tracked by its positions rather than by a market:
+ *
+ *   exposure — PST supplied as collateral, in USD, summed across its markets
+ *   net      — exposure − debt + whatever sits idle in the wallet; what
+ *              Jupiter's portfolio page and DeBank call the wallet's net worth
+ *
+ * Read daily by scripts/sources/prime.mjs into src/data/prime.json, for the
+ * PST Deep Dive tab. Add a wallet here to track it.
+ */
+export const PRIME = {
+  wallets: [
+    {
+      id: 'prime-solana',
+      label: 'Prime · Solana',
+      chain: 'solana',
+      address: 'HGLosmCDk1fbgioWVsjgPdYrnhk5u39ox7ntjBAhuWsZ',
+      url: 'https://jup.ag/portfolio/HGLosmCDk1fbgioWVsjgPdYrnhk5u39ox7ntjBAhuWsZ',
+    },
+    {
+      id: 'prime-ethereum',
+      label: 'Prime · Ethereum',
+      chain: 'ethereum',
+      address: '0x9F0DCa77E93A980750A6d1102C54D4713d7Df952',
+      url: 'https://debank.com/profile/0x9F0DCa77E93A980750A6d1102C54D4713d7Df952',
+    },
+  ],
+  /** PST's token on each chain, to price what sits idle in a wallet */
+  pst: {
+    solana: '59obFNBzyTBGowrkif5uK7ojS58vsuWz3ZCvg6tfZAGw',
+    ethereum: '0x22ae3d9a738471f405169af055d31c687087d4c7',
+  },
+  /** Kamino markets searched for a Solana wallet's obligations */
+  kaminoMarkets: ['52FSGeeokLpgvgAMdqxyt5Hoc2TbUYj5b8yxrEdZ37Vf'],
+}

@@ -235,6 +235,48 @@ export interface CuratorRow extends Curator {
 
 export type CuratorSortKey = 'name' | 'total' | 'change7d' | 'change30d' | 'change365d'
 
+/** One Huma Prime position: PST posted as collateral in one market, and the debt against it. */
+export interface PrimePosition {
+  protocol: string
+  /** the Huma Related tab's name for the market, e.g. "JupLend JupUSD" */
+  market: string
+  venue: string
+  collateral: string
+  /** collateral, USD */
+  supplied: number
+  /** debt, USD */
+  borrowed: number
+}
+
+/** One wallet on one day, as scripts/sources/prime.mjs writes it. All USD. */
+export interface PrimePoint {
+  date: string
+  /** PST supplied as collateral across its markets — its PST exposure */
+  supplied: number
+  borrowed: number
+  /** tokens sitting idle in the wallet */
+  wallet: number
+  /** supplied − borrowed + wallet: the wallet's net worth */
+  net: number
+  positions: PrimePosition[]
+}
+
+export interface PrimeWallet {
+  id: string
+  label: string
+  chain: 'solana' | 'ethereum'
+  address: string
+  /** the wallet's portfolio page (Jupiter or DeBank) */
+  url: string
+  history: PrimePoint[]
+}
+
+export interface PrimeStore {
+  source: string
+  generatedAt: string | null
+  wallets: Record<string, PrimeWallet>
+}
+
 /**
  * One day of a stablecoin product's TVL and yield, as
  * scripts/sources/stableprotocols.mjs writes it. The two fields are filled
@@ -298,7 +340,7 @@ export type StableProtocolSortKey =
  * networks — each reads its own data and measures something the chain tabs do
  * not — so they sit beside the chain ids rather than among them.
  */
-export type ViewId = 'stables' | 'protocols' | 'reports' | 'curators' | ChainId
+export type ViewId = 'stables' | 'protocols' | 'reports' | 'curators' | 'pst' | ChainId
 
 /** A headline figure exactly as the report script formatted it. */
 export interface ReportKpi {

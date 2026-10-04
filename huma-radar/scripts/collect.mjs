@@ -20,6 +20,7 @@
  *   npm run collect -- --only=stablecoins
  *   npm run collect -- --only=stableprotocols
  *   npm run collect -- --only=curators
+ *   npm run collect -- --only=prime
  */
 
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs'
@@ -37,6 +38,7 @@ import { collectComposites } from './sources/composites.mjs'
 import { collectStablecoins } from './sources/stablecoins.mjs'
 import { collectStableProtocols } from './sources/stableprotocols.mjs'
 import { collectCurators } from './sources/curators.mjs'
+import { collectPrime } from './sources/prime.mjs'
 
 const HERE = dirname(fileURLToPath(import.meta.url))
 const STORE = resolve(HERE, '../src/data/snapshots.json')
@@ -109,6 +111,11 @@ async function main() {
     curators = await collectCurators({ log })
   }
 
+  let prime = { wallets: 0 }
+  if (!only || only === 'prime') {
+    prime = await collectPrime({ today, log })
+  }
+
   store.generatedAt = new Date().toISOString()
   store.sources = [
     'aave-v3-api', 'aave-v4-api', 'morpho-api', 'fluid-api', 'jupiter-lend-api', 'kamino-api', 'orca-api',
@@ -146,6 +153,11 @@ async function main() {
   if (curators.curators) {
     console.log(`Wrote ${curators.curators} curators · ${curators.days} daily rows`)
     console.log(`-> ${resolve(HERE, '../src/data/curators.json')}`)
+  }
+
+  if (prime.wallets) {
+    console.log(`Wrote ${prime.wallets} Prime wallets`)
+    console.log(`-> ${resolve(HERE, '../src/data/prime.json')}`)
   }
 }
 
