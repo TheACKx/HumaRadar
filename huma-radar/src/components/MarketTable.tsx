@@ -266,7 +266,7 @@ export function MarketTable({
                         className="block whitespace-nowrap text-[9px] font-bold uppercase tracking-wide text-dim"
                         title={
                           r.rollup
-                            ? "A total that already contains rows listed elsewhere on this tab, so it is left out of the header's Total TVL rather than counted twice"
+                            ? "A total that already contains rows listed elsewhere on this tab, so it is left out of the header's Total Tracked TVL rather than counted twice"
                             : "Kept out of the header's totals on purpose: this row belongs on the tab but is not what the tab totals"
                         }
                       >

@@ -14,7 +14,7 @@ export function StatCards({ agg, accent }: { agg: Agg; accent: string }) {
     <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-4">
       <Card
         icon={<Layers size={15} />}
-        label="Total TVL"
+        label="Total Tracked TVL"
         value={formatUsd(agg.tvl)}
         footer={
           <div className="space-y-1">
