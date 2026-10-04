@@ -122,7 +122,7 @@ export async function collectFluid({ store, today, log }) {
     }
 
     const n = normalise(raw)
-    const name = `${n.collateralSymbol} / ${n.loanSymbol}`
+    const name = want.name ?? `${n.collateralSymbol} / ${n.loanSymbol}`
     const id = `fluid-${want.chainId}-${want.id}`
     const entry = (store.markets[id] ??= { id, history: [] })
 

@@ -137,20 +137,20 @@ export const HUMA = {
   /** Morpho Blue markets — a collateral/loan pair with a borrow side. */
   morphoMarkets: [
     {
-      name: 'PST / USDC',
+      name: 'Morpho USDC Mainnet',
       marketId: '0x002278ea242ec722813b4fe3c8eeaa07dbc331c731cc0b4248a1bf0771f933ea',
       chainId: 1,
       url: 'https://app.morpho.org/ethereum/variable/0x002278ea242ec722813b4fe3c8eeaa07dbc331c731cc0b4248a1bf0771f933ea/pst-usdc',
     },
     {
-      name: 'PST / PYUSD',
+      name: 'Morpho PYUSD',
       marketId: '0xb4977179610abfecfc8b76255a002c16b33f46d077beb86e5911e1fe9ee6e512',
       chainId: 1,
       url: 'https://app.morpho.org/ethereum/variable/0xb4977179610abfecfc8b76255a002c16b33f46d077beb86e5911e1fe9ee6e512/pst-pyusd',
     },
     {
       // Bitwise-curated; the app titles it "AUSD PST", loan first
-      name: 'PST / AUSD',
+      name: 'Morpho AUSD',
       marketId: '0xe90a6419afa96192cb088f63b779ddcb629a89f9126600d767d9442868087541',
       chainId: 1,
       url: 'https://app.morpho.org/ethereum/variable/0xe90a6419afa96192cb088f63b779ddcb629a89f9126600d767d9442868087541/ausd-pst',
@@ -164,7 +164,7 @@ export const HUMA = {
    * actually posted against them. Held out of the header totals, since that
    * same PST already backs the market rows.
    */
-  morphoCollateral: [{ symbol: 'PST', name: 'PST' }],
+  morphoCollateral: [{ symbol: 'PST', name: 'Total Morpho PST Collateral' }],
 
   /**
    * Morpho vaults surfaced on the Huma tab. All four are shown but held out of
@@ -179,10 +179,13 @@ export const HUMA = {
     { name: 'Galaxy USDC Enhanced', address: '0xd95fE7adF5075fad9D6Bf853E0f9Fe53369E8D96', chainId: 1, notInTotal: true, url: morphoUrl('ethereum', '0xd95fE7adF5075fad9D6Bf853E0f9Fe53369E8D96', 'galaxy-usdc-enhanced') },
   ],
 
-  /** Fluid borrow vaults on Ethereum, addressed by their numeric vault id. */
+  /**
+   * Fluid borrow vaults on Ethereum, addressed by their numeric vault id. A
+   * `name` replaces the API's "collateral / loan" label.
+   */
   fluid: [
-    { id: 165, chainId: 1, url: 'https://fluid.io/1/borrowing/vaults/165' },
-    { id: 166, chainId: 1, url: 'https://fluid.io/1/borrowing/vaults/166' },
+    { id: 165, chainId: 1, name: 'Fluid USDC', url: 'https://fluid.io/1/borrowing/vaults/165' },
+    { id: 166, chainId: 1, name: 'Fluid USDT', url: 'https://fluid.io/1/borrowing/vaults/166' },
     { id: 169, chainId: 1, url: 'https://fluid.io/1/borrowing/vaults/169' },
   ],
 
@@ -190,10 +193,11 @@ export const HUMA = {
    * Jupiter Lend borrow vaults on Solana. The three smart vaults pair a token
    * with a DEX pair on one side — jup.ag routes those under /borrow/smart/,
    * and the collector reads each vault's `type` rather than being told here.
+   * A `name` replaces the API's "collateral / loan" label.
    */
   juplend: [
-    { id: 61, url: 'https://jup.ag/lend/borrow/61/stats' },
-    { id: 45, url: 'https://jup.ag/lend/borrow/45/stats' },
+    { id: 61, name: 'JupLend JupUSD', url: 'https://jup.ag/lend/borrow/61/stats' },
+    { id: 45, name: 'JupLend USDC', url: 'https://jup.ag/lend/borrow/45/stats' },
     { id: 91, url: 'https://jup.ag/lend/borrow/smart/91/stats' },
     { id: 96, url: 'https://jup.ag/lend/borrow/smart/96/stats' },
     { id: 93, url: 'https://jup.ag/lend/borrow/smart/93/stats' },
@@ -202,7 +206,7 @@ export const HUMA = {
   /** Kamino lending reserves on Solana, both sides of the Huma market. */
   kamino: [
     {
-      name: 'PST',
+      name: 'Total Kamino PST Collateral',
       market: '52FSGeeokLpgvgAMdqxyt5Hoc2TbUYj5b8yxrEdZ37Vf',
       reserve: 'DzgYbR8HFQKf8YLCJ6M3E6ricB1xWAiNGZ2TB7X2KDHz',
       url: 'https://kamino.com/borrow/reserve/52FSGeeokLpgvgAMdqxyt5Hoc2TbUYj5b8yxrEdZ37Vf/DzgYbR8HFQKf8YLCJ6M3E6ricB1xWAiNGZ2TB7X2KDHz',
@@ -246,7 +250,7 @@ export const HUMA = {
 
   /** Total supplied into Fluid's Ethereum liquidity layer, per token. */
   fluidTokens: [
-    { name: 'PST', symbol: 'PST', chainId: 1, url: 'https://fluid.io/1/stats/liquidity?id=PST' },
+    { name: 'Total Fluid PST Collateral', symbol: 'PST', chainId: 1, url: 'https://fluid.io/1/stats/liquidity?id=PST' },
   ],
 
   /**
@@ -257,7 +261,7 @@ export const HUMA = {
    */
   juplendTokens: [
     {
-      name: 'PST',
+      name: 'Total JupLend PST Collateral',
       mint: '59obFNBzyTBGowrkif5uK7ojS58vsuWz3ZCvg6tfZAGw',
       url: 'https://jup.ag/lend/statistics/liquidity/59obFNBzyTBGowrkif5uK7ojS58vsuWz3ZCvg6tfZAGw',
     },

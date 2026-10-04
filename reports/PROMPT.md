@@ -25,9 +25,10 @@ definition. Edit that file, not this prompt, to change what is tracked or flagge
   report's starting figures can differ slightly from this one's closing ones.
 - Window = the report date's snapshot vs. the snapshot 7 days earlier (WoW), with the month
   (MoM, 30 days) for context. Windows are anchored to snapshot dates, not wall-clock time.
-- **Reports don't overlap.** If the previous report ended less than 7 days before this one,
-  start where it ended: `--start=<previous report's date>`. A window other than 7 days labels
-  its change columns by length (`10D $`, `10D %`) instead of WoW — use that label in prose too.
+- **Reports chain end to end — no overlap, no gap.** If the previous report ended anything
+  other than 7 days before this one (e.g. a report written a day early), start where it
+  ended: `--start=<previous report's date>`. A window other than 7 days labels its change
+  columns by length (`10D $`, `8D %`) instead of WoW — use that label in prose too.
 - A report dated today uses today's intraday snapshot: DefiLlama keeps revising the current
   day until midnight UTC. Say so in the note under the report title.
 

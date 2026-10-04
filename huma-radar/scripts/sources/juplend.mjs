@@ -190,7 +190,7 @@ export async function collectJupLend({ store, today, log }) {
     }
 
     const n = normalise(raw)
-    const name = `${n.collateralSymbol} / ${n.loanSymbol}`
+    const name = want.name ?? `${n.collateralSymbol} / ${n.loanSymbol}`
     const id = `juplend-${want.market ? `${want.market}-` : ''}${want.id}`
     const entry = (store.markets[id] ??= { id, history: [] })
 

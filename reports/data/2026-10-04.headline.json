@@ -1,0 +1,37 @@
+{
+ "start": "2026-09-28",
+ "end": "2026-10-04",
+ "span": "6D",
+ "month": "2026-09-04",
+ "supply": {
+  "value": "$313.66B",
+  "usd": "+$593.7M",
+  "pct": "+0.19%",
+  "dir": 1
+ },
+ "venues": {
+  "value": "$12.32B",
+  "usd": "+$161.5M",
+  "pct": "+1.33%",
+  "dir": 1
+ },
+ "pst": {
+  "value": "$415.0M",
+  "usd": "+$43.0M",
+  "pct": "+11.57%",
+  "dir": 1
+ },
+ "flagged": {
+  "products": 6,
+  "groups": 6,
+  "passes": 9
+ },
+ "topUp": {
+  "label": "Sky sUSDS",
+  "usd": "+$190.4M"
+ },
+ "topDown": {
+  "label": "Kamino on Solana",
+  "usd": "−$47.5M"
+ }
+}

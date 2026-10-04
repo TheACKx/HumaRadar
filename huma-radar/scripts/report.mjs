@@ -1296,7 +1296,7 @@ function render({ productRows, venueData, supplyRows, humaData, checkRows, resea
   out.push('')
   out.push(venueData.movers.length ? table(
     ['Market', 'Venue', 'Chain', 'TVL', `${P} $`, `${P} %`, 'Biggest day', 'Trend', 'Group flagged?'],
-    venueData.movers.map((m) => [`${m.name}${m.kind === 'total' ? ' (total)' : ''}`, m.venue, m.network,
+    venueData.movers.map((m) => [`${m.name}${m.kind === 'total' && !/^total\b/i.test(m.name) ? ' (total)' : ''}`, m.venue, m.network,
       fmt.money(m.now), fmt.signed(m.wow.usd), fmt.pct(m.wow.pct),
       m.bigDay ? `${fmt.signed(m.bigDay.usd)} on ${m.bigDay.date}` : '—', m.trend,
       m.inFlaggedGroup ? 'yes' : '**no — netted out**']),
@@ -1397,7 +1397,7 @@ function render({ productRows, venueData, supplyRows, humaData, checkRows, resea
   out.push('### Markets')
   out.push('')
   out.push(table(['Market', 'Venue', 'Chain', 'TVL', `${P} $`, `${P} %`, 'Borrow APY', `Borrow ${P}`, 'Util.', 'In total'],
-    h.rows.map((r) => [`${r.name}${r.kind === 'total' ? ' (total)' : ''}`, r.venue, r.network, fmt.money(r.now),
+    h.rows.map((r) => [`${r.name}${r.kind === 'total' && !/^total\b/i.test(r.name) ? ' (total)' : ''}`, r.venue, r.network, fmt.money(r.now),
       fmt.signed(r.wow?.usd), fmt.pct(r.wow?.pct), fmt.apy(r.borrowApy), fmt.pp(r.borrowApyWowPp),
       r.utilization == null ? '—' : `${r.utilization.toFixed(1)}%`, r.inTotal ? '✓' : '—'])))
   out.push('')

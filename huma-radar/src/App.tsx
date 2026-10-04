@@ -55,10 +55,11 @@ function Rule() {
 }
 
 export default function App() {
-  const [view, setView] = useState<ViewId>('stables')
+  // the site opens on Huma Related — what Huma Radar is for
+  const [view, setView] = useState<ViewId>('huma')
   // the last network looked at, kept so the chain memos below never see an
   // overview tab
-  const [chain, setChain] = useState<ChainId>('ethereum')
+  const [chain, setChain] = useState<ChainId>('huma')
   const [protocolFilter, setProtocolFilter] = useState<ProtocolFilter>('all')
   const [query, setQuery] = useState('')
   const [deltaMode, setDeltaMode] = useState<DeltaMode>('pp')
