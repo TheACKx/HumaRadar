@@ -190,6 +190,7 @@ export default function App() {
               </span>
             </div>
             <div className="mt-3 flex gap-2 overflow-x-auto pb-1">
+              {chainChip(CHAIN_MAP.huma)}
               <button
                 onClick={() => selectView('reports')}
                 className={`chip shrink-0 !px-3 !py-1.5 ${
@@ -217,7 +218,6 @@ export default function App() {
                 <Landmark size={11} />
                 Protocols
               </button>
-              {chainChip(CHAIN_MAP.huma)}
               <button
                 onClick={() => selectView('curators')}
                 className={`chip shrink-0 !px-3 !py-1.5 ${

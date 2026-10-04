@@ -60,6 +60,12 @@ export function Sidebar({ selected, onSelect, allRows, lastSync }: Props) {
         </div>
 
         <div className="space-y-0.5 px-3">
+          <ChainTab
+            chain={CHAIN_MAP.huma}
+            rows={allRows}
+            selected={selected === 'huma'}
+            onSelect={() => onSelect('huma')}
+          />
           <OverviewTab
             icon={<FileText size={11} />}
             label="Weekly Report"
@@ -88,12 +94,6 @@ export function Sidebar({ selected, onSelect, allRows, lastSync }: Props) {
             }
             selected={selected === 'protocols'}
             onSelect={() => onSelect('protocols')}
-          />
-          <ChainTab
-            chain={CHAIN_MAP.huma}
-            rows={allRows}
-            selected={selected === 'huma'}
-            onSelect={() => onSelect('huma')}
           />
           <OverviewTab
             icon={<ShieldCheck size={11} />}
