@@ -271,6 +271,92 @@ export interface PrimeWallet {
   history: PrimePoint[]
 }
 
+/**
+ * One day of PST lockups, as scripts/sources/tenure.mjs writes it. USD.
+ * Prime is read from its vault (exact); dApp is estimated from locked deposits.
+ */
+export interface TenurePoint {
+  date: string
+  prime: { none: number; m3: number; m6: number }
+  dapp: { m3: number; m6: number; wallets3: number; wallets6: number; renewing: number }
+}
+
+/** PST unlocking in one month, USD. Prime auto-renewals roll over rather than unlock. */
+export interface UnlockMonth {
+  /** YYYY-MM */
+  month: string
+  primeUnlock: number
+  primeRenew: number
+  dapp3: number
+  dapp6: number
+}
+
+export interface TenureStore {
+  source: string
+  generatedAt: string | null
+  /** first day of the dApp's locked-deposit record */
+  dappSince?: string
+  history: TenurePoint[]
+  /** the latest unlock schedule */
+  unlocks?: { asOf: string; months: UnlockMonth[] }
+}
+
+/** A top wallet's PST position, as scripts/sources/topwallets.mjs writes it. USD. */
+export interface TopWalletPosition extends PrimePosition {
+  chain: 'solana' | 'ethereum'
+  /** the wallet holding it, for an entry with several */
+  address?: string
+}
+
+/** One address of a multi-wallet entry, on one day. USD. */
+export interface TopWalletAddressPoint {
+  address: string
+  label: string | null
+  chain: 'solana' | 'ethereum'
+  /** what this address adds to the entry's Total PST Exposure */
+  exposure: number
+  supplied: number
+  borrowed: number
+  held: number
+}
+
+/** One top wallet on one day. `exposure` is what its `count` names; all USD. */
+export interface TopWalletPoint {
+  date: string
+  exposure: number
+  /** PST supplied as collateral across its PST markets */
+  supplied: number
+  /** debt against those PST positions */
+  borrowed: number
+  /** PST sitting in its wallets */
+  held: number
+  positions: TopWalletPosition[]
+  /** per address, for an entry with more than one */
+  wallets?: TopWalletAddressPoint[]
+}
+
+export interface TopWallet {
+  id: string
+  name: string
+  strategy: string
+  count: { positions?: boolean; held?: boolean }
+  addresses: {
+    chain: 'solana' | 'ethereum'
+    address: string
+    url: string
+    label?: string
+    /** this address's own rule, overriding the entry's */
+    count?: { positions?: boolean; held?: boolean }
+  }[]
+  history: TopWalletPoint[]
+}
+
+export interface TopWalletStore {
+  source: string
+  generatedAt: string | null
+  wallets: Record<string, TopWallet>
+}
+
 export interface PrimeStore {
   source: string
   generatedAt: string | null
@@ -340,7 +426,10 @@ export type StableProtocolSortKey =
  * networks — each reads its own data and measures something the chain tabs do
  * not — so they sit beside the chain ids rather than among them.
  */
-export type ViewId = 'stables' | 'protocols' | 'reports' | 'curators' | 'pst' | ChainId
+/** The PST Deep Dive tab's three pages, each its own view under the one sidebar entry. */
+export type PstSection = 'pst-funding' | 'pst-tenure' | 'pst-wallets'
+
+export type ViewId = 'stables' | 'protocols' | 'reports' | 'curators' | PstSection | ChainId
 
 /** A headline figure exactly as the report script formatted it. */
 export interface ReportKpi {

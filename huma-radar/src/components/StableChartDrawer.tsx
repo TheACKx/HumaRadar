@@ -24,6 +24,9 @@ export interface DrawerMeasure {
   /** CSV column and file prefix */
   csvColumn: string
   csvPrefix: string
+  /** where the series comes from, and what its link opens — DefiLlama unless said otherwise */
+  source?: string
+  linkLabel?: string
 }
 
 const SUPPLY: DrawerMeasure = {
@@ -109,13 +112,13 @@ export function StableChartDrawer({
               <div className="mt-1.5 flex flex-wrap items-center gap-2">
                 <span className="text-[12px] text-muted">{measure.title}</span>
                 <span className="text-dim">·</span>
-                <span className="chip !text-[10.5px]">DefiLlama · {row.history.length} days stored</span>
+                <span className="chip !text-[10.5px]">{measure.source ?? 'DefiLlama'} · {row.history.length} days stored</span>
               </div>
             </div>
             <div className="flex shrink-0 items-center gap-2">
               <a href={row.url} target="_blank" rel="noreferrer noopener"
-                className="btn !px-2.5 !py-1.5 !text-[12px]" title="Open the DefiLlama page">
-                <ExternalLink size={13} /> DefiLlama
+                className="btn !px-2.5 !py-1.5 !text-[12px]" title={`Open the ${measure.linkLabel ?? 'DefiLlama'} page`}>
+                <ExternalLink size={13} /> {measure.linkLabel ?? 'DefiLlama'}
               </a>
               <button onClick={exportCsv} className="btn !px-2.5 !py-1.5 !text-[12px]" title="Download full history as CSV">
                 <Download size={13} /> CSV
@@ -201,8 +204,8 @@ export function StableChartDrawer({
               </ResponsiveContainer>
             ) : (
               <div className="grid place-items-center rounded-xl border border-dashed border-hairline px-6 py-12 text-center text-[12px] text-dim">
-                DefiLlama publishes only {series.length} day{series.length === 1 ? '' : 's'} for{' '}
-                {row.name} — the chart appears once there are two.
+                {measure.source ?? 'DefiLlama'} has only {series.length} day{series.length === 1 ? '' : 's'} for{' '}
+                {row.name} so far — the chart appears once there are two.
               </div>
             )}
           </section>

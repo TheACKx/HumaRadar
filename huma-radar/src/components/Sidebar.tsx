@@ -1,11 +1,12 @@
 import { useState } from 'react'
-import { Activity, ChevronRight, Clock3, Coins, FileText, Landmark, Layers, Microscope, ShieldCheck } from 'lucide-react'
+import { Activity, ChevronDown, ChevronRight, Clock3, Coins, FileText, Landmark, Layers, Microscope, ShieldCheck } from 'lucide-react'
 import { CHAIN_MAP, NETWORKS, PROJECTS } from '../data/chains'
 import { CURATORS } from '../data/curators'
 import { LATEST_REPORT, weekLabel } from '../data/reports'
 import { STABLE_TOTAL } from '../data/stablecoins'
 import { STABLE_PROTOCOLS } from '../data/stableprotocols'
 import { formatUsd } from '../lib/format'
+import { PST_SECTIONS, isPstSection } from '../lib/pst'
 import type { Chain, ChainId, MarketRow, ViewId } from '../types'
 import { ChainDot, Logo } from './Primitives'
 
@@ -69,10 +70,37 @@ export function Sidebar({ selected, onSelect, allRows, lastSync }: Props) {
           <OverviewTab
             icon={<Microscope size={11} />}
             label="PST Deep Dive"
-            detail="Funding sources · Prime"
-            selected={selected === 'pst'}
-            onSelect={() => onSelect('pst')}
+            detail="Funding · tenure · wallets"
+            selected={isPstSection(selected)}
+            onSelect={() => {
+              if (!isPstSection(selected)) onSelect('pst-funding')
+            }}
+            trailing={
+              <ChevronDown
+                size={13}
+                className={`shrink-0 text-dim transition-transform ${isPstSection(selected) ? '' : '-rotate-90'}`}
+              />
+            }
           />
+          {isPstSection(selected) && (
+            <div className="mb-1 ml-[22px] space-y-0.5 border-l border-hairline/80 pl-2.5">
+              {PST_SECTIONS.map((s) => (
+                <button
+                  key={s.id}
+                  onClick={() => onSelect(s.id)}
+                  aria-current={selected === s.id ? 'page' : undefined}
+                  className={
+                    'block w-full truncate rounded-lg px-2.5 py-1.5 text-left text-[12px] font-semibold transition-colors ' +
+                    (selected === s.id
+                      ? 'bg-plum-600/20 text-white'
+                      : 'text-plum-200/70 hover:bg-raised/60 hover:text-plum-100')
+                  }
+                >
+                  {s.label}
+                </button>
+              ))}
+            </div>
+          )}
           <OverviewTab
             icon={<FileText size={11} />}
             label="Weekly Report"
@@ -267,13 +295,15 @@ function ChainTab({
  * stablecoin supply exists at all, what the issuers pay on it, and Huma itself.
  */
 function OverviewTab({
-  icon, label, detail, selected, onSelect,
+  icon, label, detail, selected, onSelect, trailing,
 }: {
   icon: React.ReactNode
   label: string
   detail: string
   selected: boolean
   onSelect: () => void
+  /** drawn at the right edge, e.g. an expand chevron */
+  trailing?: React.ReactNode
 }) {
   return (
     <button
@@ -306,8 +336,9 @@ function OverviewTab({
         >
           {label}
         </span>
-        <span className="num block text-[10.5px] text-dim">{detail}</span>
+        <span className="num block truncate text-[10.5px] text-dim">{detail}</span>
       </span>
+      {trailing}
     </button>
   )
 }

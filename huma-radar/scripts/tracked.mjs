@@ -672,3 +672,88 @@ export const PRIME = {
   /** Kamino markets searched for a Solana wallet's obligations */
   kaminoMarkets: ['52FSGeeokLpgvgAMdqxyt5Hoc2TbUYj5b8yxrEdZ37Vf'],
 }
+
+/**
+ * Top Wallets — the largest PST holders, for the PST Deep Dive tab's third
+ * page. Each entry can span wallets on both chains. `count` says what makes up
+ * its Total PST Exposure:
+ *
+ *   positions  PST supplied as collateral, USD, across Jupiter Lend, Kamino,
+ *              Morpho and Fluid (every market whose collateral is PST)
+ *   held       PST sitting in the wallet, USD
+ *
+ * An address may carry its own `count` (and a `label`), for an entry whose
+ * wallets hold PST in different ways — Sentora loops in some and holds in
+ * others. Without one it takes the entry's.
+ *
+ * Read daily by scripts/sources/topwallets.mjs into src/data/topwallets.json.
+ * Add an entry here to track another wallet.
+ */
+export const TOP_WALLETS = [
+  {
+    // the same two wallets as PRIME above, so the funding page and this list never disagree
+    id: 'huma-prime',
+    name: 'Huma Prime',
+    strategy: 'Defensive Looping: Jupiter, Morpho, Fluid',
+    count: { positions: true },
+    addresses: PRIME.wallets.map((w) => ({ chain: w.chain, label: w.label, address: w.address, url: w.url })),
+  },
+  {
+    id: 'gami-turtle',
+    name: 'Gami / Turtle',
+    strategy: 'Morpho Looping',
+    count: { positions: true },
+    addresses: [
+      { chain: 'ethereum', address: '0x3658C397B2Ab9A4f9D10f905BA233dacC312a20d', url: 'https://debank.com/profile/0x3658C397B2Ab9A4f9D10f905BA233dacC312a20d' },
+    ],
+  },
+  {
+    id: 'galaxy',
+    name: 'Galaxy',
+    strategy: 'Pure Hodl',
+    count: { held: true },
+    addresses: [
+      { chain: 'solana', address: '9iT8WYTNEkFnEN8yqG9DBFHp7uyrLQ1yyomvou5yERSz', url: 'https://jup.ag/portfolio/9iT8WYTNEkFnEN8yqG9DBFHp7uyrLQ1yyomvou5yERSz' },
+    ],
+  },
+  {
+    id: 'bitwise-pplus',
+    name: 'Bitwise PPLUS',
+    strategy: 'Fluid, Jupiter, Kamino, Morpho Looping',
+    count: { positions: true },
+    addresses: [
+      { chain: 'solana', address: 'HKnDA68eAWHQhGhzzEyjPRnHWFM84vtWxpPuz5GfQGa2', url: 'https://jup.ag/portfolio/HKnDA68eAWHQhGhzzEyjPRnHWFM84vtWxpPuz5GfQGa2' },
+      { chain: 'ethereum', address: '0x55Fa9aAc40Af97FAaB697cc74d4dA452abf0272c', url: 'https://debank.com/profile/0x55Fa9aAc40Af97FAaB697cc74d4dA452abf0272c?chain=eth' },
+    ],
+  },
+  {
+    id: 'sentora',
+    name: 'Sentora',
+    strategy: 'Morpho Looping, Hodl, Kraken Earn',
+    count: { positions: true },
+    addresses: [
+      { chain: 'ethereum', label: 'Sentora USD Vault looping', count: { positions: true }, address: '0xF34eea240836c04120732218bb9Cf12D790BBf7A', url: 'https://debank.com/profile/0xF34eea240836c04120732218bb9Cf12D790BBf7A' },
+      { chain: 'ethereum', label: 'Holding treasury wallet', count: { held: true }, address: '0x9761ddf8e79930b334f1be1bd93abe3695061cca', url: 'https://debank.com/profile/0x9761ddf8e79930b334f1be1bd93abe3695061cca' },
+      { chain: 'ethereum', label: 'Kraken Earn PST looping', count: { positions: true }, address: '0x35acb93071c9a98ee0940d91cd2c0e94313abd95', url: 'https://debank.com/profile/0x35acb93071c9a98ee0940d91cd2c0e94313abd95' },
+      { chain: 'ethereum', label: 'Kraken Earn BTC - PST hold', count: { held: true }, address: '0x12a26308e1af764ca3e21b9a3e9d60c17513310e', url: 'https://debank.com/profile/0x12a26308e1af764ca3e21b9a3e9d60c17513310e' },
+      { chain: 'ethereum', label: 'Sentora BTC - PST hold', count: { held: true }, address: '0xff409ac2e0519bde05de17b348433e461aa4566a', url: 'https://debank.com/profile/0xff409ac2e0519bde05de17b348433e461aa4566a' },
+      // a loan manager: borrows against BTC, buys PST and sends it to the wallet above, so it holds none itself
+      { chain: 'ethereum', label: 'Sentora BTC - PST hold (loan manager)', count: { held: true }, address: '0xf83a5f2489bad3a4de5497d9f1540f2bb0e4b299', url: 'https://debank.com/profile/0xf83a5f2489bad3a4de5497d9f1540f2bb0e4b299' },
+      { chain: 'ethereum', label: 'Sentora RWA PST looping', count: { positions: true }, address: '0x66ea3fd6ba818ea79e0fe477552a593d4369c704', url: 'https://debank.com/profile/0x66ea3fd6ba818ea79e0fe477552a593d4369c704' },
+      { chain: 'ethereum', label: 'Sentora ETH - PST hold', count: { held: true }, address: '0x58dc5ce5778281cee7cbfc56f79877574affb99d', url: 'https://debank.com/profile/0x58dc5ce5778281cee7cbfc56f79877574affb99d' },
+    ],
+  },
+  {
+    id: 'rockawayx',
+    name: 'RockawayX',
+    strategy: 'Kamino Looping',
+    count: { positions: true },
+    addresses: [
+      { chain: 'solana', label: 'Kamino PST looping · 1', address: 'Ar1HrwURVUrDRdGPpLDf22iG89XuehvMS8G34LRgkUmi', url: 'https://jup.ag/portfolio/Ar1HrwURVUrDRdGPpLDf22iG89XuehvMS8G34LRgkUmi' },
+      { chain: 'solana', label: 'Kamino PST looping · 2', address: '5vamWzQXLZwztYJNKW6vGeTqTQzumHnhrChkmbeP4GFv', url: 'https://jup.ag/portfolio/5vamWzQXLZwztYJNKW6vGeTqTQzumHnhrChkmbeP4GFv' },
+      { chain: 'solana', label: 'Kamino PST looping · 3', address: '2kV3CFyjizYeuDTLN5hKXBaXwn7MoYwfCWjNMxASPG8C', url: 'https://jup.ag/portfolio/2kV3CFyjizYeuDTLN5hKXBaXwn7MoYwfCWjNMxASPG8C' },
+      { chain: 'solana', label: 'Kamino PST looping · 4', address: 'C9oCkn1PEbXUyo6FdSnvzmR6WgqPw4W3mcqXRnEFBPN8', url: 'https://jup.ag/portfolio/C9oCkn1PEbXUyo6FdSnvzmR6WgqPw4W3mcqXRnEFBPN8' },
+      { chain: 'solana', label: 'Kamino PST looping · 5', address: '4Jbxf7nQfirwyL8dX5y3U2B5VAURExM8iFVfBQ8UwKbj', url: 'https://jup.ag/portfolio/4Jbxf7nQfirwyL8dX5y3U2B5VAURExM8iFVfBQ8UwKbj' },
+    ],
+  },
+]

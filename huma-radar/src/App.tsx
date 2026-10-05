@@ -3,6 +3,8 @@ import { Coins, FileText, Landmark, Microscope, Radar, ShieldCheck } from 'lucid
 import { CHAIN_MAP, NETWORKS, PROJECTS } from './data/chains'
 import { CURATORS, CURATORS_GENERATED_AT, CURATORS_LATEST_DATE } from './data/curators'
 import { PRIME_GENERATED_AT, PRIME_WALLETS } from './data/prime'
+import { TENURE_GENERATED_AT } from './data/tenure'
+import { TOP_WALLETS, TOP_WALLETS_GENERATED_AT } from './data/topwallets'
 import { GENERATED_AT, LATEST_DATE, MARKETS, PROTOCOL_ORDER } from './data/markets'
 import { STABLE_CHAINS, STABLE_GENERATED_AT, STABLE_LATEST_DATE } from './data/stablecoins'
 import {
@@ -15,6 +17,7 @@ import type {
   StableRow, ViewId,
 } from './types'
 import { Sidebar } from './components/Sidebar'
+import { PST_SECTIONS, isPstSection } from './lib/pst'
 import { StatCards } from './components/StatCards'
 import { MarketTable, TableToolbar } from './components/MarketTable'
 import { ChartDrawer } from './components/ChartDrawer'
@@ -24,6 +27,8 @@ import { StableProtocolPanel } from './components/StableProtocolPanel'
 import { StableProtocolDrawer } from './components/StableProtocolDrawer'
 import { CuratorPanel } from './components/CuratorPanel'
 import { PstDeepDivePanel } from './components/PstDeepDivePanel'
+import { TenurePanel } from './components/TenurePanel'
+import { TopWalletsPanel } from './components/TopWalletsPanel'
 import { ChainDot, Logo } from './components/Primitives'
 
 const ALL_ROWS: MarketRow[] = MARKETS.map(withDeltas)
@@ -148,7 +153,7 @@ export default function App() {
 
   const selectView = (v: ViewId) => {
     setView(v)
-    if (v !== 'stables' && v !== 'protocols' && v !== 'reports' && v !== 'curators' && v !== 'pst') {
+    if (v !== 'stables' && v !== 'protocols' && v !== 'reports' && v !== 'curators' && !isPstSection(v)) {
       setChain(v)
       setProtocolFilter('all')
     }
@@ -159,7 +164,7 @@ export default function App() {
   const onProtocols = view === 'protocols'
   const onReports = view === 'reports'
   const onCurators = view === 'curators'
-  const onPst = view === 'pst'
+  const onPst = isPstSection(view)
   const onOverview = onStables || onProtocols || onReports || onCurators || onPst
 
   // the mobile rail mirrors the sidebar order: overview, then networks, then
@@ -201,7 +206,9 @@ export default function App() {
             <div className="mt-3 flex gap-2 overflow-x-auto pb-1">
               {chainChip(CHAIN_MAP.huma)}
               <button
-                onClick={() => selectView('pst')}
+                onClick={() => {
+                  if (!onPst) selectView('pst-funding')
+                }}
                 className={`chip shrink-0 !px-3 !py-1.5 ${
                   onPst ? '!border-plum-500/50 !bg-plum-600/20 !text-plum-100' : ''
                 }`}
@@ -209,6 +216,18 @@ export default function App() {
                 <Microscope size={11} />
                 PST Deep Dive
               </button>
+              {onPst &&
+                PST_SECTIONS.map((s) => (
+                  <button
+                    key={s.id}
+                    onClick={() => selectView(s.id)}
+                    className={`chip shrink-0 !px-2.5 !py-1.5 !text-[11px] ${
+                      view === s.id ? '!border-plum-500/50 !bg-plum-600/30 !text-white' : ''
+                    }`}
+                  >
+                    {s.label}
+                  </button>
+                ))}
               <button
                 onClick={() => selectView('reports')}
                 className={`chip shrink-0 !px-3 !py-1.5 ${
@@ -304,11 +323,18 @@ export default function App() {
                     <Microscope size={17} />
                   </span>
                   <div>
-                    <h1 className="text-[22px] font-extrabold leading-none tracking-tight text-white">
+                    <div className="text-[10.5px] font-bold uppercase tracking-[0.14em] text-plum-400">
                       PST Deep Dive
+                    </div>
+                    <h1 className="mt-1 text-[22px] font-extrabold leading-none tracking-tight text-white">
+                      {PST_SECTIONS.find((s) => s.id === view)?.label}
                     </h1>
                     <p className="mt-1.5 text-[12.5px] text-muted">
-                      Where PST's funding comes from — Huma Prime, lending markets and plain dApp deposits.
+                      {view === 'pst-funding'
+                        ? "Where PST's funding comes from — Huma Prime, lending markets and plain dApp deposits."
+                        : view === 'pst-tenure'
+                          ? 'How long PST is locked for, and when it unlocks — Huma Prime and the Huma dApp.'
+                          : 'The largest PST holders — how much PST each is exposed to, and how they hold it.'}
                     </p>
                   </div>
                 </div>
@@ -322,15 +348,27 @@ export default function App() {
                 </div>
               </header>
 
-              <PstDeepDivePanel
-                pst={HUMA_PST}
-                lending={{ tvl: HUMA_AGG.tvl, tvl7d: HUMA_AGG.tvl7d, series: HUMA_LENDING_SERIES }}
-              />
+              {view === 'pst-funding' ? (
+                <PstDeepDivePanel
+                  pst={HUMA_PST}
+                  lending={{ tvl: HUMA_AGG.tvl, tvl7d: HUMA_AGG.tvl7d, series: HUMA_LENDING_SERIES }}
+                />
+              ) : view === 'pst-tenure' ? (
+                <TenurePanel pst={HUMA_PST} />
+              ) : (
+                <TopWalletsPanel pst={HUMA_PST} />
+              )}
 
               <footer className="mt-6 flex flex-wrap items-center justify-between gap-3 pb-4 text-[11px] text-dim">
-                <span>Tenure analysis and top wallets are coming to this tab next.</span>
+                <span>
+                  {view === 'pst-tenure'
+                    ? `Lockups collected ${relativeTime(TENURE_GENERATED_AT)}.`
+                    : 'PST Deep Dive · funding sources, tenure analysis and top wallets.'}
+                </span>
                 <span className="num">
-                  {PRIME_WALLETS.length} Prime wallets · collected {relativeTime(PRIME_GENERATED_AT)}
+                  {view === 'pst-wallets'
+                    ? `${TOP_WALLETS.length} wallets · collected ${relativeTime(TOP_WALLETS_GENERATED_AT)}`
+                    : `${PRIME_WALLETS.length} Prime wallets · collected ${relativeTime(PRIME_GENERATED_AT)}`}
                 </span>
               </footer>
             </>

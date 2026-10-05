@@ -121,7 +121,7 @@ export function PstDeepDivePanel({
       <div className="flex flex-wrap items-center justify-between gap-3 border-b border-hairline/70 px-5 py-3.5">
         <h2 className="flex items-center gap-2 text-[13px] font-semibold text-plum-100">
           <PieChart size={14} className="text-plum-400" />
-          1 · PST funding sources
+          Funding mix
         </h2>
         <span className="text-[11px] text-dim">
           PST Total TVL <span className="num text-plum-200">{formatUsd(pstTvl)}</span>

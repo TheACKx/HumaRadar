@@ -21,6 +21,8 @@
  *   npm run collect -- --only=stableprotocols
  *   npm run collect -- --only=curators
  *   npm run collect -- --only=prime
+ *   npm run collect -- --only=tenure
+ *   npm run collect -- --only=topwallets
  */
 
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs'
@@ -39,6 +41,8 @@ import { collectStablecoins } from './sources/stablecoins.mjs'
 import { collectStableProtocols } from './sources/stableprotocols.mjs'
 import { collectCurators } from './sources/curators.mjs'
 import { collectPrime } from './sources/prime.mjs'
+import { collectTenure } from './sources/tenure.mjs'
+import { collectTopWallets } from './sources/topwallets.mjs'
 
 const HERE = dirname(fileURLToPath(import.meta.url))
 const STORE = resolve(HERE, '../src/data/snapshots.json')
@@ -116,6 +120,16 @@ async function main() {
     prime = await collectPrime({ today, log })
   }
 
+  let tenure = { days: 0 }
+  if (!only || only === 'tenure') {
+    tenure = await collectTenure({ today, log })
+  }
+
+  let top = { wallets: 0 }
+  if (!only || only === 'topwallets') {
+    top = await collectTopWallets({ today, log })
+  }
+
   store.generatedAt = new Date().toISOString()
   store.sources = [
     'aave-v3-api', 'aave-v4-api', 'morpho-api', 'fluid-api', 'jupiter-lend-api', 'kamino-api', 'orca-api',
@@ -158,6 +172,16 @@ async function main() {
   if (prime.wallets) {
     console.log(`Wrote ${prime.wallets} Prime wallets`)
     console.log(`-> ${resolve(HERE, '../src/data/prime.json')}`)
+  }
+
+  if (tenure.days) {
+    console.log('Wrote PST lockups (Huma Prime and dApp)')
+    console.log(`-> ${resolve(HERE, '../src/data/tenure.json')}`)
+  }
+
+  if (top.wallets) {
+    console.log(`Wrote ${top.wallets} top PST wallets`)
+    console.log(`-> ${resolve(HERE, '../src/data/topwallets.json')}`)
   }
 }
 
