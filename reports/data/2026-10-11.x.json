@@ -1,0 +1,3042 @@
+{
+ "window": {
+  "start": "2026-09-27T00:00:00Z",
+  "end": "2026-10-11T08:42:47Z"
+ },
+ "fields": "post",
+ "fetchedAt": "2026-10-11T08:43:51.065Z",
+ "accounts": [
+  {
+   "handle": "ethena",
+   "name": "Ethena",
+   "why": "flagged",
+   "id": "1637885519374721035",
+   "username": "ethena",
+   "truncated": false,
+   "repliesDropped": 0,
+   "posts": [
+    {
+     "id": "2107794534436688246",
+     "url": "https://x.com/ethena/status/2107794534436688246",
+     "created_at": "2026-10-07T11:25:52.000Z",
+     "text": "StablecoinX Inc. @stablecoin_x USDE is now available as a tokenized security through @bstocksfinance. https://t.co/mrX9EPfLDH",
+     "thread": null,
+     "article": null,
+     "likes": 342,
+     "reposts": 25
+    },
+    {
+     "id": "2107440974091940296",
+     "url": "https://x.com/ethena/status/2107440974091940296",
+     "created_at": "2026-10-06T12:00:57.000Z",
+     "text": "EtherFi joins @MapleFinance, @JupiterExchange, @megaeth, @SuiNetwork and others in building their own stablecoin products on Ethena's infrastructure.",
+     "thread": "2107440961458688275",
+     "article": null,
+     "likes": 99,
+     "reposts": 6
+    },
+    {
+     "id": "2107440961458688275",
+     "url": "https://x.com/ethena/status/2107440961458688275",
+     "created_at": "2026-10-06T12:00:54.000Z",
+     "text": "EtherFi is launching their own stablecoin, powered by Ethena Whitelabel.\n\n@ether_fi has >$300m of stablecoin deposits held across their platform. Reserves, mint and redeem, & compliance for @ether_fi USD will be managed end to end by Ethena.\n\nSince launching their category-defining Cash card in 2024, they have scaled to nearly $1 billion in cumulative spend and more than 100,000 active cards.\n\nThe best stablecoin neobanks will move to own the entire stack and earn from idle deposit balances alongside their broader product suite.",
+     "thread": null,
+     "article": null,
+     "likes": 1055,
+     "reposts": 124
+    },
+    {
+     "id": "2106557087904108741",
+     "url": "https://x.com/ethena/status/2106557087904108741",
+     "created_at": "2026-10-04T01:28:42.000Z",
+     "text": "dbb9a9d565a0e3aec59e775c498afbf8a58dff33b860f977ebe73c59ff868cdc",
+     "thread": null,
+     "article": null,
+     "likes": 440,
+     "reposts": 23
+    },
+    {
+     "id": "2105623771260543190",
+     "url": "https://x.com/ethena/status/2105623771260543190",
+     "created_at": "2026-10-01T11:40:02.000Z",
+     "text": "Here's what happened @ethena in September:\n\n• Launched the @EthenaPay beta at the start of the month.\n\n• Partnered with @binance as our first venue for extending the basis trade into equity perpetuals.\n\n• USDe supply grew by over $700 million.\n\n• Standard Chartered initiated research coverage of Ethena, forecasting ~8x USDe growth over the next two years.\n\n• USDe became the second largest collateral asset and the largest dollar collateral asset across all of @Morpho, now backing two of the three largest markets on the protocol.\n\n• USDe rewards went live in the dedicated Ethena ecosystem market on @Aave V4 on Ethereum.\n\n• Completed a SOC 2 Type II audit against the Security Trust Services Criteria, receiving a clean opinion from an independent auditor with zero exceptions noted.\n\n• Announced that from the end of the month, there will be zero token incentives and inflation on a go-forward basis related to USDe.\n\n• USDe went live on TRON.\n\n• Binance Wallet enabled USDe rewards.\n\nOnwards.",
+     "thread": null,
+     "article": null,
+     "likes": 577,
+     "reposts": 67
+    },
+    {
+     "id": "2105262610472149137",
+     "url": "https://x.com/ethena/status/2105262610472149137",
+     "created_at": "2026-09-30T11:44:54.000Z",
+     "text": "The above does not constitute an endorsement or confirmation of the contents of the report by Ethena Labs and is for informational purposes only. Further, the above is not a solicitation to acquire any of the tokens mentioned in the report in any jurisdiction.",
+     "thread": "2105217753640800517",
+     "article": null,
+     "likes": 14,
+     "reposts": 0
+    },
+    {
+     "id": "2105217846007709754",
+     "url": "https://x.com/ethena/status/2105217846007709754",
+     "created_at": "2026-09-30T08:47:02.000Z",
+     "text": "https://t.co/cbsFXKyvcG",
+     "thread": "2105217753640800517",
+     "article": null,
+     "likes": 32,
+     "reposts": 1
+    },
+    {
+     "id": "2105217831080268135",
+     "url": "https://x.com/ethena/status/2105217831080268135",
+     "created_at": "2026-09-30T08:46:58.000Z",
+     "text": "https://t.co/eGGzzx6AsL",
+     "thread": "2105217753640800517",
+     "article": null,
+     "likes": 28,
+     "reposts": 1
+    },
+    {
+     "id": "2105217815406137379",
+     "url": "https://x.com/ethena/status/2105217815406137379",
+     "created_at": "2026-09-30T08:46:54.000Z",
+     "text": "https://t.co/0Ph2F4upmN",
+     "thread": "2105217753640800517",
+     "article": null,
+     "likes": 26,
+     "reposts": 2
+    },
+    {
+     "id": "2105217800130425286",
+     "url": "https://x.com/ethena/status/2105217800130425286",
+     "created_at": "2026-09-30T08:46:51.000Z",
+     "text": "https://t.co/KUfzuKqrEz",
+     "thread": "2105217753640800517",
+     "article": null,
+     "likes": 26,
+     "reposts": 1
+    },
+    {
+     "id": "2105217784858972594",
+     "url": "https://x.com/ethena/status/2105217784858972594",
+     "created_at": "2026-09-30T08:46:47.000Z",
+     "text": "https://t.co/LJA9ntRGOo",
+     "thread": "2105217753640800517",
+     "article": null,
+     "likes": 50,
+     "reposts": 2
+    },
+    {
+     "id": "2105217769407218025",
+     "url": "https://x.com/ethena/status/2105217769407218025",
+     "created_at": "2026-09-30T08:46:43.000Z",
+     "text": "https://t.co/49uETKU7Wk",
+     "thread": "2105217753640800517",
+     "article": null,
+     "likes": 77,
+     "reposts": 4
+    },
+    {
+     "id": "2105217753640800517",
+     "url": "https://x.com/ethena/status/2105217753640800517",
+     "created_at": "2026-09-30T08:46:40.000Z",
+     "text": "Standard Chartered has initiated research coverage of Ethena.\n\nThey forecast potential USDe growth of ~8x in the next 2 years as the convergence of DeFi and TradFi accelerates.\n\nUnclear why they are so bearish, but worth a read regardless: https://t.co/JlzXqrqc07",
+     "thread": null,
+     "article": null,
+     "likes": 1191,
+     "reposts": 158
+    }
+   ]
+  },
+  {
+   "handle": "maplefinance",
+   "name": "Maple",
+   "why": "flagged",
+   "id": "1164762427604389890",
+   "username": "maplefinance",
+   "truncated": false,
+   "repliesDropped": 0,
+   "posts": [
+    {
+     "id": "2108556764648186255",
+     "url": "https://x.com/maplefinance/status/2108556764648186255",
+     "created_at": "2026-10-09T13:54:42.000Z",
+     "text": "Revenue and buyback detail on the Transparency page ↓ https://t.co/kTpbrgs1Dv",
+     "thread": "2108556752740565165",
+     "article": null,
+     "likes": 14,
+     "reposts": 1
+    },
+    {
+     "id": "2108556752740565165",
+     "url": "https://x.com/maplefinance/status/2108556752740565165",
+     "created_at": "2026-10-09T13:54:39.000Z",
+     "text": "This month’s SYRUP buyback is done.\n\n$314,116 bought 1,371,166 SYRUP at an average price of $0.229.\n\nThat’s the 20% of September protocol revenue ($1.57M) allocated under MIP-021.\n\nBuybacks follow MIP-021’s rules-based design. They are not a dividend, distribution, profit-share, or guaranteed return.",
+     "thread": null,
+     "article": null,
+     "likes": 187,
+     "reposts": 27
+    },
+    {
+     "id": "2107576721277059161",
+     "url": "https://x.com/maplefinance/status/2107576721277059161",
+     "created_at": "2026-10-06T21:00:21.000Z",
+     "text": "The next stage of institutional onchain credit needs fiat infrastructure that moves as fast as the lending book does.\n\nMaple has established a banking relationship with IRACE Digital Bank, covering institutional cash management, fiat settlement, and payments between Maple and its institutional counterparties.\n\nhttps://t.co/mJKahomE72",
+     "thread": null,
+     "article": null,
+     "likes": 130,
+     "reposts": 19
+    },
+    {
+     "id": "2107546970479050986",
+     "url": "https://x.com/maplefinance/status/2107546970479050986",
+     "created_at": "2026-10-06T19:02:08.000Z",
+     "text": "syrupUSDC has been listed on Aave's @arc instance.\n\nMaple's largest asset can now leverage Aave's liquidity on Arc. https://t.co/PuSU4AekpP",
+     "thread": null,
+     "article": null,
+     "likes": 96,
+     "reposts": 12
+    },
+    {
+     "id": "2107501424053801000",
+     "url": "https://x.com/maplefinance/status/2107501424053801000",
+     "created_at": "2026-10-06T16:01:09.000Z",
+     "text": "Maple's goal is to become the credit and yield layer for a growing stablecoin economy.\n\nOn October 13, @syrupsid and @joe_defi will show how we get there, starting with Q3 results and the first quarter of rules-based buybacks under MIP-021.\n\n@HenriArslanian joins for a fireside on how institutions are moving credit onchain, then hosts the Q&A.\n\nLive on X, October 13, 11:00 ET.\n\nRegister ↓ https://t.co/tU3RLAOvK7",
+     "thread": null,
+     "article": null,
+     "likes": 81,
+     "reposts": 9
+    },
+    {
+     "id": "2107471213438329128",
+     "url": "https://x.com/maplefinance/status/2107471213438329128",
+     "created_at": "2026-10-06T14:01:06.000Z",
+     "text": "syrupUSDG is live on @arbitrum\n\nFintech adoption is moving onchain, and Arbitrum is one of the places it's landing. Eligible USDG holders there can now allocate to syrupUSDG, with yield from loans Maple underwrites and monitors for institutional borrowers.\n\nArbitrum gives it room to scale.\n\nNot available in all jurisdictions. Yield is variable and not guaranteed. Capital at risk, including smart contract and bridge risk.",
+     "thread": null,
+     "article": null,
+     "likes": 133,
+     "reposts": 16
+    },
+    {
+     "id": "2107445499490107557",
+     "url": "https://x.com/maplefinance/status/2107445499490107557",
+     "created_at": "2026-10-06T12:18:56.000Z",
+     "text": "Full revenue breakdown as always on the Transparency page ↓ https://t.co/kTpbrgs1Dv",
+     "thread": "2107445487519560014",
+     "article": null,
+     "likes": 14,
+     "reposts": 1
+    },
+    {
+     "id": "2107445487519560014",
+     "url": "https://x.com/maplefinance/status/2107445487519560014",
+     "created_at": "2026-10-06T12:18:53.000Z",
+     "text": "Maple's protocol revenue for September: $1.57M.\n\nUp from $1.47M in August, five straight months of growth.\n\n20% of it funds this month's SYRUP buyback under MIP-021, up from 10% last month. https://t.co/5TRIVKdFsD",
+     "thread": null,
+     "article": null,
+     "likes": 213,
+     "reposts": 28
+    },
+    {
+     "id": "2105676736658833594",
+     "url": "https://x.com/maplefinance/status/2105676736658833594",
+     "created_at": "2026-10-01T15:10:30.000Z",
+     "text": "The next wave of onchain institutional capital is coming from APAC, and we're watching the region intently.\n\nWe'll be in and around Singapore for @TOKEN2049 next week. @syrupsid @joe_defi and @MartindRijke are on the ground with the Maple team.\n\nOn the agenda: Meetings with treasuries, exchanges, market makers, and allocators across the region.\n\nReach out if you want to meet.",
+     "thread": null,
+     "article": null,
+     "likes": 126,
+     "reposts": 17
+    },
+    {
+     "id": "2105291927281443006",
+     "url": "https://x.com/maplefinance/status/2105291927281443006",
+     "created_at": "2026-09-30T13:41:24.000Z",
+     "text": "Capital should be activated. It's what we do every day, and now the brand says so, too.\n\nOur Head of Marketing, Natalie Williams, on why and how 👉 https://t.co/bOW7YEp8ok\n\nOnchain Capital. Activated.",
+     "thread": "2105291844565569705",
+     "article": null,
+     "likes": 16,
+     "reposts": 0
+    },
+    {
+     "id": "2105291915520561337",
+     "url": "https://x.com/maplefinance/status/2105291915520561337",
+     "created_at": "2026-09-30T13:41:21.000Z",
+     "text": "The business is outgrowing the brand that describes it. The logo and the Maple orange stay. This week you'll see the first of the evolved branding, and more every month until year-end.",
+     "thread": "2105291844565569705",
+     "article": null,
+     "likes": 17,
+     "reposts": 0
+    },
+    {
+     "id": "2105291903835242559",
+     "url": "https://x.com/maplefinance/status/2105291903835242559",
+     "created_at": "2026-09-30T13:41:18.000Z",
+     "text": "Traditional finance, crypto, and fintech are converging into one market. We're native to where they meet, and that has always been the plan.",
+     "thread": "2105291844565569705",
+     "article": null,
+     "likes": 13,
+     "reposts": 0
+    },
+    {
+     "id": "2105291892229640346",
+     "url": "https://x.com/maplefinance/status/2105291892229640346",
+     "created_at": "2026-09-30T13:41:16.000Z",
+     "text": "The mission and the business model haven't changed, but the scale has. Since the end of 2023, Maple's AUM has grown from $85M to $4.8B.",
+     "thread": "2105291844565569705",
+     "article": null,
+     "likes": 14,
+     "reposts": 0
+    },
+    {
+     "id": "2105291880540119374",
+     "url": "https://x.com/maplefinance/status/2105291880540119374",
+     "created_at": "2026-09-30T13:41:13.000Z",
+     "text": "Sid Powell and Joe Flanagan founded Maple in 2019 to change that. Traditional finance managed risk well but disclosed very little. Crypto put every transaction on a public record, but the lending often lacked credit discipline. Maple was built to do both.",
+     "thread": "2105291844565569705",
+     "article": null,
+     "likes": 14,
+     "reposts": 0
+    },
+    {
+     "id": "2105291868892430593",
+     "url": "https://x.com/maplefinance/status/2105291868892430593",
+     "created_at": "2026-09-30T13:41:10.000Z",
+     "text": "Too much of the world's capital is held back. Credit takes months to arrange, depends on where you're based, and sits in systems nobody outside the lender can check.",
+     "thread": "2105291844565569705",
+     "article": null,
+     "likes": 23,
+     "reposts": 0
+    },
+    {
+     "id": "2105291856670302498",
+     "url": "https://x.com/maplefinance/status/2105291856670302498",
+     "created_at": "2026-09-30T13:41:07.000Z",
+     "text": "Capital matters because of what it makes possible. When a business can borrow, it hires, buys inventory, and opens new markets. When a dollar in a banking app earns, it's because a business somewhere is paying interest on the capital behind it.",
+     "thread": "2105291844565569705",
+     "article": null,
+     "likes": 30,
+     "reposts": 1
+    },
+    {
+     "id": "2105291844565569705",
+     "url": "https://x.com/maplefinance/status/2105291844565569705",
+     "created_at": "2026-09-30T13:41:04.000Z",
+     "text": "Maple's brand is evolving, starting this week.\n\nThe idea behind the evolution is simple: Capital should be activated.\n\nHere's a thread on why, and what activated capital makes possible ↓ https://t.co/E04cQrwdhE",
+     "thread": null,
+     "article": null,
+     "likes": 218,
+     "reposts": 23
+    },
+    {
+     "id": "2104918525056098611",
+     "url": "https://x.com/maplefinance/status/2104918525056098611",
+     "created_at": "2026-09-29T12:57:38.000Z",
+     "text": "Want a seat at the table with @syrupsid and @oost_marcel at @money2020 Vegas?\n\nOur By Invitation Only dinner series is launching in Vegas on October 19, 2026.\n\nSeats are limited, and each guest is invited for their experience and point of view.\n\nTo get the series started, register your interest 👉 https://t.co/F7Nm5NLCLz",
+     "thread": null,
+     "article": null,
+     "likes": 81,
+     "reposts": 10
+    },
+    {
+     "id": "2104576549542670634",
+     "url": "https://x.com/maplefinance/status/2104576549542670634",
+     "created_at": "2026-09-28T14:18:45.000Z",
+     "text": "https://t.co/pGLwNQ1mPe",
+     "thread": "2104576486107963882",
+     "article": null,
+     "likes": 9,
+     "reposts": 0
+    },
+    {
+     "id": "2104576533805543774",
+     "url": "https://x.com/maplefinance/status/2104576533805543774",
+     "created_at": "2026-09-28T14:18:41.000Z",
+     "text": "When?\n\nUpgrades start this week and roll out chain by chain through Q4. We'll publish each new pool address as it goes live.\n\nLearn more ↓ https://t.co/KzyQnMpkLb",
+     "thread": "2104576486107963882",
+     "article": null,
+     "likes": 9,
+     "reposts": 0
+    },
+    {
+     "id": "2104576522074087454",
+     "url": "https://x.com/maplefinance/status/2104576522074087454",
+     "created_at": "2026-09-28T14:18:38.000Z",
+     "text": "3. What you'll see onchain: Liquidity moving to new CCIP LockRelease token pools on Ethereum, and new pool addresses on Arbitrum, Arc, Base, BNB, Ink, Mantle, Monad, Plasma, Robinhood, Solana, and Tempo.",
+     "thread": "2104576486107963882",
+     "article": null,
+     "likes": 5,
+     "reposts": 0
+    },
+    {
+     "id": "2104576510153920629",
+     "url": "https://x.com/maplefinance/status/2104576510153920629",
+     "created_at": "2026-09-28T14:18:35.000Z",
+     "text": "2. What doesn't change: Token addresses stay the same on every chain. Integrations keep working, and holders don't need to do anything.",
+     "thread": "2104576486107963882",
+     "article": null,
+     "likes": 19,
+     "reposts": 1
+    },
+    {
+     "id": "2104576498216931800",
+     "url": "https://x.com/maplefinance/status/2104576498216931800",
+     "created_at": "2026-09-28T14:18:32.000Z",
+     "text": "1. What gets better: Moving syrupUSD between chains takes less time. CCIP 2.0 also opens the path to minting and redeeming directly on the chain you're already on.",
+     "thread": "2104576486107963882",
+     "article": null,
+     "likes": 30,
+     "reposts": 1
+    },
+    {
+     "id": "2104576486107963882",
+     "url": "https://x.com/maplefinance/status/2104576486107963882",
+     "created_at": "2026-09-28T14:18:30.000Z",
+     "text": "We're upgrading syrupUSDC, syrupUSDT, and syrupUSDG to @chainlink CCIP 2.0. That means quicker bridging now, and native mint and redeem on other chains in the future.\n\nHere's what to expect ↓ https://t.co/E7Zo8lpkeK",
+     "thread": null,
+     "article": null,
+     "likes": 409,
+     "reposts": 44
+    }
+   ]
+  },
+  {
+   "handle": "SkyEcosystem",
+   "name": "Sky",
+   "why": "flagged",
+   "id": "3190865591",
+   "username": "SkyEcosystem",
+   "truncated": false,
+   "repliesDropped": 0,
+   "posts": [
+    {
+     "id": "2108561567621300585",
+     "url": "https://x.com/SkyEcosystem/status/2108561567621300585",
+     "created_at": "2026-10-09T14:13:47.000Z",
+     "text": "https://t.co/t47fu4YASs",
+     "thread": "2108561554954420500",
+     "article": null,
+     "likes": 3,
+     "reposts": 0
+    },
+    {
+     "id": "2108561565104451612",
+     "url": "https://x.com/SkyEcosystem/status/2108561565104451612",
+     "created_at": "2026-10-09T14:13:46.000Z",
+     "text": "We appreciate both agencies’ rigorous, independent reviews.\n\nSky Governance and Sky Frontier Foundation are reviewing their findings to inform the roadmap toward stronger creditworthiness.\n\nFollow the next steps as they are published.\n\nThe work continues.",
+     "thread": "2108561554954420500",
+     "article": null,
+     "likes": 5,
+     "reposts": 0
+    },
+    {
+     "id": "2108561562281603292",
+     "url": "https://x.com/SkyEcosystem/status/2108561562281603292",
+     "created_at": "2026-10-09T14:13:46.000Z",
+     "text": "Moody’s Ratings then assigned its first counterparty risk rating to a stablecoin protocol.\n\nIts review identified Sky Reserves as a central consideration, reinforcing the priority of continued reserve building.\n\nRead the Moody’s announcement ↓\nhttps://t.co/jrXU8zgmnd",
+     "thread": "2108561554954420500",
+     "article": null,
+     "likes": 6,
+     "reposts": 0
+    },
+    {
+     "id": "2108561559341723794",
+     "url": "https://x.com/SkyEcosystem/status/2108561559341723794",
+     "created_at": "2026-10-09T14:13:45.000Z",
+     "text": "S&amp;P Global Ratings recently affirmed its assessment of Sky Protocol.\n\nIts updated rationale provides an independent view of the protocol’s creditworthiness and the factors that could support improvement.\n\nRead the S&amp;P update ↓\nhttps://t.co/URLJYLix6Y",
+     "thread": "2108561554954420500",
+     "article": null,
+     "likes": 9,
+     "reposts": 0
+    },
+    {
+     "id": "2108561554954420500",
+     "url": "https://x.com/SkyEcosystem/status/2108561554954420500",
+     "created_at": "2026-10-09T14:13:44.000Z",
+     "text": "Sky Protocol is the first stablecoin protocol rated by both @SPGlobalRatings and @moodysratings.\n\nTwo independent assessments give institutional allocators established frameworks to evaluate its credit profile.\n\nA look at both assessments and the work ahead ↓ https://t.co/Ykkx0waHeY",
+     "thread": null,
+     "article": null,
+     "likes": 53,
+     "reposts": 5
+    },
+    {
+     "id": "2108202186496765991",
+     "url": "https://x.com/SkyEcosystem/status/2108202186496765991",
+     "created_at": "2026-10-08T14:25:44.000Z",
+     "text": "Put your USDS to work through @BinanceWallet’s Hold to Earn.\n\nActivate USDS to earn a variable APR while keeping it in your wallet, with no lock-up or staking required.\n\nSee how to get started ↓\nhttps://t.co/CXMtPLfXk0",
+     "thread": null,
+     "article": null,
+     "likes": 40,
+     "reposts": 6
+    },
+    {
+     "id": "2108189464581337294",
+     "url": "https://x.com/SkyEcosystem/status/2108189464581337294",
+     "created_at": "2026-10-08T13:35:11.000Z",
+     "text": "Follow Sky Ecosystem’s financials in real time.\n\nThe Financial Dashboard provides public visibility into protocol revenue, reserves, collateral, liquidity and Sky Agent allocations.\n\nExplore the data ↓\nhttps://t.co/2erHSfwP6O",
+     "thread": "2108189462190858740",
+     "article": null,
+     "likes": 6,
+     "reposts": 0
+    },
+    {
+     "id": "2108189462190858740",
+     "url": "https://x.com/SkyEcosystem/status/2108189462190858740",
+     "created_at": "2026-10-08T13:35:10.000Z",
+     "text": "Sky Agents continue raising the standard for transparency in onchain finance.\n\nGrove has added financial reporting to Grove Data, with visibility from gross revenue to net protocol income.\n\nExplore the new financials ↓ https://t.co/JQ0TIjMa0S",
+     "thread": null,
+     "article": null,
+     "likes": 46,
+     "reposts": 5
+    },
+    {
+     "id": "2108134726242644326",
+     "url": "https://x.com/SkyEcosystem/status/2108134726242644326",
+     "created_at": "2026-10-08T09:57:40.000Z",
+     "text": "Read the full announcement:\n\nhttps://t.co/Ql6clIv1Z8",
+     "thread": "2108134721930592711",
+     "article": null,
+     "likes": 9,
+     "reposts": 0
+    },
+    {
+     "id": "2108134721930592711",
+     "url": "https://x.com/SkyEcosystem/status/2108134721930592711",
+     "created_at": "2026-10-08T09:57:39.000Z",
+     "text": "Moody’s Ratings has assigned a counterparty risk rating to Sky Protocol, the first stablecoin protocol to receive a rating from the credit agency.\n\nSky Protocol has become the first stablecoin protocol rated by both Moody’s Ratings and S&P Global Ratings.\n\nTwo independent assessments give institutional allocators established credit-rating frameworks to evaluate Sky Protocol’s financial position, operations and governance.\n\nMoody’s identified Sky Reserves as a central factor in its assessment. Reserve building remains a priority, supported by the strengthened Treasury Management Function and Stage 2 buyback and reserves framework, which retains a portion of Net Protocol Surplus toward a governance-set minimum reserve target. Progress is publicly trackable through the Financial Dashboard.\n\nWe appreciate Moody’s rigorous review. Sky Governance and Sky Frontier Foundation are reviewing both agencies’ findings to inform next steps toward stronger creditworthiness, which will be published as part of the forthcoming roadmap.",
+     "thread": null,
+     "article": null,
+     "likes": 48,
+     "reposts": 1
+    },
+    {
+     "id": "2107880370951926248",
+     "url": "https://x.com/SkyEcosystem/status/2107880370951926248",
+     "created_at": "2026-10-07T17:06:57.000Z",
+     "text": "https://t.co/WI4QPNiziL",
+     "thread": "2107880367579418824",
+     "article": null,
+     "likes": 6,
+     "reposts": 0
+    },
+    {
+     "id": "2107880367579418824",
+     "url": "https://x.com/SkyEcosystem/status/2107880367579418824",
+     "created_at": "2026-10-07T17:06:56.000Z",
+     "text": "The Sky Savings Rate has increased to 3.80%, up from 3.60%.\n\nThe higher rate strengthens the baseline yield available through sUSDS and makes stablecoin capital across Sky Ecosystem more productive.\n\nAccess the Sky Savings Rate ↓ https://t.co/BPj5Md1s6f",
+     "thread": null,
+     "article": null,
+     "likes": 77,
+     "reposts": 5
+    },
+    {
+     "id": "2107405659448758680",
+     "url": "https://x.com/SkyEcosystem/status/2107405659448758680",
+     "created_at": "2026-10-06T09:40:37.000Z",
+     "text": "What makes institutions take Sky Protocol more seriously?\n\nOn @MilkRoadDaily, @gregfeibus discusses how S&amp;P’s credit rating supports institutional diligence with @Game_Set_Max, Head of Lending at @galaxyhq.\n\nWatch the clip ↓ https://t.co/QFU4oaXrQM",
+     "thread": null,
+     "article": null,
+     "likes": 73,
+     "reposts": 6
+    },
+    {
+     "id": "2107085126681121262",
+     "url": "https://x.com/SkyEcosystem/status/2107085126681121262",
+     "created_at": "2026-10-05T12:26:56.000Z",
+     "text": "A full week of onchain finance events awaits in Singapore.\n\nThe Sky Ecosystem team will be there October 6–9 to connect with institutions, allocators and builders across stablecoins and onchain capital markets.\n\nTo meet the team, reach out to insights@skyeco.com. https://t.co/Ya1kxWWSlR",
+     "thread": null,
+     "article": null,
+     "likes": 79,
+     "reposts": 6
+    },
+    {
+     "id": "2106311041093161393",
+     "url": "https://x.com/SkyEcosystem/status/2106311041093161393",
+     "created_at": "2026-10-03T09:11:00.000Z",
+     "text": "Sky Ecosystem is heading to @Yield_Summit in Singapore.\n\n@gregfeibus, Global Head of Capital Markets at Sky Frontier Foundation, will speak as institutional allocators gather to explore digital asset yield.\n\nEvent details ↓\nhttps://t.co/c6cfthXRVm",
+     "thread": null,
+     "article": null,
+     "likes": 75,
+     "reposts": 5
+    },
+    {
+     "id": "2106004975302160775",
+     "url": "https://x.com/SkyEcosystem/status/2106004975302160775",
+     "created_at": "2026-10-02T12:54:48.000Z",
+     "text": "https://t.co/BBwO5Q4iRI",
+     "thread": "2106004937977053190",
+     "article": null,
+     "likes": 2,
+     "reposts": 0
+    },
+    {
+     "id": "2106004973456695332",
+     "url": "https://x.com/SkyEcosystem/status/2106004973456695332",
+     "created_at": "2026-10-02T12:54:48.000Z",
+     "text": "September brought new institutional uses for sUSDS, growing Agent activity and the first SKY burn.\n\nThe work continues: strengthening security, expanding transparency and building efficient capital allocation at scale.\n\nFollow Sky Ecosystem for what comes next.\n\nOnwards ❯❯",
+     "thread": "2106004937977053190",
+     "article": null,
+     "likes": 11,
+     "reposts": 0
+    },
+    {
+     "id": "2106004971053535416",
+     "url": "https://x.com/SkyEcosystem/status/2106004971053535416",
+     "created_at": "2026-10-02T12:54:47.000Z",
+     "text": "USDS supply returned above $10B near month-end, following a $237M increase over 24 hours.\n\nSky Ecosystem closed September with an expanding base of stablecoin capital.\n\nSee the supply update ↓\nhttps://t.co/uZNyx5aZmr",
+     "thread": "2106004937977053190",
+     "article": null,
+     "likes": 8,
+     "reposts": 0
+    },
+    {
+     "id": "2106004967253578226",
+     "url": "https://x.com/SkyEcosystem/status/2106004967253578226",
+     "created_at": "2026-10-02T12:54:46.000Z",
+     "text": "Sky Prime Agent @sparkfinance recorded strong lending growth.\n\nToken Terminal reported active loans of $2.9B, up ~190% over 180 days, the fastest growth among the top 10 protocols by active loans.\n\nSee the data ↓\nhttps://t.co/bt8Pn0ZTgt",
+     "thread": "2106004937977053190",
+     "article": null,
+     "likes": 8,
+     "reposts": 0
+    },
+    {
+     "id": "2106004963570876624",
+     "url": "https://x.com/SkyEcosystem/status/2106004963570876624",
+     "created_at": "2026-10-02T12:54:45.000Z",
+     "text": "September also brought plans for Singapore.\n\nSky Ecosystem announced participation in @token2049, @blockworksDAS, @Yield_Summit and @CapSummitGlobal, including speaking appearances by John and Greg.\n\nSee the event lineup ↓\nhttps://t.co/3i2YRQuX44",
+     "thread": "2106004937977053190",
+     "article": null,
+     "likes": 9,
+     "reposts": 0
+    },
+    {
+     "id": "2106004960173506770",
+     "url": "https://x.com/SkyEcosystem/status/2106004960173506770",
+     "created_at": "2026-10-02T12:54:44.000Z",
+     "text": "We also published the Grove and Galaxy case study.\n\nIt explains how @grovedotfinance committed USDS through a $500M warehouse facility, with @GalaxyHQ originating and servicing institutional loans secured by digital assets.\n\nRead the case study ↓\nhttps://t.co/ibbYu40ORH",
+     "thread": "2106004937977053190",
+     "article": null,
+     "likes": 8,
+     "reposts": 0
+    },
+    {
+     "id": "2106004957182980278",
+     "url": "https://x.com/SkyEcosystem/status/2106004957182980278",
+     "created_at": "2026-10-02T12:54:44.000Z",
+     "text": "Sky Ecosystem announced its partnership with @GalaxyHQ.\n\nGalaxy added $100M of sUSDS to its balance sheet and approved it as eligible collateral across its institutional trading business, expanding the institutional uses of sUSDS.\nhttps://t.co/b23H0ZaoHT",
+     "thread": "2106004937977053190",
+     "article": null,
+     "likes": 8,
+     "reposts": 0
+    },
+    {
+     "id": "2106004953194238184",
+     "url": "https://x.com/SkyEcosystem/status/2106004953194238184",
+     "created_at": "2026-10-02T12:54:43.000Z",
+     "text": "The first SKY burn permanently removed 2.86M SKY from circulation.\n\nPurchased using 5% of monthly Net Protocol Surplus, those tokens marked the first execution of Stage 2’s buy-and-burn allocation.\n\nProtocol surplus put to work ↓\nhttps://t.co/9PxBSgkDzR",
+     "thread": "2106004937977053190",
+     "article": null,
+     "likes": 8,
+     "reposts": 0
+    },
+    {
+     "id": "2106004949972763019",
+     "url": "https://x.com/SkyEcosystem/status/2106004949972763019",
+     "created_at": "2026-10-02T12:54:42.000Z",
+     "text": "At Stablecon in Washington, DC, @gregfeibus and @John__Conneely met with institutions, allocators and builders across stablecoins and onchain capital markets.\n\nConversations continued at private dinners with industry participants.\nhttps://t.co/IYPNpFUI5S",
+     "thread": "2106004937977053190",
+     "article": null,
+     "likes": 8,
+     "reposts": 0
+    },
+    {
+     "id": "2106004947384799565",
+     "url": "https://x.com/SkyEcosystem/status/2106004947384799565",
+     "created_at": "2026-10-02T12:54:41.000Z",
+     "text": "Sky Protocol expanded its security program with @sherlockdefi’s AI-native Audit Engine.\n\nAs AI advances vulnerability discovery for attackers and defenders, the protocol continues adopting new capabilities to review its code.\n\nRead more ↓\nhttps://t.co/WzejYCgVrW",
+     "thread": "2106004937977053190",
+     "article": null,
+     "likes": 10,
+     "reposts": 1
+    },
+    {
+     "id": "2106004945220640966",
+     "url": "https://x.com/SkyEcosystem/status/2106004945220640966",
+     "created_at": "2026-10-02T12:54:41.000Z",
+     "text": "Sky Governance raised the Sky Savings Rate from 3.52% to 3.60% APY.\n\nsUSDS provides access to this variable, governance-set rate, funded from aggregate protocol surplus.\n\nThe rate update ↓\nhttps://t.co/8CGTFU59tv",
+     "thread": "2106004937977053190",
+     "article": null,
+     "likes": 9,
+     "reposts": 0
+    },
+    {
+     "id": "2106004942934663483",
+     "url": "https://x.com/SkyEcosystem/status/2106004942934663483",
+     "created_at": "2026-10-02T12:54:40.000Z",
+     "text": "Institutions need information they can verify.\n\nAt @rwasummit, @John__Conneely discussed how collateral visibility and reporting support due diligence, alongside leaders from @raincards, @dakota_xyz and @Paxos.\n\nWatch the discussion ↓\nhttps://t.co/KJUEYEbxMf",
+     "thread": "2106004937977053190",
+     "article": null,
+     "likes": 14,
+     "reposts": 0
+    },
+    {
+     "id": "2106004940514545723",
+     "url": "https://x.com/SkyEcosystem/status/2106004940514545723",
+     "created_at": "2026-10-02T12:54:40.000Z",
+     "text": "September opened with a redesigned @SkyMoney app.\n\nUsers can now access its features in one experience, with clearer information and more context to support their decisions.\n\nExplore the update ↓\nhttps://t.co/kxmlwlHzBO",
+     "thread": "2106004937977053190",
+     "article": null,
+     "likes": 15,
+     "reposts": 0
+    },
+    {
+     "id": "2106004937977053190",
+     "url": "https://x.com/SkyEcosystem/status/2106004937977053190",
+     "created_at": "2026-10-02T12:54:39.000Z",
+     "text": "Sky Ecosystem September Recap.\n\nGalaxy added $100M of sUSDS to its balance sheet. The first SKY burn went live. @grovedotfinance’s warehouse facility reached 75% utilization. @sparkfinance’s lending business grew. USDS returned above $10B.\n\nHere’s the month ↓ https://t.co/91GLbSRgKy",
+     "thread": null,
+     "article": null,
+     "likes": 95,
+     "reposts": 11
+    },
+    {
+     "id": "2105969436234592667",
+     "url": "https://x.com/SkyEcosystem/status/2105969436234592667",
+     "created_at": "2026-10-02T10:33:35.000Z",
+     "text": "Read the full report:\n\nhttps://t.co/2xyCl64T4U",
+     "thread": "2105969433504084150",
+     "article": null,
+     "likes": 7,
+     "reposts": 1
+    },
+    {
+     "id": "2105969433504084150",
+     "url": "https://x.com/SkyEcosystem/status/2105969433504084150",
+     "created_at": "2026-10-02T10:33:34.000Z",
+     "text": "S&P Global Ratings has published its annual review assessment of Sky Protocol.\n\nOver the past year, Sky Ecosystem has strengthened its Treasury Management Function, expanded financial reporting into a more transparent framework, continued raising its capital reserves, and applied a more disciplined capital-allocation framework.\n\nS&P’s updated rationale and stable outlook provides another independent view of that progress and the work ahead.\n\nReserve building does not stop at the current target. It will continue as the protocol grows.\n\nWe thank S&P for its continued, rigorous review. Sky Ecosystem remains focused on strengthening financial resilience, transparency and risk management to meet the demands of institutional capital.",
+     "thread": null,
+     "article": null,
+     "likes": 94,
+     "reposts": 12
+    },
+    {
+     "id": "2105654809399312818",
+     "url": "https://x.com/SkyEcosystem/status/2105654809399312818",
+     "created_at": "2026-10-01T13:43:22.000Z",
+     "text": "Sky Ecosystem is heading to Singapore.\n\nAt @CapSummitGlobal, @John__Conneely joins @hexonaut (@sparkfinance) and @alexlimasia (@LayerZero_Core) to discuss stablecoin growth across Asia and the models that can support institutional adoption.\n\nDetails ↓\nhttps://t.co/h5GbYOGNVw",
+     "thread": null,
+     "article": null,
+     "likes": 47,
+     "reposts": 4
+    },
+    {
+     "id": "2105591970932380001",
+     "url": "https://x.com/SkyEcosystem/status/2105591970932380001",
+     "created_at": "2026-10-01T09:33:40.000Z",
+     "text": "What happens when a yield-bearing stablecoin becomes institutional collateral?\n\n@gregfeibus joined @Game_Set_Max from @galaxyhq on @MilkRoadDaily to discuss Galaxy’s $100M sUSDS balance sheet position and what the partnership enables.\n\nWatch ↓\nhttps://t.co/we4UxX7m10",
+     "thread": null,
+     "article": null,
+     "likes": 59,
+     "reposts": 8
+    },
+    {
+     "id": "2105310762856280384",
+     "url": "https://x.com/SkyEcosystem/status/2105310762856280384",
+     "created_at": "2026-09-30T14:56:15.000Z",
+     "text": "Sky Prime Agent @sparkfinance is setting the pace in onchain lending.\n\nActive loans grew ~190% over the past 180 days to $2.9B, making Spark the fastest-growing protocol among the top 10 tracked by Token Terminal.\n\nSee the data ↓\nhttps://t.co/5O8YpvpPb6",
+     "thread": null,
+     "article": null,
+     "likes": 72,
+     "reposts": 7
+    },
+    {
+     "id": "2105237286749364493",
+     "url": "https://x.com/SkyEcosystem/status/2105237286749364493",
+     "created_at": "2026-09-30T10:04:17.000Z",
+     "text": "USDS supply is back above $10B following a $237M increase over the past 24 hours.\n\nThe capital base of Sky Ecosystem is expanding. https://t.co/OfluGh9Oco",
+     "thread": null,
+     "article": null,
+     "likes": 100,
+     "reposts": 16
+    },
+    {
+     "id": "2104913507682816450",
+     "url": "https://x.com/SkyEcosystem/status/2104913507682816450",
+     "created_at": "2026-09-29T12:37:42.000Z",
+     "text": "https://t.co/AZbB6u1sGX",
+     "thread": "2104913493040259288",
+     "article": null,
+     "likes": 3,
+     "reposts": 0
+    },
+    {
+     "id": "2104913504796864825",
+     "url": "https://x.com/SkyEcosystem/status/2104913504796864825",
+     "created_at": "2026-09-29T12:37:41.000Z",
+     "text": "Across four events, the Sky Ecosystem team will join conversations spanning stablecoins, institutional capital and onchain markets.\n\nSee John and Greg on stage, and connect with the Sky Ecosystem team throughout the week.\n\nSee you in Singapore!",
+     "thread": "2104913493040259288",
+     "article": null,
+     "likes": 4,
+     "reposts": 0
+    },
+    {
+     "id": "2104913502045720669",
+     "url": "https://x.com/SkyEcosystem/status/2104913502045720669",
+     "created_at": "2026-09-29T12:37:40.000Z",
+     "text": ".@gregfeibus will speak at @Yield_Summit, part of Singapore’s week of conversations around digital-asset yield and institutional capital.\n\nSee the event details ↓\n\nhttps://t.co/3J2gmiQOyu",
+     "thread": "2104913493040259288",
+     "article": null,
+     "likes": 5,
+     "reposts": 0
+    },
+    {
+     "id": "2104913498149167548",
+     "url": "https://x.com/SkyEcosystem/status/2104913498149167548",
+     "created_at": "2026-09-29T12:37:40.000Z",
+     "text": "At @CapSummitGlobal, @John__Conneely will join @hexonaut, CEO of @sparkfinance, and Alex Lim, Head of APAC at @LayerZero_Core, to discuss how stablecoins are growing across Asia and which models can support institutional adoption.\n\nSession details ↓\nhttps://t.co/h5GbYOHlL4",
+     "thread": "2104913493040259288",
+     "article": null,
+     "likes": 7,
+     "reposts": 0
+    },
+    {
+     "id": "2104913493040259288",
+     "url": "https://x.com/SkyEcosystem/status/2104913493040259288",
+     "created_at": "2026-09-29T12:37:38.000Z",
+     "text": "Sky Ecosystem is heading to Singapore for @token2049, @blockworksDAS, @Yield_Summit and @CapSummitGlobal.\n\nThe team will connect with institutions, allocators and builders shaping the next phase of stablecoins and onchain capital markets.\n\nHere’s where to find us ↓ https://t.co/jljlYdvmIZ",
+     "thread": null,
+     "article": null,
+     "likes": 67,
+     "reposts": 5
+    },
+    {
+     "id": "2104625502409629996",
+     "url": "https://x.com/SkyEcosystem/status/2104625502409629996",
+     "created_at": "2026-09-28T17:33:16.000Z",
+     "text": "Sky Prime Agent @sparkfinance continues to expand the Stablecoin FX Layer around USDS.\n\nThe RLUSD/USDS pool surpassed $1B in activity less than one month after launch, averaging approximately $40M in daily volume.\n\nSee the latest milestone from Spark ↓ https://t.co/DZSuvq4YlP",
+     "thread": null,
+     "article": null,
+     "likes": 82,
+     "reposts": 6
+    },
+    {
+     "id": "2104581365824143573",
+     "url": "https://x.com/SkyEcosystem/status/2104581365824143573",
+     "created_at": "2026-09-28T14:37:53.000Z",
+     "text": "Stablecoins made dollars programmable. \n\nThe next phase is making onchain dollar liquidity productive.",
+     "thread": null,
+     "article": null,
+     "likes": 63,
+     "reposts": 5
+    }
+   ]
+  },
+  {
+   "handle": "aave",
+   "name": "Aave",
+   "why": "flagged",
+   "id": "867100084248469505",
+   "username": "aave",
+   "truncated": false,
+   "repliesDropped": 0,
+   "posts": [
+    {
+     "id": "2108559779396530469",
+     "url": "https://x.com/aave/status/2108559779396530469",
+     "created_at": "2026-10-09T14:06:41.000Z",
+     "text": "Learn more here: https://t.co/MPVjvWAAS7",
+     "thread": "2108559774946398568",
+     "article": null,
+     "likes": 14,
+     "reposts": 2
+    },
+    {
+     "id": "2108559774946398568",
+     "url": "https://x.com/aave/status/2108559774946398568",
+     "created_at": "2026-10-09T14:06:40.000Z",
+     "text": "Builders can now connect the Aave MCP to the @MetaMask Agent Wallet, linking DeFi's credit layer to agentic finance.\n\nThe Aave MCP prepares Aave actions, and the Agent Wallet signs and submits them.\n\nGet started below. https://t.co/LBhJquCYdK",
+     "thread": null,
+     "article": null,
+     "likes": 469,
+     "reposts": 32
+    },
+    {
+     "id": "2108259288628203828",
+     "url": "https://x.com/aave/status/2108259288628203828",
+     "created_at": "2026-10-08T18:12:38.000Z",
+     "text": "Wrapped up a great @token2049 event in Singapore.\n\nBoth @StaniKulechov and @luigidemeo took the stage to discuss Aave, the future of onchain credit, and more.\n\nDeFi will win. https://t.co/a6LXvnm8Y4",
+     "thread": null,
+     "article": null,
+     "likes": 417,
+     "reposts": 22
+    },
+    {
+     "id": "2108208275514626374",
+     "url": "https://x.com/aave/status/2108208275514626374",
+     "created_at": "2026-10-08T14:49:56.000Z",
+     "text": "USDC and USDT deposits from @BNBCHAIN are now live in the Aave mobile app.\n\nIf you're on the waitlist, use Ghost Pass code 'AAVEONBNB' for instant access. https://t.co/SnVq9JLp21",
+     "thread": null,
+     "article": null,
+     "likes": 374,
+     "reposts": 21
+    },
+    {
+     "id": "2107864589022949866",
+     "url": "https://x.com/aave/status/2107864589022949866",
+     "created_at": "2026-10-07T16:04:14.000Z",
+     "text": "Find it here: https://t.co/1L7H9bHEWg",
+     "thread": "2107864585571356735",
+     "article": null,
+     "likes": 18,
+     "reposts": 2
+    },
+    {
+     "id": "2107864585571356735",
+     "url": "https://x.com/aave/status/2107864585571356735",
+     "created_at": "2026-10-07T16:04:14.000Z",
+     "text": "syrupUSDC by @maplefinance is now available as collateral on Aave V4 on @Arc.\n\nUsers can borrow USDC against it. https://t.co/jiz58sDN6b",
+     "thread": null,
+     "article": null,
+     "likes": 407,
+     "reposts": 33
+    },
+    {
+     "id": "2107547387908464954",
+     "url": "https://x.com/aave/status/2107547387908464954",
+     "created_at": "2026-10-06T19:03:48.000Z",
+     "text": "Aave is now supported in @Circle Mint's Digital Asset-Backed Borrowing product.\n\nEligible Circle Mint LLC customers can use cirBTC as collateral to borrow @USDC from Aave on @Arc or Ethereum, directly within Circle Mint. https://t.co/ap38tStNoR",
+     "thread": null,
+     "article": null,
+     "likes": 644,
+     "reposts": 53
+    },
+    {
+     "id": "2107486761513271768",
+     "url": "https://x.com/aave/status/2107486761513271768",
+     "created_at": "2026-10-06T15:02:53.000Z",
+     "text": "Details here: https://t.co/AOUjNSSper",
+     "thread": "2107486759412277403",
+     "article": null,
+     "likes": 13,
+     "reposts": 1
+    },
+    {
+     "id": "2107486759412277403",
+     "url": "https://x.com/aave/status/2107486759412277403",
+     "created_at": "2026-10-06T15:02:53.000Z",
+     "text": "Businesses can now integrate Aave powered yield through @privy_io Earn.\n\nFintechs, neobanks, and more get direct access to the largest onchain credit network. https://t.co/sZatTCfOvY",
+     "thread": null,
+     "article": null,
+     "likes": 496,
+     "reposts": 42
+    },
+    {
+     "id": "2106054725296857521",
+     "url": "https://x.com/aave/status/2106054725296857521",
+     "created_at": "2026-10-02T16:12:29.000Z",
+     "text": "Still waiting on access to the Aave mobile app?\n\nUse Ghost Pass code “FRIDAY” for instant access, while supplies last.\n\nEnjoy. https://t.co/PTZN3OdMlH",
+     "thread": null,
+     "article": null,
+     "likes": 506,
+     "reposts": 35
+    },
+    {
+     "id": "2105778708900413892",
+     "url": "https://x.com/aave/status/2105778708900413892",
+     "created_at": "2026-10-01T21:55:42.000Z",
+     "text": "Find Aave Labs' response here: https://t.co/fAmmYAeNvw",
+     "thread": "2105778706652250623",
+     "article": null,
+     "likes": 36,
+     "reposts": 3
+    },
+    {
+     "id": "2105778706652250623",
+     "url": "https://x.com/aave/status/2105778706652250623",
+     "created_at": "2026-10-01T21:55:41.000Z",
+     "text": "Aave Labs submitted its response to the European Commission’s MiCA Review Consultation.\n\nWe recommend regulating intermediaries rather than software, protecting self-custody, preserving savers' returns from lending, and letting euro stablecoins compete.\n\nFull response below ↓ https://t.co/EbJeqTI6zM",
+     "thread": null,
+     "article": null,
+     "likes": 551,
+     "reposts": 42
+    },
+    {
+     "id": "2105709342989201516",
+     "url": "https://x.com/aave/status/2105709342989201516",
+     "created_at": "2026-10-01T17:20:04.000Z",
+     "text": "Aave hit $1.1 trillion all-time borrow volume. https://t.co/Ub0HcfAK5u",
+     "thread": null,
+     "article": null,
+     "likes": 768,
+     "reposts": 69
+    },
+    {
+     "id": "2105673633465008322",
+     "url": "https://x.com/aave/status/2105673633465008322",
+     "created_at": "2026-10-01T14:58:10.000Z",
+     "text": "@base Tokenized stocks are only available in eligible jurisdictions outside of the U.S.\n\nFind the market here: https://t.co/piJHCQknsP",
+     "thread": "2105673020232909167",
+     "article": null,
+     "likes": 27,
+     "reposts": 2
+    },
+    {
+     "id": "2105673020232909167",
+     "url": "https://x.com/aave/status/2105673020232909167",
+     "created_at": "2026-10-01T14:55:44.000Z",
+     "text": "Aave V4's market for stock-backed loans on @base crossed $9 million deposits. https://t.co/0Kfz1DWCsn",
+     "thread": null,
+     "article": null,
+     "likes": 625,
+     "reposts": 44
+    },
+    {
+     "id": "2105315324262277333",
+     "url": "https://x.com/aave/status/2105315324262277333",
+     "created_at": "2026-09-30T15:14:22.000Z",
+     "text": "Find it here: https://t.co/uEo9m18Y0W",
+     "thread": "2105315320806404160",
+     "article": null,
+     "likes": 24,
+     "reposts": 3
+    },
+    {
+     "id": "2105315320806404160",
+     "url": "https://x.com/aave/status/2105315320806404160",
+     "created_at": "2026-09-30T15:14:22.000Z",
+     "text": "A proposal to onboard @openstandard's OUSD to Aave V3 Core and Aave V4 Core is live.\n\nOUSD is a new stablecoin purpose-built for use cases across banking, cross-border payments, institutional trading, and more. https://t.co/L0Unq2oAXG",
+     "thread": null,
+     "article": null,
+     "likes": 406,
+     "reposts": 24
+    },
+    {
+     "id": "2105009560142610587",
+     "url": "https://x.com/aave/status/2105009560142610587",
+     "created_at": "2026-09-29T18:59:22.000Z",
+     "text": "Aave V4 crossed $400 million active loans. https://t.co/Er2Ztop4wM",
+     "thread": null,
+     "article": null,
+     "likes": 425,
+     "reposts": 45
+    },
+    {
+     "id": "2104973844008075560",
+     "url": "https://x.com/aave/status/2104973844008075560",
+     "created_at": "2026-09-29T16:37:27.000Z",
+     "text": "Read @Token_Logic's proposal here: https://t.co/cPdYzBvr49",
+     "thread": "2104973840552219046",
+     "article": null,
+     "likes": 35,
+     "reposts": 2
+    },
+    {
+     "id": "2104973840552219046",
+     "url": "https://x.com/aave/status/2104973840552219046",
+     "created_at": "2026-09-29T16:37:26.000Z",
+     "text": "A new proposal seeks to deploy Aave V4 on @monad.\n\nThe deployment would include three risk-tiered markets, with USDC and USDT0 as borrowable assets. https://t.co/dJEKyiRRDV",
+     "thread": null,
+     "article": null,
+     "likes": 341,
+     "reposts": 48
+    },
+    {
+     "id": "2104898850804867334",
+     "url": "https://x.com/aave/status/2104898850804867334",
+     "created_at": "2026-09-29T11:39:27.000Z",
+     "text": "Limited supply. https://t.co/u14SYfxYCY",
+     "thread": "2104898838159102458",
+     "article": null,
+     "likes": 44,
+     "reposts": 3
+    },
+    {
+     "id": "2104898838159102458",
+     "url": "https://x.com/aave/status/2104898838159102458",
+     "created_at": "2026-09-29T11:39:24.000Z",
+     "text": "Finance for the internet era should be delightful. We've made a lot of UX improvements to Aave App, Aave Pro and Aave V3.\n\nWe've made a little gift to thank you for your feedback. Post your high score and snag a Ghost Pass. https://t.co/lrrtsWTVTl",
+     "thread": null,
+     "article": null,
+     "likes": 371,
+     "reposts": 33
+    },
+    {
+     "id": "2104603085377294424",
+     "url": "https://x.com/aave/status/2104603085377294424",
+     "created_at": "2026-09-28T16:04:11.000Z",
+     "text": "USDC and USDT deposits from @ethereum are now live in the Aave mobile app.\n\nIf you're on the waitlist, use Ghost Pass code 'ETHEREUM' for instant access. https://t.co/BcufFd5hlV",
+     "thread": null,
+     "article": null,
+     "likes": 300,
+     "reposts": 44
+    },
+    {
+     "id": "2104576659869626444",
+     "url": "https://x.com/aave/status/2104576659869626444",
+     "created_at": "2026-09-28T14:19:11.000Z",
+     "text": "Congrats to @chainlink on the launch of CCIP 2.0.\n\nThe Aave ecosystem has built on CCIP for years, and we look forward to working together to bring trillions of dollars in assets onchain. https://t.co/UknPwfH9wC",
+     "thread": null,
+     "article": null,
+     "likes": 791,
+     "reposts": 77
+    }
+   ]
+  },
+  {
+   "handle": "0xfluid",
+   "name": "Fluid",
+   "why": "flagged",
+   "id": "1711105935610093568",
+   "username": "0xfluid",
+   "truncated": false,
+   "repliesDropped": 0,
+   "posts": [
+    {
+     "id": "2108875191518736571",
+     "url": "https://x.com/0xfluid/status/2108875191518736571",
+     "created_at": "2026-10-10T11:00:01.000Z",
+     "text": "Earn now -&gt; https://t.co/8X5ehj0Qsf https://t.co/8tL0PIcoxJ",
+     "thread": "2108875191212445899",
+     "article": null,
+     "likes": 0,
+     "reposts": 0
+    },
+    {
+     "id": "2108875191212445899",
+     "url": "https://x.com/0xfluid/status/2108875191212445899",
+     "created_at": "2026-10-10T11:00:01.000Z",
+     "text": "Your bank: 0.1%\n\nT-bills: 3.9%\n\nFluid USDC: 6%\n\nPick your fighter. https://t.co/kjfYgaNmZD",
+     "thread": null,
+     "article": null,
+     "likes": 210,
+     "reposts": 3
+    },
+    {
+     "id": "2108818198720369094",
+     "url": "https://x.com/0xfluid/status/2108818198720369094",
+     "created_at": "2026-10-10T07:13:33.000Z",
+     "text": "JupLend just crossed $1B in active loans, becoming the #1 lending market on Solana 🌊 \n\n$2.5B in total TVL.\n\nPowered by Fluid. https://t.co/QuT9TnAyWw",
+     "thread": null,
+     "article": null,
+     "likes": 219,
+     "reposts": 6
+    },
+    {
+     "id": "2108545829502107831",
+     "url": "https://x.com/0xfluid/status/2108545829502107831",
+     "created_at": "2026-10-09T13:11:15.000Z",
+     "text": "Fluid Lite ETH averages 6.5% APY over 3.5 years 🌊\n\nDeposit ETH, earn ETH -&gt; https://t.co/QcTyQPwcxr https://t.co/ouXl6VJpWy",
+     "thread": null,
+     "article": null,
+     "likes": 224,
+     "reposts": 7
+    },
+    {
+     "id": "2108246132635873583",
+     "url": "https://x.com/0xfluid/status/2108246132635873583",
+     "created_at": "2026-10-08T17:20:21.000Z",
+     "text": "$500M+ in capital is backing Hashi at launch.\n\nFluid powers the lending layer, bringing Bitcoin-backed loans to Anchorage Digital users through tri-party custody and direct self-custody. https://t.co/euPxLtpmSv https://t.co/PFj4Q2R10d",
+     "thread": null,
+     "article": null,
+     "likes": 312,
+     "reposts": 24
+    },
+    {
+     "id": "2108195712752345146",
+     "url": "https://x.com/0xfluid/status/2108195712752345146",
+     "created_at": "2026-10-08T14:00:00.000Z",
+     "text": "Fluid revenue grew 22% quarter over quarter in Q3.\n\n With annualized revenue sitting at $7.3M. https://t.co/DVl1giSx3S",
+     "thread": null,
+     "article": null,
+     "likes": 235,
+     "reposts": 6
+    },
+    {
+     "id": "2108123050944458806",
+     "url": "https://x.com/0xfluid/status/2108123050944458806",
+     "created_at": "2026-10-08T09:11:17.000Z",
+     "text": "Fluid didn’t slow down in Q3.\n\nTVL grew +36% quarter over quarter, with $4.25B heading into Q4. https://t.co/2u9MayGv1Z",
+     "thread": null,
+     "article": null,
+     "likes": 235,
+     "reposts": 11
+    },
+    {
+     "id": "2107464369009475618",
+     "url": "https://x.com/0xfluid/status/2107464369009475618",
+     "created_at": "2026-10-06T13:33:55.000Z",
+     "text": "Another major stablecoin is being powered by Fluid’s Liquidity-as-a-Service.\n\n$USDG is coming to Fluid on @arbitrum with deep markets from day one.\n\nFirst, liquidity.\nNext, lending.\n\nMore utility for $USDG. More efficient capital onchain. 🌊 https://t.co/y2daLGuecZ https://t.co/oXQbUuu9c9",
+     "thread": null,
+     "article": null,
+     "likes": 295,
+     "reposts": 18
+    },
+    {
+     "id": "2107126821552824527",
+     "url": "https://x.com/0xfluid/status/2107126821552824527",
+     "created_at": "2026-10-05T15:12:37.000Z",
+     "text": "1 day left.\n\nLend USDC on @base through Fluid and earn ~8% APR.\n\nBase has deep liquidity and distribution.\nFluid puts that capital to work more efficiently.\n\nRewards distributed via @jumperapp.\n\nGo lend &gt; https://t.co/9yi0htoH8l https://t.co/irSkQEg69c https://t.co/TaKP7ewKC7",
+     "thread": null,
+     "article": null,
+     "likes": 57,
+     "reposts": 10
+    },
+    {
+     "id": "2106786701079404894",
+     "url": "https://x.com/0xfluid/status/2106786701079404894",
+     "created_at": "2026-10-04T16:41:06.000Z",
+     "text": "#1 and #2 are both Fluid.\n\nFluid leads every major money market on loan-to-deposit ratio.\nJupiter Lend, @jupiter_earn, built by us and @JupiterExchange, is right behind it.\n\nBorrowers are here for better terms and better capital efficiency.\n\nFinance is Fluid 🌊 https://t.co/aqhpnjpcW2",
+     "thread": null,
+     "article": null,
+     "likes": 52,
+     "reposts": 9
+    },
+    {
+     "id": "2105976207309439248",
+     "url": "https://x.com/0xfluid/status/2105976207309439248",
+     "created_at": "2026-10-02T11:00:29.000Z",
+     "text": "September on Fluid:\n\nWe are ready for Q4.\n\n▫️ Growth\n> Fluid is now the #2 lending protocol on @arbitrum.\n1 in every 4 dollars borrowed on the chain is borrowed through Fluid.\nSome reasons: higher LTVs, lower liquidation penalties, and liquidations that only close what’s needed to bring a position back to safety.\n> 62% of DeFi's USDai and sUSDai liquidity now sits on Fluid, making it the #1 venue for @USDai_Official.\n> Jupiter Lend V2 @jupiter_earn, has generated more USDC-USDT volume in the last 24 hours than all other Solana DEXs combined.\n\n▫️ Built on Fluid\n> @USDai_Official's sUSDai is live on @solana via @jupiter_earn, built by Fluid and @JupiterExchange; with deep liquidity from day one, powered by our Liquidity-as-a-Service program. (LaaS)\n> New reUSD vaults are live on @arbitrum. @re brings real-world assets onchain with borrowing, trading and Smart Liquidity architecture behind them.\n> Tokenized stocks are coming to Fluid. @RealityFi_xyz  and @BitgetWallet bring 1,700+ tokenized RWAs onchain, 1:1 backed by real shares.\n\n▫️ Transparency\n> Every proof point behind Fluid is now on one page: security audits, oracle integrations, price feeds, risk research, multisigs and third-party dashboards.\nhttps://t.co/BiR5VuIN3G\n\n▫️ Finance is Fluid\n> Our team and @Mardeni01 were in Dubai for the MENA Stablecoin Forum.\n> Our CSO @beeshal joined the first Superteam Nepal Evening, @SuperteamNPL, to discuss @jupiter_earn's growth and how Fluid and @JupiterExchange are building it together.\n> Fluid is joining @EFDevcon 8 as an official Supporter in Mumbai.\n\nOctober is here.\nStay Fluid 🌊",
+     "thread": null,
+     "article": null,
+     "likes": 71,
+     "reposts": 10
+    },
+    {
+     "id": "2105714888438153388",
+     "url": "https://x.com/0xfluid/status/2105714888438153388",
+     "created_at": "2026-10-01T17:42:06.000Z",
+     "text": "Fluid Lite USD.\n\n6% fixed APR. Fully automated.\n\nDeposit USDC. Start earning. That’s it.\n\n&gt; https://t.co/vHg6BBy6jC https://t.co/pV8YeCsHrZ",
+     "thread": null,
+     "article": null,
+     "likes": 48,
+     "reposts": 6
+    }
+   ]
+  },
+  {
+   "handle": "Morpho",
+   "name": "Morpho",
+   "why": "flagged",
+   "id": "1420789685811650560",
+   "username": "Morpho",
+   "truncated": false,
+   "repliesDropped": 0,
+   "posts": [
+    {
+     "id": "2108491819583672371",
+     "url": "https://x.com/Morpho/status/2108491819583672371",
+     "created_at": "2026-10-09T09:36:38.000Z",
+     "text": "\"Why Morpho builds vaults: not to be a vault company, but to enable an open credit market for the world.\n\nIf we want to underwrite 8 billion people, we’ll need tens of thousands of lending markets to serve different borrowers with different types of risk.\n\nThose markets need vaults to aggregate capital and reduce fragmentation, and curators to source and underwrite risks.”",
+     "thread": null,
+     "article": null,
+     "likes": 121,
+     "reposts": 21
+    },
+    {
+     "id": "2108278177508548789",
+     "url": "https://x.com/Morpho/status/2108278177508548789",
+     "created_at": "2026-10-08T19:27:42.000Z",
+     "text": "Building an earn product on @arc?\n\nIntegrate Morpho Vaults curated by @SteakhouseFi @gauntlet_xyz @Bitwise @galaxyhq @keyrock and more directly via the Arc Earn Kit SDK. https://t.co/O3A2BhhZi2",
+     "thread": null,
+     "article": null,
+     "likes": 145,
+     "reposts": 23
+    },
+    {
+     "id": "2108210897609212064",
+     "url": "https://x.com/Morpho/status/2108210897609212064",
+     "created_at": "2026-10-08T15:00:21.000Z",
+     "text": "Check out the Yield Curve View on the Markets App\n\nhttps://t.co/5J4GwQi1OS",
+     "thread": "2108210885550547305",
+     "article": null,
+     "likes": 26,
+     "reposts": 2
+    },
+    {
+     "id": "2108210885550547305",
+     "url": "https://x.com/Morpho/status/2108210885550547305",
+     "created_at": "2026-10-08T15:00:18.000Z",
+     "text": "New Release: Yield Curve View\n\nUnderstand the term structure of Morpho Fixed Rate Markets before committing capital. https://t.co/FSgmTA2AoN",
+     "thread": null,
+     "article": null,
+     "likes": 103,
+     "reposts": 9
+    },
+    {
+     "id": "2108177208929849545",
+     "url": "https://x.com/Morpho/status/2108177208929849545",
+     "created_at": "2026-10-08T12:46:29.000Z",
+     "text": "The Morpho Effect: September 2026\n\n🔹 @coinbase fixed-rate loans, powered by Morpho Midnight on @base\n🔹 Morpho powers credit use cases on @arc, with $500M+ in deposits\n🔹 @RobinhoodApp Earn reached $500M+ in deposits\n🔹 P2P Orders for Morpho Midnight live on @ethereum @base @arc\n🔹 Morpho total deposits new all-time high at $17B+\n\nFor the full update👇",
+     "thread": null,
+     "article": null,
+     "likes": 97,
+     "reposts": 7
+    },
+    {
+     "id": "2108177023159898584",
+     "url": "https://x.com/Morpho/status/2108177023159898584",
+     "created_at": "2026-10-08T12:45:45.000Z",
+     "text": "https://t.co/tnbC9GGAVH",
+     "thread": null,
+     "article": {
+      "title": "Morpho Effect September: Noncustodiality and Vaults",
+      "preview": "Curation is a high growth early-stage industry.\nTwo and a half years ago it barely existed as a business. Today roughly $10B sits in curated vaults.\nCoinbase and Robinhood now run their earn products",
+      "text": "Curation is a high growth early-stage industry.\nTwo and a half years ago it barely existed as a business. Today roughly $10B sits in curated vaults.\nCoinbase and Robinhood now run their earn products on them, and each passed $500M in deposits in September.\nMore than 30 curators are now active, including established names like Steakhouse Financial, Sentora, Gauntlet, and recent entrants like Galaxy Digital, Bitwise Asset Management and Armitage by Wintermute.\nUnderneath sit the vaults: the onchain infrastructure curators use to set risk parameters and allocation rules. A year ago we argued that vaults would become the default way to allocate liquidity onchain. That has become the consensus, and institutions are moving into the space.\nBut a vault has come to mean very different things, depending on the power of its curator. We think of it as a spectrum. On one end are noncustodial vaults, where the curator sets the rules but cannot change allocation without users consent or take control of user assets. On the other end are discretionary vaults, where the operator custody customer assets, and can move assets as they see fit to run more complex strategies.\nDespite Morpho Vaults being designed as noncustodial, with the combination of in-kind redemptions, timelocks, role-based access controls and immutable contracts, the same open-source infrastructure could also be forked and configured to create something that looks more like a discretionary vault.\nAt the end of the day, there is no one size fits all. Different needs will require different vault infrastructure. The more diversity we have at the vault infrastructure layer, the more tools we have to bring all types of credit onchain. We believe the more diverse the vault ecosystem is, the more tools we have to bring all types of credit onchain.\nMore on Morpho Midnight (and a little on Blue)\nCoinbase fixed rate loans, powered by Morpho\nCoinbase is the first large-scale distributor to integrate Morpho Midnight only a few months after launch, demonstrating trust in the security of the protocol. Millions of Coinbase customers can now take out fixed rateloans alongside the already successful variable rate loans powered by Morpho Blue.\n \nP2P Orders on Midnight\nAn offer-based model also lets two counterparties settle a loan directly, without routing through an existing pool. That suits allocators or borrowers who want bespoke terms and speed. With P2P Orders on Morpho Midnight, a user makes an offer on their own terms, sends it to their chosen counterparty and both parties settle directly on Morpho Midnight.\nP2P Orders are available on @Ethereum, @Base, and @Arc, with support for more networks coming.\n \nMidnight is live on Ethereum\n@Ethereum is most neutral network with one of the deepest liquidity onchain. It brings more Midnight's fixed rate markets to users who have a mandate to allocate on Ethereum only. Midnight's crosschain expansion has just begun.\n \nDirect Lend into Morpho Blue\nLending directly into Morpho Blue markets has always been possible by interacting with the smart contracts or through third-party apps such as Monarch Lend.\nIt is now available in the Morpho App, for users who are comfortable applying their own risk expertise.\n \nMorpho is the credit infrastructure on Arc\nMorpho is live on Arc, Circle's Economic OS for the internet, where it powers credit use cases.\nDeposits reached $220M+ on day one and topped $500M at the time of writing. Digital Asset Borrow via Circle Mint is also powered by Morpho, with close to $200M borrowed in under two weeks.\n \nEcosystem news\nStock-backed loans on Coinbase Tokenized Stocks are live on Morpho Blue and Midnight\nCoinbase Lend passed $500M\nRobinhood Earn passed $500M\nMorpho on Robinhood Chain reached $1B in deposits in three months\nZama doubles down on confidential vaults on Morpho launching 16 additional confidential vaults\nTurnkey shipped an embedded earn API powered by Morpho\nOUSD lending is coming to integrators on Tempo\nMorpho curators growths\nSteakhouse Financial's assets under curation have exceeded $2.3B\nBitwise's first vault is live\nSentora's assets under curation passed $1B, from close to zero at the start of 2026. Here is why Sentora curates on Morpho.\nMorpho total deposits at an all-time high\nTotal deposits passed $15B in mid-September and sits at nearly $17B at the time of writing.\n \n",
+      "links": [
+       "https://x.com/PaulFrambot/status/2103108435210559712?s=20",
+       "https://x.com/Morpho/status/2095511647481999483?s=20",
+       "https://x.com/Morpho/status/2097717592261890210?s=20",
+       "https://app.morpho.org/curator/galaxy",
+       "https://x.com/Morpho/status/2102111735079682125?s=20",
+       "https://x.com/Morpho/status/2099832226200621437?s=20",
+       "https://x.com/Morpho/status/2095136455903633613?s=20",
+       "https://x.com/Morpho/status/2100175945894338838?s=20",
+       "https://x.com/Morpho/status/2105315172336439331?s=20",
+       "https://x.com/Morpho/status/2104612449861386281?s=20",
+       "https://app.morpho.org/curator/bitwise",
+       "https://x.com/Morpho/status/2104964818696552853?s=20",
+       "https://app.morpho.org/curator/armitage",
+       "https://app.morpho.org/curator/steakhouse-financial",
+       "https://x.com/Morpho/status/2105676121975214167?s=20",
+       "https://x.com/Morpho/status/2100253961806811348?s=20",
+       "https://defillama.com/protocols/risk-curators",
+       "https://x.com/Morpho/status/2103577514853732656?s=20",
+       "https://morpho.org/stories/sentora",
+       "https://app.morpho.org/curator/sentora",
+       "https://x.com/Morpho/status/2100887060068671988?s=20",
+       "https://morpho.org/blog/stablecoins-upgraded-money-vaults-will-upgrade-asset-management",
+       "https://app.morpho.org/curator/gauntlet",
+       "https://x.com/Morpho/status/2100596832661536840?s=20"
+      ]
+     },
+     "likes": 56,
+     "reposts": 3
+    },
+    {
+     "id": "2108114913256194356",
+     "url": "https://x.com/Morpho/status/2108114913256194356",
+     "created_at": "2026-10-08T08:38:56.000Z",
+     "text": "“Blockchain’s killer use case is openness: it drives competition on pricing and makes financial infrastructure more accessible. \n\nAt Morpho, we use that openness to collapse the spread between lending and borrowing rates.” \n\n@PaulFrambot on stage with @ethereumJoseph @SamirTabar @kartiktalwar at @token2049",
+     "thread": null,
+     "article": null,
+     "likes": 80,
+     "reposts": 7
+    },
+    {
+     "id": "2107851545064980947",
+     "url": "https://x.com/Morpho/status/2107851545064980947",
+     "created_at": "2026-10-07T15:12:24.000Z",
+     "text": "Learn how Morpho is powering Crypto Loan\n\nhttps://t.co/Rz8eZnFjbm",
+     "thread": "2107851521174159637",
+     "article": null,
+     "likes": 15,
+     "reposts": 1
+    },
+    {
+     "id": "2107851533186670686",
+     "url": "https://x.com/Morpho/status/2107851533186670686",
+     "created_at": "2026-10-07T15:12:22.000Z",
+     "text": "Ledger Wallet™ integrated Morpho via @yield_xyz\n\nLearn more👇 https://t.co/TIVy47O6vv",
+     "thread": "2107851521174159637",
+     "article": null,
+     "likes": 31,
+     "reposts": 3
+    },
+    {
+     "id": "2107851521174159637",
+     "url": "https://x.com/Morpho/status/2107851521174159637",
+     "created_at": "2026-10-07T15:12:19.000Z",
+     "text": "Crypto Loan via @Ledger Wallet™, powered by Morpho\n\nLedger users can now borrow against wrapped BTC, all within self-custody.\n\nMorpho is Ledger's infrastructure of choice to become an all-in-one platform for digital assets: first with Stablecoin Earn, and now Crypto Loan. https://t.co/gyfG5mY3AZ",
+     "thread": null,
+     "article": null,
+     "likes": 208,
+     "reposts": 31
+    },
+    {
+     "id": "2107819620895969510",
+     "url": "https://x.com/Morpho/status/2107819620895969510",
+     "created_at": "2026-10-07T13:05:33.000Z",
+     "text": "Explore Multi-Market Limit Order on the Markets App\nhttps://t.co/gbfcPY40vZ",
+     "thread": "2107819608992604366",
+     "article": null,
+     "likes": 11,
+     "reposts": 1
+    },
+    {
+     "id": "2107819608992604366",
+     "url": "https://x.com/Morpho/status/2107819608992604366",
+     "created_at": "2026-10-07T13:05:30.000Z",
+     "text": "Multi-Market Limit Orders\n\nThe same capital can be offered across multiple markets with different collateral and maturities.\n\np.s. offered capital can earn variable rate yield until orders are filled thanks to callbacks https://t.co/kDlHklTZdi",
+     "thread": null,
+     "article": null,
+     "likes": 78,
+     "reposts": 6
+    },
+    {
+     "id": "2107481272104919546",
+     "url": "https://x.com/Morpho/status/2107481272104919546",
+     "created_at": "2026-10-06T14:41:05.000Z",
+     "text": "Reminder: Morpho has no official mining app, ongoing mining program, or airdrop. Be careful with any telegram groups or sites claiming otherwise.",
+     "thread": null,
+     "article": null,
+     "likes": 113,
+     "reposts": 6
+    },
+    {
+     "id": "2107460013002473759",
+     "url": "https://x.com/Morpho/status/2107460013002473759",
+     "created_at": "2026-10-06T13:16:36.000Z",
+     "text": "Learn more about @arbitrum's plan to make USDG a core asset on Arbitrum One https://t.co/OevwYS31ff",
+     "thread": "2107460001073901988",
+     "article": null,
+     "likes": 22,
+     "reposts": 1
+    },
+    {
+     "id": "2107460001073901988",
+     "url": "https://x.com/Morpho/status/2107460001073901988",
+     "created_at": "2026-10-06T13:16:33.000Z",
+     "text": "500M+ in 3 months\n\nUSDG by @Paxos has been up only on Morpho. It's now available for fintechs and enterprises building on @arbitrum One. https://t.co/FKW8mhd6Bn",
+     "thread": null,
+     "article": null,
+     "likes": 145,
+     "reposts": 15
+    },
+    {
+     "id": "2107141979574620369",
+     "url": "https://x.com/Morpho/status/2107141979574620369",
+     "created_at": "2026-10-05T16:12:51.000Z",
+     "text": "Explore P2P Orders on the Markets App\n\nhttps://t.co/oScQwMLXo4",
+     "thread": "2107141966706495899",
+     "article": null,
+     "likes": 20,
+     "reposts": 2
+    },
+    {
+     "id": "2107141966706495899",
+     "url": "https://x.com/Morpho/status/2107141966706495899",
+     "created_at": "2026-10-05T16:12:48.000Z",
+     "text": "P2P Orders for Morpho Midnight, now available on @arc https://t.co/IeCmQxitLr https://t.co/dL9Sq2FuLr",
+     "thread": null,
+     "article": null,
+     "likes": 156,
+     "reposts": 20
+    },
+    {
+     "id": "2107094317479379376",
+     "url": "https://x.com/Morpho/status/2107094317479379376",
+     "created_at": "2026-10-05T13:03:27.000Z",
+     "text": "Armitage applies @wintermute_t's industry leading liquidity provisioning expertise to vault curation.\n\nLearn more about how Wintermute launched and grew its curation business on Morpho.\n\nhttps://t.co/BH65kS8VMS",
+     "thread": null,
+     "article": null,
+     "likes": 90,
+     "reposts": 12
+    },
+    {
+     "id": "2107041195662913966",
+     "url": "https://x.com/Morpho/status/2107041195662913966",
+     "created_at": "2026-10-05T09:32:22.000Z",
+     "text": "If you haven't registered yet\n\nhttps://t.co/70tNdeyE2K",
+     "thread": "2107041182744461638",
+     "article": null,
+     "likes": 16,
+     "reposts": 1
+    },
+    {
+     "id": "2107041182744461638",
+     "url": "https://x.com/Morpho/status/2107041182744461638",
+     "created_at": "2026-10-05T09:32:19.000Z",
+     "text": "4 days until @Vault__Summit Singapore\n\nThe largest global conference for everything vaults during @token2049\n\nCohosted by Morpho and @DigiFTTech https://t.co/no2N5vEw4j",
+     "thread": null,
+     "article": null,
+     "likes": 211,
+     "reposts": 25
+    },
+    {
+     "id": "2106036602720186431",
+     "url": "https://x.com/Morpho/status/2106036602720186431",
+     "created_at": "2026-10-02T15:00:29.000Z",
+     "text": "Just over 2 weeks since launch, $500M+ deposited into Morpho on @arc https://t.co/TMj2Rn9q5W",
+     "thread": null,
+     "article": null,
+     "likes": 282,
+     "reposts": 40
+    },
+    {
+     "id": "2105925763291856947",
+     "url": "https://x.com/Morpho/status/2105925763291856947",
+     "created_at": "2026-10-02T07:40:02.000Z",
+     "text": "Next week at @token2049 Singapore\n\n@PaulFrambot will discuss the credit network Morpho is building on @ethereum with @ethereumJoseph @SamirTabar @kartiktalwar. https://t.co/d7nKk0eLk1",
+     "thread": null,
+     "article": null,
+     "likes": 117,
+     "reposts": 9
+    },
+    {
+     "id": "2105676134079959176",
+     "url": "https://x.com/Morpho/status/2105676134079959176",
+     "created_at": "2026-10-01T15:08:06.000Z",
+     "text": "Learn how Steakhouse is building its curation business with Morpho.\n\nhttps://t.co/mzgDQ2kWVn",
+     "thread": "2105676121975214167",
+     "article": null,
+     "likes": 42,
+     "reposts": 3
+    },
+    {
+     "id": "2105676121975214167",
+     "url": "https://x.com/Morpho/status/2105676121975214167",
+     "created_at": "2026-10-01T15:08:03.000Z",
+     "text": "0 → $2.3B+\n\nAn OG curator on Morpho, @SteakhouseFi has established itself as a leading curator for fintech integrations, with vaults integrated by platforms such as @coinbase and @RobinhoodApp. https://t.co/lUe7O71mbn",
+     "thread": null,
+     "article": null,
+     "likes": 170,
+     "reposts": 18
+    },
+    {
+     "id": "2105659399368855598",
+     "url": "https://x.com/Morpho/status/2105659399368855598",
+     "created_at": "2026-10-01T14:01:36.000Z",
+     "text": "Learn more about how offers and pools differ\n\nhttps://t.co/zQFxZzqWeM",
+     "thread": "2105659189582549055",
+     "article": null,
+     "likes": 24,
+     "reposts": 0
+    },
+    {
+     "id": "2105659189582549055",
+     "url": "https://x.com/Morpho/status/2105659189582549055",
+     "created_at": "2026-10-01T14:00:46.000Z",
+     "text": "A visual comparison of price setting in pools vs offer-based markets\n\nFor pools, everyone takes the rate defined by the formula. With offers, participants can set their own rates. https://t.co/kws3VbhTYj",
+     "thread": null,
+     "article": null,
+     "likes": 105,
+     "reposts": 18
+    },
+    {
+     "id": "2105644365477810198",
+     "url": "https://x.com/Morpho/status/2105644365477810198",
+     "created_at": "2026-10-01T13:01:52.000Z",
+     "text": "Integrate crypto-backed loans via @arc Borrow Kit \n\nPowered by Morpho https://t.co/6CtkV6ya8T",
+     "thread": null,
+     "article": null,
+     "likes": 99,
+     "reposts": 11
+    },
+    {
+     "id": "2105315172336439331",
+     "url": "https://x.com/Morpho/status/2105315172336439331",
+     "created_at": "2026-09-30T15:13:46.000Z",
+     "text": "Enterprises and fintechs will soon be able to offer earn &amp; borrow products with OUSD by @openstandard\n\nPowered by Morpho on @tempo https://t.co/Mso3SRGYKn",
+     "thread": null,
+     "article": null,
+     "likes": 125,
+     "reposts": 16
+    },
+    {
+     "id": "2105306856159842646",
+     "url": "https://x.com/Morpho/status/2105306856159842646",
+     "created_at": "2026-09-30T14:40:43.000Z",
+     "text": "Offer-based markets introduce a new structure for onchain credit.\n\nWe break down how they work, how they differ from lending pools, and what they enable.\n\nhttps://t.co/zQFxZzru4k",
+     "thread": null,
+     "article": null,
+     "likes": 105,
+     "reposts": 6
+    },
+    {
+     "id": "2104964818696552853",
+     "url": "https://x.com/Morpho/status/2104964818696552853",
+     "created_at": "2026-09-29T16:01:35.000Z",
+     "text": "0 →$1B in total deposits since July.\n\nMorpho's credit network on Robinhood Chain by @RobinhoodCrypto continues to grow. https://t.co/VG7hBVAS6o",
+     "thread": null,
+     "article": null,
+     "likes": 188,
+     "reposts": 27
+    },
+    {
+     "id": "2104949927873036416",
+     "url": "https://x.com/Morpho/status/2104949927873036416",
+     "created_at": "2026-09-29T15:02:25.000Z",
+     "text": "New assets to borrow against via @coinbase crypto-backed loans\n\nPowered by Morpho https://t.co/AZ3178vJFw",
+     "thread": null,
+     "article": null,
+     "likes": 82,
+     "reposts": 7
+    },
+    {
+     "id": "2104921410426777929",
+     "url": "https://x.com/Morpho/status/2104921410426777929",
+     "created_at": "2026-09-29T13:09:06.000Z",
+     "text": "Explore P2P Orders on the fixed rate app.\n\nhttps://t.co/SSr8dmKPaU",
+     "thread": "2104921397369974797",
+     "article": null,
+     "likes": 29,
+     "reposts": 6
+    },
+    {
+     "id": "2104921397369974797",
+     "url": "https://x.com/Morpho/status/2104921397369974797",
+     "created_at": "2026-09-29T13:09:03.000Z",
+     "text": "Introducing P2P Orders for Morpho Midnight\n\nSet bespoke terms, send to your counterparty, and settle on Midnight.\n\nAvailable on @ethereum &amp; @base. https://t.co/kve6pTUaBH",
+     "thread": null,
+     "article": null,
+     "likes": 167,
+     "reposts": 28
+    },
+    {
+     "id": "2104612449861386281",
+     "url": "https://x.com/Morpho/status/2104612449861386281",
+     "created_at": "2026-09-28T16:41:24.000Z",
+     "text": "$150M+ USDC borrowed against cirBTC on @arc. https://t.co/Ml0PMhqaFp https://t.co/t667Dthaky",
+     "thread": null,
+     "article": null,
+     "likes": 232,
+     "reposts": 41
+    }
+   ]
+  },
+  {
+   "handle": "jupiter_earn",
+   "name": "Jupiter Lend",
+   "why": "flagged",
+   "id": "1949221908131528704",
+   "username": "jupiter_earn",
+   "truncated": false,
+   "repliesDropped": 0,
+   "posts": [
+    {
+     "id": "2108774735941353983",
+     "url": "https://x.com/jupiter_earn/status/2108774735941353983",
+     "created_at": "2026-10-10T04:20:50.000Z",
+     "text": "what’s everyone doing this weekend?\n\ntouching grass, holding bags, earning yield, borrowing against them, or checking prices \"just once\"?",
+     "thread": null,
+     "article": null,
+     "likes": 29,
+     "reposts": 1
+    },
+    {
+     "id": "2108558505917681918",
+     "url": "https://x.com/jupiter_earn/status/2108558505917681918",
+     "created_at": "2026-10-09T14:01:37.000Z",
+     "text": "Still live, but probably not for long ↓\n\nhttps://t.co/AJY6LJptFd",
+     "thread": "2108558502847508878",
+     "article": null,
+     "likes": 5,
+     "reposts": 0
+    },
+    {
+     "id": "2108558502847508878",
+     "url": "https://x.com/jupiter_earn/status/2108558502847508878",
+     "created_at": "2026-10-09T14:01:36.000Z",
+     "text": "HOTWHEELS COLLECTIBLES JUST GOT LIQUID:\n\nA “ROXY” Porsche 911 GT3 R (992) Hot Wheels collectible is now live as collateral on Offerbook vaulted with @ripcarsio\n\n∙ FMV: $590\n∙ Loan: $450 USDC\n∙ Duration: 30D\n∙ APY: 7% https://t.co/kP1Wupwru9",
+     "thread": null,
+     "article": null,
+     "likes": 80,
+     "reposts": 10
+    },
+    {
+     "id": "2108529410269999115",
+     "url": "https://x.com/jupiter_earn/status/2108529410269999115",
+     "created_at": "2026-10-09T12:06:00.000Z",
+     "text": "You’re holding SOL anyway. Make the wait count. https://t.co/HJOarsFTTr",
+     "thread": "2108529408701354005",
+     "article": null,
+     "likes": 1,
+     "reposts": 0
+    },
+    {
+     "id": "2108529410039279963",
+     "url": "https://x.com/jupiter_earn/status/2108529410039279963",
+     "created_at": "2026-10-09T12:06:00.000Z",
+     "text": "Stake your SOL here 👇\nhttps://t.co/gChj1yhLX2",
+     "thread": "2108529408701354005",
+     "article": null,
+     "likes": 1,
+     "reposts": 0
+    },
+    {
+     "id": "2108529409590460731",
+     "url": "https://x.com/jupiter_earn/status/2108529409590460731",
+     "created_at": "2026-10-09T12:06:00.000Z",
+     "text": "Step by Step on how to Stake your SOL👇\nhttps://t.co/mR3BDMwWJV",
+     "thread": "2108529408701354005",
+     "article": null,
+     "likes": 4,
+     "reposts": 0
+    },
+    {
+     "id": "2108529409141690830",
+     "url": "https://x.com/jupiter_earn/status/2108529409141690830",
+     "created_at": "2026-10-09T12:06:00.000Z",
+     "text": "Here’s how staking works:\n\nYou delegate your SOL to Jupiter’s validator, giving it weight to vote on blocks, and helping to secure Solana.\n\nIn return, the network distributes newly issued SOL as staking rewards every epoch (or roughly every 2 days).\n\nYour share of those rewards is then deposited into your stake account. That’s your yield.\n\nYour rewards compound automatically, so the SOL you earn, starts earning more SOL too.",
+     "thread": "2108529408701354005",
+     "article": null,
+     "likes": 5,
+     "reposts": 0
+    },
+    {
+     "id": "2108529408701354005",
+     "url": "https://x.com/jupiter_earn/status/2108529408701354005",
+     "created_at": "2026-10-09T12:06:00.000Z",
+     "text": "Solana pays people to secure the network.\nYou can earn your share by staking your SOL with Jupiter 🧵 https://t.co/Aio9JaijqT",
+     "thread": null,
+     "article": null,
+     "likes": 56,
+     "reposts": 8
+    },
+    {
+     "id": "2108421059972333776",
+     "url": "https://x.com/jupiter_earn/status/2108421059972333776",
+     "created_at": "2026-10-09T04:55:27.000Z",
+     "text": "How much have lenders earned on Jupiter Lend since launch?\n\n$10M?\n\n$20M?\n\nHigher 👇 https://t.co/CUURu7G9Si",
+     "thread": null,
+     "article": null,
+     "likes": 100,
+     "reposts": 9
+    },
+    {
+     "id": "2108181366449799545",
+     "url": "https://x.com/jupiter_earn/status/2108181366449799545",
+     "created_at": "2026-10-08T13:03:00.000Z",
+     "text": "Stake your SOL here 👇\nhttps://t.co/gChj1yhe7u",
+     "thread": "2108181365820694812",
+     "article": null,
+     "likes": 3,
+     "reposts": 0
+    },
+    {
+     "id": "2108181365820694812",
+     "url": "https://x.com/jupiter_earn/status/2108181365820694812",
+     "created_at": "2026-10-08T13:03:00.000Z",
+     "text": "Stop just holding your SOL\nStake it! https://t.co/Ztnx3spAgk",
+     "thread": null,
+     "article": null,
+     "likes": 59,
+     "reposts": 5
+    },
+    {
+     "id": "2108137425713414584",
+     "url": "https://x.com/jupiter_earn/status/2108137425713414584",
+     "created_at": "2026-10-08T10:08:24.000Z",
+     "text": "Sometimes it's better to sideline and watch https://t.co/7fLyzoAmb8",
+     "thread": null,
+     "article": null,
+     "likes": 18,
+     "reposts": 1
+    },
+    {
+     "id": "2107838339407880233",
+     "url": "https://x.com/jupiter_earn/status/2107838339407880233",
+     "created_at": "2026-10-07T14:19:56.000Z",
+     "text": "A new loop just went live on Jupiter Lend:\n\nYou can multiply your reinsurance-backed yield via reUSD, currently up to 18.6% APY.\n\n5M in borrow capacity is now available: https://t.co/IsCzpjn5SR https://t.co/kHL7InqDxD",
+     "thread": null,
+     "article": null,
+     "likes": 72,
+     "reposts": 4
+    },
+    {
+     "id": "2107803126581317772",
+     "url": "https://x.com/jupiter_earn/status/2107803126581317772",
+     "created_at": "2026-10-07T12:00:01.000Z",
+     "text": "Never sell your SOL! https://t.co/PXrUlt44WA",
+     "thread": "2107803124207399388",
+     "article": null,
+     "likes": 0,
+     "reposts": 0
+    },
+    {
+     "id": "2107803126237376839",
+     "url": "https://x.com/jupiter_earn/status/2107803126237376839",
+     "created_at": "2026-10-07T12:00:01.000Z",
+     "text": "Start borrowing against your SOL on Jupiter Lend\nhttps://t.co/o7SZwHUd8Q",
+     "thread": "2107803124207399388",
+     "article": null,
+     "likes": 1,
+     "reposts": 0
+    },
+    {
+     "id": "2107803125763510770",
+     "url": "https://x.com/jupiter_earn/status/2107803125763510770",
+     "created_at": "2026-10-07T12:00:00.000Z",
+     "text": "Want to see how easy it is to set up your borrow position?\n\nWatch the walkthrough below 👇\nhttps://t.co/5GUtEGAreB",
+     "thread": "2107803124207399388",
+     "article": null,
+     "likes": 4,
+     "reposts": 0
+    },
+    {
+     "id": "2107803125021053058",
+     "url": "https://x.com/jupiter_earn/status/2107803125021053058",
+     "created_at": "2026-10-07T12:00:00.000Z",
+     "text": "When you borrow an asset, you post collateral.\n\nThat backs your position, allowing you to secure the loan.\n\nIn return, you pay interest to the people who supplied the liquidity.\n\nAnd in some cases, your collateral actually earns a Supply APY.\n\nOn Jupiter Lend, SOL is one of those assets.",
+     "thread": "2107803124207399388",
+     "article": null,
+     "likes": 5,
+     "reposts": 0
+    },
+    {
+     "id": "2107803124207399388",
+     "url": "https://x.com/jupiter_earn/status/2107803124207399388",
+     "created_at": "2026-10-07T12:00:00.000Z",
+     "text": "You're bullish on SOL, but need liquidity for your next move.\n\nHere's how to borrow against it without needing to sell 🧵 https://t.co/2Rh5esNWfc",
+     "thread": null,
+     "article": null,
+     "likes": 95,
+     "reposts": 8
+    },
+    {
+     "id": "2107652075278778548",
+     "url": "https://x.com/jupiter_earn/status/2107652075278778548",
+     "created_at": "2026-10-07T01:59:47.000Z",
+     "text": "One of the biggest mindset unlocks in DeFi:\n\nIt’s not trading OR earning.\n\nIt’s trading AND earning.",
+     "thread": null,
+     "article": null,
+     "likes": 24,
+     "reposts": 5
+    },
+    {
+     "id": "2107492534859768014",
+     "url": "https://x.com/jupiter_earn/status/2107492534859768014",
+     "created_at": "2026-10-06T15:25:50.000Z",
+     "text": "Borrow against your SOL here 👇\nhttps://t.co/cz94vlRJv0",
+     "thread": "2107492532594819492",
+     "article": null,
+     "likes": 2,
+     "reposts": 0
+    },
+    {
+     "id": "2107492532594819492",
+     "url": "https://x.com/jupiter_earn/status/2107492532594819492",
+     "created_at": "2026-10-06T15:25:49.000Z",
+     "text": "https://t.co/rgOopGRmAV https://t.co/agLb2S6SJA",
+     "thread": null,
+     "article": null,
+     "likes": 29,
+     "reposts": 1
+    },
+    {
+     "id": "2107440749751218248",
+     "url": "https://x.com/jupiter_earn/status/2107440749751218248",
+     "created_at": "2026-10-06T12:00:03.000Z",
+     "text": "Borrow against your SOL here 👇\nhttps://t.co/cz94vlRJv0",
+     "thread": "2107440749474402444",
+     "article": null,
+     "likes": 2,
+     "reposts": 0
+    },
+    {
+     "id": "2107440749474402444",
+     "url": "https://x.com/jupiter_earn/status/2107440749474402444",
+     "created_at": "2026-10-06T12:00:03.000Z",
+     "text": "NEVER SELL YOUR SOL!\n\nBorrow against it 😎 https://t.co/Z5ffplyf8K",
+     "thread": null,
+     "article": null,
+     "likes": 111,
+     "reposts": 10
+    },
+    {
+     "id": "2107185954217992294",
+     "url": "https://x.com/jupiter_earn/status/2107185954217992294",
+     "created_at": "2026-10-05T19:07:35.000Z",
+     "text": "For the first time in its history:\n\nJupiter Lend crossed $2.5 Billion in Total Market Size.\n\nDeFi on Solana is exploding\n\nAnd on Jupiter, we're making earning onchain as simple as we made trading. https://t.co/39VdTqZ8Of",
+     "thread": null,
+     "article": null,
+     "likes": 188,
+     "reposts": 21
+    },
+    {
+     "id": "2107108550296166469",
+     "url": "https://x.com/jupiter_earn/status/2107108550296166469",
+     "created_at": "2026-10-05T14:00:01.000Z",
+     "text": "You’re holding SOL anyway. Make the wait count. https://t.co/46onGgAG1T",
+     "thread": "2107108547859300606",
+     "article": null,
+     "likes": 3,
+     "reposts": 0
+    },
+    {
+     "id": "2107108549927055716",
+     "url": "https://x.com/jupiter_earn/status/2107108549927055716",
+     "created_at": "2026-10-05T14:00:01.000Z",
+     "text": "Make the swap right here 👇\nhttps://t.co/Gr7Rt4tIca",
+     "thread": "2107108547859300606",
+     "article": null,
+     "likes": 1,
+     "reposts": 0
+    },
+    {
+     "id": "2107108549411131460",
+     "url": "https://x.com/jupiter_earn/status/2107108549411131460",
+     "created_at": "2026-10-05T14:00:01.000Z",
+     "text": "To start earning up to 5.7% APY, you can swap to JupSOL on Jupiter.\n\nOnce it's in your wallet, rewards accumulate automatically, with nothing to claim on your end.\n\nAll it takes is a few seconds 👇\nhttps://t.co/0OuNYCYkpl",
+     "thread": "2107108547859300606",
+     "article": null,
+     "likes": 4,
+     "reposts": 0
+    },
+    {
+     "id": "2107108548639424970",
+     "url": "https://x.com/jupiter_earn/status/2107108548639424970",
+     "created_at": "2026-10-05T14:00:00.000Z",
+     "text": "When you swap to JupSOL instead, your SOL grows over time.\n\nIt represents SOL staked with Jupiter’s validator, which helps secure the Solana network, and earns from 3 sources of yield:\n\nStaking rewards, MEV tips, and priority fees paid by users to help their transactions get processed faster.\n\nThose rewards flow back to the pool, so each JupSOL represents more SOL over time.",
+     "thread": "2107108547859300606",
+     "article": null,
+     "likes": 5,
+     "reposts": 0
+    },
+    {
+     "id": "2107108547859300606",
+     "url": "https://x.com/jupiter_earn/status/2107108547859300606",
+     "created_at": "2026-10-05T14:00:00.000Z",
+     "text": "You’re leaving easy money on the table by holding SOL 🧵 https://t.co/rf8sj89mHU",
+     "thread": null,
+     "article": null,
+     "likes": 25,
+     "reposts": 1
+    },
+    {
+     "id": "2106989132274950532",
+     "url": "https://x.com/jupiter_earn/status/2106989132274950532",
+     "created_at": "2026-10-05T06:05:29.000Z",
+     "text": "You also can be the Cooler Daniel! https://t.co/BB3CwSqpbL https://t.co/q94D63dSfB",
+     "thread": null,
+     "article": null,
+     "likes": 37,
+     "reposts": 7
+    },
+    {
+     "id": "2106173416269287825",
+     "url": "https://x.com/jupiter_earn/status/2106173416269287825",
+     "created_at": "2026-10-03T00:04:07.000Z",
+     "text": "https://t.co/b2OTzV6qo7",
+     "thread": null,
+     "article": {
+      "title": "Every way to earn on your SOL",
+      "preview": "Holding SOL?\n\nWhether you're building a long term position, or you're waiting for your next trade, Jupiter gives you 8 different ways to earn on it:\n\n1. Lending (~4% APY)\nSupply SOL into an Earn Vault",
+      "text": "Holding SOL?\n\nWhether you're building a long term position, or you're waiting for your next trade, Jupiter gives you 8 different ways to earn on it:\n\n1. Lending (~4% APY)\nSupply SOL into an Earn Vault on Jupiter Lend to earn interest from borrowers.\n\nIn return, you'll receive jlWSOL, a receipt token that grows in value over time without the need to claim any rewards.\n \n2. Native Staking (~4.8% APY)\nDelegate SOL to Jupiter's Validator to start earning staking rewards, while you help secure the network.\n\nNote: Natively staking/unstaking takes up to 2 days. If you want to start earning immediately, look into JupSOL.\n \n\n3. Swap into JupSOL (~5.6% APY)\nJupSOL is staked SOL that stays liquid, so you can use it in DeFi.\n\nThe underlying staked SOL earns a combination of staking rewards, MEV & priority fees that gives it a higher yield than native staking.\n\nOver time, your JupSOL balance stays the same, while its redemption rate continues to grow.\n\nThen, when you want to make your next trade, simply swap out.\n \n\n4. Earning while you borrow\nBorrowing against SOL on Jupiter Lend doesn't mean it has to stop earning.\n\nWhen you supply JupSOL or SOL as collateral, it continues to earn staking rewards or a Supply APY, respectively.\n\nIn addition, Jupiter's Native Staked Vaults unlock a new capability: You can supply natively staked SOL from 5 different validators (Jupiter, Helius, Nansen, Dawn, & p2p) without needing to unstake your position.\n\nThen you can put your borrowed funds to work, keeping in mind that loans accrue interest, and debt can carry with it a liquidation risk.\n \n5. Multiply your yield with looping\nOn Jupiter Lend, Multiply lets you borrow against  your JupSOL and buy more, potentially increasing its yield.\n\nA JupSOL/SOL loop works like this:\n1. Supply JupSOL as collateral\n2. Borrow SOL against it\n3. Swap the borrowed SOL into more JupSOL\n4. Redeposit JupSOL\n\nSteps 2-4 repeat in loops until your target leverage is reached, and this looping happens atomically in a single transaction.\n\nWhen Multiplying, keep tabs on the respective supply and borrow APYs in addition to your position health.\n \n\n6. Earn trading fees via Smart Vaults\nSmart Collateral allows a paired position to serve as liquidity inside of Jupiter Lend AMM, adding swap-fee revenue to any supply APY.\n\nWith the SOL-JitoSOL smart Vault, you can simply supply SOL and the vault will autocompose the pair for you. \n\nThen you can borrow against your position and use those funds however you'd like in DeFi.\n\nBut do be mindful of the net Supply and Borrow APYs.\n \n\n7. Using Jupiter Offerbook\nJupiter Offerbook provides fixed-rate, fixed-term USDC loans against collateral like SOL.\n\nA lender funds the offer, and you can use the borrowed USDC elsewhere. But you should note: This isn't a yield product for SOL. Rather its a way to obtain liquidity which you can use in DeFi.\n\nAdditionally, Offerbook provides a leverage long option where you deposit USDC and pick an asset like SOL to amplify your exposure to its price.\n\nAlthough this also isn't technically 'earning on your SOL', it allows you to earn on SOL's price appreciation.\n \n8. Mint or swap to JLP (Currently ~10% APY)\nJLP provides liquidity to Jupiter Perps. In return, 75% of fees generated flow back into the pool, while part of the pool's SOL is natively staked for additional yield.\nHowever, JLP gives you partial SOL exposure through a basket of assets, rather than exposure to SOL alone.\nYield accrues automatically by holding JLP, with nothing to stake or claim.\n \nIf you’re going to hold anyway, you might as well earn\n\nLending earns borrower interest, staking earns network rewards, and looping has the potential to earn amplified yield.\n\nYou have plenty of options, but if you decide to just hold your SOL, make sure the choice is intentional.\n\nOtherwise, you're leaving easy gains on the table.",
+      "links": [
+       "https://offerbook.jup.ag/borrow",
+       "https://jup.ag/lend/borrow/multiply",
+       "https://jup.ag/stake?tab=Liquid",
+       "https://jup.ag/lend/borrow/smart",
+       "https://jup.ag/lend/borrow",
+       "https://jup.ag/lend/earn",
+       "https://jup.ag/stake"
+      ]
+     },
+     "likes": 90,
+     "reposts": 13
+    },
+    {
+     "id": "2106005333437239571",
+     "url": "https://x.com/jupiter_earn/status/2106005333437239571",
+     "created_at": "2026-10-02T12:56:13.000Z",
+     "text": "Your SOL can earn 5.7% APY while you wait for your next trade.\n\nAll it takes is one swap 👇 https://t.co/2HYxdxtZez",
+     "thread": null,
+     "article": null,
+     "likes": 81,
+     "reposts": 11
+    },
+    {
+     "id": "2105983893807735141",
+     "url": "https://x.com/jupiter_earn/status/2105983893807735141",
+     "created_at": "2026-10-02T11:31:02.000Z",
+     "text": "I love projecting my growth like this.\n\nNo 5am routine.\n\nJust my $SOL quietly becoming more $SOL.\n\nIf I’m going to be unproductive, at least one of us is compounding.\n\nhttps://t.co/l0zFaoWqsd https://t.co/oIkSbpk9NF",
+     "thread": null,
+     "article": null,
+     "likes": 80,
+     "reposts": 7
+    },
+    {
+     "id": "2105659250294890566",
+     "url": "https://x.com/jupiter_earn/status/2105659250294890566",
+     "created_at": "2026-10-01T14:01:01.000Z",
+     "text": "You hodl anyway, Earn while your wait https://t.co/84AU59gLCv",
+     "thread": "2105659247862092234",
+     "article": null,
+     "likes": 1,
+     "reposts": 0
+    },
+    {
+     "id": "2105659249967731196",
+     "url": "https://x.com/jupiter_earn/status/2105659249967731196",
+     "created_at": "2026-10-01T14:01:01.000Z",
+     "text": "Lend your Solana here 👇\nhttps://t.co/l0zFaoVSCF",
+     "thread": "2105659247862092234",
+     "article": null,
+     "likes": 1,
+     "reposts": 0
+    },
+    {
+     "id": "2105659249401401471",
+     "url": "https://x.com/jupiter_earn/status/2105659249401401471",
+     "created_at": "2026-10-01T14:01:00.000Z",
+     "text": "Step by Step on how to Lend your Solana 👇\nhttps://t.co/B5mnmIqrTY",
+     "thread": "2105659247862092234",
+     "article": null,
+     "likes": 2,
+     "reposts": 0
+    },
+    {
+     "id": "2105659248629698900",
+     "url": "https://x.com/jupiter_earn/status/2105659248629698900",
+     "created_at": "2026-10-01T14:01:00.000Z",
+     "text": "On Jupiter Lend, it's simple:\n\nLenders supply liquidity.\nBorrowers pay interest to use it.\n\nThat interest becomes your yield.\nWhen more of the pool gets borrowed, rates rise, and lenders earn more.\n\nWhen less is borrowed, rates fall, and cheaper loans can increase demand.\n\nThe market ends up finding its own balance.",
+     "thread": "2105659247862092234",
+     "article": null,
+     "likes": 2,
+     "reposts": 0
+    },
+    {
+     "id": "2105659247862092234",
+     "url": "https://x.com/jupiter_earn/status/2105659247862092234",
+     "created_at": "2026-10-01T14:01:00.000Z",
+     "text": "YOU ARE LEAVING MONEY ON THE TABLE 🧵 https://t.co/BdohCkVFlY",
+     "thread": null,
+     "article": null,
+     "likes": 14,
+     "reposts": 0
+    },
+    {
+     "id": "2105610055324418359",
+     "url": "https://x.com/jupiter_earn/status/2105610055324418359",
+     "created_at": "2026-10-01T10:45:32.000Z",
+     "text": "LEND YOUR SOL https://t.co/u4mNXDsXvM",
+     "thread": null,
+     "article": null,
+     "likes": 15,
+     "reposts": 1
+    },
+    {
+     "id": "2105570531756114205",
+     "url": "https://x.com/jupiter_earn/status/2105570531756114205",
+     "created_at": "2026-10-01T08:08:29.000Z",
+     "text": "The Actual Shift.\n\nIt's not \"my cards are worth more now so I should cash out.\" it's \"I need liquidity, and selling isn't the only way to get it anymore.\"\n\nthat's the real story of collectible season, not a market move, a mindset one.\n\nSo, borrow against anything on https://t.co/BjXEEzo1E2",
+     "thread": "2105570525397627003",
+     "article": null,
+     "likes": 2,
+     "reposts": 0
+    },
+    {
+     "id": "2105570528706871732",
+     "url": "https://x.com/jupiter_earn/status/2105570528706871732",
+     "created_at": "2026-10-01T08:08:28.000Z",
+     "text": "Why This Works.\n\nThe loan is time-based, not price-based. \n\nThe card's FMV moving up or down during the term doesn't trigger anything, only the due date matters\nrepay by maturity, the card comes back.\n\nMiss it, the lender keeps the card, same downside as any secured loan, just no surprise liquidations mid-term.",
+     "thread": "2105570525397627003",
+     "article": null,
+     "likes": 7,
+     "reposts": 0
+    },
+    {
+     "id": "2105570525397627003",
+     "url": "https://x.com/jupiter_earn/status/2105570525397627003",
+     "created_at": "2026-10-01T08:08:27.000Z",
+     "text": "\" Everyone's talking about collectible szn and nobody's talking about the other way to cash out \"\n\nTCG and sports cards used to have one exit: \nSell > List it > Wait for a buyer and hope the market's in the mood that week.\n\nNow on Jupiter Offerbook there's another option and more collectors are quietly choosing it.\n\nThe problem with selling, once a card's gone, it's gone. \n\nThe PSA 10, the autograph, the one pulled from a pack 5 years ago sold means sold. no getting it back, no \"I'll rebuy it later\" (the market rarely lets you).\n\nFor a lot of collectors, that's the actual cost of needing cash. not the dollar amount. the card itself.\n\nWhat's happening instead;\n\non Offerbook, collectors are vaulting cards with partners like @Collector_Crypt, @phygitals, and @beezie, then borrowing USDC against them instead of selling.\n\nA real example: a 2004 #002 Charizard PSA 10 (Japanese Promo) is sitting as active collateral right now with 4,882 USDC borrowed, 30-day term, card locked until repayment.",
+     "thread": null,
+     "article": null,
+     "likes": 29,
+     "reposts": 2
+    },
+    {
+     "id": "2105541098118729893",
+     "url": "https://x.com/jupiter_earn/status/2105541098118729893",
+     "created_at": "2026-10-01T06:11:31.000Z",
+     "text": "Lend your Solana here 👇\nhttps://t.co/l0zFaoWqsd",
+     "thread": "2105541095673483657",
+     "article": null,
+     "likes": 1,
+     "reposts": 0
+    },
+    {
+     "id": "2105541095673483657",
+     "url": "https://x.com/jupiter_earn/status/2105541095673483657",
+     "created_at": "2026-10-01T06:11:30.000Z",
+     "text": "Make your SOLs work for you 😏 https://t.co/Alzhmcrt7H https://t.co/lvvP8H4kgA",
+     "thread": null,
+     "article": null,
+     "likes": 22,
+     "reposts": 1
+    },
+    {
+     "id": "2105297058907513246",
+     "url": "https://x.com/jupiter_earn/status/2105297058907513246",
+     "created_at": "2026-09-30T14:01:48.000Z",
+     "text": "Lend your SOL here 👇 \nhttps://t.co/l0zFaoWqsd",
+     "thread": "2105297056713859583",
+     "article": null,
+     "likes": 3,
+     "reposts": 0
+    },
+    {
+     "id": "2105297056713859583",
+     "url": "https://x.com/jupiter_earn/status/2105297056713859583",
+     "created_at": "2026-09-30T14:01:47.000Z",
+     "text": "We are all waiting for the inevitable\n\nEARN WHILE YOU WAIT! https://t.co/3VALj2vHFq",
+     "thread": null,
+     "article": null,
+     "likes": 47,
+     "reposts": 11
+    },
+    {
+     "id": "2105245507237073118",
+     "url": "https://x.com/jupiter_earn/status/2105245507237073118",
+     "created_at": "2026-09-30T10:36:57.000Z",
+     "text": "Lend into everything.\n\nhttps://t.co/UafOYPfV9a",
+     "thread": "2105244515279962159",
+     "article": null,
+     "likes": 1,
+     "reposts": 0
+    },
+    {
+     "id": "2105245363506688434",
+     "url": "https://x.com/jupiter_earn/status/2105245363506688434",
+     "created_at": "2026-09-30T10:36:22.000Z",
+     "text": "Lend into everything\n\nhttps://t.co/UafOYPfV9a",
+     "thread": "2105244515279962159",
+     "article": null,
+     "likes": 0,
+     "reposts": 0
+    },
+    {
+     "id": "2105244515279962159",
+     "url": "https://x.com/jupiter_earn/status/2105244515279962159",
+     "created_at": "2026-09-30T10:33:00.000Z",
+     "text": "Everyone’s saying the market is starting to look clearer.\n\nMaybe the bull is back. Maybe it’s warming up.\n\nBut you don’t have to just sit there waiting for your bags to move.\n\nIf you’re diamond hand on solana:JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN, you can borrow USDC against it on Offerbook and look for more opportunities without selling.\n\nAnd if your stables are sitting idle, they could be lending into positions like this:\n• 40% APY\n• 7 days\n• 7.45 USDC interest\n\nMarket gets exciting, your assets should too.\n\nFind more yield opportunities on Jupiter Earn.",
+     "thread": null,
+     "article": null,
+     "likes": 45,
+     "reposts": 3
+    },
+    {
+     "id": "2105100364441862282",
+     "url": "https://x.com/jupiter_earn/status/2105100364441862282",
+     "created_at": "2026-09-30T01:00:12.000Z",
+     "text": "You can start lending on Jupiter Lend: https://t.co/HCC2nMetda\n\nOr stake your SOL on our staking page: https://t.co/gChj1yhLX2",
+     "thread": "2105097158706024524",
+     "article": null,
+     "likes": 1,
+     "reposts": 1
+    },
+    {
+     "id": "2105097158706024524",
+     "url": "https://x.com/jupiter_earn/status/2105097158706024524",
+     "created_at": "2026-09-30T00:47:28.000Z",
+     "text": "You can start earning immediately on 2 assets that everyone owns:\n\n1. Lend your stables for up to 6% APY on Jupiter Lend.\n\nYou can even swap directly into a yield-bearing position by buying jlTokens such as jlUSDC.\n\n2. Stake your SOL with Jupiter’s validator or swap into JupSOL for up to 5.5% APY.\n\nWhether you choose liquid or native staking, you can borrow against your position while it continues earning.\n\nEarn on more of your capital in one place, when you Just Use Jupiter.",
+     "thread": null,
+     "article": null,
+     "likes": 36,
+     "reposts": 7
+    },
+    {
+     "id": "2104547308461584537",
+     "url": "https://x.com/jupiter_earn/status/2104547308461584537",
+     "created_at": "2026-09-28T12:22:33.000Z",
+     "text": "Borrow USDC at a fixed rate without liquidations here\n\nhttps://t.co/0pCSKctJbY",
+     "thread": "2104547004399706152",
+     "article": null,
+     "likes": 1,
+     "reposts": 0
+    },
+    {
+     "id": "2104547004399706152",
+     "url": "https://x.com/jupiter_earn/status/2104547004399706152",
+     "created_at": "2026-09-28T12:21:21.000Z",
+     "text": "Your bags are finally moving, but selling still feels illegal.\n\nThis week $USELESS, $ANSEM, $BONK, solana:JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN and $GP holders used Offerbook to access USDC without letting go of their tokens.\n\nKeep the upside, borrow against anything. https://t.co/3rD6Vkunsn",
+     "thread": null,
+     "article": null,
+     "likes": 14,
+     "reposts": 0
+    },
+    {
+     "id": "2104503884593197236",
+     "url": "https://x.com/jupiter_earn/status/2104503884593197236",
+     "created_at": "2026-09-28T09:30:00.000Z",
+     "text": "Run the numbers again, i need to feel something. https://t.co/J0JkiLKZ2H",
+     "thread": null,
+     "article": null,
+     "likes": 17,
+     "reposts": 0
+    },
+    {
+     "id": "2104482218748092504",
+     "url": "https://x.com/jupiter_earn/status/2104482218748092504",
+     "created_at": "2026-09-28T08:03:54.000Z",
+     "text": "BIG WEEK ahead for Jupiter Lenders. https://t.co/nerdkfun96",
+     "thread": null,
+     "article": null,
+     "likes": 57,
+     "reposts": 6
+    },
+    {
+     "id": "2104467966209523962",
+     "url": "https://x.com/jupiter_earn/status/2104467966209523962",
+     "created_at": "2026-09-28T07:07:16.000Z",
+     "text": "Interested in looping your sUSDai?\n\nCheck out the vault here:\n\nhttps://t.co/Mxvy7eSAqx",
+     "thread": "2104467964213002731",
+     "article": null,
+     "likes": 4,
+     "reposts": 0
+    },
+    {
+     "id": "2104467964213002731",
+     "url": "https://x.com/jupiter_earn/status/2104467964213002731",
+     "created_at": "2026-09-28T07:07:16.000Z",
+     "text": "In just 3 days, the sUSDai loop crossed over $15M in total supply.\n\nLoopers are currently earning more than 20% APY on their positions. https://t.co/QOVZtSUdZo",
+     "thread": null,
+     "article": null,
+     "likes": 48,
+     "reposts": 7
+    },
+    {
+     "id": "2104105247220400421",
+     "url": "https://x.com/jupiter_earn/status/2104105247220400421",
+     "created_at": "2026-09-27T07:05:57.000Z",
+     "text": "Lend your JupUSD here 👇\nhttps://t.co/hKbRFyDbR4",
+     "thread": "2104105244707975570",
+     "article": null,
+     "likes": 5,
+     "reposts": 0
+    },
+    {
+     "id": "2104105244707975570",
+     "url": "https://x.com/jupiter_earn/status/2104105244707975570",
+     "created_at": "2026-09-27T07:05:57.000Z",
+     "text": "Lending solana:JuprjznTrTSp2UFa3ZBUFgwdAmtZCq4MQCwysN55USD APY goes brrr https://t.co/BZn082R1z1",
+     "thread": null,
+     "article": null,
+     "likes": 42,
+     "reposts": 5
+    }
+   ]
+  },
+  {
+   "handle": "kamino",
+   "name": "Kamino",
+   "why": "flagged",
+   "id": "1549038204178911233",
+   "username": "kamino",
+   "truncated": false,
+   "repliesDropped": 0,
+   "posts": [
+    {
+     "id": "2108632350754033940",
+     "url": "https://x.com/kamino/status/2108632350754033940",
+     "created_at": "2026-10-09T18:55:03.000Z",
+     "text": "For more information:\nhttps://t.co/FlwCQ8hLeK",
+     "thread": "2108618328713380280",
+     "article": null,
+     "likes": 10,
+     "reposts": 0
+    },
+    {
+     "id": "2108632041399206334",
+     "url": "https://x.com/kamino/status/2108632041399206334",
+     "created_at": "2026-10-09T18:53:49.000Z",
+     "text": "Access the vault here:\nhttps://t.co/NCpaUX6fw8",
+     "thread": "2108618328713380280",
+     "article": null,
+     "likes": 13,
+     "reposts": 0
+    },
+    {
+     "id": "2108618328713380280",
+     "url": "https://x.com/kamino/status/2108618328713380280",
+     "created_at": "2026-10-09T17:59:20.000Z",
+     "text": "Kamino Institutional Commodity Yield brings the global commodity trade finance market onchain, connecting capital on Solana to short-term commodity financing\n\nHere’s how the vault works and how it has averaged 7.6% APY over the past two months ↓ https://t.co/0KcKzMgLnL",
+     "thread": null,
+     "article": null,
+     "likes": 202,
+     "reposts": 27
+    },
+    {
+     "id": "2108596336870240370",
+     "url": "https://x.com/kamino/status/2108596336870240370",
+     "created_at": "2026-10-09T16:31:57.000Z",
+     "text": "xStocks Vaults, powered by Kamino, are now available in @KrakenWalletHQ. \n\nUsers can earn yield on SPYx, QQQx, and NVDAx while maintaining their underlying stock exposure through Kamino credit markets on Solana. https://t.co/6Ua4luktnZ",
+     "thread": null,
+     "article": null,
+     "likes": 103,
+     "reposts": 8
+    },
+    {
+     "id": "2108305686992224706",
+     "url": "https://x.com/kamino/status/2108305686992224706",
+     "created_at": "2026-10-08T21:17:00.000Z",
+     "text": "Holders can borrow USDC against apyUSD without redeeming their position or waiting through the underlying ~20-day redemption cooldown.\n\nThrough one-click Multiply, users can amplify their exposure to apyUSD yield, currently offering up to 38.48% Max APY at 3.3x leverage, subject to borrowing costs and liquidation risk.\n\nCurated by @Hyperithm, the Apyx Market expands access to preferred equity-backed yield and onchain liquidity on Solana.\n\nAccess the market here:\nhttps://t.co/oyhKezbcok",
+     "thread": "2108305660991734016",
+     "article": null,
+     "likes": 1,
+     "reposts": 0
+    },
+    {
+     "id": "2108305674631516162",
+     "url": "https://x.com/kamino/status/2108305674631516162",
+     "created_at": "2026-10-08T21:16:57.000Z",
+     "text": "apyUSD is a yield-bearing token from @apyx_fi, providing onchain exposure to preferred equity issued by publicly traded Digital Asset Treasury companies.\n\nCurrently, Apyx's underlying reserves consist of Strategy's STRC preferred stock and cash. STRC pays monthly dividends, which Apyx collects, converts into apxUSD, and distributes to the apyUSD vault over time.\n\nAs this income accrues, the value of apyUSD increases relative to apxUSD, allowing holders to earn yield without receiving separate distributions. This allows holders to earn yield from traditional capital markets directly onchain, with apyUSD currently offering a 13.7% base APY.\n\nLearn more:\nhttps://t.co/lVgk6Z1doD",
+     "thread": "2108305660991734016",
+     "article": null,
+     "likes": 5,
+     "reposts": 0
+    },
+    {
+     "id": "2108305660991734016",
+     "url": "https://x.com/kamino/status/2108305660991734016",
+     "created_at": "2026-10-08T21:16:54.000Z",
+     "text": "The Apyx Market brings preferred equity-backed yield to Solana, with apyUSD currently offering 13.7% base APY from Strategy's STRC dividends.\n\nUsers can borrow USDC against apyUSD or amplify their yield exposure through one-click Multiply on Kamino.\n\nHere's how it works ↓ https://t.co/yjmRNZ0sPM",
+     "thread": null,
+     "article": null,
+     "likes": 65,
+     "reposts": 6
+    },
+    {
+     "id": "2108230297686872487",
+     "url": "https://x.com/kamino/status/2108230297686872487",
+     "created_at": "2026-10-08T16:17:26.000Z",
+     "text": "Learn more about the PAXG Market here:\n\nhttps://t.co/lRsE3W35Kc",
+     "thread": "2108229424378437642",
+     "article": null,
+     "likes": 1,
+     "reposts": 0
+    },
+    {
+     "id": "2108229424378437642",
+     "url": "https://x.com/kamino/status/2108229424378437642",
+     "created_at": "2026-10-08T16:13:58.000Z",
+     "text": "New incentives are live in the PAXG Market.\n\n$100,000 in USDG borrow rewards will be distributed over the next 3 months, in collaboration with @SteakhouseFi and @global_dollar.\n\nBorrow USDG against PAXG to earn boosted rewards and access gold-backed credit on Kamino. https://t.co/qnlM8feWps",
+     "thread": null,
+     "article": null,
+     "likes": 67,
+     "reposts": 6
+    },
+    {
+     "id": "2107578622693331145",
+     "url": "https://x.com/kamino/status/2107578622693331145",
+     "created_at": "2026-10-06T21:07:55.000Z",
+     "text": "The AUTO Market has crossed $100M in total market size on Kamino.\n\nAUTO brings near-prime U.S. auto credit onchain, backed by consumer auto loans originated by Agora Data, structured through Figure Forge, and minted by @HastraFi.\n\nFixed Rate Multiply has been a key driver of AUTO Market growth, pairing consumer credit with a defined cost of capital.",
+     "thread": null,
+     "article": null,
+     "likes": 64,
+     "reposts": 4
+    },
+    {
+     "id": "2107498426116325380",
+     "url": "https://x.com/kamino/status/2107498426116325380",
+     "created_at": "2026-10-06T15:49:14.000Z",
+     "text": "Access the Multiply vault here:\nhttps://t.co/AcGXVlrjwp",
+     "thread": "2107498401248186493",
+     "article": null,
+     "likes": 6,
+     "reposts": 0
+    },
+    {
+     "id": "2107498414179221675",
+     "url": "https://x.com/kamino/status/2107498414179221675",
+     "created_at": "2026-10-06T15:49:12.000Z",
+     "text": "Issued by @apyx_fi, apyUSD is Apyx’s yield-bearing dollar, representing locked apxUSD and earning yield from the dividend-paying preferred equity backing the protocol.\n\nThe reserve is primarily composed of preferred equity from publicly traded Digital Asset Treasury companies, including Strategy’s STRC, with monthly attestations from a PCAOB-registered audit firm.\n\napyUSD redemptions take roughly 20 days. On Kamino, holders can access immediate USDC liquidity against apyUSD while continuing to earn its underlying yield.",
+     "thread": "2107498401248186493",
+     "article": null,
+     "likes": 7,
+     "reposts": 0
+    },
+    {
+     "id": "2107498401248186493",
+     "url": "https://x.com/kamino/status/2107498401248186493",
+     "created_at": "2026-10-06T15:49:08.000Z",
+     "text": "The Apyx Market is now live on Kamino.\n\nCurated by @Hyperithm, apyUSD can now be used as collateral to access USDC liquidity through Kamino’s isolated credit market. https://t.co/XS72XOvsOQ",
+     "thread": null,
+     "article": null,
+     "likes": 57,
+     "reposts": 5
+    },
+    {
+     "id": "2107323687666147662",
+     "url": "https://x.com/kamino/status/2107323687666147662",
+     "created_at": "2026-10-06T04:14:53.000Z",
+     "text": "Our Head of Strategy @cheryldchan will be at @token2049 Singapore to discuss what it takes to move global finance onchain and the infrastructure institutions will build on.\n\nOctober 7, 2:00–2:30 PM SGT on the MEXC Stage. https://t.co/mpkY7BZGXA",
+     "thread": null,
+     "article": null,
+     "likes": 53,
+     "reposts": 6
+    },
+    {
+     "id": "2107189413914517725",
+     "url": "https://x.com/kamino/status/2107189413914517725",
+     "created_at": "2026-10-05T19:21:20.000Z",
+     "text": "Access the vault here: \nhttps://t.co/NCpaUX5HGA",
+     "thread": "2107188405813604809",
+     "article": null,
+     "likes": 3,
+     "reposts": 0
+    },
+    {
+     "id": "2107189122280391151",
+     "url": "https://x.com/kamino/status/2107189122280391151",
+     "created_at": "2026-10-05T19:20:11.000Z",
+     "text": "The Institutional Commodity Yield Vault has grown from zero to $55M+ in deposits in just two months, showcasing strong demand for access to institutional credit onchain.\n\nLearn more about the vault here:\nhttps://t.co/FlwCQ8hLeK",
+     "thread": "2107188405813604809",
+     "article": null,
+     "likes": 4,
+     "reposts": 1
+    },
+    {
+     "id": "2107188405813604809",
+     "url": "https://x.com/kamino/status/2107188405813604809",
+     "created_at": "2026-10-05T19:17:20.000Z",
+     "text": "$23M in new deposit capacity is available in Kamino’s Institutional Commodity Yield Vault.\n\nInstitutional Commodity Yield brings global commodity trade finance onchain through fully collateralized, short-term loans, averaging 7.6% APY over the past two months from interest paid by institutional borrowers.",
+     "thread": null,
+     "article": null,
+     "likes": 50,
+     "reposts": 7
+    },
+    {
+     "id": "2106784828313993267",
+     "url": "https://x.com/kamino/status/2106784828313993267",
+     "created_at": "2026-10-04T16:33:39.000Z",
+     "text": "https://t.co/6Xm0GfBBjV",
+     "thread": null,
+     "article": {
+      "title": "Fixed Rate Multiply: Leveraged Yield with a Defined Cost of Capital",
+      "preview": "Kamino Fixed Rates bring a defined cost of capital and duration to onchain leverage, where financing has historically been dominated by variable-rate, open-term borrowing. This lets borrowers",
+      "text": "Kamino Fixed Rates bring a defined cost of capital and duration to onchain leverage, where financing has historically been dominated by variable-rate, open-term borrowing. This lets borrowers structure leveraged positions around known funding costs rather than utilization-driven rate changes.\nWith Fixed Rate Multiply, a user selects an asset and target leverage, and Kamino builds the position in one transaction. The debt comes from a fixed-rate reserve, locking the financing cost for the full term, while Auto Rollover can carry the position into another eligible fixed term at expiry without requiring manual refinancing.\nThe first Fixed Rate Multiply vault, AUTO/wYLDS, went live on September 21 with Figure and HastraFi. Since launch, the broader AUTO Market has scaled to $35M in fixed-rate loans, while AUTO supply has grown from $9M to $55M.\nHow Fixed Rate Multiply Works\nFixed Rate Multiply uses Kamino’s existing one-click leverage flow, but the borrow is originated at a fixed rate for a defined term instead of at a variable rate.\nA user selects an asset and target leverage, and Kamino builds the position in a single transaction:\nA flash loan provides the capital needed to reach the target leverage\nThe initial deposit and flash-borrowed funds are converted into the collateral asset\nThe full amount is deposited into Kamino as collateral\nThe debt asset is borrowed from a fixed-rate reserve and used to repay the flash loan\nThe result is a leveraged position with a financing cost that is fixed for the full term.\nIf any step fails, the transaction reverts and no position is created. Closing runs the same flow in reverse. The flash loan fee is 0.001% per transaction.\n \nWhat Does a Fixed Rate Change?\nFixed Rate Multiply gives leveraged strategies a defined cost of capital over a defined period.\nInstead of borrowing from a variable-rate reserve, the position borrows from a reserve configured for a specific asset, rate, and term. Once the loan is originated, that rate remains fixed through the end of the term, regardless of changes in utilization elsewhere.\nToday, AUTO/wYLDS uses three 30-day wYLDS reserves at 5.30%, 5.75%, and 6%. Each reserve has its own available liquidity, and borrowers access that liquidity directly when opening a Fixed Rate position.\nAs Kamino expands Fixed Rates across additional terms and markets, these reserves can form the basis of a broader onchain yield curve.\nFixed-term borrowing also introduces different tradeoffs from open-term variable credit. Fixed rates can price at a premium to the prevailing variable rate, and closing during the initial term may incur an Early Repay Penalty to compensate lenders that committed capital for that duration. After the first rollover, positions can be closed without that additional penalty.\nAUTO/wYLDS\nAUTO is a yield-bearing token, backed by near-prime U.S. auto loans originated by Agora Data, structured through Figure Forge, and minted through HastraFi. The AUTO/wYLDS vault deposits AUTO as collateral, borrows wYLDS at a fixed rate, and loops the borrowed capital back into AUTO, maintaining USD-denominated exposure. Entry and exit route through Figure’s mint and redeem infrastructure rather than relying on secondary-market liquidity.\n \nAuto Rollover: Carrying Positions Across Fixed Terms\nFixed-rate credit becomes significantly more useful onchain when borrowers can manage duration without rebuilding positions at every expiry.\nThree days before the end date, a position enters its rollover window. If eligible fixed-rate liquidity is available, the loan can move into a new term automatically instead of requiring the borrower to close and manually refinance.\nAt expiry, Kamino follows the available path in order:\nRoll into another eligible fixed term: If qualifying fixed-rate liquidity is available, the position continues into a new term.\nMove into the variable-rate reserve where supported: If a fixed-rate rollover is unavailable, the debt can fall back to variable borrowing for the same asset in the same market.\nAuto-repay: If neither path is available, the protocol begins repaying the debt from collateral according to the market’s configured Auto-repay mechanics.\n \nAuto Rollover gives borrowers the defined cost of capital of fixed-term credit without turning every maturity into a manual refinancing event.\nUsers can disable rollover from the position interface, and the position lifecycle shows the active term, rollover window and expected expiry path.\nLiquidations\nA fixed rate removes financing-rate volatility during the active term. It does not remove collateral or liquidation risk.\nAUTO/wYLDS has a maximum LTV of 78% and a liquidation LTV of 80%. A position opened near maximum leverage therefore has less room for relative movement between AUTO and wYLDS before reaching the liquidation threshold.\nAUTO continues to accrue yield while interest accrues on the wYLDS debt. As long as AUTO’s yield remains above the fixed borrow rate and the relative value of the two assets remains stable, LTV should decline over the term. If that spread reverses or AUTO falls relative to wYLDS, LTV can increase.\nFixed Rate Multiply makes the financing cost predictable, but collateral performance, position sizing and liquidation risk still need to be managed throughout the term.\nDefined Cost of Capital with Continuity Across Terms\nFixed Rates introduce a new function to onchain leverage: the ability to finance a position at a known cost for a defined period while maintaining continuity across maturities.\nA borrower can calculate the financing spread at entry, size the position against that cost and hold through the term without the borrow rate repricing with utilization. As the term approaches expiry, Auto Rollover can carry the position into another eligible fixed term rather than forcing the borrower to rebuild it manually.\nFixed Rate Multiply packages that infrastructure into the same one-click experience already used for leveraged strategies across Kamino.\nAUTO/wYLDS is the first Fixed Rate Multiply vault. From here, Kamino is expanding Fixed Rates across new markets and reserves, while adding new functionality around term selection, rollover and fixed-rate liquidity. As that infrastructure develops, a broader range of strategies will be able to access defined financing directly onchain.\nLearn more: kamino.com/docs/products/borrow/fixed-rates\nThis is informational content and does not constitute financial advice, an offer, or a solicitation. Prospective depositors should review the full documentation and loan agreement, conduct their own due diligence, and consult with professional advisors before participating.\nKamino Lend involves risk, including potential loss of capital. Terms, rates, and features are subject to change and are not guaranteed. Subject to Kamino's T&Cs and geo-blocking — unavailable in restricted jurisdictions. Informational only, not investment, legal, or tax advice. Full risk disclosure: https://kamino.com/docs/risk/asset-risk/index",
+      "links": [
+       "kamino.com/docs/products/borrow/fixed-rates",
+       "https://kamino.com/docs/risk/asset-risk/index",
+       "https://kamino.com/docs/risk/asset-risk/index",
+       "http://kamino.com/docs/products/borrow/fixed-rates"
+      ]
+     },
+     "likes": 56,
+     "reposts": 7
+    },
+    {
+     "id": "2106040406483861612",
+     "url": "https://x.com/kamino/status/2106040406483861612",
+     "created_at": "2026-10-02T15:15:35.000Z",
+     "text": "Learn more about how Auto Rollover works on Kamino:\nhttps://t.co/yuRJdcrMm7",
+     "thread": "2106039735638491512",
+     "article": null,
+     "likes": 3,
+     "reposts": 0
+    },
+    {
+     "id": "2106040246722756825",
+     "url": "https://x.com/kamino/status/2106040246722756825",
+     "created_at": "2026-10-02T15:14:57.000Z",
+     "text": "Access the AUTO/wYLDS Fixed Rate Multiply Vault:\n\nhttps://t.co/ZHMYPqbq5E",
+     "thread": "2106039735638491512",
+     "article": null,
+     "likes": 5,
+     "reposts": 0
+    },
+    {
+     "id": "2106039735638491512",
+     "url": "https://x.com/kamino/status/2106039735638491512",
+     "created_at": "2026-10-02T15:12:55.000Z",
+     "text": "$20M in additional wYLDS liquidity is now available for the AUTO/wYLDS Fixed Rate Multiply Vault.\n\nAccess up to 33% Max APY with a 6% fixed borrow rate for 30 days. \n\nAuto Rollover is enabled by default, allowing eligible positions to roll into a new fixed-rate term at expiry without manual refinancing.",
+     "thread": null,
+     "article": null,
+     "likes": 48,
+     "reposts": 5
+    },
+    {
+     "id": "2105748548763386179",
+     "url": "https://x.com/kamino/status/2105748548763386179",
+     "created_at": "2026-10-01T19:55:51.000Z",
+     "text": "The AUTO Market has crossed $20M in fixed-rate loans on Kamino.\n\nFixed Rate Multiply has driven most of that growth, giving borrowers one-click leverage with a defined cost of capital. \n\nThe future of onchain credit is fixed. https://t.co/FKJT4yT2Yf",
+     "thread": null,
+     "article": null,
+     "likes": 71,
+     "reposts": 4
+    },
+    {
+     "id": "2105396377169850527",
+     "url": "https://x.com/kamino/status/2105396377169850527",
+     "created_at": "2026-09-30T20:36:27.000Z",
+     "text": "Kamino Fixed Rates bring predictable borrowing costs to onchain credit, enabling a broader set of borrowers and strategies.\n\nInstitutions can borrow at a known cost, while Multiply users can lock in financing for the term instead of taking variable-rate risk.\n\nA new standard for fixed-rate credit on Kamino.",
+     "thread": null,
+     "article": null,
+     "likes": 77,
+     "reposts": 8
+    },
+    {
+     "id": "2105032106376143032",
+     "url": "https://x.com/kamino/status/2105032106376143032",
+     "created_at": "2026-09-29T20:28:58.000Z",
+     "text": "Access the Vault here:\nhttps://t.co/PqEEZipc83\n\nDisclaimer: Targeted yield is not guaranteed and depends on loan performance; deposited capital may be partially or fully lost. Not a bank deposit, not insured. Subject to Kamino's T&Cs and geo-blocking — not available in restricted jurisdictions. Informational only, not investment/legal/tax advice.",
+     "thread": "2105031359559283015",
+     "article": null,
+     "likes": 5,
+     "reposts": 0
+    },
+    {
+     "id": "2105031712774176920",
+     "url": "https://x.com/kamino/status/2105031712774176920",
+     "created_at": "2026-09-29T20:27:24.000Z",
+     "text": "Learn more about how Institutional Commodity Yield works:\n\nhttps://t.co/HEocavMmlX",
+     "thread": "2105031359559283015",
+     "article": null,
+     "likes": 8,
+     "reposts": 0
+    },
+    {
+     "id": "2105031359559283015",
+     "url": "https://x.com/kamino/status/2105031359559283015",
+     "created_at": "2026-09-29T20:26:00.000Z",
+     "text": "Kamino’s Institutional Commodity Yield Vault has surpassed $50M in deposits.\n\nInstitutional Commodity Yield brings one of the world’s largest credit markets onchain through fully collateralized commodity loans, targeting 7%+ yield generated by institutional borrower demand. https://t.co/zATyde3gkP",
+     "thread": null,
+     "article": null,
+     "likes": 89,
+     "reposts": 10
+    },
+    {
+     "id": "2104947099670552772",
+     "url": "https://x.com/kamino/status/2104947099670552772",
+     "created_at": "2026-09-29T14:51:11.000Z",
+     "text": "The USDai Market on Kamino has crossed $10M in total market size.\n\nLeveraged sUSDai positions are currently yielding up to 20% max APY from institutional GPU-backed credit. https://t.co/oKB8BkZj8W https://t.co/Myo2gsC86X",
+     "thread": null,
+     "article": null,
+     "likes": 76,
+     "reposts": 7
+    },
+    {
+     "id": "2104631364830302427",
+     "url": "https://x.com/kamino/status/2104631364830302427",
+     "created_at": "2026-09-28T17:56:34.000Z",
+     "text": "Every Kamino Fixed Rate position gives borrowers a clear view of the full term lifecycle.\n\nTrack the active term, see exactly when the rollover window opens, and know what happens as the position approaches expiry. If eligible fixed-rate liquidity is available, Auto Rollover can move the position into a new term.",
+     "thread": null,
+     "article": null,
+     "likes": 58,
+     "reposts": 6
+    },
+    {
+     "id": "2104307784653447557",
+     "url": "https://x.com/kamino/status/2104307784653447557",
+     "created_at": "2026-09-27T20:30:46.000Z",
+     "text": "Kamino Fixed Rates add fixed-rate, fixed-term borrowing directly into existing Kamino Lend markets.\n\nBuilt directly on Kamino Lend, they use its existing market, collateral, liquidation, and risk infrastructure, with Auto Rollover enabling continuity across fixed terms and Multiply extending that fixed-rate credit into one-click leveraged strategies.\n\nBuilt on battle-tested infrastructure that has operated for years with zero bad debt.",
+     "thread": null,
+     "article": null,
+     "likes": 119,
+     "reposts": 19
+    }
+   ]
+  },
+  {
+   "handle": "humafinance",
+   "name": "Huma",
+   "why": "always read",
+   "id": "1504853869397905408",
+   "username": "humafinance",
+   "truncated": false,
+   "repliesDropped": 0,
+   "posts": [
+    {
+     "id": "2108573908291276927",
+     "url": "https://x.com/humafinance/status/2108573908291276927",
+     "created_at": "2026-10-09T15:02:49.000Z",
+     "text": "PST is one of DeFi’s fastest growing institutional assets, with a market cap exceeding $400M.\n\nWith @Chainlink CCIP Vault Adapters, PST will expand to more chains, scaling deposits and unifying vault liquidity.\n\nLearn more ↓ https://t.co/lbQqqqc9fi",
+     "thread": null,
+     "article": null,
+     "likes": 91,
+     "reposts": 17
+    },
+    {
+     "id": "2108468861582659633",
+     "url": "https://x.com/humafinance/status/2108468861582659633",
+     "created_at": "2026-10-09T08:05:24.000Z",
+     "text": "Yield is just a number. Institutional capital requires more than yield.\n\n@DrPayFi on stage at @Vault__Summit on what makes PST an institutional-grade yield asset with principled risk, verifiable transparency, and deep layered liquidity built in. https://t.co/2kYtZ7n7pn",
+     "thread": null,
+     "article": null,
+     "likes": 46,
+     "reposts": 5
+    },
+    {
+     "id": "2108173528663027824",
+     "url": "https://x.com/humafinance/status/2108173528663027824",
+     "created_at": "2026-10-08T12:31:51.000Z",
+     "text": "Huma 🤝 @Chainlink \n\nPST scaled across Solana, Ethereum &amp; Arc with CCIP and vault partners @RockawayX @Bitwise @SentoraHQ @EmberProtocol @turtledotxyz.\n\nCCIP Vault Adapters will expand PST’s reach across chains and deepen vault liquidity. https://t.co/e8wOqjg5ZJ https://t.co/UPArfeRAHF",
+     "thread": null,
+     "article": null,
+     "likes": 165,
+     "reposts": 18
+    },
+    {
+     "id": "2108120327817691517",
+     "url": "https://x.com/humafinance/status/2108120327817691517",
+     "created_at": "2026-10-08T09:00:27.000Z",
+     "text": "Liquidity is becoming the infrastructure layer of modern payments.\n\nOn day 1 of @token2049, Huma co-hosted The Liquidity Table alongside @Bitwise, @0xfluid, and @EmberProtocol. A one-star Michelin private dinner bringing together institutions, allocators, and operators defining how capital moves onchain.\n\nGrateful to everyone who joined us for the evening.",
+     "thread": null,
+     "article": null,
+     "likes": 60,
+     "reposts": 9
+    },
+    {
+     "id": "2107848985797112223",
+     "url": "https://x.com/humafinance/status/2107848985797112223",
+     "created_at": "2026-10-07T15:02:14.000Z",
+     "text": "20/20 Vision: @Solana x Huma Happy Hour\n\n📅  20 October 2026\n\n​Join Huma and @SolanaFndn for an evening of drinks, conversation, and connection at The Venetian in Las Vegas.\n\nhttps://t.co/Z5Q6IjXn8a",
+     "thread": "2107848961482694960",
+     "article": null,
+     "likes": 5,
+     "reposts": 0
+    },
+    {
+     "id": "2107848973679743432",
+     "url": "https://x.com/humafinance/status/2107848973679743432",
+     "created_at": "2026-10-07T15:02:11.000Z",
+     "text": "The T+0 Dinner with @SentoraHQ and @arf_one\n\n📅 19 October 2026\n\nAn intimate, invite-only gathering with strictly limited capacity focused on conversation about the future of global financial infrastructure.\n\nFor partners and ambitious founders, DM @avniguven_ to secure your seat.\n\nhttps://t.co/2saCVBck1n",
+     "thread": "2107848961482694960",
+     "article": null,
+     "likes": 6,
+     "reposts": 0
+    },
+    {
+     "id": "2107848961482694960",
+     "url": "https://x.com/humafinance/status/2107848961482694960",
+     "created_at": "2026-10-07T15:02:09.000Z",
+     "text": "The Huma team will be at @money2020 USA in Las Vegas from 18–21 October.\n\nWe'll be hosting and joining a series of events and private gathering alongside leading payment companies, institutions leaders, and select fintech founders.\n\nSee you in Vegas. Full itinerary ↓ https://t.co/wv9efNaAI4",
+     "thread": null,
+     "article": null,
+     "likes": 47,
+     "reposts": 8
+    },
+    {
+     "id": "2106086063496462721",
+     "url": "https://x.com/humafinance/status/2106086063496462721",
+     "created_at": "2026-10-02T18:17:01.000Z",
+     "text": "https://t.co/X7ek0ln3Z0",
+     "thread": "2106085716803702985",
+     "article": null,
+     "likes": 3,
+     "reposts": 0
+    },
+    {
+     "id": "2106085716803702985",
+     "url": "https://x.com/humafinance/status/2106085716803702985",
+     "created_at": "2026-10-02T18:15:38.000Z",
+     "text": "$300M to $400M in just 19 days.\n$168M in net inflows over the last 30 days.\n\nPST is the fastest growing credit asset across all ecosystems.\n\nPayFi Season. https://t.co/7a3kSluMtd https://t.co/66Np57db6g",
+     "thread": null,
+     "article": null,
+     "likes": 61,
+     "reposts": 10
+    },
+    {
+     "id": "2106068261268037949",
+     "url": "https://x.com/humafinance/status/2106068261268037949",
+     "created_at": "2026-10-02T17:06:16.000Z",
+     "text": "2/ Deposit PYUSD or borrow against PST on Morpho ↓\nhttps://t.co/pD2v7rNnze",
+     "thread": "2106068259124707475",
+     "article": null,
+     "likes": 0,
+     "reposts": 0
+    },
+    {
+     "id": "2106068259124707475",
+     "url": "https://x.com/humafinance/status/2106068259124707475",
+     "created_at": "2026-10-02T17:06:16.000Z",
+     "text": ".@SentoraHQ just increased the capacity of Huma PST vault on @Morpho. Already attracted $68M in PYUSD, growing rapidly.\n\nThis builds on our partnership with Sentora to bring more institutional capital and payment financing onchain. https://t.co/Ugk7DJY5OS",
+     "thread": null,
+     "article": null,
+     "likes": 26,
+     "reposts": 5
+    },
+    {
+     "id": "2105690013489156287",
+     "url": "https://x.com/humafinance/status/2105690013489156287",
+     "created_at": "2026-10-01T16:03:15.000Z",
+     "text": "Full dashboard ↓\nhttps://t.co/6Rm0C0YgnF",
+     "thread": "2105690001300439245",
+     "article": null,
+     "likes": 3,
+     "reposts": 0
+    },
+    {
+     "id": "2105690001300439245",
+     "url": "https://x.com/humafinance/status/2105690001300439245",
+     "created_at": "2026-10-01T16:03:12.000Z",
+     "text": "Huma's PST Proof of Solvency dashboard, powered by @AccountableData, has received the first AA grade from @RockawayX under its Protocol Transparency Ratings, the highest of the first grades published. https://t.co/FVqcUgwAnW",
+     "thread": null,
+     "article": null,
+     "likes": 41,
+     "reposts": 10
+    },
+    {
+     "id": "2105640214203113752",
+     "url": "https://x.com/humafinance/status/2105640214203113752",
+     "created_at": "2026-10-01T12:45:22.000Z",
+     "text": "@Vault__Summit by @Morpho @DigiFTTech\n\n📅 9 October 2026\n\nHuma is joining Vault Summit Singapore as a Platinum Sponsor. Catch @DrPayFi @jessc2049 on stage sharing key insights on Huma and PayFi. https://t.co/F2vATaZxVA",
+     "thread": "2105640139645145334",
+     "article": null,
+     "likes": 2,
+     "reposts": 1
+    },
+    {
+     "id": "2105640175519089041",
+     "url": "https://x.com/humafinance/status/2105640175519089041",
+     "created_at": "2026-10-01T12:45:13.000Z",
+     "text": "@DeFinition_evt by @AccountableData\n\n📅 7 October 2026\n\n@DrPayFi will be joining Panel 2: The trust problem in yield-bearing assets highlighting how Huma build one of the most transparent, resilient, and liquid yield assets like PST.\n\nhttps://t.co/tzdUoNR339",
+     "thread": "2105640139645145334",
+     "article": null,
+     "likes": 3,
+     "reposts": 1
+    },
+    {
+     "id": "2105640163422658560",
+     "url": "https://x.com/humafinance/status/2105640163422658560",
+     "created_at": "2026-10-01T12:45:10.000Z",
+     "text": "Agentic Money 2026 by @osldotcom @moneyinmotion26 @LongTreeLabs\n\n📅 6 October 2026\n\nCatch our Co-Founder and Co-CEO, Richard (@DrPayFi) on stage to share key insights about Payment Financing, onchain credit and real world yield.\n\nhttps://t.co/I6Adhroxrj",
+     "thread": "2105640139645145334",
+     "article": null,
+     "likes": 4,
+     "reposts": 0
+    },
+    {
+     "id": "2105640151594787188",
+     "url": "https://x.com/humafinance/status/2105640151594787188",
+     "created_at": "2026-10-01T12:45:07.000Z",
+     "text": "Solana Summit and Solana Capital Forum by @SolanaEvents\n\n📅 6 October 2026\n\nhttps://t.co/kBI16ZFUTJ\nhttps://t.co/1FP3IE1Ncc",
+     "thread": "2105640139645145334",
+     "article": null,
+     "likes": 4,
+     "reposts": 0
+    },
+    {
+     "id": "2105640139645145334",
+     "url": "https://x.com/humafinance/status/2105640139645145334",
+     "created_at": "2026-10-01T12:45:04.000Z",
+     "text": "The Huma team will be in Singapore during @token2049 week.\n\nFrom 5 to 9 October, Huma will be cohosting and participating in a series of events and private gatherings alongside strategic partners and leading institutions.\n\nSee you in 🇸🇬 next week. Full itinerary below ↓ https://t.co/J8zkBiU7xr",
+     "thread": null,
+     "article": null,
+     "likes": 52,
+     "reposts": 11
+    },
+    {
+     "id": "2105282569919140328",
+     "url": "https://x.com/humafinance/status/2105282569919140328",
+     "created_at": "2026-09-30T13:04:13.000Z",
+     "text": "Q3 was built with an ecosystem of key institutional partners and the best builders in onchain finance.\n\nHuge thanks to our distribution partners below and to all our existing partners, continuing to build for a world that's always on.\n\nNext quarter is bigger. And there's no celebration till PST surpasses $500M.",
+     "thread": "2105282536217948573",
+     "article": null,
+     "likes": 11,
+     "reposts": 0
+    },
+    {
+     "id": "2105282553951506559",
+     "url": "https://x.com/humafinance/status/2105282553951506559",
+     "created_at": "2026-09-30T13:04:09.000Z",
+     "text": "Q3 by the numbers:\n\n• Cumulative payment volume: $18B+, up 20% Q/Q\n• PST market cap now at $382M+, up 110% Q/Q\n• $196M of net capital flowed into PST this quarter, making it the fastest-growing tokenized credit asset according to @RWA_xyz\n• $0 credit defaults since inception\n\nPayFi found it's momentum. Now, it is growing faster than anything else in tokenized credit.",
+     "thread": "2105282536217948573",
+     "article": null,
+     "likes": 10,
+     "reposts": 0
+    },
+    {
+     "id": "2105282536217948573",
+     "url": "https://x.com/humafinance/status/2105282536217948573",
+     "created_at": "2026-09-30T13:04:05.000Z",
+     "text": "Q3 is Huma's biggest quarter ever.\n\nKey ecosystem updates:\n• PST reserves and @arf_one receivables now independently verifiable via @AccountableData\n• PST became the largest yield-bearing asset on @solana\n• PST expanded cross-chain to @ethereum and @Arc\n• PST curated by Billion Dollar AUM institutions\n• New Huma brand identity and website",
+     "thread": null,
+     "article": null,
+     "likes": 64,
+     "reposts": 10
+    },
+    {
+     "id": "2104231794241577462",
+     "url": "https://x.com/humafinance/status/2104231794241577462",
+     "created_at": "2026-09-27T15:28:49.000Z",
+     "text": "Learn about how Huma is making it happen ↓\n\nhttps://t.co/in6ih4Qbhg",
+     "thread": "2104231792018657577",
+     "article": null,
+     "likes": 4,
+     "reposts": 0
+    },
+    {
+     "id": "2104231792018657577",
+     "url": "https://x.com/humafinance/status/2104231792018657577",
+     "created_at": "2026-09-27T15:28:48.000Z",
+     "text": "\"Trade finance is going to be the largest real-world user of stablecoins.\" @0xErbil\n\nGlobal trade is a $32T market with a $2.5T financing gap. Exporters wait weeks. Banks charge outsized fees. SMEs are left behind.\n\nPayFi is being built as the new financial layer for that flow. https://t.co/T8ZCTwrk1K",
+     "thread": null,
+     "article": null,
+     "likes": 57,
+     "reposts": 6
+    }
+   ]
+  },
+  {
+   "handle": "TheDeFinvestor",
+   "name": "The DeFi Investor",
+   "why": "watch",
+   "about": "weekly watchlists and the latest developments in DeFi",
+   "start": "2026-10-04T00:00:00Z",
+   "maxPosts": 100,
+   "threads": false,
+   "id": "1395365515779055616",
+   "username": "TheDeFinvestor",
+   "truncated": false,
+   "repliesDropped": 0,
+   "posts": [
+    {
+     "id": "2108886108235034655",
+     "url": "https://x.com/TheDeFinvestor/status/2108886108235034655",
+     "created_at": "2026-10-10T11:43:24.000Z",
+     "text": "Hyperliquid still dominates the on-chain perps sector by a wide margin.   \n\nIt currently has more open interest than all the other perps DEXs combined.  \n\nThe gap between Hyperliquid and its competitors is just massive. https://t.co/1sNklDbI6i",
+     "thread": null,
+     "article": null,
+     "likes": 86,
+     "reposts": 6
+    },
+    {
+     "id": "2108503805398532123",
+     "url": "https://x.com/TheDeFinvestor/status/2108503805398532123",
+     "created_at": "2026-10-09T10:24:15.000Z",
+     "text": "9 crypto projects now generate $1M+ in weekly revenue for token holders:\n\nHyperliquid, Pump, Tron, Aerodrome, Uniswap, Ethereum, StonkFun, Sky, and Chainlink, which either do buybacks or revenue-sharing.\n\nThese projects alone account for 75%+ of the total token holders revenue. https://t.co/YitfTK42nM",
+     "thread": null,
+     "article": null,
+     "likes": 246,
+     "reposts": 30
+    },
+    {
+     "id": "2108159036507955546",
+     "url": "https://x.com/TheDeFinvestor/status/2108159036507955546",
+     "created_at": "2026-10-08T11:34:16.000Z",
+     "text": "The latest developments in DeFi 👇\n\nEtherFi introduced its own stablecoin powered by Ethena Whitelabel service\n\nLido revealed Lido Lending, a new DeFi lending platform\n\nHyperliquid’s ~$200M revenue-sharing deal with Circle went live\n\nDerive v3, an improved on-chain options trading platform, went live\n\nPolymarket CEO said they’re “exploring an on-chain asset tied to Polymarket’s economy”, but without giving a launch timeline\n\nSuperform introduced Earn Stocks - DeFi yield strategies for tokenized stocks\n\nAptos introduced MonoMove - its biggest network scalability upgrade to date\n\nLighter announced the pre-market listing of the Variational token\n\nTenero V2, an upgraded Bitcoin DeFi analytics platform, went live\n\nOndo Finance launched a platform bringing tokenized pre-IPOs on-chain\n\nArbitrum is adopting USDG as its ecosystem dollar, with the revenue from USDG reserves flowing back into the Arbitrum ecosystem\n\nVirtuals introduced Virtual App - a personal AI app with access to markets\n\nBlast and Abstract announced they are shutting down\n\nSanctum burned 25% of its total token supply\n\nOrca and Loopscale merged into a new project called Formation\n\nI hope you found this recap helpful!",
+     "thread": null,
+     "article": null,
+     "likes": 110,
+     "reposts": 9
+    },
+    {
+     "id": "2107782128448483729",
+     "url": "https://x.com/TheDeFinvestor/status/2107782128448483729",
+     "created_at": "2026-10-07T10:36:34.000Z",
+     "text": "Easiest way to win this cycle is to bet on projects with PMF and strong revenue.  \n\nWe have a lot of quality projects now, and the demand for vaporwave VC tokens will only keep going down.   \n\nFundamental investing is the way to go. https://t.co/mItia8QsDJ",
+     "thread": null,
+     "article": null,
+     "likes": 150,
+     "reposts": 14
+    },
+    {
+     "id": "2107419181721551007",
+     "url": "https://x.com/TheDeFinvestor/status/2107419181721551007",
+     "created_at": "2026-10-06T10:34:21.000Z",
+     "text": "$8.9M of HYPE was burned yesterday.   \n\nThat's more than what 99% of projects buy back &amp; burn in an entire year. \n\nHyperliquid is truly in a league of its own. https://t.co/iKB98WC6fY",
+     "thread": null,
+     "article": null,
+     "likes": 170,
+     "reposts": 9
+    },
+    {
+     "id": "2107047729339802052",
+     "url": "https://x.com/TheDeFinvestor/status/2107047729339802052",
+     "created_at": "2026-10-05T09:58:20.000Z",
+     "text": "Something to remember for next cycle:  \n\nThe single best indicator that the cycle bottom is in is Saylor selling $BTC.  \n\nThis man nailed the bottom with his sell orders in both 2022 and 2026. https://t.co/2tIEa6ALUy",
+     "thread": null,
+     "article": null,
+     "likes": 119,
+     "reposts": 5
+    },
+    {
+     "id": "2106721190383439980",
+     "url": "https://x.com/TheDeFinvestor/status/2106721190383439980",
+     "created_at": "2026-10-04T12:20:47.000Z",
+     "text": "Crypto Watchlist for the week ahead:\n\n$HYPE - Hyperliquid team will sell $320M worth of HYPE OTC to an institution on Oct. 7\n\n$ENA - All ENA tokens for early investors will be unlocked on Oct. 5+ Ethena started teasing an announcement today\n\n$NEAR - A proposal to cut NEAR annual inflation from 2.5% to 1.6% is expected to go live next week\n\n$SUI - Sui's Basecamp conference starts on Oct 7\n\n$ETH - Ethereum’s Glamsterdam upgrade will activate on the Sepolia testnet on October 6\n\nMacro events - FOMC minutes will be released on Oct. 7\n\n$DRV - Derive V3 goes live on Oct. 6\n\nEthos - Ethos TGE is scheduled for Oct. 8\n\n$MON - Monad Summit will happen on Oct. 6\n\nPapertrade - Papertrade, a platform for trading with up to 1000x leverage on Hyperliquid, will go live on Oct. 10\n\nI hope you found this helpful🫡",
+     "thread": null,
+     "article": null,
+     "likes": 502,
+     "reposts": 53
+    }
+   ]
+  },
+  {
+   "handle": "Securitize",
+   "name": "Securitize",
+   "why": "watch",
+   "about": "Onchain Assets Weekly (X Articles) and tokenization news, often as threads",
+   "start": "2026-10-04T00:00:00Z",
+   "maxPosts": 100,
+   "threads": true,
+   "id": "963568407118462976",
+   "username": "Securitize",
+   "truncated": false,
+   "repliesDropped": 13,
+   "posts": [
+    {
+     "id": "2108659839425540392",
+     "url": "https://x.com/Securitize/status/2108659839425540392",
+     "created_at": "2026-10-09T20:44:17.000Z",
+     "text": "https://t.co/0vyec9X5Nt",
+     "thread": null,
+     "article": {
+      "title": "Onchain Assets Weekly: 10/9/26",
+      "preview": "This week’s highlights: Securitize Stocks launch; Carlos Domingo joins CNBC; Tokenized equity trading hits $15.6B; Modernizing ownership records; and Securitize expands focus in Asia.\n \nWall Street",
+      "text": "This week’s highlights: Securitize Stocks launch; Carlos Domingo joins CNBC; Tokenized equity trading hits $15.6B; Modernizing ownership records; and Securitize expands focus in Asia.\n \nWall Street Journal\nSecuritize Launches Tokenized Stock Trading for U.S. Investors\nSecuritize Stocks is now live, giving eligible investors access to 1:1-backed U.S. equities with the rights and economic benefits of the underlying shares, including Apple, NVIDIA, Tesla, Microsoft and more.\n \nREAD MORE\n \nCNBC\nCarlos Domingo Discusses Debut of Securitize Stocks\nCarlos Domingo covers Securitize’s launch of tokenized stock trading in the U.S., starting with 12 stocks and a goal of reaching at least 75 by year-end.\n \n \nYahoo Finance\nTokenized Equity Trading Just Hit $15.6B — and the Regulatory Framework Is Still Being Built\nAs tokenized equity trading reached a record $15.6 billion in September, Securitize topped the article’s AUM leaderboard with $1.62 billion.\n \nREAD MORE\n \nToken Post\nSecuritize CEO Pushes Blockchain Records to Identify Shareholders\nSecuritize CEO & Co-Founder Carlos Domingo explains how blockchain-based ownership records could improve dividend and proxy communications without changing shareholders’ underlying rights.\n \nREAD MORE\n \nYahoo Finance\nSecuritize Soars 10% on LG CNS Partnership, Eyeing Korea for “Next Phase of Institutional Tokenization”\nSecuritize and LG CNS signed an MoU to explore tokenized funds, equities, stablecoins, and settlement infrastructure for financial institutions in Korea and across Asia-Pacific.\n \nREAD MORE\n \n \n",
+      "links": [
+       "https://finance.yahoo.com/markets/stocks/articles/securitize-soars-10-lg-cns-185252509.html",
+       "https://www.tokenpost.com/news/business/26868",
+       "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-10-08-2026/card/securitize-launches-tokenized-stock-trading-for-u-s-investors-dUqrm7mXGjwUrAdo4x6M?mod=author_content_page_1_pos_1",
+       "https://finance.yahoo.com/markets/crypto/articles/tokenized-equity-trading-just-hit-170754705.html"
+      ]
+     },
+     "likes": 93,
+     "reposts": 13
+    },
+    {
+     "id": "2108582146289906060",
+     "url": "https://x.com/Securitize/status/2108582146289906060",
+     "created_at": "2026-10-09T15:35:33.000Z",
+     "text": "https://t.co/kJx4vu0mcQ",
+     "thread": "2108579972851933230",
+     "article": null,
+     "likes": 7,
+     "reposts": 0
+    },
+    {
+     "id": "2108579972851933230",
+     "url": "https://x.com/Securitize/status/2108579972851933230",
+     "created_at": "2026-10-09T15:26:55.000Z",
+     "text": "Securitize Stocks are now live.\n\nHere’s who’s supporting trading now, and who’s building the venues and market connections for their future:\n\nSecuritize Stocks launched on @Solana, with transactions settling in USDC.\n\n@NYSE is building a 24/7 digital venue where Securitize Stocks are expected to trade upon the venue’s launch.\n\n@okx and @ICE_Markets are building OKXICE, a planned Tokenized Securities Venue where Securitize Stocks are expected to be available in the future.\n\nSecuritize Stocks are designed to support additional onchain utility over time, including supported lending and collateral markets like @aave.\n\n@jumptrading serves as a market maker on our Solana PropAMM, supporting liquidity, price discovery and execution.\n\n@Ripple Prime plans to support Securitize Stocks and explore bringing them into its broader institutional trading ecosystem.\n\n@RQDClearing is supporting the framework connecting onchain trading to established clearing, custody and settlement infrastructure.\n\nWe’re glad to have these partners working alongside us, and we look forward to continuing that work as Securitize Stocks develop.",
+     "thread": null,
+     "article": null,
+     "likes": 531,
+     "reposts": 122
+    },
+    {
+     "id": "2108317140122046923",
+     "url": "https://x.com/Securitize/status/2108317140122046923",
+     "created_at": "2026-10-08T22:02:31.000Z",
+     "text": "Following today’s launch of Securitize Stocks on @solana, our CEO @carlosdomingo joined @CNBC to discuss bringing stocks onchain in the U.S. and the path toward 24/7 trading.\n\nTokenize the World. https://t.co/UKOPMtdBoH",
+     "thread": null,
+     "article": null,
+     "likes": 236,
+     "reposts": 43
+    },
+    {
+     "id": "2108256302636159451",
+     "url": "https://x.com/Securitize/status/2108256302636159451",
+     "created_at": "2026-10-08T18:00:46.000Z",
+     "text": "@solana https://t.co/QGMD3awaVN",
+     "thread": "2108256145970266404",
+     "article": null,
+     "likes": 8,
+     "reposts": 0
+    },
+    {
+     "id": "2108256145970266404",
+     "url": "https://x.com/Securitize/status/2108256145970266404",
+     "created_at": "2026-10-08T18:00:09.000Z",
+     "text": "We launched Securitize Stocks to bring some of the most widely held U.S. equities onchain, starting with AAPL, NVDA, TSLA and more on @solana.\n\nEligible investors can hold tokenized positions backed 1:1 by actual shares, with shareholder rights intact.\n\nTokenize the World. https://t.co/zsqReDhNWt https://t.co/Rar7hCQgcY",
+     "thread": null,
+     "article": null,
+     "likes": 276,
+     "reposts": 40
+    },
+    {
+     "id": "2108180783827411451",
+     "url": "https://x.com/Securitize/status/2108180783827411451",
+     "created_at": "2026-10-08T13:00:41.000Z",
+     "text": "https://t.co/dLHUBfm6RK",
+     "thread": null,
+     "article": {
+      "title": "Securitize Launches Global Onchain Trading of U.S. Stocks with Security Entitlements",
+      "preview": "Trading on Securitize’s registered broker-dealer platform on Solana and on the upcoming NYSE ATS and OKXICE TSV, Securitize Stocks give eligible investors global access to 1:1-backed U.S. equities",
+      "text": "Trading on Securitize’s registered broker-dealer platform on Solana and on the upcoming NYSE ATS and OKXICE TSV, Securitize Stocks give eligible investors global access to 1:1-backed U.S. equities with the rights and economic benefits of the underlying shares.\n \n \nToday, we’re proud to announce the launch of Securitize Stocks, bringing some of the world’s most widely held U.S. equities onchain for eligible investors in the United States, European Union (EU) and other permitted jurisdictions worldwide.\nThe initial offering on Securitize will include security entitlements to shares of AAPL, MSFT, NVDA, GOOG, TSLA, META, AMZN, NFLX, CRCL, SPCX, MSTR and PLTR. Securitize Stocks will initially launch on @Solana and trade on Securitize’s registered broker-dealer platform.\nSecuritize Stocks are also expected to trade on the new 24/7 digital trading venue being developed by the New York Stock Exchange (@NYSE), subject to the venue’s launch and applicable regulatory and operational requirements. The planned connectivity would create another pathway for tokenized U.S. equities to trade through infrastructure being developed by one of the world’s leading exchange operators.\nUnlike products that primarily provide economic exposure to a stock’s price, Securitize Stocks are backed 1:1 by underlying shares, structured to preserve the investor rights and economic benefits associated with those shares, and convertible, where available, to direct ownership on the books of the issuer’s transfer agent. The offering is designed to accelerate adoption of issuer-sponsored tokenization as issuers increasingly embrace tokenization.\n \nSecuritize Stocks give investors:\n1:1 backing and security entitlements. Each token is backed one for one by an underlying share and represents a security entitlement under UCC Article 8, preserving applicable rights and economic benefits including dividends and, where the underlying class carries them, voting rights. This sets Securitize Stocks apart from products that are primarily designed to track a stock’s performance.\nGlobal availability. Securitize Stocks will be available to eligible investors in the U.S., EU and other permitted jurisdictions, subject to applicable securities laws, sanctions requirements and other restrictions.\nNo share lending. Shares backing Securitize Stocks will not be lent out. The tokens are designed to support additional onchain utility over time, including supported lending and collateral markets like Aave.\nA bridge to issuer-sponsored tokenization. Securitize Stocks use a convertible entitlement token (CET) structure. When a company adopts issuer-sponsored tokenization, investors can convert their security entitlements into actual shares recorded on the company's register, through Securitize's partnerships with leading transfer agents.\nCompatibility with evolving U.S. market structure. The offering is designed to be  consistent with SEC guidance on tokenized securities. Secondary market trading is offered for Securitize Stocks in a regulated manner through its broker-dealer, without the need for exemptions. Securitize Stocks are also expected to be eligible for trading on  Tokenized Securities Venues (TSVs) as contemplated by the SEC’s Innovation Exemption.\n \nSecuritize Stocks are also expected to be available on the OKXICE Tokenized Securities Venue (TSV), which combines @OKX’s blockchain technology and global reach with the regulatory experience and institutional connectivity of Intercontinental Exchange (@ICE_Markets), parent company of the New York Stock Exchange. The TSV will bring tokenized U.S. equities onchain in a compliant, permissioned environment, with plans to unlock 24/7 trading, instant settlement and self-custody of exchange-listed securities for a global audience.\n \nSecuritize selected Solana as the launch network for Securitize Stocks onchain trading, with transactions settling in USDC. Solana is also one of the networks where Securitize's own tokenized common stock has traded since its NYSE listing in July.\n \nInfrastructure for an Onchain U.S. Equities Market\nSecuritize Stocks bring together infrastructure spanning blockchain, liquidity, brokerage, clearing, settlement and transfer agency to connect traditional U.S. securities markets with onchain markets.\nAt launch, Securitize Stocks will be available through Securitize’s existing Solana PropAMM, with @jumptrading, which will serve as a market maker to support liquidity, price discovery and execution consistent with applicable market requirements. Trading will initially be available during extended hours, with plans to move toward 24/7 availability. Securitize Stocks will trade alongside issuer-sponsored tokenized equities including Securitize’s own stock, SECZ. Access will remain subject to onboarding, KYC/AML checks, jurisdictional eligibility and applicable securities laws.\n“Bringing U.S. equities onchain requires liquidity infrastructure capable of delivering the execution quality investors expect from modern markets,” said a spokesperson for Jump. “PropAMMs on Solana have demonstrated that onchain markets can deliver tight spreads, deep liquidity and transparent price discovery at significant scale. We’re excited to bring that technology on Securitize’s platform to Securitize Stocks and help build efficient, liquid markets for tokenized U.S. equities.”\nInstitutional market participants are also expected to play a growing role as tokenized equities develop. @Ripple Prime plans to support the launch of Securitize Stocks and explore opportunities to incorporate the assets into its broader institutional trading ecosystem.\n \nTokenized equities also create the potential for traditional securities to become more useful within onchain financial markets, including through supported lending and collateral applications.\n \nBehind the onchain trading experience, Securitize Stocks will connect with established securities-market infrastructure for clearing, custody and settlement.\n \nLearn more about Securitize Stocks at stocks.securitize.io.\n \nAbout Securitize\nSecuritize (NYSE: SECZ), the leading platform for tokenized assets with approximately $5B in AUM as of September 2026, is bringing the world onchain through tokenized funds in partnership with top-tier asset managers such as Apollo, BlackRock, BNY, Hamilton Lane, KKR, VanEck and others. It is the only company operating regulated digital-securities infrastructure in both the U.S. and EU, and has been named to the Forbes 2026 Fintech 50 and CNBC World's Top Fintech Companies 2026 lists.\nFor more information, please visit:\nWebsite | X/Twitter | LinkedIn\nContacts\nTom Murphy\npress@securitize.io\nSam Ross\ninvestor.relations@securitize.io\nSource: Securitize (NYSE: SECZ) (XNYS:SECZ)\n \n ",
+      "links": [
+       "stocks.securitize.io",
+       "https://www.forbes.com/lists/fintech50/",
+       "https://x.com/@ICE_Markets",
+       "https://urldefense.com/v3/__https:/x.com/Securitize__;!!OV6yIpbVupsAJY1qcZ_q!Oy5u0mhSG5XBsZMbUrGdZRaugFLRsPUsv2OD0XYvL6oFNDvrNpnBXEAtfPggygJ9YbvfHeA9-UTvVCxFrmO3iHrk$",
+       "https://www.cnbc.com/worlds-top-fintech-companies-2026/",
+       "https://urldefense.com/v3/__http:/www.linkedin.com/company/securitize__;!!OV6yIpbVupsAJY1qcZ_q!Oy5u0mhSG5XBsZMbUrGdZRaugFLRsPUsv2OD0XYvL6oFNDvrNpnBXEAtfPggygJ9YbvfHeA9-UTvVCxFrnpDxMD7$",
+       "https://secz.digital/4hNYgXK",
+       "mailto:press@securitize.io",
+       "https://urldefense.com/v3/__https:/securitize.io/__;!!OV6yIpbVupsAJY1qcZ_q!Oy5u0mhSG5XBsZMbUrGdZRaugFLRsPUsv2OD0XYvL6oFNDvrNpnBXEAtfPggygJ9YbvfHeA9-UTvVCxFrq72k7I_$",
+       "mailto:investor.relations@securitize.io"
+      ]
+     },
+     "likes": 404,
+     "reposts": 65
+    },
+    {
+     "id": "2107930813039796477",
+     "url": "https://x.com/Securitize/status/2107930813039796477",
+     "created_at": "2026-10-07T20:27:23.000Z",
+     "text": "CoinAlts 2026 heads to San Francisco on October 14.\n\nThe Securitize team will be at @coinalts with fund managers and digital asset leaders to talk about bringing funds onchain, managing ownership, and connecting with investors.\n\nWe look forward to connecting with you in SF. https://t.co/PmjFPINF7M",
+     "thread": null,
+     "article": null,
+     "likes": 59,
+     "reposts": 3
+    },
+    {
+     "id": "2107854163208221101",
+     "url": "https://x.com/Securitize/status/2107854163208221101",
+     "created_at": "2026-10-07T15:22:49.000Z",
+     "text": "CFTC @ChairmanSelig believes mass tokenization can transform markets across every asset class.\n\nNear-instant settlement and real-time collateral mobility are the foundation of a financial system built for the 21st century.\n\nTokenize the World. https://t.co/zROm5r52M8",
+     "thread": null,
+     "article": null,
+     "likes": 172,
+     "reposts": 27
+    },
+    {
+     "id": "2107827855799570587",
+     "url": "https://x.com/Securitize/status/2107827855799570587",
+     "created_at": "2026-10-07T13:38:17.000Z",
+     "text": "Tokenize the World. https://t.co/QFgdCVKSdD",
+     "thread": null,
+     "article": null,
+     "likes": 127,
+     "reposts": 17
+    },
+    {
+     "id": "2107455982838182156",
+     "url": "https://x.com/Securitize/status/2107455982838182156",
+     "created_at": "2026-10-06T13:00:35.000Z",
+     "text": "4/ South Korea is one of the world’s most sophisticated technology and financial markets.\n\nWith LG CNS, we aim to bring more high-quality products onchain in Korea and strengthen links between Korean institutions and global capital markets.\n\nTokenize the World. https://t.co/0NUEwOpwkY",
+     "thread": "2107455965675307190",
+     "article": null,
+     "likes": 6,
+     "reposts": 0
+    },
+    {
+     "id": "2107455976458670443",
+     "url": "https://x.com/Securitize/status/2107455976458670443",
+     "created_at": "2026-10-06T13:00:34.000Z",
+     "text": "3/ Stablecoin infrastructure and digital asset treasury solutions are also in scope.\n\nSubject to law and approvals, future infrastructure could link Korean tokenized assets to global markets for distribution, execution and settlement of tokenized securities and stablecoins.",
+     "thread": "2107455965675307190",
+     "article": null,
+     "likes": 13,
+     "reposts": 2
+    },
+    {
+     "id": "2107455974566920614",
+     "url": "https://x.com/Securitize/status/2107455974566920614",
+     "created_at": "2026-10-06T13:00:33.000Z",
+     "text": "2/ Together, we’ll develop institutional use cases for tokenized assets, securities and stablecoins across Korea and the broader Asia-Pacific region.\n\nIn Korea, we’ll consider funds, equities, bonds and private-market assets within its evolving regulatory framework. https://t.co/Seadqt8a7j",
+     "thread": "2107455965675307190",
+     "article": null,
+     "likes": 14,
+     "reposts": 1
+    },
+    {
+     "id": "2107455965675307190",
+     "url": "https://x.com/Securitize/status/2107455965675307190",
+     "created_at": "2026-10-06T13:00:31.000Z",
+     "text": "Securitize and LG CNS are partnering to advance tokenized assets in South Korea.\n\nThrough an MOU, we’ll pair our experience building regulated tokenization infrastructure with LG CNS’s technology and relationships across Korea’s financial sector. https://t.co/3DTy8ggCMv",
+     "thread": null,
+     "article": null,
+     "likes": 196,
+     "reposts": 36
+    },
+    {
+     "id": "2107166343372103935",
+     "url": "https://x.com/Securitize/status/2107166343372103935",
+     "created_at": "2026-10-05T17:49:40.000Z",
+     "text": "Transfer agent rules still include paper forms, physical addresses, and mailed proxy votes. That should change as securities move onchain.\n\nSecuritize CEO @carlosdomingo joined @therollupco to explain why companies should be able to communicate with investors digitally. https://t.co/Pvm9yjgmI8",
+     "thread": null,
+     "article": null,
+     "likes": 97,
+     "reposts": 15
+    }
+   ]
+  }
+ ],
+ "postsRead": 295,
+ "usersRead": 0,
+ "estCostUsd": 1.475,
+ "notes": []
+}

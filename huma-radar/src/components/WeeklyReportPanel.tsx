@@ -62,11 +62,11 @@ export function WeeklyReportPanel() {
 // ---------------------------------------------------------------- weeks
 
 function WeekStrip({ selected, onSelect }: { selected: string | null; onSelect: (end: string) => void }) {
-  const next = nextReportDate()
+  const next = nextReportDate(new Date(), LATEST_REPORT?.end)
   const nextIsNew = !REPORTS.some((r) => r.end >= next)
-  // the next report picks up where the last one ended, if that is under a week ago
+  // reports chain end to end: the next one starts where the last one ended, if that was within two weeks
   const weekBack = addDays(next, -7)
-  const nextStart = LATEST_REPORT && LATEST_REPORT.end > weekBack ? LATEST_REPORT.end : weekBack
+  const nextStart = LATEST_REPORT && LATEST_REPORT.end >= addDays(next, -14) ? LATEST_REPORT.end : weekBack
 
   return (
     <div className="mb-6 flex gap-3 overflow-x-auto pb-1">

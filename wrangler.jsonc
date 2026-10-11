@@ -26,8 +26,10 @@
   // Turkey has been permanently UTC+3 since 2016, so it holds all year.
   // The Monday 07:30 run exists for the weekly report, which runs Monday to
   // Monday at 08:00 UTC — before the daily run — and needs Monday's snapshot.
+  // Spelled MON: Cloudflare counts weekdays from Sunday = 1, so "1" fired on
+  // Sundays (first noticed 2026-10-05).
   "triggers": {
-    "crons": ["0 12 * * *", "30 7 * * 1"]
+    "crons": ["0 12 * * *", "30 7 * * MON"]
   },
 
   "vars": {

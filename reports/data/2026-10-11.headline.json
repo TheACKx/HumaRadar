@@ -1,0 +1,37 @@
+{
+ "start": "2026-10-04",
+ "end": "2026-10-11",
+ "span": "WoW",
+ "month": "2026-09-11",
+ "supply": {
+  "value": "$312.77B",
+  "usd": "−$910.7M",
+  "pct": "−0.29%",
+  "dir": -1
+ },
+ "venues": {
+  "value": "$12.07B",
+  "usd": "−$246.9M",
+  "pct": "−2.00%",
+  "dir": -1
+ },
+ "pst": {
+  "value": "$400.4M",
+  "usd": "−$14.6M",
+  "pct": "−3.51%",
+  "dir": -1
+ },
+ "flagged": {
+  "products": 6,
+  "groups": 6,
+  "passes": 9
+ },
+ "topUp": {
+  "label": "Sky sUSDS",
+  "usd": "+$272.5M"
+ },
+ "topDown": {
+  "label": "Aave v3 on Ethereum",
+  "usd": "−$390.5M"
+ }
+}

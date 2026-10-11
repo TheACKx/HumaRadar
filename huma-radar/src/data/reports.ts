@@ -95,15 +95,19 @@ export function longDate(iso: string) {
 
 /**
  * The Monday the next report is due, from today: reports run Monday to Monday
- * at 08:00 UTC, so a Monday that has not reached 08:00 UTC counts.
+ * at 08:00 UTC, so a Monday that has not reached 08:00 UTC counts. A report
+ * written early (within 3 days of that Monday) makes the scheduled run skip
+ * itself, so the next one is due the Monday after — the same rule the
+ * weekly-defi-report task follows.
  */
-export function nextReportDate(now = new Date()) {
+export function nextReportDate(now = new Date(), latestEnd?: string) {
   const d = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()))
   const minutes = now.getUTCHours() * 60 + now.getUTCMinutes()
   let ahead = (1 - d.getUTCDay() + 7) % 7
   if (ahead === 0 && minutes >= 8 * 60) ahead = 7
   d.setUTCDate(d.getUTCDate() + ahead)
-  return d.toISOString().slice(0, 10)
+  const monday = d.toISOString().slice(0, 10)
+  return latestEnd && latestEnd >= addDays(monday, -3) ? addDays(monday, 7) : monday
 }
 
 // Report tables name chains by display name, including ones the network tabs
