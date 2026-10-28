@@ -1,4 +1,4 @@
-{"source":"defillama","generatedAt":"2026-10-27T15:20:21.650Z","protocols":{"huma":{"id":"huma","name":"Huma","ticker":"PST","kind":"protocol","venue":"huma-finance-v2 · TVL only","url":"https://defillama.com/protocol/huma-finance-v2?events=false&fees=false","history":[
+{"source":"defillama","generatedAt":"2026-10-28T12:02:17.600Z","protocols":{"huma":{"id":"huma","name":"Huma","ticker":"PST","kind":"protocol","venue":"huma-finance-v2 · TVL only","url":"https://defillama.com/protocol/huma-finance-v2?events=false&fees=false","history":[
 {"date":"2026-05-27","tvl":167592451,"apy":null},
 {"date":"2026-05-28","tvl":166723651,"apy":null},
 {"date":"2026-05-29","tvl":164461029,"apy":null},
@@ -152,8 +152,8 @@
 {"date":"2026-10-24","tvl":375318292,"apy":null},
 {"date":"2026-10-25","tvl":374749606,"apy":null},
 {"date":"2026-10-26","tvl":374737917,"apy":null},
-{"date":"2026-10-27","tvl":376049531,"apy":null}]},"sky":{"id":"sky","name":"Sky","ticker":"sUSDS","kind":"pool","venue":"sky-lending · Ethereum","url":"https://defillama.com/yields/pool/d8c4eff5-c8a9-46fc-a888-057c4c668e72","history":[
-{"date":"2025-09-23","tvl":2240211222,"apy":4.75},
+{"date":"2026-10-27","tvl":380066326,"apy":null},
+{"date":"2026-10-28","tvl":376919497,"apy":null}]},"sky":{"id":"sky","name":"Sky","ticker":"sUSDS","kind":"pool","venue":"sky-lending · Ethereum","url":"https://defillama.com/yields/pool/d8c4eff5-c8a9-46fc-a888-057c4c668e72","history":[
 {"date":"2025-09-24","tvl":2319587066,"apy":4.75},
 {"date":"2025-09-25","tvl":2290735672,"apy":4.75},
 {"date":"2025-09-26","tvl":2354400007,"apy":4.75},
@@ -552,8 +552,8 @@
 {"date":"2026-10-24","tvl":4872149289,"apy":3.8},
 {"date":"2026-10-25","tvl":4840522912,"apy":3.8},
 {"date":"2026-10-26","tvl":4824051017,"apy":3.8},
-{"date":"2026-10-27","tvl":4819574959,"apy":3.8}]},"aave":{"id":"aave","name":"Aave","ticker":"USDC","kind":"pool","venue":"aave-v3 · Ethereum","url":"https://defillama.com/yields/pool/aa70268e-4b52-42bf-a116-608b370f9501","history":[
-{"date":"2025-09-23","tvl":924245946,"apy":4.5584},
+{"date":"2026-10-27","tvl":4800478505,"apy":3.8},
+{"date":"2026-10-28","tvl":4673043018,"apy":3.8}]},"aave":{"id":"aave","name":"Aave","ticker":"USDC","kind":"pool","venue":"aave-v3 · Ethereum","url":"https://defillama.com/yields/pool/aa70268e-4b52-42bf-a116-608b370f9501","history":[
 {"date":"2025-09-24","tvl":876784442,"apy":4.609},
 {"date":"2025-09-25","tvl":1136970185,"apy":4.1308},
 {"date":"2025-09-26","tvl":1261447141,"apy":3.8788},
@@ -952,7 +952,8 @@
 {"date":"2026-10-24","tvl":141297252,"apy":3.8815},
 {"date":"2026-10-25","tvl":150998926,"apy":3.7815},
 {"date":"2026-10-26","tvl":174590558,"apy":3.7064},
-{"date":"2026-10-27","tvl":143608029,"apy":3.8019}]},"maple":{"id":"maple","name":"Maple","ticker":"syrupUSD","kind":"mcaps","venue":"syrupUSDC + syrupUSDT + syrupUSDG · market cap","url":"https://defillama.com/rwa/platform/maple","history":[
+{"date":"2026-10-27","tvl":134700517,"apy":4.2734},
+{"date":"2026-10-28","tvl":140011815,"apy":3.9199}]},"maple":{"id":"maple","name":"Maple","ticker":"syrupUSD","kind":"mcaps","venue":"syrupUSDC + syrupUSDT + syrupUSDG · market cap","url":"https://defillama.com/rwa/platform/maple","history":[
 {"date":"2025-09-29","tvl":1134601837,"apy":9.111,"parts":{"syrupUSDC":1134601837,"syrupUSDT":0,"syrupUSDG":0}},
 {"date":"2025-09-30","tvl":1137085925,"apy":9.0849,"parts":{"syrupUSDC":1137085925,"syrupUSDT":0,"syrupUSDG":0}},
 {"date":"2025-10-01","tvl":1132473016,"apy":9.082,"parts":{"syrupUSDC":1132473016,"syrupUSDT":0,"syrupUSDG":0}},
@@ -1346,7 +1347,8 @@
 {"date":"2026-10-24","tvl":1608509517,"apy":5.0462,"parts":{"syrupUSDC":986961545,"syrupUSDT":328302377,"syrupUSDG":293245595}},
 {"date":"2026-10-25","tvl":1601787647,"apy":5.0497,"parts":{"syrupUSDC":985205414,"syrupUSDT":321315391,"syrupUSDG":295266842}},
 {"date":"2026-10-26","tvl":1602502093,"apy":5.0059,"parts":{"syrupUSDC":980783171,"syrupUSDT":320960415,"syrupUSDG":300758507}},
-{"date":"2026-10-27","tvl":1618339312,"apy":4.9832,"parts":{"syrupUSDC":973006738,"syrupUSDT":320864264,"syrupUSDG":324468310}}]},"ondo":{"id":"ondo","name":"Ondo","ticker":"USDY","kind":"protocol","venue":"ondo-yield-assets · median of 9 pools","url":"https://defillama.com/protocol/ondo-yield-assets?fees=false&medianApy=true","history":[
+{"date":"2026-10-27","tvl":1618339312,"apy":4.9832,"parts":{"syrupUSDC":973006738,"syrupUSDT":320864264,"syrupUSDG":324468310}},
+{"date":"2026-10-28","tvl":1618188235,"apy":5.0285,"parts":{"syrupUSDC":957738739,"syrupUSDT":320742974,"syrupUSDG":339706522}}]},"ondo":{"id":"ondo","name":"Ondo","ticker":"USDY","kind":"protocol","venue":"ondo-yield-assets · median of 9 pools","url":"https://defillama.com/protocol/ondo-yield-assets?fees=false&medianApy=true","history":[
 {"date":"2026-01-28","tvl":null,"apy":3.7},
 {"date":"2026-01-29","tvl":null,"apy":3.7},
 {"date":"2026-01-30","tvl":null,"apy":3.7},
@@ -1619,8 +1621,8 @@
 {"date":"2026-10-24","tvl":null,"apy":3.72},
 {"date":"2026-10-25","tvl":null,"apy":3.73},
 {"date":"2026-10-26","tvl":null,"apy":3.73},
-{"date":"2026-10-27","tvl":null,"apy":3.74}]},"ethena":{"id":"ethena","name":"Ethena","ticker":"USDe","kind":"protocol","venue":"ethena-usde · median of 1 pool","url":"https://defillama.com/protocol/ethena-usde?fees=false&medianApy=true","history":[
-{"date":"2025-09-23","tvl":14154087067,"apy":7.4833},
+{"date":"2026-10-27","tvl":null,"apy":3.74},
+{"date":"2026-10-28","tvl":null,"apy":3.74}]},"ethena":{"id":"ethena","name":"Ethena","ticker":"USDe","kind":"protocol","venue":"ethena-usde · median of 1 pool","url":"https://defillama.com/protocol/ethena-usde?fees=false&medianApy=true","history":[
 {"date":"2025-09-24","tvl":14435718983,"apy":7.5821},
 {"date":"2025-09-25","tvl":14412474726,"apy":5.7162},
 {"date":"2025-09-26","tvl":14337316633,"apy":5.7355},
@@ -2019,8 +2021,8 @@
 {"date":"2026-10-24","tvl":4594139086,"apy":5.1081},
 {"date":"2026-10-25","tvl":4586587752,"apy":5.1052},
 {"date":"2026-10-26","tvl":4582443789,"apy":5.075},
-{"date":"2026-10-27","tvl":4558755560,"apy":5.0843}]},"spark":{"id":"spark","name":"Spark","ticker":"spUSDS","kind":"pool","venue":"sparklend · Ethereum","url":"https://defillama.com/yields/pool/0ed981dc-b49d-426d-ade5-6014728b1ef9","history":[
-{"date":"2025-09-23","tvl":141900749,"apy":3.5498},
+{"date":"2026-10-27","tvl":4595408261,"apy":5.0845},
+{"date":"2026-10-28","tvl":4540298911,"apy":5.0825}]},"spark":{"id":"spark","name":"Spark","ticker":"spUSDS","kind":"pool","venue":"sparklend · Ethereum","url":"https://defillama.com/yields/pool/0ed981dc-b49d-426d-ade5-6014728b1ef9","history":[
 {"date":"2025-09-24","tvl":138527259,"apy":3.5498},
 {"date":"2025-09-25","tvl":124479105,"apy":3.5499},
 {"date":"2025-09-26","tvl":104704918,"apy":3.55},
@@ -2419,7 +2421,8 @@
 {"date":"2026-10-24","tvl":390986673,"apy":2.6931},
 {"date":"2026-10-25","tvl":390223873,"apy":2.6931},
 {"date":"2026-10-26","tvl":394137142,"apy":2.6931},
-{"date":"2026-10-27","tvl":394452286,"apy":2.6931}]},"hastra":{"id":"hastra","name":"Hastra","ticker":"PRIME","kind":"protocol","venue":"hastra · median of 2 pools","url":"https://defillama.com/protocol/hastra?fees=false&medianApy=true","history":[
+{"date":"2026-10-27","tvl":392821710,"apy":2.6931},
+{"date":"2026-10-28","tvl":396076833,"apy":2.6931}]},"hastra":{"id":"hastra","name":"Hastra","ticker":"PRIME","kind":"protocol","venue":"hastra · median of 2 pools","url":"https://defillama.com/protocol/hastra?fees=false&medianApy=true","history":[
 {"date":"2026-04-02","tvl":null,"apy":7.4046},
 {"date":"2026-04-03","tvl":null,"apy":7.6639},
 {"date":"2026-04-04","tvl":null,"apy":7.6635},
@@ -2628,7 +2631,8 @@
 {"date":"2026-10-24","tvl":null,"apy":6.2705},
 {"date":"2026-10-25","tvl":null,"apy":6.2694},
 {"date":"2026-10-26","tvl":null,"apy":6.2475},
-{"date":"2026-10-27","tvl":null,"apy":6.2573}]},"onre":{"id":"onre","name":"OnRe","ticker":"ONYC","kind":"pool","venue":"onre · Solana","url":"https://defillama.com/yields/pool/7083d6a5-e3cb-4eeb-8204-f1b735e4ecbb","history":[
+{"date":"2026-10-27","tvl":null,"apy":6.2517},
+{"date":"2026-10-28","tvl":null,"apy":6.2511}]},"onre":{"id":"onre","name":"OnRe","ticker":"ONYC","kind":"pool","venue":"onre · Solana","url":"https://defillama.com/yields/pool/7083d6a5-e3cb-4eeb-8204-f1b735e4ecbb","history":[
 {"date":"2026-04-03","tvl":131801112,"apy":10.207},
 {"date":"2026-04-04","tvl":131977480,"apy":10.2042},
 {"date":"2026-04-05","tvl":132214793,"apy":10.2013},
@@ -2836,7 +2840,8 @@
 {"date":"2026-10-24","tvl":283319657,"apy":11.02},
 {"date":"2026-10-25","tvl":283401273,"apy":11.02},
 {"date":"2026-10-26","tvl":283836477,"apy":11.02},
-{"date":"2026-10-27","tvl":287988659,"apy":11.02}]},"reusd":{"id":"reusd","name":"Re","ticker":"reUSD","kind":"pool","venue":"re · Ethereum","url":"https://defillama.com/yields/pool/1c312830-ee96-40c9-b55f-b0f209ca6ebd","history":[
+{"date":"2026-10-27","tvl":287996223,"apy":11.02},
+{"date":"2026-10-28","tvl":287499651,"apy":11.02}]},"reusd":{"id":"reusd","name":"Re","ticker":"reUSD","kind":"pool","venue":"re · Ethereum","url":"https://defillama.com/yields/pool/1c312830-ee96-40c9-b55f-b0f209ca6ebd","history":[
 {"date":"2026-04-02","tvl":185550666,"apy":0},
 {"date":"2026-04-03","tvl":186133196,"apy":6.0754},
 {"date":"2026-04-04","tvl":185578545,"apy":6.0754},
@@ -3045,7 +3050,8 @@
 {"date":"2026-10-24","tvl":338347304,"apy":6.7126},
 {"date":"2026-10-25","tvl":338950336,"apy":6.7163},
 {"date":"2026-10-26","tvl":340967836,"apy":6.7259},
-{"date":"2026-10-27","tvl":342203804,"apy":6.741}]},"reusde":{"id":"reusde","name":"Re","ticker":"reUSDe","kind":"pool","venue":"re · Ethereum","url":"https://defillama.com/yields/pool/145810df-dc01-43e7-8033-e0aa5dceb767","history":[
+{"date":"2026-10-27","tvl":342203804,"apy":6.741},
+{"date":"2026-10-28","tvl":342738062,"apy":6.7614}]},"reusde":{"id":"reusde","name":"Re","ticker":"reUSDe","kind":"pool","venue":"re · Ethereum","url":"https://defillama.com/yields/pool/145810df-dc01-43e7-8033-e0aa5dceb767","history":[
 {"date":"2026-04-02","tvl":16575722,"apy":0},
 {"date":"2026-04-03","tvl":16621140,"apy":12.0003},
 {"date":"2026-04-04","tvl":16653951,"apy":12.0003},
@@ -3254,7 +3260,8 @@
 {"date":"2026-10-24","tvl":30051159,"apy":11.802},
 {"date":"2026-10-25","tvl":30063193,"apy":11.8026},
 {"date":"2026-10-26","tvl":30073716,"apy":11.8031},
-{"date":"2026-10-27","tvl":30091949,"apy":11.8043}]},"usd3":{"id":"usd3","name":"3Jane","ticker":"USD3","kind":"pool","venue":"3jane-lending · Ethereum","url":"https://defillama.com/yields/pool/f8cd444e-d99f-4132-b234-fd3482bf8806","history":[
+{"date":"2026-10-27","tvl":30091949,"apy":11.8043},
+{"date":"2026-10-28","tvl":30112144,"apy":11.8077}]},"usd3":{"id":"usd3","name":"3Jane","ticker":"USD3","kind":"pool","venue":"3jane-lending · Ethereum","url":"https://defillama.com/yields/pool/f8cd444e-d99f-4132-b234-fd3482bf8806","history":[
 {"date":"2026-02-25","tvl":17588676,"apy":0},
 {"date":"2026-02-26","tvl":17492213,"apy":0},
 {"date":"2026-02-27","tvl":16369189,"apy":0},
@@ -3499,7 +3506,8 @@
 {"date":"2026-10-24","tvl":92252109,"apy":6.7407},
 {"date":"2026-10-25","tvl":91986794,"apy":6.7677},
 {"date":"2026-10-26","tvl":106570126,"apy":6.7477},
-{"date":"2026-10-27","tvl":106575715,"apy":6.6765}]},"susd3":{"id":"susd3","name":"3Jane","ticker":"sUSD3","kind":"pool","venue":"3jane-lending · Ethereum","url":"https://defillama.com/yields/pool/a99bb965-ebaa-4d98-9ed2-fa18de52c605","history":[
+{"date":"2026-10-27","tvl":106619731,"apy":6.6245},
+{"date":"2026-10-28","tvl":106616907,"apy":6.5723}]},"susd3":{"id":"susd3","name":"3Jane","ticker":"sUSD3","kind":"pool","venue":"3jane-lending · Ethereum","url":"https://defillama.com/yields/pool/a99bb965-ebaa-4d98-9ed2-fa18de52c605","history":[
 {"date":"2026-02-25","tvl":7744705,"apy":17.003},
 {"date":"2026-02-26","tvl":7822480,"apy":16.36},
 {"date":"2026-02-27","tvl":7925535,"apy":15.7098},
@@ -3744,8 +3752,8 @@
 {"date":"2026-10-24","tvl":8338493,"apy":13.8347},
 {"date":"2026-10-25","tvl":8348429,"apy":13.8727},
 {"date":"2026-10-26","tvl":8349136,"apy":13.8501},
-{"date":"2026-10-27","tvl":8361728,"apy":13.7681}]},"cap":{"id":"cap","name":"Cap","ticker":"stcUSD","kind":"protocol","venue":"cap · median of 1 pool","url":"https://defillama.com/protocol/cap?fees=false&medianApy=true","history":[
-{"date":"2025-09-23","tvl":130832745,"apy":16.1627},
+{"date":"2026-10-27","tvl":8364145,"apy":13.7016},
+{"date":"2026-10-28","tvl":8364735,"apy":13.6506}]},"cap":{"id":"cap","name":"Cap","ticker":"stcUSD","kind":"protocol","venue":"cap · median of 1 pool","url":"https://defillama.com/protocol/cap?fees=false&medianApy=true","history":[
 {"date":"2025-09-24","tvl":130714863,"apy":13.0755},
 {"date":"2025-09-25","tvl":131015944,"apy":8.9248},
 {"date":"2025-09-26","tvl":134279493,"apy":13.244},
@@ -4144,8 +4152,8 @@
 {"date":"2026-10-24","tvl":209109892,"apy":5.9002},
 {"date":"2026-10-25","tvl":203424973,"apy":4.957},
 {"date":"2026-10-26","tvl":201468277,"apy":5.831},
-{"date":"2026-10-27","tvl":203123169,"apy":5.2025}]},"avant":{"id":"avant","name":"Avant","ticker":"savUSD","kind":"protocol","venue":"avant-avusd · median of 1 pool","url":"https://defillama.com/protocol/avant-avusd?fees=false&medianApy=true","history":[
-{"date":"2025-09-23","tvl":120603871,"apy":null},
+{"date":"2026-10-27","tvl":202759509,"apy":4.6645},
+{"date":"2026-10-28","tvl":206135118,"apy":5.084}]},"avant":{"id":"avant","name":"Avant","ticker":"savUSD","kind":"protocol","venue":"avant-avusd · median of 1 pool","url":"https://defillama.com/protocol/avant-avusd?fees=false&medianApy=true","history":[
 {"date":"2025-09-24","tvl":120112691,"apy":null},
 {"date":"2025-09-25","tvl":121042599,"apy":null},
 {"date":"2025-09-26","tvl":129258022,"apy":null},
@@ -4544,7 +4552,8 @@
 {"date":"2026-10-24","tvl":118015472,"apy":7.8095},
 {"date":"2026-10-25","tvl":117503466,"apy":7.7404},
 {"date":"2026-10-26","tvl":117381796,"apy":7.6742},
-{"date":"2026-10-27","tvl":116538495,"apy":7.6241}]},"valos":{"id":"valos","name":"Valos","ticker":"vUSD","kind":"pool","venue":"accountable · Monad","url":"https://defillama.com/yields/pool/4baffdfd-8015-4713-bad4-10a199b30157","history":[
+{"date":"2026-10-27","tvl":116805996,"apy":7.6241},
+{"date":"2026-10-28","tvl":116176739,"apy":7.5705}]},"valos":{"id":"valos","name":"Valos","ticker":"vUSD","kind":"pool","venue":"accountable · Monad","url":"https://defillama.com/yields/pool/4baffdfd-8015-4713-bad4-10a199b30157","history":[
 {"date":"2026-04-16","tvl":9899287,"apy":11.2831},
 {"date":"2026-04-22","tvl":3051022,"apy":10.916},
 {"date":"2026-04-23","tvl":3051022,"apy":10.8564},
@@ -4712,8 +4721,8 @@
 {"date":"2026-10-24","tvl":100574568,"apy":6.6639},
 {"date":"2026-10-25","tvl":100553980,"apy":6.6642},
 {"date":"2026-10-26","tvl":100527516,"apy":6.664},
-{"date":"2026-10-27","tvl":100523476,"apy":6.665}]},"fluid":{"id":"fluid","name":"Fluid","ticker":"USDC","kind":"pool","venue":"fluid-lending · Ethereum","url":"https://defillama.com/yields/pool/4438dabc-7f0c-430b-8136-2722711ae663","history":[
-{"date":"2025-09-23","tvl":295320902,"apy":7.91},
+{"date":"2026-10-27","tvl":100532946,"apy":6.6633},
+{"date":"2026-10-28","tvl":100538368,"apy":6.6652}]},"fluid":{"id":"fluid","name":"Fluid","ticker":"USDC","kind":"pool","venue":"fluid-lending · Ethereum","url":"https://defillama.com/yields/pool/4438dabc-7f0c-430b-8136-2722711ae663","history":[
 {"date":"2025-09-24","tvl":300445630,"apy":7.96},
 {"date":"2025-09-25","tvl":288767920,"apy":8.87},
 {"date":"2025-09-26","tvl":281699167,"apy":8.55},
@@ -5112,7 +5121,8 @@
 {"date":"2026-10-24","tvl":135835713,"apy":6.39},
 {"date":"2026-10-25","tvl":137106144,"apy":5.96},
 {"date":"2026-10-26","tvl":138321754,"apy":6.18},
-{"date":"2026-10-27","tvl":140729254,"apy":5.84}]},"usdai":{"id":"usdai","name":"UsdAI","ticker":"sUSDai","kind":"pool","venue":"usd-ai · Arbitrum","url":"https://defillama.com/yields/pool/712ce948-bd9e-4f4a-8916-b72c447f7578","history":[
+{"date":"2026-10-27","tvl":141207026,"apy":5.6},
+{"date":"2026-10-28","tvl":140786808,"apy":5.92}]},"usdai":{"id":"usdai","name":"UsdAI","ticker":"sUSDai","kind":"pool","venue":"usd-ai · Arbitrum","url":"https://defillama.com/yields/pool/712ce948-bd9e-4f4a-8916-b72c447f7578","history":[
 {"date":"2026-03-04","tvl":339124831,"apy":5.71},
 {"date":"2026-03-05","tvl":339391582,"apy":5.8},
 {"date":"2026-03-06","tvl":342697058,"apy":2.78},
@@ -5350,7 +5360,8 @@
 {"date":"2026-10-24","tvl":554249798,"apy":6.25},
 {"date":"2026-10-25","tvl":554215906,"apy":6.25},
 {"date":"2026-10-26","tvl":554035570,"apy":6.26},
-{"date":"2026-10-27","tvl":554258381,"apy":6.26}]},"tori":{"id":"tori","name":"Tori","ticker":"strUSD","kind":"protocol","venue":"tori-finance · median of 1 pool","url":"https://defillama.com/protocol/tori-finance?usdInflows=false&medianApy=true","history":[
+{"date":"2026-10-27","tvl":556195606,"apy":6.25},
+{"date":"2026-10-28","tvl":556239529,"apy":6.25}]},"tori":{"id":"tori","name":"Tori","ticker":"strUSD","kind":"protocol","venue":"tori-finance · median of 1 pool","url":"https://defillama.com/protocol/tori-finance?usdInflows=false&medianApy=true","history":[
 {"date":"2026-06-24","tvl":0,"apy":null},
 {"date":"2026-06-25","tvl":0,"apy":null},
 {"date":"2026-06-26","tvl":45851346,"apy":null},
@@ -5476,7 +5487,8 @@
 {"date":"2026-10-24","tvl":72715646,"apy":10.0038},
 {"date":"2026-10-25","tvl":72182400,"apy":9.9768},
 {"date":"2026-10-26","tvl":71956786,"apy":9.8716},
-{"date":"2026-10-27","tvl":72031924,"apy":9.87}]},"yuzu":{"id":"yuzu","name":"Yuzu","ticker":"syzUSD","kind":"protocol","venue":"yuzu-money · median of 4 pools","url":"https://defillama.com/protocol/yuzu-money?fees=false&events=false&medianApy=true","history":[
+{"date":"2026-10-27","tvl":71992405,"apy":9.869},
+{"date":"2026-10-28","tvl":72042319,"apy":9.8669}]},"yuzu":{"id":"yuzu","name":"Yuzu","ticker":"syzUSD","kind":"protocol","venue":"yuzu-money · median of 4 pools","url":"https://defillama.com/protocol/yuzu-money?fees=false&events=false&medianApy=true","history":[
 {"date":"2025-11-14","tvl":17950038,"apy":null},
 {"date":"2025-11-15","tvl":16567870,"apy":null},
 {"date":"2025-11-16","tvl":16560290,"apy":null},
@@ -5824,7 +5836,8 @@
 {"date":"2026-10-24","tvl":77084801,"apy":7.7558},
 {"date":"2026-10-25","tvl":77207551,"apy":8.0133},
 {"date":"2026-10-26","tvl":77253466,"apy":8.0831},
-{"date":"2026-10-27","tvl":77532782,"apy":8.0821}]},"ember":{"id":"ember","name":"Ember","ticker":"PPplus","kind":"pool","venue":"ember · Ethereum","url":"https://defillama.com/yields/pool/99989c4e-cf3b-5936-89fa-769f7e56cd34","history":[
+{"date":"2026-10-27","tvl":77518702,"apy":8.1968},
+{"date":"2026-10-28","tvl":77550133,"apy":8.427}]},"ember":{"id":"ember","name":"Ember","ticker":"PPplus","kind":"pool","venue":"ember · Ethereum","url":"https://defillama.com/yields/pool/99989c4e-cf3b-5936-89fa-769f7e56cd34","history":[
 {"date":"2026-07-19","tvl":2999117,"apy":0},
 {"date":"2026-07-20","tvl":2999673,"apy":0},
 {"date":"2026-07-21","tvl":2999797,"apy":0},
@@ -5925,4 +5938,5 @@
 {"date":"2026-10-24","tvl":5771493,"apy":5.295},
 {"date":"2026-10-25","tvl":5773312,"apy":8.0363},
 {"date":"2026-10-26","tvl":5773292,"apy":8.9227},
-{"date":"2026-10-27","tvl":5774117,"apy":10.4102}]}}}
+{"date":"2026-10-27","tvl":5775193,"apy":11.9474},
+{"date":"2026-10-28","tvl":5775046,"apy":11.9474}]}}}
