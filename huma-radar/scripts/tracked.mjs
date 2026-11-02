@@ -203,22 +203,44 @@ export const HUMA = {
     { id: 93, url: 'https://jup.ag/lend/borrow/smart/93/stats' },
   ],
 
-  /** Kamino lending reserves on Solana, both sides of the Huma market. */
+  /**
+   * Kamino lending reserves on Solana, both sides of the two PST markets: the
+   * Huma Market, and Sentora's curated Sentora Huma PST Market (launched
+   * 27 Oct 2026, PYUSD lent against PST). `venue` is the market's name on
+   * Kamino, shown under each row.
+   */
   kamino: [
     {
-      name: 'Total Kamino PST Collateral',
+      name: 'Kamino PST Huma Market',
       market: '52FSGeeokLpgvgAMdqxyt5Hoc2TbUYj5b8yxrEdZ37Vf',
       reserve: 'DzgYbR8HFQKf8YLCJ6M3E6ricB1xWAiNGZ2TB7X2KDHz',
+      venue: 'Huma Market',
       url: 'https://kamino.com/borrow/reserve/52FSGeeokLpgvgAMdqxyt5Hoc2TbUYj5b8yxrEdZ37Vf/DzgYbR8HFQKf8YLCJ6M3E6ricB1xWAiNGZ2TB7X2KDHz',
     },
     {
-      // the lending side of the same market: the USDC borrowed against PST,
+      name: 'Kamino PST Sentora Market',
+      market: 'CyyFApdfEzHM5dVowALutPiL3fZepMrThtQUed77A1KN',
+      reserve: '5cuL2uZzVyGVh6yDXFaKFd1vBWMEPqskZsPwDMEgjtmk',
+      venue: 'Sentora Huma PST Market',
+      url: 'https://kamino.com/borrow/reserve/CyyFApdfEzHM5dVowALutPiL3fZepMrThtQUed77A1KN/5cuL2uZzVyGVh6yDXFaKFd1vBWMEPqskZsPwDMEgjtmk',
+    },
+    {
+      // the lending side of each market: the stablecoin borrowed against PST,
       // with its own supply and borrow rates. Real money, but not PST, so it
       // is shown and marked rather than added to this tab's totals.
-      name: 'USDC',
+      name: 'Kamino USDC',
       market: '52FSGeeokLpgvgAMdqxyt5Hoc2TbUYj5b8yxrEdZ37Vf',
       reserve: '4QKFoFDzNFnvfkzVazABbCEfMwd3y1pZqUVzmpnkCphj',
+      venue: 'Huma Market',
       url: 'https://kamino.com/borrow/reserve/52FSGeeokLpgvgAMdqxyt5Hoc2TbUYj5b8yxrEdZ37Vf/4QKFoFDzNFnvfkzVazABbCEfMwd3y1pZqUVzmpnkCphj',
+      notInTotal: true,
+    },
+    {
+      name: 'Kamino PYUSD',
+      market: 'CyyFApdfEzHM5dVowALutPiL3fZepMrThtQUed77A1KN',
+      reserve: 'J11HELuMrLs4WywWHpwoagqT5NMgHTGqCexKjrhM1PuU',
+      venue: 'Sentora Huma PST Market',
+      url: 'https://kamino.com/borrow/reserve/CyyFApdfEzHM5dVowALutPiL3fZepMrThtQUed77A1KN/J11HELuMrLs4WywWHpwoagqT5NMgHTGqCexKjrhM1PuU',
       notInTotal: true,
     },
   ],
@@ -245,6 +267,15 @@ export const HUMA = {
       symbol: 'PST',
       venue: 'Fluid · Jupiter Lend · Orca',
       parts: ['fluid-1-169', 'juplend-93', 'orca-fcdb84kbyt'],
+    },
+    {
+      // the PST posted in both Kamino markets above
+      id: 'kamino-pst',
+      name: 'Total Kamino PST Collateral',
+      symbol: 'PST',
+      protocol: 'Kamino',
+      venue: 'Huma Market · Sentora Huma PST Market',
+      parts: ['kamino-dzgybr8hfq', 'kamino-5cul2uzzvy'],
     },
   ],
 
@@ -670,7 +701,7 @@ export const PRIME = {
     ethereum: '0x22ae3d9a738471f405169af055d31c687087d4c7',
   },
   /** Kamino markets searched for a Solana wallet's obligations */
-  kaminoMarkets: ['52FSGeeokLpgvgAMdqxyt5Hoc2TbUYj5b8yxrEdZ37Vf'],
+  kaminoMarkets: ['52FSGeeokLpgvgAMdqxyt5Hoc2TbUYj5b8yxrEdZ37Vf', 'CyyFApdfEzHM5dVowALutPiL3fZepMrThtQUed77A1KN'],
 }
 
 /**

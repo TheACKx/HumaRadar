@@ -26,17 +26,27 @@ const ZERO = '0x0000000000000000000000000000000000000000'
 const units = (raw, decimals) => Number(raw) / 10 ** Number(decimals)
 const isPstSymbol = (s) => /(^|[^a-z])PST([^a-z]|$)/i.test(s ?? '') && !/mPST/.test(s ?? '')
 
+/**
+ * JSON from a public API, retried. A rate limit (HTTP 429) gets a longer,
+ * growing wait — about two minutes in all — because Jupiter's free API limits
+ * GitHub's shared runners hard enough that three quick retries failed a whole
+ * wallet every day from 2026-10-16.
+ */
 export async function getJson(url, opts = {}, attempt = 1) {
+  let limited = false
   try {
     const res = await fetch(url, {
       ...opts,
       headers: { accept: 'application/json', 'content-type': 'application/json', ...(opts.headers ?? {}) },
     })
+    limited = res.status === 429
     if (!res.ok) throw new Error(`HTTP ${res.status}`)
     return await res.json()
   } catch (err) {
-    if (attempt >= 3) throw new Error(`${new URL(url).host}: ${err.message}`)
-    await new Promise((r) => setTimeout(r, 1000 * attempt))
+    const max = limited ? 7 : 3
+    if (attempt >= max) throw new Error(`${new URL(url).host}: ${err.message}`)
+    const wait = limited ? Math.min(40000, 2500 * 2 ** (attempt - 1)) : 1000 * attempt
+    await new Promise((r) => setTimeout(r, wait))
     return getJson(url, opts, attempt + 1)
   }
 }
@@ -91,14 +101,16 @@ async function kaminoPositions(wallet) {
   const out = []
   for (const market of PRIME.kaminoMarkets) {
     const list = await getJson(`https://api.kamino.finance/kamino-market/${market}/users/${wallet}/obligations`)
+    // named as on the Huma Related tab: the market's PST row
+    const name = HUMA.kamino.find((k) => k.market === market && !k.notInTotal)?.name ?? 'Kamino PST'
     for (const o of list) {
       const s = o.refreshedStats ?? {}
       out.push({
         protocol: 'Kamino',
-        market: 'Kamino PST',
+        market: name,
         venue: 'Kamino Lend',
         collateral: 'PST',
-        // the Huma market's only collateral is PST
+        // both Huma markets take only PST as collateral
         pst: true,
         supplied: Number(s.userTotalDeposit ?? 0),
         borrowed: Number(s.userTotalBorrow ?? 0),

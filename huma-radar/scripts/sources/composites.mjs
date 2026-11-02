@@ -42,7 +42,8 @@ export function collectComposites({ store, today, log }) {
       id,
       chain: overlay.id,
       chainId: parts[0].chainId,
-      protocol: 'Combined',
+      // a total within one protocol files under it, so its filter still finds it
+      protocol: want.protocol ?? 'Combined',
       kind: 'reserve',
       name: want.name,
       symbol: want.symbol,

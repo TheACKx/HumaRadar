@@ -8,7 +8,9 @@
  *              serve a position's daily collateral and debt (Morpho's
  *              historicalState, Kamino's obligation metrics history). Jupiter
  *              Lend and Fluid serve current positions only, so a wallet using
- *              them starts from its first daily collection instead.
+ *              them starts from its first daily collection instead. Kamino
+ *              lists a wallet's open obligations only, so one closed since is
+ *              missing from the days it was still open.
  *   held       Solana: the PST token accounts' own transactions give the
  *              balance after each change. Ethereum: the address's PST
  *              transfers on Blockscout, walked back from today's balance. Both
@@ -88,10 +90,13 @@ async function kaminoHistory(wallet) {
     const obligations = await getJson(`https://api.kamino.finance/kamino-market/${market}/users/${wallet}/obligations`)
     for (const o of obligations) {
       const j = await getJson(`https://api.kamino.finance/v2/kamino-market/${market}/obligations/${o.obligationAddress}/metrics/history?env=mainnet-beta&start=${from}&end=${to}`)
-      for (const h of j.history ?? []) {
-        const d = h.timestamp.slice(0, 10)
-        supplied.set(d, (supplied.get(d) ?? 0) + Number(h.refreshedStats?.userTotalDeposit ?? 0))
-        borrowed.set(d, (borrowed.get(d) ?? 0) + Number(h.refreshedStats?.userTotalBorrow ?? 0))
+      // the API picks its interval from the range — hourly for a month or
+      // less — so keep each day's last reading rather than adding them up
+      const byDay = new Map()
+      for (const h of j.history ?? []) byDay.set(h.timestamp.slice(0, 10), h.refreshedStats ?? {})
+      for (const [d, s] of byDay) {
+        supplied.set(d, (supplied.get(d) ?? 0) + Number(s.userTotalDeposit ?? 0))
+        borrowed.set(d, (borrowed.get(d) ?? 0) + Number(s.userTotalBorrow ?? 0))
       }
     }
   }
