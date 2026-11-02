@@ -1,0 +1,37 @@
+{
+ "start": "2026-10-11",
+ "end": "2026-11-02",
+ "span": "22D",
+ "month": "2026-10-03",
+ "supply": {
+  "value": "$299.52B",
+  "usd": "−$8.26B",
+  "pct": "−2.68%",
+  "dir": -1
+ },
+ "venues": {
+  "value": "$11.55B",
+  "usd": "−$872.4M",
+  "pct": "−7.02%",
+  "dir": -1
+ },
+ "pst": {
+  "value": "$369.9M",
+  "usd": "−$30.9M",
+  "pct": "−7.71%",
+  "dir": -1
+ },
+ "flagged": {
+  "products": 12,
+  "groups": 12,
+  "passes": 15
+ },
+ "topUp": {
+  "label": "Re reUSD",
+  "usd": "+$53.1M"
+ },
+ "topDown": {
+  "label": "Sky sUSDS",
+  "usd": "−$539.5M"
+ }
+}
