@@ -1,4 +1,4 @@
-{"source":"defillama-protocols","generatedAt":"2026-11-03T12:01:43.478Z","curators":{"sentora":{"id":"sentora","name":"Sentora","slug":"sentora-curator","url":"https://defillama.com/protocol/sentora-curator","history":[
+{"source":"defillama-protocols","generatedAt":"2026-11-03T17:00:22.062Z","curators":{"sentora":{"id":"sentora","name":"Sentora","slug":"sentora-curator","url":"https://defillama.com/protocol/sentora-curator","history":[
 {"date":"2025-09-30","total":19696186},
 {"date":"2025-10-01","total":28812398},
 {"date":"2025-10-02","total":39467312},
@@ -398,7 +398,7 @@
 {"date":"2026-10-31","total":2576644762},
 {"date":"2026-11-01","total":2592794496},
 {"date":"2026-11-02","total":2593185593},
-{"date":"2026-11-03","total":2624250275}]},"gauntlet":{"id":"gauntlet","name":"Gauntlet","slug":"gauntlet","url":"https://defillama.com/protocol/gauntlet","history":[
+{"date":"2026-11-03","total":2627958369}]},"gauntlet":{"id":"gauntlet","name":"Gauntlet","slug":"gauntlet","url":"https://defillama.com/protocol/gauntlet","history":[
 {"date":"2025-09-30","total":1367564961},
 {"date":"2025-10-01","total":1363957894},
 {"date":"2025-10-02","total":1384915409},
@@ -798,7 +798,7 @@
 {"date":"2026-10-31","total":1518613043},
 {"date":"2026-11-01","total":1523017485},
 {"date":"2026-11-02","total":1544260119},
-{"date":"2026-11-03","total":1544705635}]},"k3":{"id":"k3","name":"K3 Capital","slug":"k3-capital","url":"https://defillama.com/protocol/k3-capital","history":[
+{"date":"2026-11-03","total":1543627596}]},"k3":{"id":"k3","name":"K3 Capital","slug":"k3-capital","url":"https://defillama.com/protocol/k3-capital","history":[
 {"date":"2025-09-30","total":365125302},
 {"date":"2025-10-01","total":383390363},
 {"date":"2025-10-02","total":405979472},
@@ -1198,7 +1198,7 @@
 {"date":"2026-10-31","total":209889006},
 {"date":"2026-11-01","total":210401315},
 {"date":"2026-11-02","total":211158542},
-{"date":"2026-11-03","total":216718432}]},"rockawayx":{"id":"rockawayx","name":"RockawayX","slug":"rockawayx","url":"https://defillama.com/protocol/rockawayx","history":[
+{"date":"2026-11-03","total":219669716}]},"rockawayx":{"id":"rockawayx","name":"RockawayX","slug":"rockawayx","url":"https://defillama.com/protocol/rockawayx","history":[
 {"date":"2026-03-26","total":44567429},
 {"date":"2026-03-27","total":44682010},
 {"date":"2026-03-28","total":52061819},
@@ -1421,7 +1421,7 @@
 {"date":"2026-10-31","total":273283116},
 {"date":"2026-11-01","total":279329189},
 {"date":"2026-11-02","total":282842013},
-{"date":"2026-11-03","total":282043027}]},"clearstar":{"id":"clearstar","name":"Clearstar","slug":"clearstar","url":"https://defillama.com/protocol/clearstar","history":[
+{"date":"2026-11-03","total":257727319}]},"clearstar":{"id":"clearstar","name":"Clearstar","slug":"clearstar","url":"https://defillama.com/protocol/clearstar","history":[
 {"date":"2025-09-27","total":18239833},
 {"date":"2025-09-28","total":18311205},
 {"date":"2025-09-29","total":18494401},
@@ -1821,7 +1821,7 @@
 {"date":"2026-10-31","total":185395296},
 {"date":"2026-11-01","total":185987487},
 {"date":"2026-11-02","total":187236152},
-{"date":"2026-11-03","total":184468001}]},"armitage":{"id":"armitage","name":"Armitage by Wintermute","slug":"armitage-by-wintermute","url":"https://defillama.com/protocol/armitage-by-wintermute","history":[
+{"date":"2026-11-03","total":185624613}]},"armitage":{"id":"armitage","name":"Armitage by Wintermute","slug":"armitage-by-wintermute","url":"https://defillama.com/protocol/armitage-by-wintermute","history":[
 {"date":"2026-05-20","total":50005674},
 {"date":"2026-05-21","total":50003637},
 {"date":"2026-05-22","total":50147327},
@@ -1989,7 +1989,7 @@
 {"date":"2026-10-31","total":87330345},
 {"date":"2026-11-01","total":85617742},
 {"date":"2026-11-02","total":86546472},
-{"date":"2026-11-03","total":94066843}]},"galaxy":{"id":"galaxy","name":"Galaxy Curation","slug":"galaxy-curation","url":"https://defillama.com/protocol/galaxy-curation","history":[
+{"date":"2026-11-03","total":94695019}]},"galaxy":{"id":"galaxy","name":"Galaxy Curation","slug":"galaxy-curation","url":"https://defillama.com/protocol/galaxy-curation","history":[
 {"date":"2026-04-07","total":428983},
 {"date":"2026-04-08","total":18427117},
 {"date":"2026-04-09","total":38435899},
@@ -2199,7 +2199,7 @@
 {"date":"2026-10-31","total":117246458},
 {"date":"2026-11-01","total":117261083},
 {"date":"2026-11-02","total":116599898},
-{"date":"2026-11-03","total":116587089}]},"bitwise":{"id":"bitwise","name":"Bitwise","slug":"bitwise","url":"https://defillama.com/protocol/bitwise","history":[
+{"date":"2026-11-03","total":116635411}]},"bitwise":{"id":"bitwise","name":"Bitwise","slug":"bitwise","url":"https://defillama.com/protocol/bitwise","history":[
 {"date":"2026-09-03","total":7699833},
 {"date":"2026-09-04","total":7702333},
 {"date":"2026-09-05","total":8414003},
@@ -2261,7 +2261,7 @@
 {"date":"2026-10-31","total":14683844},
 {"date":"2026-11-01","total":14767803},
 {"date":"2026-11-02","total":16118601},
-{"date":"2026-11-03","total":12068533}]},"steakhouse":{"id":"steakhouse","name":"Steakhouse","slug":"steakhouse-financial","url":"https://defillama.com/protocol/steakhouse-financial","history":[
+{"date":"2026-11-03","total":10671532}]},"steakhouse":{"id":"steakhouse","name":"Steakhouse","slug":"steakhouse-financial","url":"https://defillama.com/protocol/steakhouse-financial","history":[
 {"date":"2025-09-30","total":1361470892},
 {"date":"2025-10-01","total":1283027502},
 {"date":"2025-10-02","total":1336394840},
@@ -2661,4 +2661,4 @@
 {"date":"2026-10-31","total":2726173339},
 {"date":"2026-11-01","total":2732617709},
 {"date":"2026-11-02","total":2733310894},
-{"date":"2026-11-03","total":2752054408}]}}}
+{"date":"2026-11-03","total":2781475672}]}}}
