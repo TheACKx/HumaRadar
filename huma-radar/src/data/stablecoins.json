@@ -1,5 +1,4 @@
-{"source":"defillama-stablecoins","generatedAt":"2026-11-02T19:27:21.708Z","chains":{"all":{"id":"all","name":"All Chains","slug":"all","url":"https://defillama.com/stablecoins","history":[
-{"date":"2025-09-29","total":294924765676},
+{"source":"defillama-stablecoins","generatedAt":"2026-11-03T12:01:21.051Z","chains":{"all":{"id":"all","name":"All Chains","slug":"all","url":"https://defillama.com/stablecoins","history":[
 {"date":"2025-09-30","total":295727623366},
 {"date":"2025-10-01","total":297142777382},
 {"date":"2025-10-02","total":298039320638},
@@ -398,8 +397,8 @@
 {"date":"2026-10-30","total":301428531553},
 {"date":"2026-10-31","total":300719871878},
 {"date":"2026-11-01","total":300128789823},
-{"date":"2026-11-02","total":299464109787}]},"ethereum":{"id":"ethereum","name":"Ethereum","slug":"Ethereum","url":"https://defillama.com/stablecoins/ethereum","history":[
-{"date":"2025-09-29","total":157773084571},
+{"date":"2026-11-02","total":299386922256},
+{"date":"2026-11-03","total":297661062100}]},"ethereum":{"id":"ethereum","name":"Ethereum","slug":"Ethereum","url":"https://defillama.com/stablecoins/ethereum","history":[
 {"date":"2025-09-30","total":157563368268},
 {"date":"2025-10-01","total":158541506747},
 {"date":"2025-10-02","total":159163218261},
@@ -798,8 +797,8 @@
 {"date":"2026-10-30","total":142769508100},
 {"date":"2026-10-31","total":142598314997},
 {"date":"2026-11-01","total":142157089074},
-{"date":"2026-11-02","total":141587850285}]},"solana":{"id":"solana","name":"Solana","slug":"Solana","url":"https://defillama.com/stablecoins/solana","history":[
-{"date":"2025-09-29","total":13595727148},
+{"date":"2026-11-02","total":141557464895},
+{"date":"2026-11-03","total":140381498960}]},"solana":{"id":"solana","name":"Solana","slug":"Solana","url":"https://defillama.com/stablecoins/solana","history":[
 {"date":"2025-09-30","total":14011286115},
 {"date":"2025-10-01","total":14125220662},
 {"date":"2025-10-02","total":14412473932},
@@ -1198,8 +1197,8 @@
 {"date":"2026-10-30","total":15452876624},
 {"date":"2026-10-31","total":15494668303},
 {"date":"2026-11-01","total":15509282954},
-{"date":"2026-11-02","total":15441575828}]},"base":{"id":"base","name":"Base","slug":"Base","url":"https://defillama.com/stablecoins/base","history":[
-{"date":"2025-09-29","total":4434963096},
+{"date":"2026-11-02","total":15439318516},
+{"date":"2026-11-03","total":15370688489}]},"base":{"id":"base","name":"Base","slug":"Base","url":"https://defillama.com/stablecoins/base","history":[
 {"date":"2025-09-30","total":4436334710},
 {"date":"2025-10-01","total":4417608748},
 {"date":"2025-10-02","total":4510363152},
@@ -1598,8 +1597,8 @@
 {"date":"2026-10-30","total":5153427419},
 {"date":"2026-10-31","total":5144178939},
 {"date":"2026-11-01","total":5150268144},
-{"date":"2026-11-02","total":5212017265}]},"xrpl":{"id":"xrpl","name":"XRPL","slug":"XRPL","url":"https://defillama.com/stablecoins/xrpl","history":[
-{"date":"2025-09-29","total":95642314},
+{"date":"2026-11-02","total":5211360434},
+{"date":"2026-11-03","total":5011932965}]},"xrpl":{"id":"xrpl","name":"XRPL","slug":"XRPL","url":"https://defillama.com/stablecoins/xrpl","history":[
 {"date":"2025-09-30","total":94704700},
 {"date":"2025-10-01","total":94369600},
 {"date":"2025-10-02","total":98762995},
@@ -1998,8 +1997,8 @@
 {"date":"2026-10-30","total":1082957124},
 {"date":"2026-10-31","total":799176164},
 {"date":"2026-11-01","total":799318849},
-{"date":"2026-11-02","total":803398432}]},"plasma":{"id":"plasma","name":"Plasma","slug":"Plasma","url":"https://defillama.com/stablecoins/plasma","history":[
-{"date":"2025-09-29","total":6031518503},
+{"date":"2026-11-02","total":803431834},
+{"date":"2026-11-03","total":943183742}]},"plasma":{"id":"plasma","name":"Plasma","slug":"Plasma","url":"https://defillama.com/stablecoins/plasma","history":[
 {"date":"2025-09-30","total":6061367565},
 {"date":"2025-10-01","total":5868246137},
 {"date":"2025-10-02","total":5757732330},
@@ -2398,7 +2397,8 @@
 {"date":"2026-10-30","total":1344093172},
 {"date":"2026-10-31","total":1325206133},
 {"date":"2026-11-01","total":1310843777},
-{"date":"2026-11-02","total":1294504443}]},"robinhood":{"id":"robinhood","name":"Robinhood Chain","slug":"Robinhood Chain","url":"https://defillama.com/stablecoins/robinhood-chain","history":[
+{"date":"2026-11-02","total":1294083148},
+{"date":"2026-11-03","total":1338598081}]},"robinhood":{"id":"robinhood","name":"Robinhood Chain","slug":"Robinhood Chain","url":"https://defillama.com/stablecoins/robinhood-chain","history":[
 {"date":"2026-07-07","total":241284147},
 {"date":"2026-07-08","total":246778325},
 {"date":"2026-07-09","total":275825407},
@@ -2517,7 +2517,8 @@
 {"date":"2026-10-30","total":1087362401},
 {"date":"2026-10-31","total":1044656907},
 {"date":"2026-11-01","total":1046186482},
-{"date":"2026-11-02","total":1044997625}]},"monad":{"id":"monad","name":"Monad","slug":"Monad","url":"https://defillama.com/stablecoins/monad","history":[
+{"date":"2026-11-02","total":1044811598},
+{"date":"2026-11-03","total":1054820904}]},"monad":{"id":"monad","name":"Monad","slug":"Monad","url":"https://defillama.com/stablecoins/monad","history":[
 {"date":"2025-11-22","total":2933434},
 {"date":"2025-11-23","total":12924955},
 {"date":"2025-11-24","total":16122319},
@@ -2863,8 +2864,8 @@
 {"date":"2026-10-30","total":648974745},
 {"date":"2026-10-31","total":656909377},
 {"date":"2026-11-01","total":653542577},
-{"date":"2026-11-02","total":661990518}]},"bsc":{"id":"bsc","name":"BSC","slug":"BSC","url":"https://defillama.com/stablecoins/bsc","history":[
-{"date":"2025-09-29","total":13356326616},
+{"date":"2026-11-02","total":661729314},
+{"date":"2026-11-03","total":562469107}]},"bsc":{"id":"bsc","name":"BSC","slug":"BSC","url":"https://defillama.com/stablecoins/bsc","history":[
 {"date":"2025-09-30","total":13396495412},
 {"date":"2025-10-01","total":13554427351},
 {"date":"2025-10-02","total":13584151168},
@@ -3263,7 +3264,8 @@
 {"date":"2026-10-30","total":14270491324},
 {"date":"2026-10-31","total":14281405601},
 {"date":"2026-11-01","total":14277903371},
-{"date":"2026-11-02","total":14277542786}]},"tempo":{"id":"tempo","name":"Tempo","slug":"Tempo","url":"https://defillama.com/stablecoins/tempo","history":[
+{"date":"2026-11-02","total":14273777979},
+{"date":"2026-11-03","total":14269684457}]},"tempo":{"id":"tempo","name":"Tempo","slug":"Tempo","url":"https://defillama.com/stablecoins/tempo","history":[
 {"date":"2026-04-28","total":6211592},
 {"date":"2026-04-29","total":6321328},
 {"date":"2026-04-30","total":6326530},
@@ -3452,8 +3454,8 @@
 {"date":"2026-10-30","total":759105394},
 {"date":"2026-10-31","total":750786732},
 {"date":"2026-11-01","total":746499672},
-{"date":"2026-11-02","total":747063207}]},"stellar":{"id":"stellar","name":"Stellar","slug":"Stellar","url":"https://defillama.com/stablecoins/stellar","history":[
-{"date":"2025-09-29","total":234788269},
+{"date":"2026-11-02","total":746702119},
+{"date":"2026-11-03","total":737869043}]},"stellar":{"id":"stellar","name":"Stellar","slug":"Stellar","url":"https://defillama.com/stablecoins/stellar","history":[
 {"date":"2025-09-30","total":229077792},
 {"date":"2025-10-01","total":235936083},
 {"date":"2025-10-02","total":240255482},
@@ -3852,7 +3854,8 @@
 {"date":"2026-10-30","total":348499736},
 {"date":"2026-10-31","total":355889872},
 {"date":"2026-11-01","total":354219981},
-{"date":"2026-11-02","total":354406972}]},"arc":{"id":"arc","name":"Arc","slug":"Arc","url":"https://defillama.com/stablecoins/arc","history":[
+{"date":"2026-11-02","total":354340460},
+{"date":"2026-11-03","total":363301510}]},"arc":{"id":"arc","name":"Arc","slug":"Arc","url":"https://defillama.com/stablecoins/arc","history":[
 {"date":"2026-09-17","total":655984430},
 {"date":"2026-09-18","total":647045358},
 {"date":"2026-09-19","total":633984917},
@@ -3899,4 +3902,5 @@
 {"date":"2026-10-30","total":1081758188},
 {"date":"2026-10-31","total":1115150667},
 {"date":"2026-11-01","total":1096732432},
-{"date":"2026-11-02","total":1097805741}]}}}
+{"date":"2026-11-02","total":1097708596},
+{"date":"2026-11-03","total":1114361037}]}}}
