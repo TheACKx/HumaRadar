@@ -1,5 +1,4 @@
-{"source":"defillama-protocols","generatedAt":"2026-11-17T18:30:16.352Z","curators":{"sentora":{"id":"sentora","name":"Sentora","slug":"sentora-curator","url":"https://defillama.com/protocol/sentora-curator","history":[
-{"date":"2025-10-14","total":228723734},
+{"source":"defillama-protocols","generatedAt":"2026-11-18T12:02:08.138Z","curators":{"sentora":{"id":"sentora","name":"Sentora","slug":"sentora-curator","url":"https://defillama.com/protocol/sentora-curator","history":[
 {"date":"2025-10-15","total":229339536},
 {"date":"2025-10-16","total":228975788},
 {"date":"2025-10-17","total":233415789},
@@ -398,8 +397,8 @@
 {"date":"2026-11-14","total":2761214968},
 {"date":"2026-11-15","total":2709505359},
 {"date":"2026-11-16","total":2695166470},
-{"date":"2026-11-17","total":2672609180}]},"gauntlet":{"id":"gauntlet","name":"Gauntlet","slug":"gauntlet","url":"https://defillama.com/protocol/gauntlet","history":[
-{"date":"2025-10-14","total":1502951148},
+{"date":"2026-11-17","total":2682773918},
+{"date":"2026-11-18","total":2680239640}]},"gauntlet":{"id":"gauntlet","name":"Gauntlet","slug":"gauntlet","url":"https://defillama.com/protocol/gauntlet","history":[
 {"date":"2025-10-15","total":1486898637},
 {"date":"2025-10-16","total":1474297640},
 {"date":"2025-10-17","total":1466909046},
@@ -798,8 +797,8 @@
 {"date":"2026-11-14","total":1579605708},
 {"date":"2026-11-15","total":1543693920},
 {"date":"2026-11-16","total":1532745490},
-{"date":"2026-11-17","total":1482185067}]},"k3":{"id":"k3","name":"K3 Capital","slug":"k3-capital","url":"https://defillama.com/protocol/k3-capital","history":[
-{"date":"2025-10-14","total":1465252502},
+{"date":"2026-11-17","total":1533291695},
+{"date":"2026-11-18","total":1443531822}]},"k3":{"id":"k3","name":"K3 Capital","slug":"k3-capital","url":"https://defillama.com/protocol/k3-capital","history":[
 {"date":"2025-10-15","total":1469052776},
 {"date":"2025-10-16","total":1428210859},
 {"date":"2025-10-17","total":1456138722},
@@ -1198,7 +1197,8 @@
 {"date":"2026-11-14","total":208475767},
 {"date":"2026-11-15","total":198190863},
 {"date":"2026-11-16","total":201597499},
-{"date":"2026-11-17","total":194436464}]},"rockawayx":{"id":"rockawayx","name":"RockawayX","slug":"rockawayx","url":"https://defillama.com/protocol/rockawayx","history":[
+{"date":"2026-11-17","total":197361741},
+{"date":"2026-11-18","total":196021985}]},"rockawayx":{"id":"rockawayx","name":"RockawayX","slug":"rockawayx","url":"https://defillama.com/protocol/rockawayx","history":[
 {"date":"2026-03-26","total":44567429},
 {"date":"2026-03-27","total":44682010},
 {"date":"2026-03-28","total":52061819},
@@ -1435,8 +1435,8 @@
 {"date":"2026-11-14","total":292511917},
 {"date":"2026-11-15","total":255918927},
 {"date":"2026-11-16","total":269373273},
-{"date":"2026-11-17","total":251338919}]},"clearstar":{"id":"clearstar","name":"Clearstar","slug":"clearstar","url":"https://defillama.com/protocol/clearstar","history":[
-{"date":"2025-10-11","total":33377141},
+{"date":"2026-11-17","total":266061476},
+{"date":"2026-11-18","total":246877347}]},"clearstar":{"id":"clearstar","name":"Clearstar","slug":"clearstar","url":"https://defillama.com/protocol/clearstar","history":[
 {"date":"2025-10-12","total":47279269},
 {"date":"2025-10-13","total":51505781},
 {"date":"2025-10-14","total":48185643},
@@ -1835,7 +1835,8 @@
 {"date":"2026-11-14","total":162134833},
 {"date":"2026-11-15","total":156085847},
 {"date":"2026-11-16","total":158631377},
-{"date":"2026-11-17","total":148379277}]},"armitage":{"id":"armitage","name":"Armitage by Wintermute","slug":"armitage-by-wintermute","url":"https://defillama.com/protocol/armitage-by-wintermute","history":[
+{"date":"2026-11-17","total":148465211},
+{"date":"2026-11-18","total":151381234}]},"armitage":{"id":"armitage","name":"Armitage by Wintermute","slug":"armitage-by-wintermute","url":"https://defillama.com/protocol/armitage-by-wintermute","history":[
 {"date":"2026-05-20","total":50005674},
 {"date":"2026-05-21","total":50003637},
 {"date":"2026-05-22","total":50147327},
@@ -2017,7 +2018,8 @@
 {"date":"2026-11-14","total":103529840},
 {"date":"2026-11-15","total":103533547},
 {"date":"2026-11-16","total":104240699},
-{"date":"2026-11-17","total":102650885}]},"galaxy":{"id":"galaxy","name":"Galaxy Curation","slug":"galaxy-curation","url":"https://defillama.com/protocol/galaxy-curation","history":[
+{"date":"2026-11-17","total":104110381},
+{"date":"2026-11-18","total":101900256}]},"galaxy":{"id":"galaxy","name":"Galaxy Curation","slug":"galaxy-curation","url":"https://defillama.com/protocol/galaxy-curation","history":[
 {"date":"2026-04-07","total":428983},
 {"date":"2026-04-08","total":18427117},
 {"date":"2026-04-09","total":38435899},
@@ -2241,7 +2243,8 @@
 {"date":"2026-11-14","total":130026387},
 {"date":"2026-11-15","total":128840146},
 {"date":"2026-11-16","total":129013205},
-{"date":"2026-11-17","total":129876809}]},"bitwise":{"id":"bitwise","name":"Bitwise","slug":"bitwise","url":"https://defillama.com/protocol/bitwise","history":[
+{"date":"2026-11-17","total":129982344},
+{"date":"2026-11-18","total":129907190}]},"bitwise":{"id":"bitwise","name":"Bitwise","slug":"bitwise","url":"https://defillama.com/protocol/bitwise","history":[
 {"date":"2026-09-03","total":7699833},
 {"date":"2026-09-04","total":7702333},
 {"date":"2026-09-05","total":8414003},
@@ -2317,8 +2320,8 @@
 {"date":"2026-11-14","total":4605007},
 {"date":"2026-11-15","total":3674308},
 {"date":"2026-11-16","total":3652680},
-{"date":"2026-11-17","total":2501025}]},"steakhouse":{"id":"steakhouse","name":"Steakhouse","slug":"steakhouse-financial","url":"https://defillama.com/protocol/steakhouse-financial","history":[
-{"date":"2025-10-14","total":1576652678},
+{"date":"2026-11-17","total":3171428},
+{"date":"2026-11-18","total":2229115}]},"steakhouse":{"id":"steakhouse","name":"Steakhouse","slug":"steakhouse-financial","url":"https://defillama.com/protocol/steakhouse-financial","history":[
 {"date":"2025-10-15","total":1602314755},
 {"date":"2025-10-16","total":1609128381},
 {"date":"2025-10-17","total":1562901513},
@@ -2717,4 +2720,5 @@
 {"date":"2026-11-14","total":2753365194},
 {"date":"2026-11-15","total":2718428483},
 {"date":"2026-11-16","total":2729778406},
-{"date":"2026-11-17","total":2699440026}]}}}
+{"date":"2026-11-17","total":2725386497},
+{"date":"2026-11-18","total":2693570985}]}}}
